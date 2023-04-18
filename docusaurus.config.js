@@ -172,8 +172,8 @@ const config = {
       maxHeadingLevel: 4,
     },
     algolia: {
-      appId: 'NK1PYTA7OE',
-      apiKey: '495df4fc48f4bea4ddc466ad53f164e8',
+      appId: 'S4YOJK9V4X',
+      apiKey: '3bf796bbbc156928d571253bcb25dafc',
       indexName: 'wikiblog',
     },
     zoom: {
@@ -185,7 +185,7 @@ const config = {
       config: {},
     },
     matomo: {
-      matomoUrl: 'https://matomo.kuizuo.cn/',
+      matomoUrl: 'https://wrm244.gxist.cn/',
       siteId: '1',
       phpLoader: 'matomo.php',
       jsLoader: 'matomo.js',
