@@ -195,8 +195,6 @@ const config = {
       repoId: 'R_kgDOJYXemg',
       category: 'General',
       categoryId: 'DIC_kwDOJYXems4CV3b4',
-      theme: 'light',
-      darkTheme: 'dark',
       loading: "lazy",
       lang: "zh-CN",
     },
