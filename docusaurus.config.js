@@ -1,0 +1,324 @@
+const path = require('path') 
+
+// const announcementBarContent = `<a href="/typescript-full-stack-technology-trpc" target="_blank">Typescript 全栈最值得学习的技术栈 TRPC</a>`
+
+/** @type {import('@docusaurus/types').Config} */
+const config = {
+  title: '河山的技术存档',
+  titleDelimiter: '-',
+  url: 'https://wrm244.github.io',
+  baseUrl: '/',
+  favicon: 'assets/images/social/avatar.ico',
+  organizationName: 'wrm244',
+  projectName: 'blog',
+  tagline: '记录所学知识，领略编程之美',
+  /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+  themeConfig: {
+    image: 'assets/images/social/avatar.png',
+    // announcementBar: {
+    //   id: 'announcementBar-3',
+    //   content: announcementBarContent,
+    // },
+    metadata: [
+      {
+        name: 'keywords',
+        content: '河山',
+      },
+      {
+        name: 'keywords',
+        content: 'blog, javascript, nginx, machine learning, react, vue, web',
+      },
+      {
+        name: 'keywords',
+        content: '编程爱好者, Web开发者',
+      },
+    ],
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
+    navbar: {
+      title: '河山的技术存档',
+      logo: {
+        alt: '河山',
+        src: 'assets/images/social/avatar.png',
+        srcDark: 'assets/images/social/avatar.png',
+      },
+      hideOnScroll: true,
+      items: [
+        {
+          label: '博客',
+          position: 'left',
+          items: [
+            {
+              label: '标签',
+              to: 'tags',
+            },
+            {
+              label: '归档',
+              to: 'archive',
+            },
+          ],
+        },
+        {
+          label: '笔记',
+          position: 'left',
+          to: 'docs/skill/',
+        },
+        {
+          label: '简历',
+          position: 'left',
+          to: 'https://wrm244.github.io/resume/',
+        },
+        {
+          label: '导航',
+          position: 'left',
+          to: 'resource',
+        },
+        {
+          label: '项目',
+          position: 'right',
+          to: 'project',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: '学习',
+          items: [
+            {
+              label: '标签',
+              to: 'tags',
+            },
+            {
+              label: '归档',
+              to: 'archive',
+            },
+            {
+              label: '笔记',
+              to: 'docs/skill',
+            },
+            {
+              label: '项目',
+              to: 'project',
+            },
+          ],
+        },
+        {
+          title: '社交媒体',
+          items: [
+            {
+              label: '关于我',
+              to: '/about',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/wrm244',
+            },
+          ],
+        },
+        {
+          title: '更多',
+          items: [
+            {
+              label: '友链',
+              position: 'right',
+              to: 'friends',
+            },
+            {
+              label: '导航',
+              position: 'right',
+              to: 'resource',
+            },
+            // {
+            //   label: '我的站点',
+            //   position: 'right',
+            //   to: 'website',
+            // },
+            {
+              html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img style="height:50px;margin-top:0.5rem" src="assets/images/buildwith.png" /><a/>`,
+            },
+          ],
+        },
+      ],
+      copyright: `<p>Copyright © 2020 - ${new Date().getFullYear()} 河山 Built with Docusaurus. Theme use <a href="https://kuizuo.cn/">kuizuo<a></p>`,
+    },
+    prism: {
+      theme: require('prism-react-renderer/themes/vsLight'),
+      darkTheme: require('prism-react-renderer/themes/vsDark'),
+      additionalLanguages: ['java', 'php', 'rust', 'toml'],
+      defaultLanguage: 'javascript',
+      magicComments: [
+        {
+          className: 'theme-code-block-highlighted-line',
+          line: 'highlight-next-line',
+          block: { start: 'highlight-start', end: 'highlight-end' },
+        },
+        {
+          className: 'code-block-error-line',
+          line: 'This will error',
+        },
+      ],
+    },
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 4,
+    },
+    algolia: {
+      appId: 'GV6YN1ODMO',
+      apiKey: '50303937b0e4630bec4a20a14e3b7872',
+      indexName: 'kuizuo',
+    },
+    zoom: {
+      selector: '.markdown :not(em) > img',
+      background: {
+        light: 'rgb(255, 255, 255)',
+        dark: 'rgb(50, 50, 50)',
+      },
+      config: {},
+    },
+    matomo: {
+      matomoUrl: 'https://matomo.kuizuo.cn/',
+      siteId: '1',
+      phpLoader: 'matomo.php',
+      jsLoader: 'matomo.js',
+    },
+    giscus: {
+      repo: 'wrm244/wikiblog',
+      repoId: 'R_kgDOJYXemg',
+      category: 'General',
+      categoryId: 'DIC_kwDOJYXems4CV3b4',
+      theme: 'light',
+      darkTheme: 'dark',
+      loading: "lazy",
+      lang: "zh-CN",
+    },
+    liveCodeBlock: {
+      playgroundPosition: 'top',
+    },
+    socials: {
+      github: 'https://github.com/wrm244',
+      twitter: 'https://twitter.com/wrm244',
+      csdn: 'https://blog.csdn.net/wrm244',
+      qq: 'https://wpa.qq.com/msgrd?v=3&amp;uin=934978593&amp;site=qq',
+      zhihu: 'https://www.zhihu.com/people/wrm244',
+    },
+  },
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'description',
+        content: '河山的技术存档',
+      },
+    },
+  ],
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        docs: {
+          path: 'docs',
+          sidebarPath: 'sidebars.js',
+        },
+        blog: false,
+        theme: {
+          customCss: [require.resolve('./src/css/custom.scss')],
+        },
+        sitemap: {
+          changefreq: 'daily',
+          priority: 0.5,
+        },
+        // gtag: {
+        //   trackingID: 'G-S4SD5NXWXF',
+        //   anonymizeIP: true,
+        // },
+        // debug: true,
+      }),
+    ],
+  ],
+  // themes: ['@docusaurus/theme-live-codeblock'],
+  plugins: [
+    'docusaurus-plugin-matomo',
+    'docusaurus-plugin-image-zoom',
+    'docusaurus-plugin-sass',
+    path.resolve(__dirname, './src/plugin/plugin-baidu-tongji'),
+    path.resolve(__dirname, './src/plugin/plugin-baidu-push'),
+    [
+      path.resolve(__dirname, './src/plugin/plugin-content-blog'),
+      {
+        path: 'blog',
+        routeBasePath: '/',
+        editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
+          `https://github.com/wrm244/wikiblog/edit/main/${blogDirPath}/${blogPath}`,
+        editLocalizedFiles: false,
+        blogDescription: '河山的技术存档',
+        blogSidebarCount: 10,
+        blogSidebarTitle: '最近更新',
+        postsPerPage: 10,
+        showReadingTime: true,
+        readingTime: ({ content, frontMatter, defaultReadingTime }) =>
+          defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
+        feedOptions: {
+          type: 'all',
+          title: '河山',
+          copyright: `Copyright © ${new Date().getFullYear()} 河山 Built with Docusaurus. class="footer_lin">`,
+        },
+      },
+    ],
+    [
+      '@docusaurus/plugin-ideal-image',
+      {
+        disableInDev: false,
+      },
+    ],
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: true,
+        offlineModeActivationStrategies: [
+          'appInstalled',
+          'standalone',
+          'queryString',
+        ],
+        pwaHead: [
+          {
+            tagName: 'link',
+            rel: 'icon',
+            href: 'assets/images/social/avatar.png',
+          },
+          {
+            tagName: 'link',
+            rel: 'manifest',
+            href: '/manifest.json',
+          },
+          {
+            tagName: 'meta',
+            name: 'theme-color',
+            content: 'rgb(51 139 255)',
+          },
+        ],
+      },
+    ],
+  ],
+  stylesheets: [],
+  i18n: {
+    defaultLocale: 'zh-CN',
+    locales: ['en', 'zh-CN'],
+    localeConfigs: {
+      en: {
+        htmlLang: 'en-GB',
+      },
+    },
+  },
+}
+
+module.exports = config
