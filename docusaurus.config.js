@@ -172,9 +172,9 @@ const config = {
       maxHeadingLevel: 4,
     },
     algolia: {
-      appId: 'GV6YN1ODMO',
-      apiKey: '50303937b0e4630bec4a20a14e3b7872',
-      indexName: 'kuizuo',
+      appId: 'NK1PYTA7OE',
+      apiKey: '495df4fc48f4bea4ddc466ad53f164e8',
+      indexName: 'wikiblog',
     },
     zoom: {
       selector: '.markdown :not(em) > img',
