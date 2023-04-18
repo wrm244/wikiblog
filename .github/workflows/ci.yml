@@ -23,10 +23,11 @@ jobs:
           yarn install
           yarn run build
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: wikiblog
-          FOLDER: build
-          BUILD_SCRIPT: npm install && npm run build
+      - name: Build and Deploy
+        uses: theme-keep/hexo-deploy-github-pages-action@master # 使用专门部署 Hexo 到 GitHub pages 的 action
+        env:
+          PERSONAL_TOKEN: ${{ secrets.PERSION_TOKEN }} # secret 名
+          PUBLISH_REPOSITORY: wrm244/wrm244.github.io # 公共仓库，格式：GitHub 用户名/仓库名
+          BRANCH: wikiblog # 分支，填 gh-pages 就行
+          PUBLISH_DIR: ./build # 部署 public 目录下的文件
+
