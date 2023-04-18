@@ -143,7 +143,7 @@ const config = {
             //   to: 'website',
             // },
             {
-              html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img style="height:50px;margin-top:0.5rem" src="assets/images/buildwith.png" /><a/>`,
+              html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img style="height:50px;margin-top:0.5rem" src="/assets/images/buildwith.png" /><a/>`,
             },
           ],
         },
