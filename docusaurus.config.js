@@ -165,7 +165,7 @@ const config = {
           ],
         },
       ],
-      copyright: `<p>Copyright © 2022 - ${new Date().getFullYear()} 河山 Built with <a href="https://docusaurus.io/zh-CN/" target="_blank">Docusaurus</a>.<p>
+      copyright: `<p>版权所有 © ${new Date().getFullYear()} 河山 此网站使用 <a href="https://docusaurus.io/zh-CN/" target="_blank">Docusaurus</a> 搭建。<p>
       <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style="color: white">本网站由 <img src="/assets/images/upyun-logo-white.png" width="42px" align="top"/> 提供CDN加速/云存储服务</a></p>`,
     },
     prism: {
