@@ -1,7 +1,9 @@
 ---
+slug: BUG-Template
 title: BUG记录模板
 date: 2023-04-15 14:12:04
 tags: [BUG]
+authors: RiverMountain
 ---
 # 项目场景：
 `提示：这里简述项目相关背景：`

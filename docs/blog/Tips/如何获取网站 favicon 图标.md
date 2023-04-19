@@ -1,6 +1,6 @@
 ---
 id: Docusaurus-获取网站 favicon 图标
-slug: /Docusaurus-获取网站 favicon 图标
+slug: /Docusaurus-find-favicon
 title: 获取网站 favicon 图标
 date: 2023/01/27
 authors: RiverMountain

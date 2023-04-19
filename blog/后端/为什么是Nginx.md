@@ -1,7 +1,9 @@
 ---
+slug: why-is-nginx
 title: 为什么是Nginx
 date: 2023-04-14 21:10:23
 tags: [后端,nginx]
+authors: RiverMountain
 ---
 
 :::tip

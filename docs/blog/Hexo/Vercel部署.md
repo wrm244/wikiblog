@@ -1,6 +1,6 @@
 ---
 id: Hexo-Vercel部署
-slug: /Hexo-Vercel部署
+slug: /Hexo-Vercel
 title: Vercel部署
 date: 2022/12/14
 authors: RiverMountain

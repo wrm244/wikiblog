@@ -1,6 +1,6 @@
 ---
 id: Docusaurus-使用Hygen创建文章模板
-slug: /Docusaurus-使用Hygen创建文章模板
+slug: /Docusaurus-Hygen
 title: 使用 Hygen 创建文章模板
 date: 2023/03/16
 authors: RiverMountain
