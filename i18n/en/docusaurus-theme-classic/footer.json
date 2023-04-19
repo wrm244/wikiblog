@@ -60,7 +60,7 @@
     "description": "The label of footer link with label=博客 linking to resource"
   },
   "copyright": {
-    "message": "<p>Copyright © 2022 - 2023 RiverMountain Built with Docusaurus. Theme use <a href=\"https://kuizuo.cn/\">kuizuo<a></p>",
-    "description": "The footer copyright"
+    "message": "<p>Copyright © 2022 - 2023 河山 Built with <a href=\"https://docusaurus.io/zh-CN/\" target=\"_blank\">Docusaurus</a>.<p><a href=\"https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral\" style=\"color: white\">This website is provided by <img src=\"/assets/images/upyun-logo-white.png\" width=\"40px\" align=\"top\"/> CDN acceleration/cloud storage services</a>",
+    "description": "The footer copyright</p>"
   }
 }
