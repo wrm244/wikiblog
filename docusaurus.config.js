@@ -43,8 +43,8 @@ const config = {
       title: '河山的技术存档',
       logo: {
         alt: '河山',
-        src: 'assets/images/social/avatar.png',
-        srcDark: 'assets/images/social/avatar.png',
+        src: '/assets/images/social/avatar.png',
+        srcDark: '/assets/images/social/avatar.png',//记得加上绝对路径/
       },
       hideOnScroll: true,
       items: [

@@ -43,7 +43,7 @@ module.exports = config
 
 ## sidebars.js
 
-用于配置文档的侧边栏，例如本博客中的[技术笔记](/docs/skill/)，[工具推荐](/docs/tools/)。侧边栏对应的每一项都是一个 markdown 文件，同时这些文件都存放在 docs 目录下，方便管理。
+用于配置文档的侧边栏，例如本博客中的[技术笔记](/docs/stack/)，[工具推荐](/docs/tools/)。侧边栏对应的每一项都是一个 markdown 文件，同时这些文件都存放在 docs 目录下，方便管理。
 
 [侧边栏 | Docusaurus](https://docusaurus.io/zh-CN/docs/sidebar)
 

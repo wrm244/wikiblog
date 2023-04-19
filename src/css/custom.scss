@@ -611,7 +611,7 @@ html[data-theme='dark'] .pagination-nav__link {
 }
 
 /* 导航收缩相应尺寸调大 */
-@media (max-width: 1100px) {
+@media (max-width: 1165px) {
   .navbar > .container,
   .navbar > .container-fluid {
     padding: 0;
@@ -632,8 +632,6 @@ html[data-theme='dark'] .pagination-nav__link {
   .navbar-sidebar {
     display: block;
     height: 100dvh;
-    backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, .9);
   }
 }
 
