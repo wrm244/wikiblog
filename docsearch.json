@@ -1,5 +1,5 @@
 {
-  "index_name": "wrm244",
+  "index_name": "wikiblog",
   "start_urls": ["https://wrm244.github.io/"],
   "sitemap_urls": ["https://wrm244.github.io/sitemap.xml"],
   "selectors": {
