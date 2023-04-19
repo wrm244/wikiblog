@@ -75,7 +75,7 @@ function Hero() {
           </a>
           <span>　</span>
           <Button isLink href={'https://wrm244.github.io/resume'} target="_blank">
-            <Translate id="hompage.hero.text.introduce">个人简历</Translate>
+            <Translate id="hompage.hero.text.resume">个人简历</Translate>
           </Button>
         </animated.div>
       </div>
