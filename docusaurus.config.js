@@ -1,12 +1,13 @@
 const path = require('path') 
-
+const math = require('remark-math');
+const katex = require('rehype-katex');
 // const announcementBarContent = `<a href="/typescript-full-stack-technology-trpc" target="_blank">Typescript 全栈最值得学习的技术栈 TRPC</a>`
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '河山的技术存档',
   titleDelimiter: '-',
-  url: 'https://wrm244.github.io',
+  url: 'https://wrm244.gxist.cn',
   baseUrl: '/',
   favicon: '/assets/images/social/avatar.ico',
   organizationName: 'wrm244',
@@ -20,6 +21,9 @@ const config = {
     //   id: 'announcementBar-3',
     //   content: announcementBarContent,
     // },
+    mermaid: {
+      theme: {light: 'neutral', dark: 'forest'},
+    },
     metadata: [
       {
         name: 'keywords',
@@ -234,6 +238,8 @@ const config = {
         docs: {
           path: 'docs',
           sidebarPath: 'sidebars.js',
+          // remarkPlugins: [math],
+          // rehypePlugins: [katex],
         },
         blog: false,
         theme: {
@@ -247,6 +253,10 @@ const config = {
     ],
   ],
   // themes: ['@docusaurus/theme-live-codeblock'],
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
   plugins: [
     // 'docusaurus-plugin-matomo',
     'docusaurus-plugin-image-zoom',
@@ -310,7 +320,14 @@ const config = {
       },
     ],
   ],
-  stylesheets: [],
+  stylesheets: [
+    {
+    href: 'https://jsd.onmicrosoft.cn/npm/katex@0.13.24/dist/katex.min.css',
+    type: 'text/css',
+    integrity:
+      'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+    crossorigin: 'anonymous',
+  },],
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['en', 'zh-CN'],

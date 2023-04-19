@@ -20,7 +20,6 @@ Nginx 的最重要的几个使用场景：
 
 - API 服务，OpenResty ；
 
-  
 
 下面着重先学习下 Nginx 的几个概念。
 
