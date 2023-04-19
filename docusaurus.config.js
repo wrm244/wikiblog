@@ -8,13 +8,14 @@ const config = {
   titleDelimiter: '-',
   url: 'https://wrm244.github.io',
   baseUrl: '/',
-  favicon: 'assets/images/social/avatar.ico',
+  favicon: '/assets/images/social/avatar.ico',
   organizationName: 'wrm244',
   projectName: 'blog',
   tagline: '记录所学知识，领略编程之美',
+  onBrokenLinks: 'ignore',  //忽略坏链
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
-    image: 'assets/images/social/avatar.png',
+    image: '/assets/images/social/avatar.png',
     // announcementBar: {
     //   id: 'announcementBar-3',
     //   content: announcementBarContent,
@@ -64,7 +65,17 @@ const config = {
         {
           label: '笔记',
           position: 'left',
-          to: 'docs/skill/',
+          to: 'docs/stack/',
+          items: [
+            {
+              label: '本站的搭建',
+              to: 'docs/blog/',
+            },
+            {
+              label: '学习栈',
+              to: 'docs/stack/',
+            },
+          ],
         },
         {
           label: '简历',
@@ -148,7 +159,7 @@ const config = {
           ],
         },
       ],
-      copyright: `<p>Copyright © 2020 - ${new Date().getFullYear()} 河山 Built with Docusaurus. Theme use <a href="https://kuizuo.cn/">kuizuo<a></p>`,
+      copyright: `<p>Copyright © 2022 - ${new Date().getFullYear()} 河山 Built with Docusaurus. Theme use <a href="https://kuizuo.cn/">kuizuo<a></p>`,
     },
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
@@ -184,12 +195,12 @@ const config = {
       },
       config: {},
     },
-    matomo: {
-      matomoUrl: 'https://wrm244.gxist.cn/',
-      siteId: '1',
-      phpLoader: 'matomo.php',
-      jsLoader: 'matomo.js',
-    },
+    // matomo: {
+    //   matomoUrl: 'https://wrm244.gxist.cn/',
+    //   siteId: '1',
+    //   phpLoader: 'matomo.php',
+    //   jsLoader: 'matomo.js',
+    // },
     giscus: {
       repo: 'wrm244/wikiblog',
       repoId: 'R_kgDOJYXemg',
@@ -245,7 +256,7 @@ const config = {
   ],
   // themes: ['@docusaurus/theme-live-codeblock'],
   plugins: [
-    'docusaurus-plugin-matomo',
+    // 'docusaurus-plugin-matomo',
     'docusaurus-plugin-image-zoom',
     'docusaurus-plugin-sass',
     path.resolve(__dirname, './src/plugin/plugin-baidu-tongji'),

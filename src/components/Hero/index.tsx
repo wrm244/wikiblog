@@ -11,7 +11,7 @@ import HeroMain from './img/javascript_illustration.svg'
 
 import JuejinIcon from '@site/static/svg/juejin.svg'
 import { Icon } from '@iconify/react'
-
+import Button from '../Button';
 import styles from './styles.module.scss'
 
 function Hero() {
@@ -73,6 +73,10 @@ function Hero() {
           <a className={styles.intro} href={'./about'}>
             <Translate id="hompage.hero.introduce">自我介绍</Translate>
           </a>
+          <span>　</span>
+          <Button isLink href={'https://wrm244.github.io/resume'} target="_blank">
+            <Translate id="hompage.hero.text.introduce">个人简历</Translate>
+          </Button>
         </animated.div>
       </div>
       <div className={styles.bloghome__image}>
