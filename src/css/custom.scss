@@ -832,3 +832,16 @@ div[class^='announcementBar_'] {
 .transition {
   transition: all 0.3s ease;
 }
+//页脚样式
+.footer__title{
+  margin-bottom: 0 !important;
+  margin-top: var(--ifm-heading-margin-bottom) !important;
+}
+.footer__link-item {
+  font-size: 14px !important;
+}
+.col.footer__col{
+  padding: 0;
+  text-align: center;
+  border-top: 0.1px solid #535965;
+}

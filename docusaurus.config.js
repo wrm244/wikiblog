@@ -212,8 +212,9 @@ const config = {
       github: 'https://github.com/wrm244',
       twitter: 'https://twitter.com/wrm244',
       csdn: 'https://blog.csdn.net/wrm244',
-      qq: 'https://wpa.qq.com/msgrd?v=3&amp;uin=934978593&amp;site=qq',
-      zhihu: 'https://www.zhihu.com/people/wrm244',
+      juejin: 'https://juejin.cn/user/3021907877702814',
+      qq: 'tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=934978593&website=www.oicqzone.com',
+      zhihu: 'https://www.zhihu.com/people/dobet',
     },
   },
   headTags: [

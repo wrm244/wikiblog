@@ -130,22 +130,22 @@ export function SocialLinks({ ...prop }) {
 
   return (
     <animated.div className={styles.social__links} {...prop}>
-      <a href="/rss.xml" target="_blank">
+      <a href="/rss.xml" target="_blank" aria-label="Really Simple Syndication">
         <Icon icon="ri:rss-line" />
       </a>
-      <a href={socials.github} target="_blank">
+      <a href={socials.github} target="_blank" aria-label="github">
         <Icon icon="ri:github-line" />
       </a>
-      <a href={socials.juejin} target="_blank">
+      <a href={socials.juejin} target="_blank" aria-label="juejin">
         <JuejinIcon />
       </a>
-      <a href={socials.qq} target="_blank">
+      <a href={socials.qq} target="_blank" aria-label="QQ">
         <Icon icon="ri:qq-line" />
       </a>
-      <a href={socials.twitter} target="_blank">
+      <a href={socials.twitter} target="_blank" aria-label="twitter">
         <Icon icon="ri:twitter-line" />
       </a>
-      <a href={socials.zhihu} target="_blank">
+      <a href={socials.zhihu} target="_blank" aria-label="zhihu">
         <Icon icon="ri:zhihu-line" />
       </a>
     </animated.div>
