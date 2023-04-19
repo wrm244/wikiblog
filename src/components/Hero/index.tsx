@@ -14,6 +14,27 @@ import { Icon } from '@iconify/react'
 import Button from '../Button';
 import styles from './styles.module.scss'
 
+/* 桌面下滑箭头 */
+function ArrowDownBtn(): JSX.Element {
+  return (
+    <span className={styles.arrowDownBtnWrapper}>
+      <svg
+        className={styles.arrowDownBtn}
+        aria-hidden="true"
+        viewBox="-75.52 -43.52 599.04 599.04"
+        fill="currentColor"
+        onClick={() => {
+          window.scrollTo({
+            top: window.innerHeight+40,
+            behavior: "smooth"
+          })
+        }}>
+        <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" />
+      </svg>
+    </span>
+  )
+}
+
 function Hero() {
   const trails = useTrail(4, {
     from: { opacity: 0, transform: 'translate3d(0px, 2em, 0px)' },
@@ -44,7 +65,7 @@ function Hero() {
             id="homepage.hero.look"
             values={{
               note: (
-                <Link to="/docs/skill">
+                <Link to="/docs/stack">
                   <Translate id="hompage.hero.note">笔记</Translate>
                 </Link>
               ),
@@ -67,6 +88,10 @@ function Hero() {
           >
             {`你可以随处逛逛与评论，查看{note}、{project}、{link}、以及我的{idea}。`}
           </Translate>
+          <br />
+          <a /* href="https://github.com/wrm244/wikiblog/commits/main" */ target="_blank">
+            <img alt="my deploy data" src="https://img.shields.io/github/last-commit/wrm244/wikiblog?color=blue&style=flat-square" />
+          </a>
         </animated.p>
         <SocialLinks style={trails[2]} />
         <animated.div style={trails[3]}>
@@ -81,6 +106,7 @@ function Hero() {
       </div>
       <div className={styles.bloghome__image}>
         <HeroMain />
+        <ArrowDownBtn />
       </div>
     </animated.div>
   )

@@ -135,7 +135,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 7px;
   height: 5px;
 }
 
@@ -243,6 +243,11 @@ html[data-theme='dark'] .theme-code-block {
 /* navbar */
 .navbar {
   box-shadow: none;
+  
+  // 毛玻璃效果
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(12px);
+  opacity: 1;
 
   .navbar__title {
     margin-left: 12px;
@@ -250,10 +255,20 @@ html[data-theme='dark'] .theme-code-block {
     font-family: var(--ifm-font-family-name);
   }
 }
-
+.navbar-sidebar__backdrop {
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  right: 0;
+  transition-property: opacity,visibility;
+  height: 100dvh;
+}
 .navbar__link,
 .dropdown,
-.navbar__title,
+.navbar__title{
+  font-weight: 600;
+  font-size: 1.1rem;
+}
 .menu {
   font-weight: 400;
 }
@@ -616,6 +631,9 @@ html[data-theme='dark'] .pagination-nav__link {
 
   .navbar-sidebar {
     display: block;
+    height: 100dvh;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, .9);
   }
 }
 

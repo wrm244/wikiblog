@@ -11,7 +11,7 @@ const config = {
   favicon: '/assets/images/social/avatar.ico',
   organizationName: 'wrm244',
   projectName: 'blog',
-  tagline: '记录所学知识，领略编程之美',
+  tagline: '学习记录，技术存档',
   onBrokenLinks: 'ignore',  //忽略坏链
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
@@ -31,7 +31,7 @@ const config = {
       },
       {
         name: 'keywords',
-        content: '编程爱好者, Web开发者',
+        content: '编程爱好者, 计算机研究学习',
       },
     ],
     docs: {
@@ -114,7 +114,7 @@ const config = {
             },
             {
               label: '笔记',
-              to: 'docs/skill',
+              to: 'docs/stack',
             },
             {
               label: '项目',
@@ -148,18 +148,13 @@ const config = {
               position: 'right',
               to: 'resource',
             },
-            // {
-            //   label: '我的站点',
-            //   position: 'right',
-            //   to: 'website',
-            // },
             {
-              html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img style="height:50px;margin-top:0.5rem" src="/assets/images/buildwith.png" /><a/>`,
+              html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img alt="Built with Docusaurus" style="height:50px;margin-top:0.5rem" src="/assets/images/buildwith.png" /><a/>`,
             },
           ],
         },
       ],
-      copyright: `<p>Copyright © 2022 - ${new Date().getFullYear()} 河山 Built with Docusaurus. Theme use <a href="https://kuizuo.cn/">kuizuo<a></p>`,
+      copyright: `<p>Copyright © 2022 - ${new Date().getFullYear()} 河山 Built with <a href="https://docusaurus.io/zh-CN/" target="_blank">Docusaurus</a>. Theme use <a href="https://kuizuo.cn/">kuizuo<a></p>`,
     },
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
@@ -195,12 +190,6 @@ const config = {
       },
       config: {},
     },
-    // matomo: {
-    //   matomoUrl: 'https://wrm244.gxist.cn/',
-    //   siteId: '1',
-    //   phpLoader: 'matomo.php',
-    //   jsLoader: 'matomo.js',
-    // },
     giscus: {
       repo: 'wrm244/wikiblog',
       repoId: 'R_kgDOJYXemg',
@@ -246,11 +235,6 @@ const config = {
           changefreq: 'daily',
           priority: 0.5,
         },
-        // gtag: {
-        //   trackingID: 'G-S4SD5NXWXF',
-        //   anonymizeIP: true,
-        // },
-        // debug: true,
       }),
     ],
   ],
