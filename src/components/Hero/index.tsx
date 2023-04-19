@@ -86,10 +86,10 @@ function Hero() {
             }}
           >
             {`你可以随处逛逛与评论，查看{note}、{project}、{link}、以及我的{idea}。`}
-          </Translate> 
+          </Translate>
           <br />
           <a /* href="https://github.com/wrm244/wikiblog/commits/main" */ target="_blank">
-            <img src="https://img.shields.io/github/last-commit/wrm244/wikiblog?color=blue&style=flat-square" />
+            <img alt="my deploy data" src="https://img.shields.io/github/last-commit/wrm244/wikiblog?color=blue&style=flat-square" />
           </a>
         </animated.p>
         <SocialLinks style={trails[2]} />
@@ -108,9 +108,7 @@ function Hero() {
       <div className={styles.bloghome__image}>
         <ArrowDownBtn />
         <HeroMain />
-        
-     
-      
+        <ArrowDownBtn />
       </div>
     </animated.div>
   )

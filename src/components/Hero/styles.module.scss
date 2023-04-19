@@ -301,13 +301,13 @@ html[data-theme='dark'] .bloghome__intro > p {
 .arrowDownBtnWrapper svg {
   width: 3%;
   height: auto;
-
+/*手机上的大小*/
   min-width:3%;
-  max-width: 20%
+  max-width: 15%
 }
 
 .arrowDownBtn {
-  color: #A0BBEF;
+  color: #12affa;
   height: 3px;
   width: 3px;
   transition: 0.4s ease;
