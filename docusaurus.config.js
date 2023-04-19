@@ -165,7 +165,8 @@ const config = {
           ],
         },
       ],
-      copyright: `<p>Copyright © 2022 - ${new Date().getFullYear()} 河山 Built with <a href="https://docusaurus.io/zh-CN/" target="_blank">Docusaurus</a>. Theme use <a href="https://kuizuo.cn/">kuizuo<a></p>`,
+      copyright: `<p>Copyright © 2022 - ${new Date().getFullYear()} 河山 Built with <a href="https://docusaurus.io/zh-CN/" target="_blank">Docusaurus</a>. Theme use <a href="https://kuizuo.cn/">kuizuo  <a></p>
+      <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style="color: white">本网站由 <img src="/assets/images/upyun-logo-white.png" width="48px" align="middle"/> 提供CDN加速/云存储服务</a>`,
     },
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
