@@ -12,8 +12,8 @@
     "message": "Hello! 我是",
     "description": "hero greet"
   },
-  "愧怍": {
-    "message": "愧怍",
+  "河山": {
+    "message": "河山",
     "description": "my name"
   },
   "homepage.hero.text": {
@@ -40,12 +40,12 @@
     "message": "想法感悟",
     "description": "Idea label"
   },
-  "homepage.qqgroup": {
-    "message": "QQ 群：5478458",
-    "description": "qq group"
-  },
   "自我介绍": {
     "message": "自我介绍",
+    "description": "follow me btn text"
+  },
+  "个人简历": {
+    "message": "个人简历",
     "description": "follow me btn text"
   },
   "阅读全文": {

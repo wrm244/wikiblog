@@ -11,7 +11,7 @@ const config = {
   favicon: '/assets/images/social/avatar.ico',
   organizationName: 'wrm244',
   projectName: 'blog',
-  tagline: '记录所学知识，领略编程之美',
+  tagline: '学习记录，技术存档',
   onBrokenLinks: 'ignore',  //忽略坏链
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
@@ -31,7 +31,7 @@ const config = {
       },
       {
         name: 'keywords',
-        content: '编程爱好者, Web开发者',
+        content: '编程爱好者, 计算机研究学习',
       },
     ],
     docs: {
@@ -102,7 +102,7 @@ const config = {
       style: 'dark',
       links: [
         {
-          title: '学习',
+          title: '博客',
           items: [
             {
               label: '标签',
@@ -112,15 +112,22 @@ const config = {
               label: '归档',
               to: 'archive',
             },
-            {
+            
+          ],
+        },
+        {
+          title: '学习',
+          items: [
+           {
               label: '笔记',
-              to: 'docs/skill',
+              to: 'docs/stack',
             },
             {
               label: '项目',
               to: 'project',
             },
-          ],
+          
+        ],
         },
         {
           title: '社交媒体',
@@ -140,12 +147,12 @@ const config = {
           items: [
             {
               label: '友链',
-              position: 'right',
+              //position: 'right',
               to: 'friends',
             },
             {
               label: '导航',
-              position: 'right',
+              //position: 'right',
               to: 'resource',
             },
             // {
@@ -195,12 +202,6 @@ const config = {
       },
       config: {},
     },
-    // matomo: {
-    //   matomoUrl: 'https://wrm244.gxist.cn/',
-    //   siteId: '1',
-    //   phpLoader: 'matomo.php',
-    //   jsLoader: 'matomo.js',
-    // },
     giscus: {
       repo: 'wrm244/wikiblog',
       repoId: 'R_kgDOJYXemg',

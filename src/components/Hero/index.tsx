@@ -14,6 +14,27 @@ import { Icon } from '@iconify/react'
 import Button from '../Button';
 import styles from './styles.module.scss'
 
+/* 桌面下滑箭头 */
+function ArrowDownBtn(): JSX.Element {
+  return (
+    <span className={styles.arrowDownBtnWrapper}>
+      <svg
+        className={styles.arrowDownBtn}
+        aria-hidden="true"
+        viewBox="-75.52 -43.52 599.04 599.04"
+        fill="currentColor"
+        onClick={() => {
+          window.scrollTo({
+            top: window.innerHeight+40,
+            behavior: "smooth"
+          })
+        }}>
+        <path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" />
+      </svg>
+    </span>
+  )
+}
+
 function Hero() {
   const trails = useTrail(4, {
     from: { opacity: 0, transform: 'translate3d(0px, 2em, 0px)' },
@@ -39,12 +60,11 @@ function Hero() {
             {`这是一个我用来记录和分享我的学习心得、个人感悟和创意项目的网站。你可以在这里找到我关于编程、设计、人工智能等各种主题的笔记和博客，也可以看到我参与或制作的一些有趣的项目。`}
           </Translate>
           <br />
-          <br />
           <Translate
             id="homepage.hero.look"
             values={{
               note: (
-                <Link to="/docs/skill">
+                <Link to="/docs/stack">
                   <Translate id="hompage.hero.note">笔记</Translate>
                 </Link>
               ),
@@ -66,7 +86,11 @@ function Hero() {
             }}
           >
             {`你可以随处逛逛与评论，查看{note}、{project}、{link}、以及我的{idea}。`}
-          </Translate>
+          </Translate> 
+          <br />
+          <a /* href="https://github.com/wrm244/wikiblog/commits/main" */ target="_blank">
+            <img src="https://img.shields.io/github/last-commit/wrm244/wikiblog?color=blue&style=flat-square" />
+          </a>
         </animated.p>
         <SocialLinks style={trails[2]} />
         <animated.div style={trails[3]}>
@@ -75,12 +99,18 @@ function Hero() {
           </a>
           <span>　</span>
           <Button isLink href={'https://wrm244.github.io/resume'} target="_blank">
-            <Translate id="hompage.hero.text.introduce">个人简历</Translate>
+            <Translate id="hompage.hero.text.resume">个人简历</Translate>
           </Button>
         </animated.div>
       </div>
+      
+      
       <div className={styles.bloghome__image}>
+        <ArrowDownBtn />
         <HeroMain />
+        
+     
+      
       </div>
     </animated.div>
   )

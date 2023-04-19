@@ -35,9 +35,17 @@
     "message": "Archive",
     "description": "Navbar item with label 归档"
   },
+  "item.label.本站的搭建": {
+    "message": "Build Site",
+    "description": "Navbar item with label 本站的搭建"
+  },
   "item.label.笔记": {
     "message": "Notes",
     "description": "Navbar item with label 笔记"
+  },
+  "item.label.学习栈": {
+    "message": "Stack",
+    "description": "Navbar item with label 学习栈"
   },
   "item.label.工具推荐": {
     "message": "Recommended Tools",

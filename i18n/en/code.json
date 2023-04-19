@@ -30,6 +30,10 @@
   "hompage.hero.introduce": {
     "message": "Introduce"
   },
+"hompage.hero.text.resume":{
+  "message": "Resume"
+},
+  
   "theme.blog.archive.posts.total": {
     "message": "Total {total} posts"
   },
