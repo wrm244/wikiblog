@@ -19,6 +19,10 @@
     "message": "Links",
     "description": "Navbar item with label 导航"
   },
+  "item.label.幻灯片": {
+    "message": "Slides",
+    "description": "Navbar item with label 幻灯片"
+  },
   "item.label.项目": {
     "message": "Projects",
     "description": "Navbar item with label 项目"

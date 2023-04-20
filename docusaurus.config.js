@@ -86,15 +86,21 @@ const config = {
           ],
         },
         {
-          label: '简历',
-          position: 'left',
-          to: 'https://wrm244.github.io/resume/',
-        },
-        {
           label: '导航',
           position: 'left',
           to: 'resource',
         },
+        {
+          label: '幻灯片',
+          position: 'left',
+          to: 'https://wrm244.gitee.io/slide/',
+        },
+        {
+          label: '简历',
+          position: 'left',
+          to: 'https://wrm244.github.io/resume/',
+        },
+        
         {
           label: '项目',
           position: 'right',

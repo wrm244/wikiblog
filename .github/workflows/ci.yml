@@ -53,7 +53,7 @@ jobs:
       - name: deploy resume
         run: |
          cd ./build
-         git clone git@github.com:wrm244/resume.git ./resume
+         git clone https://github.com/wrm244/resume.git ./resume
          git checkout gp-pages   
 
       - name: SSH Deploy
