@@ -621,7 +621,7 @@ html[data-theme='dark'] .pagination-nav__link {
 }
 
 /* 导航收缩相应尺寸调大 */
-@media (max-width: 1165px) {
+@media (max-width: 1000px) {
   .navbar > .container,
   .navbar > .container-fluid {
     padding: 0;
@@ -834,7 +834,7 @@ div[class^='announcementBar_'] {
 }
 //页脚样式
 .footer__title{
-  margin-bottom: 0 !important;
+  margin-bottom: 7px !important;
   margin-top: var(--ifm-heading-margin-bottom) !important;
 }
 .footer__link-item {
