@@ -46,6 +46,10 @@
   "item.label.学习栈": {
     "message": "Stack",
     "description": "Navbar item with label 学习栈"
+  }, 
+  "item.label.随笔": {
+    "message": "Lifestyle",
+    "description": "Navbar item with label 随笔"
   },
   "item.label.工具推荐": {
     "message": "Recommended Tools",

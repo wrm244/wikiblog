@@ -25,7 +25,7 @@ function ArrowDownBtn(): JSX.Element {
         fill="currentColor"
         onClick={() => {
           window.scrollTo({
-            top: window.innerHeight+25,
+            top: window.innerHeight-52,
             behavior: "smooth"
           })
         }}>
@@ -88,7 +88,9 @@ function Hero() {
             {`你可以随处逛逛与评论，查看{note}、{project}、{link}、以及我的{idea}。`}
           </Translate>
           <br />
-          <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wrm244/wikiblog?label=update&logo=github"/> <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/wrm244/wikiblog/ci.yml?label=ci%20build&logo=github"></img>  <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/77e2a74d-30e3-4788-b7f1-257d746d2361/deploy-status"></img>
+          {/* 徽章的效果 */}
+          <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wrm244/wikiblog?label=Update&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }} /> <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/wrm244/wikiblog/ci.yml?label=CI%20Build&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }}></img>  <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/77e2a74d-30e3-4788-b7f1-257d746d2361/deploy-status" style={{ boxShadow: '0px 16px 30px rgb(62 196 119 / 15%)', marginTop: '14px' }}></img>
+
         </animated.p>
         <SocialLinks style={trails[2]} />
         <animated.div style={trails[3]}>

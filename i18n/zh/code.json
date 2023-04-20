@@ -52,6 +52,10 @@
     "message": "阅读全文",
     "description": "read full text"
   },
+  "博客":{
+    "message":"博客",
+    "description": "blog"
+  },
   "theme.tags.tagsPageTitle": {
     "message": "标签",
     "description": "The title of the tag list page"

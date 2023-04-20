@@ -4,9 +4,13 @@
 > Build with 🦖<a href="https://docusaurus.io/">Docusaurus</a> Theme use <a href="https://kuizuo.cn/">kuizuo<a> 
 > <a href="https://wrm244.github.io">🖥 Online Preview</a>
 
+<p align=center>
+<a href="https://docusaurus.io/zh-CN/" target="_blank"><img alt="Built with Docusaurus" style="height:50px;margin-top:0.5rem" src="https://wrm244.github.io/assets/images/buildwith.png" /></a>
+<a href="https://www.netlify.com/" target="_blank"><img alt="Built with Netlify" style="height:50px;margin-top:0.5rem " src="https://wrm244.github.io/assets/images/netlify-color-accent.svg" /></a>     
+</p>
 ## 👋 Introduction
 
-这是一个我用来记录和分享我的学习心得、个人感悟和创意项目的网站。你可以在这里找到我关于编程、设计、人工智能等各种主题的笔记和博客，也可以看到我参与或制作的一些有趣的项目。该技术存档使用🦖<a href="https://docusaurus.io/">Docusaurus</a>搭建，主题来自<a href="https://kuizuo.cn/">kuizuo<a>，遵循[MIT](./LICENSE)协议
+这是一个我用来记录和分享我的学习心得、个人感悟和创意项目的网站。你可以在这里找到我关于编程、设计、人工智能等各种主题的笔记和博客，也可以看到我参与或制作的一些有趣的项目。该技术存档使用🦖 <a href="https://docusaurus.io/">Docusaurus</a>搭建，遵循[MIT](./LICENSE)协议。
 
 
 ## 📊 Catalogue
@@ -50,7 +54,7 @@ Build
 ```sh
 yarn run build
 ```
-## 📥 Github Action CI
+## ✅ Github Action CI
 该流程会同步部署到云服务器与GitHub Pages上面：
 ```yml
 name: ci
@@ -104,6 +108,7 @@ jobs:
             --env API_KEY=${ALGOLIA_API_KEY} \
             --env "CONFIG=${CONFIG}" \
             algolia/docsearch-scraper
+
     #ssh同步./build 文件夹到云服务器
       - name: SSH Deploy
         uses: easingthemes/ssh-deploy@v2.2.11
@@ -114,6 +119,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: 'root'
           TARGET: '/www/wwwroot/wrm244'
+          
     #同步到github pages上面      
       - name: Github page Deploy
         uses: wrm244/docusaurus-deploy-action@master # 使用专门部署 Hexo 到 GitHub pages 的 action
