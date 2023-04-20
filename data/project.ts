@@ -1,23 +1,33 @@
 export const projects: Project[] = [
-  // {
-  //   title: '愧怍的小站',
-  //   description: '基于Docusaurus v2 静态网站生成器实现个人博客',
-  //   preview: '/img/project/blog.png',
-  //   website: 'https://kuizuo.cn',
-  //   source: 'https://github.com/kuizuo/blog',
-  //   tags: ['opensource', 'design', 'favorite'],
-  //   type: 'web',
-  // },
-  // {
-  //   title: 'kz-admin',
-  //   description:
-  //     '基于NestJs + TypeScript + TypeORM + Redis + MySql + Vben Admin编写的一款前后端分离的权限管理系统',
-  //   preview: '/img/project/kz-admin.png',
-  //   website: 'https://admin.kuizuo.cn',
-  //   source: 'https://github.com/kuizuo/kz-admin',
-  //   tags: ['opensource', 'favorite', 'product', 'large'],
-  //   type: 'web',
-  // },
+  {
+    title: '河山的技术存档',
+    description: '基于Docusaurus v2 静态网站生成器实现个人网站',
+    preview: '/assets/images/project/blog.png',
+    website: 'https://wrm244.gxist.cn',
+    source: 'https://github.com/wrm244/wikiblog',
+    tags: ['opensource', 'design', 'favorite'],
+    type: 'web',
+  },
+  {
+    title: '基于hexo框架Revealjs处理生成slides',
+    description:
+      '基于Hexo + pandoc +Reveal编写md自动生成slides发布在静态页面上',
+    preview: '/assets/images/project/Slides.png',
+    website: 'https://wrm244.gxist.cn/slide/',
+    //source: 'https://github.com/wrm244/wrm244-hexo',
+    tags: ['favorite','design'],
+    type: 'web',
+  },
+  {
+    title: '图书管理系统课设',
+    description:
+      '基于C# + Mysql编写图书管理统一终端',
+    preview: '/assets/images/project/book.png',
+    website: 'https://github.com/wrm244/BookManagementSystem',
+    source: 'https://github.com/wrm244/BookManagementSystem',
+    tags: ['opensource','design'],
+    type: 'Curriculum Design',
+  },
   // {
   //   title: 'KZ-API',
   //   description: '🔗 基于Nuxt3 + Vite3 + Vue3 + UnoCSS搭建的API接口服务网站',
@@ -168,7 +178,7 @@ export type TagType =
   | 'large'
   | 'personal'
 
-export type ProjectType = 'personal' | 'web' | 'app' | 'toy' | 'other'
+export type ProjectType = 'personal' | 'web' | 'app' | 'Curriculum Design'| 'toy' | 'other' 
 
 export type Project = {
   title: string
