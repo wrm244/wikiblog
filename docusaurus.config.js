@@ -98,7 +98,7 @@ const config = {
         {
           label: '简历',
           position: 'left',
-          to: 'https://wrm244.github.io/resume/',
+          to: 'resume',
         },
         
         {
