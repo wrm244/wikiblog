@@ -49,7 +49,13 @@ jobs:
             --env API_KEY=${ALGOLIA_API_KEY} \
             --env "CONFIG=${CONFIG}" \
             algolia/docsearch-scraper
- 
+
+      - name: deploy resume
+        run: |
+         cd ./build
+         git clone git@github.com:wrm244/resume.git ./resume
+         git checkout gp-pages   
+
       - name: SSH Deploy
         uses: easingthemes/ssh-deploy@v2.2.11
         env:
@@ -59,9 +65,9 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: 'root'
           TARGET: '/www/wwwroot/wrm244'
-          
+
       - name: Github page Deploy
-        uses: wrm244/docusaurus-deploy-action@master # 使用专门部署 Hexo 到 GitHub pages 的 action
+        uses: wrm244/docusaurus-deploy-action@master # 
         env:
           PERSONAL_TOKEN: ${{ secrets.PERSION_TOKEN }} # secret 名
           PUBLISH_REPOSITORY: wrm244/wrm244.github.io # 公共仓库，格式：GitHub 用户名/仓库名
