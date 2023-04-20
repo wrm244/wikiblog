@@ -53,8 +53,7 @@ jobs:
       - name: deploy resume
         run: |
          cd ./build
-         git clone https://github.com/wrm244/resume.git ./resume
-         git checkout gp-pages   
+         git clone -b gp-pages https://github.com/wrm244/resume.git ./resume
 
       - name: SSH Deploy
         uses: easingthemes/ssh-deploy@v2.2.11

@@ -140,7 +140,10 @@ const config = {
               label: '项目',
               to: 'project',
             },
-          
+            {
+              label: '幻灯片',
+              href: 'https://wrm244.gitee.io/slide/',
+            },
         ],
         },
         {
@@ -178,8 +181,11 @@ const config = {
           ],
         },
       ],
-      copyright: `<p>版权所有 © ${new Date().getFullYear()} 河山 此网站使用 <a href="https://docusaurus.io/zh-CN/" target="_blank">Docusaurus</a> 搭建。<p>
-      <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style="color: white">本网站由 <img src="/assets/images/upyun-logo-white.png" width="42px" align="top"/> 提供CDN加速/云存储服务</a></p>`,
+      copyright: `版权所有 © ${new Date().getFullYear()} 河山 此网站使用 <a href="https://docusaurus.io/zh-CN/" target="_blank">Docusaurus</a> 搭建<br/>
+      <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style="color: white">本网站由 <img src="/assets/images/upyun-logo-white.png" width="45px" align="top"/> 提供CDN加速/云存储服务</a>
+      <br/>
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>`,
     },
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
