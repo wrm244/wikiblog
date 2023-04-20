@@ -90,7 +90,7 @@ function Hero() {
           <br />
           <a /* href="https://github.com/wrm244/wikiblog/commits/main" */ target="_blank">
             <img alt="my deploy data" src="https://img.shields.io/github/last-commit/wrm244/wikiblog?color=blue&style=flat-square" />
-          </a>
+          </a>  <img alt="GitHub" src="https://img.shields.io/github/license/wrm244/wikiblog"></img>  <img alt="GitHub" src="https://github.com/wrm244/wikiblog/actions/workflows/ci.yml/badge.svg"></img>  <a href="https://app.netlify.com/sites/radiant-brioche-f77a52/deploys" rel="nofollow"><img src="https://camo.githubusercontent.com/3115b1d8fae2abafc31e0b80413712d2ece817ca919c8a7bef24651c04329f99/68747470733a2f2f6170692e6e65746c6966792e636f6d2f6170692f76312f6261646765732f37376532613734642d333065332d343738382d623766312d3235376437343664323336312f6465706c6f792d737461747573" alt="Netlify Status" data-canonical-src="https://api.netlify.com/api/v1/badges/77e2a74d-30e3-4788-b7f1-257d746d2361/deploy-status"/></a> 
         </animated.p>
         <SocialLinks style={trails[2]} />
         <animated.div style={trails[3]}>
