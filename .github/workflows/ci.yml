@@ -54,6 +54,9 @@ jobs:
         run: |
          cd ./build
          git clone -b gp-pages https://github.com/wrm244/resume.git ./resume
+         cd ./resume
+         rm -rf ./.git
+         cd ..
 
       - name: SSH Deploy
         uses: easingthemes/ssh-deploy@v2.2.11
