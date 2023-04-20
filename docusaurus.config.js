@@ -31,11 +31,11 @@ const config = {
       },
       {
         name: 'keywords',
-        content: 'blog, javascript, nginx, machine learning, react, vue, web',
+        content: 'blog,machine learning,javascript, nginx,, react, vue, web',
       },
       {
         name: 'keywords',
-        content: '编程爱好者, 计算机研究学习',
+        content: ' 计算机研究学习，编程爱好者',
       },
     ],
     docs: {
@@ -50,7 +50,7 @@ const config = {
         src: '/assets/images/social/avatar.png',
         srcDark: '/assets/images/social/avatar.png',//记得加上绝对路径/
       },
-      hideOnScroll: true,
+      hideOnScroll: false,
       items: [
         {
           label: '博客',

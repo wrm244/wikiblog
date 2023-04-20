@@ -1,5 +1,5 @@
 
-## 河山的技术存档
+## 河山的技术存档(website)
 ![GitHub last commit](https://img.shields.io/github/last-commit/wrm244/wikiblog?label=update&logo=github) [![Netlify Status](https://api.netlify.com/api/v1/badges/77e2a74d-30e3-4788-b7f1-257d746d2361/deploy-status)](https://app.netlify.com/sites/radiant-brioche-f77a52/deploys) ![Github Action](https://github.com/wrm244/wikiblog/actions/workflows/ci.yml/badge.svg) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 > Build with 🦖<a href="https://docusaurus.io/">Docusaurus</a> Theme use <a href="https://kuizuo.cn/">kuizuo<a> 
 > <a href="https://wrm244.github.io">🖥 Online Preview</a>
@@ -104,7 +104,7 @@ jobs:
             --env API_KEY=${ALGOLIA_API_KEY} \
             --env "CONFIG=${CONFIG}" \
             algolia/docsearch-scraper
-    #ssh同步./build 文件夹
+    #ssh同步./build 文件夹到云服务器
       - name: SSH Deploy
         uses: easingthemes/ssh-deploy@v2.2.11
         env:
