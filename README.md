@@ -1,5 +1,6 @@
 
-##河山的技术存档
+## 河山的技术存档
+[![Netlify Status](https://api.netlify.com/api/v1/badges/77e2a74d-30e3-4788-b7f1-257d746d2361/deploy-status)](https://app.netlify.com/sites/radiant-brioche-f77a52/deploys) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 > Build with 🦖<a href="https://docusaurus.io/">Docusaurus</a> Theme use <a href="https://kuizuo.cn/">kuizuo<a> 
 > <a href="https://wrm244.github.io">🖥 Online Preview</a>
 
