@@ -1,7 +1,7 @@
 const path = require('path') 
-const math = require('remark-math');
-const katex = require('rehype-katex');
-// const announcementBarContent = `<a href="/typescript-full-stack-technology-trpc" target="_blank">Typescript 全栈最值得学习的技术栈 TRPC</a>`
+// const math = require('remark-math');
+// const katex = require('rehype-katex');
+//const announcementBarContent = `🎉欢迎来到我的主页`
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -23,6 +23,14 @@ const config = {
     // },
     mermaid: {
       theme: {light: 'neutral', dark: 'forest'},
+    },
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+    prism: {
+      showLinenums: true,
     },
     metadata: [
       {
@@ -98,12 +106,12 @@ const config = {
         {
           label: '简历',
           position: 'left',
-          to: 'resume',
+          to: '/resume/',
         },
         
         {
           label: '项目',
-          position: 'right',
+          position: 'left',
           to: 'project',
         },
         {
@@ -175,14 +183,11 @@ const config = {
             {
               html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img alt="Built with Docusaurus" style="height:50px;margin-top:0.5rem" src="/assets/images/buildwith.png" /></a> <a href="https://www.netlify.com/" target="_blank"><img alt="Built with Netlify" style="height:50px;margin-top:0.5rem" src="/assets/images/netlify-color-accent.svg" /></a>`,
             },
-            // {
-            //   html: `<a href="https://www.netlify.com/" target="_blank"><img alt="Built with Netlify" style="height:50px;margin-top:0.5rem" src="/assets/images/netlify-color-accent.svg" /></a>`,
-            // },
           ],
         },
       ],
-      copyright: `版权所有 © ${new Date().getFullYear()} 河山 此网站使用 <a href="https://docusaurus.io/zh-CN/" target="_blank">Docusaurus</a> 搭建<br/>
-      <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style="color: white">本网站由 <img src="/assets/images/upyun-logo-white.png" width="45px" align="top"/> 提供CDN加速/云存储服务</a>
+      copyright: `版权所有 © ${new Date().getFullYear()} 河山, 此网站使用 <a href="https://docusaurus.io/zh-CN/" target="_blank">Docusaurus</a> 搭建<br/>
+      <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style="color: white">本网站由 <img src="/assets/images/upyun-logo-white.png" width="48px" align="top"/> 提供CDN加速/云存储服务</a>
       <br/>
       <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
       <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>`,
@@ -340,14 +345,14 @@ const config = {
       },
     ],
   ],
-  stylesheets: [
-    {
-    href: 'https://jsd.onmicrosoft.cn/npm/katex@0.13.24/dist/katex.min.css',
-    type: 'text/css',
-    integrity:
-      'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
-    crossorigin: 'anonymous',
-  },],
+  // stylesheets: [
+  //   {
+  //   href: 'https://jsd.onmicrosoft.cn/npm/katex@0.13.24/dist/katex.min.css',
+  //   type: 'text/css',
+  //   integrity:
+  //     'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+  //   crossorigin: 'anonymous',
+  // },],
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['en', 'zh-CN'],

@@ -4,7 +4,7 @@
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme) ![NPM version](https://badge.fury.io/js/hexo.svg) [![Netlify Status](https://api.netlify.com/api/v1/badges/77e2a74d-30e3-4788-b7f1-257d746d2361/deploy-status)](https://app.netlify.com/sites/radiant-brioche-f77a52/deploys) ![GitHub](https://img.shields.io/github/license/wrm244/wrm244.github.io)
 
 ## English
-> This is the source repository of the git page, which is rendered and deployed by HEXO. The code is compressed, so it has no reference value. That’s why I wrote this readme to remind you that this is just a warehouse for static source code acquisition.
+> This is the source repository of the git page, which is rendered and deployed by deocsaurus. The code is compressed, so it has no reference value. That’s why I wrote this readme to remind you that this is just a warehouse for static source code acquisition.
 ## License
 
 MIT © 河山 100%
