@@ -75,21 +75,21 @@ jobs:
           PUBLISH_REPOSITORY: wrm244/wrm244.github.io # 公共仓库，格式：GitHub 用户名/仓库名
           BRANCH: wikiblog # 分支，填 gh-pages 就行
           PUBLISH_DIR: ./build # 部署 public 目录下的文件
-      
-      - name: Install Prince
-        run: |
-          curl https://www.princexml.com/download/prince-15.1-linux-generic-x86_64.tar.gz -O
-          tar zxf prince-15.1-linux-generic-x86_64.tar.gz
-          cd prince-15.1-linux-generic-x86_64
-          yes "" | sudo ./install.sh
+      #仅仅支持英文      
+      # - name: Install Prince
+      #   run: |
+      #     curl https://www.princexml.com/download/prince-15.1-linux-generic-x86_64.tar.gz -O
+      #     tar zxf prince-15.1-linux-generic-x86_64.tar.gz
+      #     cd prince-15.1-linux-generic-x86_64
+      #     yes "" | sudo ./install.sh
 
-      - name: Build PDF
-        run: npx docusaurus-prince-pdf -u ${{ secrets.WEB_URL }} --output docs.pdf
+      # - name: Build PDF
+      #   run: npx docusaurus-prince-pdf -u ${{ secrets.WEB_URL }} --output docs.pdf
 
-      - name: Upload results
-        uses: actions/upload-artifact@v3
-        with:
-          name: result
-          # The output filename can be specified with --output option
-          path: docs.pdf
-          if-no-files-found: error
+      # - name: Upload results
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: result
+      #     # The output filename can be specified with --output option
+      #     path: docs.pdf
+      #     if-no-files-found: error
