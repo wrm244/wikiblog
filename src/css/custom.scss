@@ -846,3 +846,8 @@ div[class^='announcementBar_'] {
   padding: 0 !important;
   margin-left: 26px !important;
 }
+// zoom背景
+.medium-zoom-overlay {
+  background: #ffffff00 !important;
+  backdrop-filter: blur(10px) !important;
+}

@@ -2,15 +2,15 @@
   "name": "blog",
   "version": "2.3.1",
   "author": {
-    "url": "https://github.com/kuizuo",
-    "email": "hi@kuizuo.cn",
-    "name": "Kuizuo"
+    "url": "https://github.com/wrm244",
+    "email": "wrm244@outlook.com",
+    "name": "wrm244"
   },
   "repository": {
-    "url": "https://github.com/kuizuo/blog",
+    "url": "https://github.com/wrm244/wikiblog",
     "type": "git"
   },
-  "homepage": "https://kuizuo.cn",
+  "homepage": "https://wrm244.gxist.cn",
   "license": "MIT",
   "scripts": {
     "docusaurus": "docusaurus",
@@ -82,9 +82,8 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      ">0.1%",
+      "not dead"
     ],
     "development": [
       "last 1 chrome version",

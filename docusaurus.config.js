@@ -221,10 +221,13 @@ const config = {
     zoom: {
       selector: '.markdown :not(em) > img',
       background: {
-        light: 'rgb(255, 255, 255)',
+        light: '#eef9fd',
         dark: 'rgb(50, 50, 50)',
       },
-      config: {},
+      config: {
+        magin:10,
+        scrollOffset: 0,
+      },
     },
     giscus: {
       repo: 'wrm244/wikiblog',
@@ -277,7 +280,7 @@ const config = {
       }),
     ],
   ],
-  // themes: ['@docusaurus/theme-live-codeblock'],
+  themes: ['@docusaurus/theme-live-codeblock'],
   markdown: {
     mermaid: true,
   },
@@ -313,6 +316,7 @@ const config = {
     [
       '@docusaurus/plugin-ideal-image',
       {
+        quality: 80,
         disableInDev: false,
       },
     ],
