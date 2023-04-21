@@ -1,4 +1,4 @@
-const path = require('path') 
+const path = require('path')
 // const math = require('remark-math');
 // const katex = require('rehype-katex');
 //const announcementBarContent = `🎉欢迎来到我的主页`
@@ -21,9 +21,9 @@ const config = {
     //   id: 'announcementBar-3',
     //   content: announcementBarContent,
     // },
-    
+
     mermaid: {
-      theme: {light: 'neutral', dark: 'forest'},
+      theme: { light: 'neutral', dark: 'forest' },
     },
     colorMode: {
       defaultMode: 'light',
@@ -109,7 +109,7 @@ const config = {
           position: 'left',
           to: '/resume/',
         },
-        
+
         {
           label: '项目',
           position: 'left',
@@ -135,13 +135,13 @@ const config = {
               label: '归档',
               to: 'archive',
             },
-            
+
           ],
         },
         {
           title: '学习',
           items: [
-           {
+            {
               label: '笔记',
               to: 'docs/stack',
             },
@@ -153,7 +153,7 @@ const config = {
               label: '幻灯片',
               href: 'https://wrm244.gitee.io/slide/',
             },
-        ],
+          ],
         },
         {
           title: '社交媒体',
@@ -226,15 +226,15 @@ const config = {
         dark: 'rgb(50, 50, 50)',
       },
       config: {
-        magin:10,
+        magin: 10,
         scrollOffset: 0,
       },
     },
     giscus: {
-      repo: 'wrm244/wikiblog',
-      repoId: 'R_kgDOJYXemg',
+      repo: 'wrm244/wrm244.github.io',
+      repoId: 'R_kgDOJU98qQ',
       category: 'General',
-      categoryId: 'DIC_kwDOJYXems4CV3b4',
+      categoryId: 'DIC_kwDOJU98qc4CV3d1',
       loading: "lazy",
       lang: "zh-CN",
     },
@@ -373,17 +373,12 @@ const config = {
       require.resolve("@easyops-cn/docusaurus-search-local"),
       /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
       ({
-        // ... Your options.
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
-        // For Docs using Chinese, The `language` is recommended to set to:
-        // ```
         language: ["en", "zh"],
         indexBlog: true,
         indexPages: true,
-        indexDocs:  true,
-        // docsRouteBasePath: "/docs",
-        // ```
+        indexDocs: true,
       }),
     ],
   ],
