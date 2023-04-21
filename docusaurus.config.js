@@ -21,6 +21,7 @@ const config = {
     //   id: 'announcementBar-3',
     //   content: announcementBarContent,
     // },
+    
     mermaid: {
       theme: {light: 'neutral', dark: 'forest'},
     },
@@ -213,11 +214,11 @@ const config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 4,
     },
-    algolia: {
-      appId: 'S4YOJK9V4X',
-      apiKey: '3bf796bbbc156928d571253bcb25dafc',
-      indexName: 'wikiblog',
-    },
+    // algolia: {
+    //   appId: 'S4YOJK9V4X',
+    //   apiKey: '3bf796bbbc156928d571253bcb25dafc',
+    //   indexName: 'wikiblog',
+    // },
     zoom: {
       selector: '.markdown :not(em) > img',
       background: {
@@ -366,6 +367,26 @@ const config = {
       },
     },
   },
+  themes: [
+    // ... Your other themes.
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        // For Docs using Chinese, The `language` is recommended to set to:
+        // ```
+        language: ["en", "zh"],
+        indexBlog: true,
+        indexPages: true,
+        indexDocs:  true,
+        // docsRouteBasePath: "/docs",
+        // ```
+      }),
+    ],
+  ],
 }
 
 module.exports = config
