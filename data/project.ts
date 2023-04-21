@@ -1,10 +1,10 @@
 export const projects: Project[] = [
   {
     title: '河山的技术存档',
-    description: '基于Docusaurus v2 静态网站生成器实现个人网站',
+    description: '基于Docusaurus v2 静态网站生成实现个人网站',
     preview: '/assets/images/project/blog.png',
     website: 'https://wrm244.gxist.cn',
-    source: 'https://github.com/wrm244/wikiblog',
+    source: 'https://github.com/wrm244/wrm244.github.io',
     tags: ['opensource', 'design', 'favorite'],
     type: 'web',
   },
@@ -16,6 +16,15 @@ export const projects: Project[] = [
     website: 'https://wrm244.gxist.cn/slide/',
     //source: 'https://github.com/wrm244/wrm244-hexo',
     tags: ['favorite','design'],
+    type: 'web',
+  },
+  {
+    title: 'docusaurus-theme-zen',
+    description: '基于Docusaurus v2 个人网站主题',
+    preview: '/assets/images/project/blogtheme.png',
+    website: 'https://wrm244.github.io/docusaurus-theme-zen/',
+    source: 'https://github.com/wrm244/docusaurus-theme-zen',
+    tags: ['opensource', 'design', 'favorite'],
     type: 'web',
   },
   {
