@@ -5,7 +5,7 @@ title: Vercel部署
 date: 2022/12/14
 authors: RiverMountain
 last_update:
-  date: 2022/12/14
+  date: 2023/4/23
 ---
 
 ## Vercel 简介
@@ -18,18 +18,23 @@ vercel是一个代码托管平台，它能够托管你的静态html界面，甚�
 
 登入之后在右上角点击创建新项目
 
-![20230205192716](https://shake-picture.oss-cn-guangzhou.aliyuncs.com/Docusaurus/docs/Blog_Building/Docusaurus/20230205192716.png)
+![](assets/Vercel部署/image-20230423011849.png)
+
+
 
 选择自己部成功的储存静态博客的仓库
 
-![20230205192741](https://shake-picture.oss-cn-guangzhou.aliyuncs.com/Docusaurus/docs/Blog_Building/Docusaurus/20230205192741.png)
+![](assets/Vercel部署/image-20230423011854.png)
+
+
 
 点击 Import
 
-![20230205192756](https://shake-picture.oss-cn-guangzhou.aliyuncs.com/Docusaurus/docs/Blog_Building/Docusaurus/20230205192756.png)
+![](assets/Vercel部署/image-20230423011859.png)
 
-![20230205192805](https://shake-picture.oss-cn-guangzhou.aliyuncs.com/Docusaurus/docs/Blog_Building/Docusaurus/20230205192805.png)
+![](assets/Vercel部署/image-20230423011903.png)
+
 
 然后等待一小会，出现以下界面代表部署成功
 
-![20230205192828](https://shake-picture.oss-cn-guangzhou.aliyuncs.com/Docusaurus/docs/Blog_Building/Docusaurus/20230205192828.png)
+![](assets/Vercel部署/image-20230423011930.png)
