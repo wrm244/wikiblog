@@ -224,7 +224,7 @@ html[data-theme='dark'] .bloghome__intro > p {
 
   .bloghome__intro {
     padding: 0 var(--ifm-spacing-horizontal);
-    padding-top: 0;
+    padding-top: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -255,7 +255,7 @@ html[data-theme='dark'] .bloghome__intro > p {
   }
 
   .bloghome__image {
-    padding-top: 0;
+    padding-top: 1em;
   }
 
   .bloghome__image svg {
