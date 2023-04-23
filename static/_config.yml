@@ -1,2 +1,2 @@
-exclude: [/assets]
+exclude: [/assets,_layouts/default.html]
 timezone: Asia/Shanghai
