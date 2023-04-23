@@ -1,8 +1,8 @@
 ---
-slug: overleaf-build-docker
+slug: /blog/project/web/overleaf-build-docker
 title: Docker部署Overleaf包含中文字体与全套texlive镜像
 description: docker镜像里面包含中文支持字体
-tags: [论文]
+tags: [docker,overleaf]
 date: 2023-04-12 16:09:48
 authors: RiverMountain
 ---

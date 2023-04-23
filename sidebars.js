@@ -36,7 +36,7 @@ const sidebars = {
       ],
     },
     {
-      label: '网站小技巧',
+      label: 'tools',
       type: 'category',
       link: {
         // title: '',
@@ -133,7 +133,7 @@ const sidebars = {
       ],
     },
     {
-      label: '数据库',
+      label: 'database',
       type: 'category',
       link: {
         // title: '',

@@ -1,8 +1,8 @@
 ---
-slug: why-is-nginx
+slug: /blog/CS/backend/why-is-nginx
 title: 为什么是Nginx
 date: 2023-04-14 21:10:23
-tags: [后端,nginx]
+tags: [backend,nginx]
 authors: RiverMountain
 ---
 

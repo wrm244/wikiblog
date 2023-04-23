@@ -1,5 +1,5 @@
 ---
-slug: Docusaurus-Theme
+slug: /blog/project/docusaurus/Docusaurus-Theme-Zen
 title: Docusaurus-Theme-Zen
 date: 2023-04-22 14:09:58
 tags: [docusaurus]

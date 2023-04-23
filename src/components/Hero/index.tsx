@@ -37,11 +37,11 @@ function ArrowDownBtn(): JSX.Element {
 
 function Hero() {
   const trails = useTrail(4, {
-    from: { opacity: 0, transform: 'translate3d(0px, 2em, 0px)' },
-    to: { opacity: 1, transform: 'translate3d(0px, 0px, 0px)' },
+    from: { opacity: 0, x: 2 },
+    to: { opacity: 1, x: 0 },
     config: {
       mass: 3,
-      tension: 460,
+      tension: 400,
       friction: 45,
     },
   })
@@ -92,6 +92,7 @@ function Hero() {
           <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wrm244/wrm244.github.io?label=Update&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }} /> <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/wrm244/docusaurus-theme-zen/ci.yml?label=CI%20Build&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }}></img>  <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/77e2a74d-30e3-4788-b7f1-257d746d2361/deploy-status" style={{ boxShadow: '0px 16px 30px rgb(62 196 119 / 15%)', marginTop: '14px' }}></img>
 
         </animated.p>
+        
         <SocialLinks style={trails[2]} />
         <animated.div style={trails[3]}>
           <a className={styles.intro} href={'./about'}>

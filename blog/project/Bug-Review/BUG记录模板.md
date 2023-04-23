@@ -1,8 +1,8 @@
 ---
-slug: BUG-Template
+slug: /blog/project/BUG-Review/BUG-Template
 title: BUG记录模板
 date: 2023-04-15 14:12:04
-tags: [BUG]
+tags: [bug]
 authors: RiverMountain
 ---
 # 项目场景：

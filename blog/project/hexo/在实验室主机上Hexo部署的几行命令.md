@@ -1,8 +1,8 @@
 ---
-slug: about-deploy-prompt
+slug: /blog/project/hexo/about-deploy-prompt
 title: 关于在此网站部署的几行命令
 date: 2023-04-12 14:09:58
-tags: [linux-prompt,hexo]
+tags: [linux,hexo]
 authors: RiverMountain
 ---
 ```bash

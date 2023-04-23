@@ -1,5 +1,5 @@
 ---
-slug: hexo-plugins
+slug: /blog/project/hexo/hexo-plugins
 title: hexo插件推荐
 description: hexo的有用插件
 date: 2023-04-13 01:38:29

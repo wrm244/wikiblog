@@ -56,7 +56,7 @@
     "description": "The label of footer link with label=导航 linking to resource"
   },
   "copyright": {
-    "message": "Copyright © 2023 RiverMountain. Built with <a href=\"https://docusaurus.io/zh-CN/\" target=\"_blank\">Docusaurus.</a><br/><a href=\"https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral\" style=\"color: white\">This website is provided by <img src=\"/assets/images/upyun-logo-white.png\" width=\"45px\" align=\"top\"/> CDN acceleration/cloud storage services.</a> <script async src=\"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js\"></script><br/><span id=\"busuanzi_container_site_pv\">This site has been visited <span id=\"busuanzi_value_site_pv\"></span> times in total.</span>",
+    "message": "Copyright © 2023 RiverMountain. Built with <a href=\"https://docusaurus.io/zh-CN/\" target=\"_blank\">Docusaurus.</a><br/><a href=\"https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral\" style=\"color: white\">This website is provided by <img alt=\"upyunlogo\" src=\"/assets/images/upyun-logo-white.png\" width=\"45px\" align=\"top\"/> CDN acceleration/cloud storage services.</a> <script async src=\"//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js\"></script><br/><span id=\"busuanzi_container_site_pv\">This site has been visited <span id=\"busuanzi_value_site_pv\"></span> times in total.</span>",
     "description": "The footer copyright"
   },
   "link.title.博客": {

@@ -1,5 +1,5 @@
 ---
-slug: hexo-obsidian-page
+slug: /blog/project/hexo/hexo-obsidian-page
 title: Obsidian与hexo结合部署到github pages上
 date: 2023-04-13 20:28:29
 tags: [hexo,obsidian]

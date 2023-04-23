@@ -1,5 +1,5 @@
 ---
-slug: bt-flarum-build
+slug: /blog/project/web/bt-flarum-build
 title: 宝塔 Flarum 论坛的搭建与迁移
 date: 2023-04-14 21:30:27
 tags: [Flarum]
