@@ -7,6 +7,14 @@
     "message": "blog",
     "description": "Navbar item with label 博客"
   },
+  "item.label.镜像站点": {
+    "message": "Mirror",
+    "description": "Navbar item with label 镜像站点"
+  },
+  "item.label.服务器": {
+    "message": "Server",
+    "description": "Navbar item with label 服务器"
+  },
   "item.label.学习": {
     "message": "Study",
     "description": "Navbar item with label 学习"

@@ -34,22 +34,6 @@ jobs:
         run: |
           yarn run build
           
-      # - name: Get the content of docsearch.json as config
-      #   id: algolia_config
-      #   run: echo "::set-output name=config::$(cat docsearch.json | jq -r tostring)"
-
-      # - name: Run docsearch-scraper
-      #   env:
-      #     ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
-      #     ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      #     CONFIG: ${{ steps.algolia_config.outputs.config }}
-      #   run: |
-      #     docker run \
-      #       --env APPLICATION_ID=${ALGOLIA_APP_ID} \
-      #       --env API_KEY=${ALGOLIA_API_KEY} \
-      #       --env "CONFIG=${CONFIG}" \
-      #       algolia/docsearch-scraper
-
       - name: deploy resume
         run: |
          cd ./build
@@ -75,6 +59,18 @@ jobs:
           PUBLISH_REPOSITORY: wrm244/wrm244.github.io # 公共仓库，格式：GitHub 用户名/仓库名
           BRANCH: wikiblog # 分支，填 gh-pages 就行
           PUBLISH_DIR: ./build # 部署 public 目录下的文件
+      
+      - name: Sync to Gitee
+        uses: wearerequired/git-mirror-action@master
+        env:
+          # 注意在 Settings->Secrets 配置 GITEE_RSA_PRIVATE_KEY
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_PRIVATE_KEY }}
+        with:
+          # 注意替换为你的 GitHub 源仓库地址
+          source-repo: git@github.com:wrm244/wikiblog.git
+          # 注意替换为你的 Gitee 目标仓库地址
+          destination-repo: git@gitee.com:wrm244/wikiblog.git
+      
       #仅仅支持英文      
       # - name: Install Prince
       #   run: |

@@ -109,10 +109,31 @@ const config = {
           position: 'left',
           to: '/resume/',
         },
-
+        {
+          label: '镜像站点',
+          position: 'left',
+          items: [
+            {
+              label: '服务器',
+              to: 'https://wrm244.gxist.cn',
+            },
+            {
+              label: 'Cloudflare',
+              to: 'https://wikiblog.pages.dev',
+            },
+            {
+              label: 'Netlify',
+              to: 'https://wrm244.netlify.app',
+            },
+            {
+              label: 'GP',
+              to: 'https://wrm244.github.io',
+            },
+          ],
+        },
         {
           label: '项目',
-          position: 'left',
+          position: 'right',
           to: 'project',
         },
         {
@@ -135,7 +156,10 @@ const config = {
               label: '归档',
               to: 'archive',
             },
-
+            {
+              label: '随笔',
+              to: 'tags/lifestyle',
+            },
           ],
         },
         {
@@ -162,6 +186,10 @@ const config = {
               label: '关于我',
               to: '/about',
             },
+            {
+              label: '镜像站点',
+              href: 'https://wikiblog.pages.dev',
+            }, 
             {
               label: 'GitHub',
               href: 'https://github.com/wrm244',
