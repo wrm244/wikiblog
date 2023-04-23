@@ -7,8 +7,8 @@
   --ifm-color-primary-light: #2cb8fb;
   --ifm-color-primary-lighter: #b0e6ff;
   --ifm-color-primary-lightest: #d5f1fd;
-  --ifm-code-font-size: 92%;
-  --ifm-font-family-base: 'JetBrains Mono','Noto Serif SC','SF Pro Text','SF Pro Display','SF Pro Icons','Helvetica Neue',Helvetica,Arial,sans-serif,system-ui, ui-sans-serif,-apple-system,'Segoe UI', 'Helvetica Neue', 'Noto Sans', sans-serif, 'Apple Color Emoji',consolas,'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', consolas,sfmono-regular, menlo, monaco, 'Liberation Mono', monospace;
+  --ifm-code-font-size: 90%;
+  --ifm-font-family-base: 'Noto Serif SC','SF Pro Text','SF Pro Display','SF Pro Icons','Helvetica Neue',Helvetica,Arial,sans-serif,system-ui, ui-sans-serif,-apple-system,'Segoe UI', 'Helvetica Neue', 'Noto Sans', sans-serif, 'Apple Color Emoji',consolas,'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', consolas,sfmono-regular, menlo, monaco, 'Liberation Mono', monospace;
   --ifm-heading-font-family: var(var(--ifm-font-family-base));
   // --ifm-font-family-monospace: 'JetBrainsMono','Noto Sans SC','SF Pro Text','SFMono-Regular','Menlo','Monaco','Consolas',"Liberation Mono","Courier New",'monospace'
   /* --content-font-family: "Raleway", "Kai", "楷体", "Kaiti", serif; */
@@ -120,7 +120,7 @@ html[data-theme='dark'] :is(h1, h2, h3, h4, h5, h6) {
 }
 
 body {
-  font-family: 'JetBrains Mono','Noto Serif SC','SF Pro Text','SF Pro Display','SF Pro Icons','Helvetica Neue',Helvetica,Arial,sans-serif,system-ui, ui-sans-serif,-apple-system,'Segoe UI', 'Helvetica Neue', 'Noto Sans', sans-serif, 'Apple Color Emoji',consolas,'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', consolas,sfmono-regular, menlo, monaco, 'Liberation Mono', monospace;
+  font-family: 'Noto Serif SC','SF Pro Text','SF Pro Display','SF Pro Icons','Helvetica Neue',Helvetica,Arial,sans-serif,system-ui, ui-sans-serif,-apple-system,'Segoe UI', 'Helvetica Neue', 'Noto Sans', sans-serif, 'Apple Color Emoji',consolas,'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', consolas,sfmono-regular, menlo, monaco, 'Liberation Mono', monospace;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -244,7 +244,7 @@ html[data-theme='dark'] .theme-code-block {
   
   // 毛玻璃效果
   background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   opacity: 1;
 
   .navbar__title {
