@@ -361,8 +361,8 @@ const config = {
         debug: false,
         offlineModeActivationStrategies: [
           'appInstalled',
+          'queryString',
           'standalone',
-          'always',
         ],
         pwaHead: [
           {
