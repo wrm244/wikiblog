@@ -107,20 +107,7 @@ function Hero() {
         </animated.div>
       </div>
       <div className={styles.bloghome__image}>
-
-        {/* <HeroMain /> */}
-        <CodeBlock title="About" className={`home-code`} language="js">
-          {`const siteInfo = {
-    maintainer: {
-    name: 'RiverMountain',
-    github: 'https://github.com/wrm244',
-    stacks: ['Java', 'Javascript', 'Python', 'Node']
-  },
-  category: 'blog',
-  stacks: ['Docusaurus', 'Customized', 'Netlify']
-}
-`}
-        </CodeBlock>
+           <HeroMain />
         <ArrowDownBtn />
       </div>
     </animated.div>
