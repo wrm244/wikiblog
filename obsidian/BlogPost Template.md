@@ -2,14 +2,10 @@
 title: {{title}}
 description: 
 slug: /{{title}}
-authors:
-  name: RiverMountain
-  url: https://github.com/wrm244
-  image_url: /assets/images/social/avatar.png
-  email: wrm244@139.com
+authors: RiverMountain
 tags: []
 keywords: []
-image: 
+image: https://wrm244.github.io/
 date: {{date}}
 hide_table_of_contents: false
 last_update:

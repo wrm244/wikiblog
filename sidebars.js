@@ -19,6 +19,7 @@ const sidebars = {
         'blog/Docusaurus/Docusaurus-图床配置',
         'blog/Docusaurus/Docusaurus-文档编辑指南',
         'blog/Docusaurus/Docusaurus-使用Hygen创建文章模板',
+        'blog/Docusaurus/docs-template',
       ],
     },
     {
