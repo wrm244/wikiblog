@@ -1,0 +1,185 @@
+{
+  "main": {
+    "id": "aa54475ab005e2b5",
+    "type": "split",
+    "children": [
+      {
+        "id": "5f43f4dc2b5e0af4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a3636c89f8999cd3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/blog/Docusaurus/环境配置.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "214eed1f942f66d3",
+    "type": "split",
+    "children": [
+      {
+        "id": "dad812d93fdb0233",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9645adc9b84ae224",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "83e984b8e65276f3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2359b6e2293156fd",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 272.5
+  },
+  "right": {
+    "id": "022e8cbd77fe97ad",
+    "type": "split",
+    "children": [
+      {
+        "id": "e9dac94a8e330d62",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "084f907328d5a768",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docs/blog/Docusaurus/环境配置.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4ce5127602a3966e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docs/blog/Docusaurus/环境配置.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4b483f8895c165c9",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "3a4771917cb14888",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docs/blog/Docusaurus/环境配置.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "a3636c89f8999cd3",
+  "lastOpenFiles": [
+    "docs/blog/Docusaurus/assets/环境配置/image-20230423015236.png",
+    "docs/blog/Docusaurus/assets/环境配置/image-20230423015227.png",
+    "docs/blog/Docusaurus/assets/环境配置/image-20230423015220.png",
+    "docs/blog/Docusaurus/assets/环境配置/image-20230423015214.png",
+    "docs/blog/Docusaurus/assets/环境配置/image-20230423015206.png",
+    "docs/blog/Docusaurus/assets/环境配置/image-20230423015201.png",
+    "docs/blog/Docusaurus/assets/环境配置/image-20230423015147.png",
+    "docs/blog/Docusaurus/assets/环境配置/image-20230423015142.png",
+    "docs/blog/Docusaurus/assets/环境配置/image-20230423015123.png",
+    "docs/blog/Docusaurus/assets/环境配置",
+    "docs/blog/Docusaurus/部署.md",
+    "docs/blog/Docusaurus/assets/部署/image-20230423015054.png",
+    "docs/blog/Docusaurus/assets/部署/image-20230423015043.png",
+    "docs/blog/Docusaurus/assets/部署",
+    "docs/blog/Docusaurus/assets",
+    "docs/blog/Tips/如何获取网站 favicon 图标.md",
+    "static/obsidian/BlogPost Template.md",
+    "static/obsidian/DocsPost Template.md",
+    "docs/blog/Hexo/环境配置.md",
+    "static/obsidian",
+    "docs/blog/Hexo/Vercel部署.md",
+    "docs/blog/Hexo/assets/Vercel部署",
+    "docs/blog/Hexo/guides.md",
+    "docs/blog/Hexo/主题安装.md",
+    "docs/blog/Hexo/assets/主题安装",
+    "docs/blog/Hexo/部署.md",
+    "docs/blog/Hexo/assets/环境配置",
+    "docs/blog/Hexo/assets/部署",
+    "docs/blog/Hexo/assets",
+    "docs/blog/Hexo/部署.assets",
+    "docs/blog/introduction.md",
+    "README.md",
+    "blog/project/docusaurus/Docusaurus-Theme-Zen.md"
+  ]
+}
