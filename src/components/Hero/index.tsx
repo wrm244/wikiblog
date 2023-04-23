@@ -2,16 +2,16 @@ import React from 'react'
 
 import { useTrail, animated } from '@react-spring/web'
 import Translate from '@docusaurus/Translate'
-import { useThemeConfig} from '@docusaurus/theme-common'
+import { useThemeConfig } from '@docusaurus/theme-common'
 import { ThemeConfig } from '@docusaurus/preset-classic'
-
+import CodeBlock from '@theme/CodeBlock';
 import Link from '@docusaurus/Link'
 
 import HeroMain from './img/javascript_illustration.svg'
 
 import JuejinIcon from '@site/static/svg/juejin.svg'
 import { Icon } from '@iconify/react'
-import Button from '../Button';
+// import Button from '../Button';
 import styles from './styles.module.scss'
 
 /* 桌面下滑箭头 */
@@ -25,7 +25,7 @@ function ArrowDownBtn(): JSX.Element {
         fill="currentColor"
         onClick={() => {
           window.scrollTo({
-            top: window.innerHeight-40,
+            top: window.innerHeight - 40,
             behavior: "smooth"
           })
         }}>
@@ -92,23 +92,35 @@ function Hero() {
           <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wrm244/wrm244.github.io?label=Update&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }} /> <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/wrm244/docusaurus-theme-zen/ci.yml?label=CI%20Build&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }}></img>  <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/77e2a74d-30e3-4788-b7f1-257d746d2361/deploy-status" style={{ boxShadow: '0px 16px 30px rgb(62 196 119 / 15%)', marginTop: '14px' }}></img>
 
         </animated.p>
-        
+
         <SocialLinks style={trails[2]} />
         <animated.div style={trails[3]}>
           <a className={styles.intro} href={'./about'}>
             <Translate id="hompage.hero.introduce">自我介绍</Translate>
           </a>
           <span>　</span>
-          <Button isLink href={'https://wrm244.gxist.cn/resume'} target="_blank">
+          <a className={styles.intro} href={'./about'}>
+            {/* <Button isLink href={'https://wrm244.gxist.cn/resume' } target="_blank"> */}
             <Translate id="hompage.hero.text.resume">个人简历</Translate>
-          </Button>
+            {/* </Button> */}
+          </a>
         </animated.div>
       </div>
-      
-      
       <div className={styles.bloghome__image}>
-        <ArrowDownBtn />
-        <HeroMain />
+
+        {/* <HeroMain /> */}
+        <CodeBlock title="About" className={`home-code`} language="js">
+          {`const siteInfo = {
+    maintainer: {
+    name: 'RiverMountain',
+    github: 'https://github.com/wrm244',
+    stacks: ['Java', 'Javascript', 'Python', 'Node']
+  },
+  category: 'blog',
+  stacks: ['Docusaurus', 'Customized', 'Netlify']
+}
+`}
+        </CodeBlock>
         <ArrowDownBtn />
       </div>
     </animated.div>

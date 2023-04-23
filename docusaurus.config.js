@@ -337,7 +337,7 @@ const config = {
         blogDescription: '河山的技术存档',
         blogSidebarCount: 10,
         blogSidebarTitle: '最近更新',
-        postsPerPage: 10,
+        postsPerPage: 6,
         showReadingTime: true,
         readingTime: ({ content, frontMatter, defaultReadingTime }) =>
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
