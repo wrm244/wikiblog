@@ -95,20 +95,20 @@ const config = {
           ],
         },
         {
-          label: '导航',
+          label: '链接',
           position: 'left',
-          to: 'resource',
+          items: [
+            {
+              label: '导航',
+              to: 'resource',
+              },
+            {
+            label: '幻灯片',
+            to: 'https://wrm244.gitee.io/slide/',
+            },
+          ],
         },
-        {
-          label: '幻灯片',
-          position: 'left',
-          to: 'https://wrm244.gitee.io/slide/',
-        },
-        {
-          label: '简历',
-          position: 'left',
-          to: '/resume/',
-        },
+        
         {
           label: '镜像站点',
           position: 'left',
@@ -130,6 +130,11 @@ const config = {
               to: 'https://wrm244.github.io',
             },
           ],
+        },
+        {
+          label: '简历',
+          position: 'left',
+          to: '/resume/',
         },
         {
           label: '项目',

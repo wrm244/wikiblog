@@ -24,8 +24,12 @@
     "description": "Navbar item with label 工具"
   },
   "item.label.导航": {
-    "message": "Links",
+    "message": "Navigation",
     "description": "Navbar item with label 导航"
+  },
+  "item.label.链接": {
+    "message": "Links",
+    "description": "Navbar item with label 链接"
   },
   "item.label.幻灯片": {
     "message": "Slides",
