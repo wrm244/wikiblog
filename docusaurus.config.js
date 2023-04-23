@@ -351,7 +351,7 @@ const config = {
     [
       '@docusaurus/plugin-ideal-image',
       {
-        quality: 80,
+        quality: 75,
         disableInDev: false,
       },
     ],
@@ -379,6 +379,37 @@ const config = {
             tagName: 'meta',
             name: 'theme-color',
             content: 'rgb(51 139 255)',
+          },
+          {
+            tagName: 'meta',
+            name: 'apple-mobile-web-app-capable',
+            content: 'yes',
+          },
+          {
+            tagName: 'meta',
+            name: 'apple-mobile-web-app-status-bar-style',
+            content: '#000',
+          },
+          {
+            tagName: 'link',
+            rel: 'apple-touch-icon',
+            href: 'assets/images/social/avatar.png',
+          },
+          {
+            tagName: 'link',
+            rel: 'mask-icon',
+            href: 'assets/images/social/avatar.png',
+            color: 'rgb(37, 194, 160)',
+          },
+          {
+            tagName: 'meta',
+            name: 'msapplication-TileImage',
+            content: 'assets/images/social/avatar.png',
+          },
+          {
+            tagName: 'meta',
+            name: 'msapplication-TileColor',
+            content: '#000',
           },
         ],
       },
