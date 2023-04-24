@@ -11,7 +11,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/BlogPost Template",
+  "attachmentFolderPath": "./assets/本网站CDN加速的处理",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative"
 }
