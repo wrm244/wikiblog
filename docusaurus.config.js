@@ -114,7 +114,7 @@ const config = {
         },
         
         {
-          label: '镜像站点',
+          label: '镜像',
           position: 'left',
           items: [
             {

@@ -7,7 +7,7 @@
     "message": "blog",
     "description": "Navbar item with label 博客"
   },
-  "item.label.镜像站点": {
+  "item.label.镜像": {
     "message": "Mirror",
     "description": "Navbar item with label 镜像站点"
   },
