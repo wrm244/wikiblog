@@ -122,6 +122,7 @@ html[data-theme='dark'] :is(h1, h2, h3, h4, h5, h6) {
 body {
   font-family: 'Noto Serif SC','SF Pro Text','SF Pro Display','SF Pro Icons','Helvetica Neue',Helvetica,Arial,sans-serif,system-ui, ui-sans-serif,-apple-system,'Segoe UI', 'Helvetica Neue', 'Noto Sans', sans-serif, 'Apple Color Emoji',consolas,'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', consolas,sfmono-regular, menlo, monaco, 'Liberation Mono', monospace;
   -webkit-font-smoothing: antialiased;
+  font-display: swap;
 }
 
 html,

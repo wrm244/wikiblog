@@ -34,7 +34,6 @@ function ArrowDownBtn(): JSX.Element {
     </span>
   )
 }
-
 function Hero() {
   const trails = useTrail(4, {
     from: { opacity: 0, x: 2 },
