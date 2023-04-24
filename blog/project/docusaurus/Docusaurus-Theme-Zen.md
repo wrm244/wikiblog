@@ -5,7 +5,7 @@ date: 2023-04-22 14:09:58
 tags: [docusaurus]
 authors: RiverMountain
 ---
-![logo](https://wrm244.github.io/docusaurus-theme-zen/assets/images/avatar300.png)
+![](assets/BUG记录模板/Pasted%20image%2020230424111505.png)
 ## Docusaurus-Theme-Zen
 ![GitHub last commit](https://img.shields.io/github/last-commit/wrm244/docusaurus-theme-zen?label=update&logo=github)  
 

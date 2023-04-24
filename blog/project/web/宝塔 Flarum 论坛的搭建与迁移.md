@@ -11,7 +11,8 @@ authors: RiverMountain
 
 <!-- truncate -->
 
-![image.png](https://raw.githubusercontent.com/wrm244/image/main/2023/202304142254997.png)
+![](assets/宝塔%20Flarum%20论坛的搭建与迁移/image-20230424111807.png)
+
 
 什么是 `Flarum`？`Flarum` 是一款基于 `PHP Laravel` 框架开发的论坛网站，拥有轻量、美观、响应式、易上手等特点。
 # 部署

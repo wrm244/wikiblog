@@ -315,10 +315,10 @@ const config = {
     ],
   ],
   themes: ['@docusaurus/theme-live-codeblock'],
+  themes: ['@docusaurus/theme-mermaid'],
   markdown: {
     mermaid: true,
   },
-  themes: ['@docusaurus/theme-mermaid'],
   plugins: [
     // 'docusaurus-plugin-matomo',
     'docusaurus-plugin-image-zoom',

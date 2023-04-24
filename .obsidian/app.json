@@ -11,7 +11,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/BUG记录模板",
+  "attachmentFolderPath": "./assets/hexo利用github action进行部署",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative"
 }

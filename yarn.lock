@@ -1941,7 +1941,7 @@
 
 "@docusaurus/theme-mermaid@^2.4.0":
   version "2.4.0"
-  resolved "https://registry.npmmirror.com/@docusaurus/theme-mermaid/-/theme-mermaid-2.4.0.tgz"
+  resolved "https://registry.yarnpkg.com/@docusaurus/theme-mermaid/-/theme-mermaid-2.4.0.tgz#a969a3ec3387de7dafb6156feb3920f83cdeffe8"
   integrity sha512-qB4cMDn93iwQ5JzhLgHsME5DgUbISMKgk6nP6tEWqepP3S/WXR1L/uRAH8xXbuRhJgzERHM/f6riyv0cNIQeTg==
   dependencies:
     "@docusaurus/core" "2.4.0"
