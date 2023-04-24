@@ -43,7 +43,7 @@ jobs:
          cd ..
       
       - name: Install ImageMagick # 安装ImageMagick
-        run: apt install pngquant
+        run: sudo apt-get install pngquant
 
       - name: Compress images recursively # 递归压缩图片
         run: find ./build/assets/images -name "*.png" -size +50k -exec pngquant --force --quality=60-100 --strip --skip-if-larger  --verbose {} \; # 这里可以根据您的需求修改命令和路径
