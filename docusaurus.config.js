@@ -9,7 +9,7 @@ const config = {
   titleDelimiter: '-',
   url: 'https://wrm244.gxist.cn',
   baseUrl: '/',
-  favicon: '/favicon.ico',
+  favicon: '/assets/images/social/avatar.ico',
   organizationName: 'wrm244',
   projectName: 'blog',
   tagline: '学习记录，技术存档',
