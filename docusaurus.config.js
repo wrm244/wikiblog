@@ -102,6 +102,10 @@ const config = {
               label: '导航',
               to: 'resource',
               },
+        {
+          label: '简历',
+          to: 'https://wrm244.gxist.cn/resume/',
+        },
             {
             label: '幻灯片',
             to: 'https://wrm244.gitee.io/slide/',
@@ -130,11 +134,6 @@ const config = {
               to: 'https://wrm244.github.io',
             },
           ],
-        },
-        {
-          label: '简历',
-          position: 'left',
-          to: '/resume/',
         },
         {
           label: '项目',
@@ -193,7 +192,7 @@ const config = {
             },
             {
               label: '镜像站点',
-              href: 'https://wikiblog.pages.dev',
+              href: 'https://wrm244.netlify.app',
             }, 
             {
               label: 'GitHub',
