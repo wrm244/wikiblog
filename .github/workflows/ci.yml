@@ -42,11 +42,11 @@ jobs:
          rm -rf ./.git
          cd ..
       
-      - name: Install ImageMagick # 安装ImageMagick
+      - name: Install pngquant # 安装ImageMagick
         run: sudo apt-get install pngquant
 
       - name: Compress images recursively # 递归压缩图片
-        run: find ./build/assets/images -name "*.png" -size +50k -exec pngquant --force --quality=60-100 --strip --skip-if-larger  --verbose {} \; # 这里可以根据您的需求修改命令和路径
+        run: find ./build/assets/images -name "*.png" -size +50k -exec pngquant --force --quality=60-75 --strip --skip-if-larger  --verbose--ext=.png {} \; # 这里可以根据您的需求修改命令和路径
 
       - name: SSH Deploy
         uses: easingthemes/ssh-deploy@v2.2.11
