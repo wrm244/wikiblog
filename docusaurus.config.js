@@ -37,10 +37,10 @@ const config = {
         name: 'keywords',
         content: '河山',
       },
-      {
-        name: 'theme-color',
-        content: '#0086f1',
-      },
+      // {
+      //   name: 'theme-color',
+      //   content: '#0086f1',
+      // },
       {
         name: 'keywords',
         content: 'blog,machine learning,javascript, nginx,, react, vue, web',
@@ -226,7 +226,7 @@ const config = {
       copyright: `版权所有 © ${new Date().getFullYear()} 河山, 此网站使用 <a href="https://docusaurus.io/zh-CN/" target="_blank">Docusaurus</a> 搭建<br/>
       <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style="color: white">本网站由 <img alt="upyunlogo" src="/assets/images/upyun-logo-white.png" width="48px" align="top"/> 提供CDN加速/云存储服务</a>
       <br/>
-      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
       <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>`,
     },
     prism: {
@@ -292,7 +292,7 @@ const config = {
       tagName: 'meta',
       attributes: {
         name: 'description',
-        content: '河山的技术存档',
+        content: '河山的技术存档，博客与项目',
       },
     },
   ],
@@ -381,7 +381,7 @@ const config = {
           {
             tagName: 'meta',
             name: 'theme-color',
-            content: 'rgb(51 139 255)',
+            content: '#0086f1',
           },
           {
             tagName: 'meta',

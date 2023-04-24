@@ -3,7 +3,7 @@
   "short_name": "河山的技术存档",
   "theme_color": "#0086f1",
   "background_color": "#424242",
-  "display": "fullscreen",
+  "display": "standalone",
   "scope": "./",
   "start_url": "./index.html",
   "prefer_related_applications": true,
