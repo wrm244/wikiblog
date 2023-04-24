@@ -296,14 +296,14 @@ const config = {
         content: '河山的技术存档，博客与项目',
       },
     },
-    {//先加载字体
-      tagName: 'link',
-      attributes: {
-        rel: 'preload',
-        // href: 'https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap',
-        as: 'font',
-      },
-    },
+    // {//先加载字体
+    //   tagName: 'link',
+    //   attributes: {
+    //     rel: 'preload',
+    //     // href: 'https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap',
+    //     as: 'font',
+    //   },
+    // },
     {//先加载主页LOGO图片
       tagName: 'link',
       attributes: {
