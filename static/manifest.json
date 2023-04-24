@@ -1,7 +1,7 @@
 {
   "name": "河山的技术存档",
   "short_name": "河山的技术存档",
-  "theme_color": "#12affa",
+  "theme_color": "#0086f1",
   "background_color": "#424242",
   "display": "fullscreen",
   "scope": "./",

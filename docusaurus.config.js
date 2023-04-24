@@ -38,6 +38,10 @@ const config = {
         content: '河山',
       },
       {
+        name: 'theme-color',
+        content: '#0086f1',
+      },
+      {
         name: 'keywords',
         content: 'blog,machine learning,javascript, nginx,, react, vue, web',
       },
