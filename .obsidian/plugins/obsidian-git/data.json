@@ -1,5 +1,5 @@
 {
-  "commitMessage": "docs: {{date}} Files:{{numFiles}}",
+  "commitMessage": "docs(Files:{{numFiles}}): {{date}}",
   "commitDateFormat": "YYYY-MM-DD HH:mm",
   "autoSaveInterval": 0,
   "autoPushInterval": 0,
@@ -26,5 +26,5 @@
   "submoduleRecurseCheckout": false,
   "gitDir": "",
   "showFileMenu": true,
-  "autoCommitMessage": "vault backup: {{date}}"
+  "autoCommitMessage": "docs(Files:{{numFiles}}): {{date}}"
 }

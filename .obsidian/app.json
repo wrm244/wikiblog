@@ -11,7 +11,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/hexo利用github action进行部署",
+  "attachmentFolderPath": "./assets/BlogPost Template",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative"
 }

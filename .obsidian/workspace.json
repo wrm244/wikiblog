@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "f3459402719dd7cd",
+        "id": "194b69b25e962c64",
         "type": "tabs",
         "children": [
           {
-            "id": "1cf8526e89d7c6af",
+            "id": "5506958df81f04ef",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -138,8 +138,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "1cf8526e89d7c6af",
+  "active": "9645adc9b84ae224",
   "lastOpenFiles": [
+    "obsidian/BlogPost Template.md",
+    "obsidian/DocsPost Template.md",
     "blog/project/hexo/hexo利用github action进行部署.md",
     "blog/project/hexo/Obsidian与hexo结合部署到github pages上.md",
     "blog/project/hexo/hexo插件推荐.md",
@@ -173,8 +175,6 @@
     "build/en/README.md",
     "build/en/svg/next.svg",
     "build/README.md",
-    "obsidian/DocsPost Template.md",
-    "obsidian/BlogPost Template.md",
     "docs/blog/Docusaurus/docs模板示例.md",
     "docs/blog/Docusaurus/自定义组件.md",
     "docs/blog/Docusaurus/图床配置.md",
