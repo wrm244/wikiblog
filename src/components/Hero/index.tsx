@@ -88,7 +88,7 @@ function Hero() {
           </Translate>
           <br />
           {/* 徽章的效果 */}
-          <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wrm244/wrm244.github.io?label=Update&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }} /> <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/wrm244/docusaurus-theme-zen/ci.yml?label=CI%20Build&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }}></img>  <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/77e2a74d-30e3-4788-b7f1-257d746d2361/deploy-status" style={{ boxShadow: '0px 16px 30px rgb(62 196 119 / 15%)', marginTop: '14px' }}></img>
+          <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wrm244/wrm244.github.io?label=Update&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }} /> <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/wrm244/docusaurus-theme-zen/ci.yml?label=CI&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }}></img>  <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/77e2a74d-30e3-4788-b7f1-257d746d2361/deploy-status" style={{ boxShadow: '0px 16px 30px rgb(62 196 119 / 15%)', marginTop: '14px' }}></img>
 
         </animated.p>
 
