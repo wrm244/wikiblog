@@ -36,17 +36,20 @@ CDN的全称是Content Delivery Network，即内容分发网络。其基本思�
 ## 二、静态部署
 
 首先要说明本站静态部署的位置有以下提供：
+
 | 序号 | 提供商             | 网址               | 是否CDN  |
 | ---- | ------------------ | ------------------ | -------- |
 | 1    | 腾讯云轻量级服务器 | wrm244.gxist.cn    | 是       |
 | 2    | Netlify            | wrm244.netlify.app | 否(源站) |
 | 3    | cloudflare         | wikiblog.pages.dev | 否       |
 | 4    | github pages       | wrm244.github.io   | 否         |
+
 > 以上建议访问次序由上到下递减
 
 该部署是通过github ci/cd 自动化集成分发构建好的静态页面到github pages与云服务器(通过ssh sync 同步)，再自动更新到netlify与cloudflare，其中又拍云回源暂时绑定在主源站云服务器与备用netlify站点。
 
 以下是对应域名几张国内访问速率对比图：
+
 1.wrm244.gxist.cn
 ![wrm244.gxist.cn | 400](assets/本网站CDN加速的处理/image-20230425195622.png)
 2.wrm244.netlify.app

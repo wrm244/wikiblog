@@ -43,11 +43,12 @@ jobs:
          cd ..
       
       - name: Install pngquant # 安装ImageMagick
-        run: sudo apt-get install pngquant
+        run: sudo apt-get install pngquant imagemagick -y
 
       - name: Compress images recursively # 递归压缩图片
-        run: find ./build/assets/images -name "*.png" -size +50k -exec pngquant --force --quality=60-75 --strip --skip-if-larger  --verbose   --ext=.png {} \; # 这里可以根据您的需求修改命令和路径
-
+        run: |
+          find ./build/assets/images -name "*.png" -size +50k -exec pngquant --force --quality=60-75 --strip --skip-if-larger  --verbose   --ext=.png {} \
+          find ./build/assets/images -type f \( -name "*.jpg" -o -name "*.png" \) -exec identify -format '%w %h %i\n' {} \; | awk '$1>1000 || $2>1000 {print $3}' | xargs -I {} convert {} +write {} -resize 65% {}
       - name: SSH Deploy
         uses: easingthemes/ssh-deploy@v2.2.11
         env:
