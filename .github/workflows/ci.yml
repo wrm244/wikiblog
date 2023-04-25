@@ -47,11 +47,11 @@ jobs:
 
       - name: Compress images recursively # 递归压缩图片
         run:
-          find ./build/assets/images -name "*.png" -size +50k -exec pngquant --force --quality=60-75 --strip --skip-if-larger  --verbose   --ext=.png {} \;
+          find ./build/assets/images -name "*.png" -size +70k -exec pngquant --force --quality=75-85 --strip --skip-if-larger  --verbose   --ext=.png {} \;
       
-      - name: images size to 65%
-        run:
-          find ./build/assets/images -type f \( -name "*.jpg" -o -name "*.png" \) -exec identify -format '%w %h %i\n' {} \; | awk '$1>700 || $2>700 {print $3}' | xargs -I {} convert {} +write {} -resize 65% {}
+      # - name: images size to 70%
+      #   run:
+      #     find ./build/assets/images -type f \( -name "*.jpg" -o -name "*.png" \) -exec identify -format '%w %h %i\n' {} \; | awk '$1>1000 || $2>1000 {print $3}' | xargs -I {} convert {} +write {} -resize 76% {}
       
       - name: SSH Deploy
         uses: easingthemes/ssh-deploy@v2.2.11
