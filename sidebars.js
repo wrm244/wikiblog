@@ -188,6 +188,12 @@ const sidebars = {
       ],
     },
   ],
+  course: [
+    'course/introduction',
+    {
+      
+    }
+  ],
 }
 
 module.exports = sidebars

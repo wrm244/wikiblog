@@ -31,6 +31,14 @@
     "message": "Links",
     "description": "Navbar item with label 链接"
   },
+  "item.label.本站主题": {
+    "message": "Theme",
+    "description": "Navbar item with label 本站主题"
+  },
+  "item.label.专业课程": {
+    "message": "Course",
+    "description": "Navbar item with label 本站主题"
+  },
   "item.label.幻灯片": {
     "message": "Slides",
     "description": "Navbar item with label 幻灯片"

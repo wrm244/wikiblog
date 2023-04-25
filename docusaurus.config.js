@@ -82,16 +82,20 @@ const config = {
         {
           label: '笔记',
           position: 'left',
-          to: 'docs/stack/',
           items: [
             {
               label: '本站的搭建',
               to: 'docs/blog/',
             },
             {
+              label: '专业课程',
+              to: 'docs/course/',
+            },
+            {
               label: '学习栈',
               to: 'docs/stack/',
             },
+            
           ],
         },
         {
@@ -110,6 +114,10 @@ const config = {
             label: '幻灯片',
             to: 'https://wrm244.gitee.io/slide/',
             },
+            {
+              label: '本站主题',
+              href: 'https://github.com/wrm244/docusaurus-theme-zen',
+              },
           ],
         },
         
@@ -171,7 +179,7 @@ const config = {
           items: [
             {
               label: '笔记',
-              to: 'docs/stack',
+              to: 'docs',
             },
             {
               label: '项目',
@@ -198,6 +206,10 @@ const config = {
               label: 'GitHub',
               href: 'https://github.com/wrm244',
             },
+            {
+              label: '本站主题',
+              href: 'https://github.com/wrm244/docusaurus-theme-zen',
+              },
           ],
         },
         {
