@@ -47,7 +47,7 @@ jobs:
 
       - name: Compress images recursively # 递归压缩图片
         run:
-          find ./build/assets/images -name "*.png" -size +50k -exec pngquant --force --quality=60-75 --strip --skip-if-larger  --verbose   --ext=.png {}
+          find ./build/assets/images -name "*.png" -size +50k -exec pngquant --force --quality=60-75 --strip --skip-if-larger  --verbose   --ext=.png {} \;
       
       - name: images size to 65%
         run:
