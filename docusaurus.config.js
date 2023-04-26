@@ -323,14 +323,6 @@ const config = {
         as: 'image',
       },
     },
-    {//先加载主页ico图片
-      tagName: 'link',
-      attributes: {
-        rel: 'preload',
-        href: '/assets/images/social/avatar.ico',
-        as: 'image',
-      },
-    },
   ],
   presets: [
     [
