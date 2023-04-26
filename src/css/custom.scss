@@ -76,7 +76,6 @@ html {
   -webkit-font-smoothing: unset;
   /* 文字颜色 */
   color: hsl(214deg 37% 25%);
-  transition: all .6s linear;
 }
 
 html :is(h1, h2, h3, h4, h5, h6) {
@@ -244,31 +243,32 @@ html[data-theme='dark'] .theme-code-block {
 /* navbar */
 .navbar {
   box-shadow: none;
-  
   // 毛玻璃效果
   background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(13px);
   border-bottom: 1px solid #e1e1e1;
   opacity: 1;
-
+  text-shadow: 0.6px 0.6px 0 #fff;
   .navbar__title {
     margin-left: 4px;
     color: var(--ifm-color-primary);
-    font-family: var(--ifm-font-family-name);
+    font-family: var(--ifm-font-family-name); 
+    
   }
 }
 html[data-theme='dark'] .navbar {
   box-shadow: none;
-  
   // 毛玻璃效果
   background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(13px);
   border-bottom: 1px solid #ffffff00;
+  text-shadow: 0.5px 0.5px 0 #0c0c0c;
   opacity: 1;
   .navbar__title {
     margin-left: 4px;
     color: var(--ifm-color-primary);
     font-family: var(--ifm-font-family-name);
+    // text-shadow: 1px 1px 0 #fff;
   }
 }
 .navbar-sidebar__backdrop {
