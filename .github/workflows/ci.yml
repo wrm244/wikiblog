@@ -18,16 +18,16 @@ jobs:
         with:
           node-version: '18.16.0'
 
-      - name: Cache node modules
-        uses: actions/cache@v1
-        id: cache
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      # - name: Cache node modules
+      #   uses: actions/cache@v1
+      #   id: cache
+      #   with:
+      #     path: node_modules
+      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-node-
       - name: Install Dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
+        # if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install
       
       - name: Build Project
@@ -42,12 +42,12 @@ jobs:
          rm -rf ./.git
          cd ..
       
-      - name: Install pngquant # 安装ImageMagick
-        run: sudo apt-get install pngquant imagemagick -y
+      # - name: Install pngquant # 安装ImageMagick
+      #   run: sudo apt-get install pngquant imagemagick -y
 
-      - name: Compress images recursively # 递归压缩图片
-        run:
-          find ./build/assets/images -name "*.png" -size +70k -exec pngquant --force --quality=75-85 --strip --skip-if-larger  --verbose   --ext=.png {} \;
+      # - name: Compress images recursively # 递归压缩图片
+      #   run:
+      #     find ./build/assets/images -name "*.png" -size +70k -exec pngquant --force --quality=80-100 --strip --skip-if-larger  --verbose   --ext=.png {} \;
       
       # - name: images size to 70%
       #   run:
