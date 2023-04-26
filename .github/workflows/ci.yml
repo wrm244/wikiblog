@@ -75,7 +75,6 @@ jobs:
         with:
           site: ${{ secrets.SITE }}
           sitemap: ${{ secrets.SITEMAP }}
-          bing-token: ${{ secrets.BING_TOKEN }}
           baidu-token: ${{ secrets.BAIDU_TOKEN }}
 
       - name: Sync to Gitee
