@@ -76,6 +76,7 @@ html {
   -webkit-font-smoothing: unset;
   /* 文字颜色 */
   color: hsl(214deg 37% 25%);
+  transition: all .6s linear;
 }
 
 html :is(h1, h2, h3, h4, h5, h6) {
@@ -123,6 +124,7 @@ body {
   font-family: 'Noto Serif SC','SF Pro Text','SF Pro Display','SF Pro Icons','Helvetica Neue',Helvetica,Arial,sans-serif,system-ui, ui-sans-serif,-apple-system,'Segoe UI', 'Helvetica Neue', 'Noto Sans', sans-serif, 'Apple Color Emoji',consolas,'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', consolas,sfmono-regular, menlo, monaco, 'Liberation Mono', monospace;
   -webkit-font-smoothing: antialiased;
   font-display: swap;
+  transition: all .6s linear;
 }
 
 html,
@@ -245,9 +247,24 @@ html[data-theme='dark'] .theme-code-block {
   
   // 毛玻璃效果
   background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #e1e1e1;
   opacity: 1;
 
+  .navbar__title {
+    margin-left: 4px;
+    color: var(--ifm-color-primary);
+    font-family: var(--ifm-font-family-name);
+  }
+}
+html[data-theme='dark'] .navbar {
+  box-shadow: none;
+  
+  // 毛玻璃效果
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #ffffff00;
+  opacity: 1;
   .navbar__title {
     margin-left: 4px;
     color: var(--ifm-color-primary);
