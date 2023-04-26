@@ -1,45 +1,48 @@
-import React from 'react'
-import { useThemeConfig, useColorMode } from '@docusaurus/theme-common'
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
-import { ThemeConfig } from '@docusaurus/preset-classic'
-import BrowserOnly from '@docusaurus/BrowserOnly'
-import Giscus, { GiscusProps } from '@giscus/react'
+import {useColorMode} from '@docusaurus/theme-common';
+import BrowserOnly from '@docusaurus/BrowserOnly';
+import React, { forwardRef, useEffect, useState } from 'react';
+import Giscus, { GiscusProps } from '@giscus/react';
+import { useThemeConfig, ThemeConfig } from '@docusaurus/theme-common';
 
 interface CustomThemeConfig extends ThemeConfig {
-  giscus: GiscusProps & { darkTheme: string }
+  giscus: GiscusProps & { darkTheme: string };
 }
 
-const defaultConfig: Partial<GiscusProps> & { darkTheme: string } = {
-  id: 'comments',
-  mapping: 'title',
-  reactionsEnabled: '1',
-  emitMetadata: '0',
-  inputPosition: 'top',
-  lang: 'zh-CN',
-  theme: 'light',
-  darkTheme: 'dark',
-}
+export const Comment = forwardRef<HTMLDivElement>((_props, ref) => {
+  const themeConfig = useThemeConfig() as any;
+  const theme = useColorMode().colorMode === 'dark' ? 'dark' : 'light';
+  const { giscus } = useThemeConfig() as CustomThemeConfig;
+  const [routeDidUpdate, setRouteDidUpdate] = useState(false);
 
-export default function Comment(): JSX.Element {
-  const themeConfig = useThemeConfig() as CustomThemeConfig
-  const { i18n } = useDocusaurusContext()
+  useEffect(() => {
+    function eventHandler(e) {
+      setRouteDidUpdate(true);
+    }
 
-  // merge default config
-  const giscus = { ...defaultConfig, ...themeConfig.giscus }
+    window.emitter.on('onRouteDidUpdate', eventHandler);
 
-  if (!giscus.repo || !giscus.repoId || !giscus.categoryId) {
-    throw new Error(
-      'You must provide `repo`, `repoId`, and `categoryId` to `themeConfig.giscus`.',
-    )
+    return () => {
+      window.emitter.off('onRouteDidUpdate', eventHandler);
+    };
+  }, []);
+
+  if (!routeDidUpdate) {
+    return null;
   }
 
-  giscus.theme =
-    useColorMode().colorMode === 'dark' ? giscus.darkTheme : giscus.theme
-  giscus.lang = i18n.currentLocale
-
+  const options: GiscusProps = {
+    ...(themeConfig.giscus as GiscusProps),
+    id: 'comments',
+    reactionsEnabled: '1',
+    emitMetadata: '0',
+    inputPosition: 'top',
+    theme,
+  };
   return (
     <BrowserOnly fallback={<div>Loading Comments...</div>}>
-      {() => <Giscus {...giscus} />}
+      {() => <Giscus {...options} />}
     </BrowserOnly>
-  )
-}
+  );
+});
+
+export default Comment;

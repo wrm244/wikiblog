@@ -298,6 +298,7 @@ const config = {
       zhihu: 'https://www.zhihu.com/people/dobet',
     },
   },
+  clientModules: [require.resolve('./src/clientModules/routeModules.ts')],
   headTags: [
     {
       tagName: 'meta',

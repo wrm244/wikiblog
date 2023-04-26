@@ -2243,12 +2243,12 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@giscus/react@^2.0.6":
-  version "2.0.6"
-  resolved "https://registry.npmmirror.com/@giscus/react/-/react-2.0.6.tgz"
-  integrity sha512-Kdrz/Jx7XNwFMuaIXHWXeqISdYwilFhRp9blmUwkixR+HdFJe4+dzkorVNnyW0M/xbSfzhjb49Ng2YvJOB/28Q==
+"@giscus/react@^2.2.8":
+  version "2.2.8"
+  resolved "https://registry.npmmirror.com/@giscus/react/-/react-2.2.8.tgz#ae02463a0bb27d1decc11e756f41182cc0797288"
+  integrity sha512-dPk3GMmsx5hHXXi8Xye7aen+lsZ/PR4I7AwTXKxKtAvxXsH5XAVB/bI6uWr4BrLEH3plZMzgOlVUIPOFJsHQCw==
   dependencies:
-    giscus "^1.0.6"
+    giscus "^1.2.8"
 
 "@hapi/hoek@^9.0.0":
   version "9.3.0"
@@ -2346,10 +2346,22 @@
   resolved "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.4.tgz"
   integrity sha512-Hcv+nVC0kZnQ3tD9GVu5xSMR4VVYOteQIr/hwFPVEvPdlXqgGEuRjiheChHgdM+JyqdgNcmzZOX/tnl0JOiI7A==
 
+"@lit-labs/ssr-dom-shim@^1.0.0", "@lit-labs/ssr-dom-shim@^1.1.0":
+  version "1.1.1"
+  resolved "https://registry.npmmirror.com/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.1.1.tgz#64df34e2f12e68e78ac57e571d25ec07fa460ca9"
+  integrity sha512-kXOeFbfCm4fFf2A3WwVEeQj55tMZa8c8/f9AKHMobQMkzNUfUj+antR3fRPaZJawsa1aZiP/Da3ndpZrwEe4rQ==
+
 "@lit/reactive-element@^1.3.0":
   version "1.3.3"
   resolved "https://registry.npmmirror.com/@lit/reactive-element/-/reactive-element-1.3.3.tgz"
   integrity sha512-ukelZ49tzUqgOAEbVujl/U62JNK3wdn5kKtXVqrjKND4QvHACZOMOYaZI6/5Jd8vsg+Fq9HDwiib70FBLydOiQ==
+
+"@lit/reactive-element@^1.6.0":
+  version "1.6.1"
+  resolved "https://registry.npmmirror.com/@lit/reactive-element/-/reactive-element-1.6.1.tgz#0d958b6d479d0e3db5fc1132ecc4fa84be3f0b93"
+  integrity sha512-va15kYZr7KZNNPZdxONGQzpUr+4sxVu7V/VG7a8mRfPPXUyhEYj5RzXCQmGrlP3tAh0L3HHm5AjBMFYRqlM9SA==
+  dependencies:
+    "@lit-labs/ssr-dom-shim" "^1.0.0"
 
 "@mdx-js/mdx@^1.6.22":
   version "1.6.22"
@@ -5860,12 +5872,12 @@ get-symbol-description@^1.0.0:
     call-bind "^1.0.2"
     get-intrinsic "^1.1.1"
 
-giscus@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.npmmirror.com/giscus/-/giscus-1.0.6.tgz"
-  integrity sha512-YPqo3ZyefMdAJaadZdDjSqj6m+KTZC21SL1QxF85HZZkBEqICzrGHu8PQhWc1HPiZAQsDVH9guvjhI79w+XUeg==
+giscus@^1.2.8:
+  version "1.2.8"
+  resolved "https://registry.npmmirror.com/giscus/-/giscus-1.2.8.tgz#557964e1cb5e46c4b0abf69ed0b974c0718b8142"
+  integrity sha512-pufrgQYt1W+4ztiWp/PilLPN8NdyKvpbQ8jNqbAa1g84t6qqyevXHfkOYCi4x4d+y191vJAUc6seL1Dq74yUeA==
   dependencies:
-    lit "^2.2.6"
+    lit "^2.6.1"
 
 github-from-package@0.0.0:
   version "0.0.0"
@@ -7011,29 +7023,30 @@ lines-and-columns@^1.1.6:
   resolved "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.2.4.tgz"
   integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
 
-lit-element@^3.2.0:
-  version "3.2.1"
-  resolved "https://registry.npmmirror.com/lit-element/-/lit-element-3.2.1.tgz"
-  integrity sha512-2PxyE9Yq9Jyo/YBK2anycaHcqo93YvB5D+24JxloPVqryW/BOXekne+jGsm0Ke3E5E2v7CDgkmpEmCAzYfrHCQ==
+lit-element@^3.3.0:
+  version "3.3.2"
+  resolved "https://registry.npmmirror.com/lit-element/-/lit-element-3.3.2.tgz#9913bf220b85065f0e5f1bb8878cc44f36b50cfa"
+  integrity sha512-xXAeVWKGr4/njq0rGC9dethMnYCq5hpKYrgQZYTzawt9YQhMiXfD+T1RgrdY3NamOxwq2aXlb0vOI6e29CKgVQ==
   dependencies:
+    "@lit-labs/ssr-dom-shim" "^1.1.0"
     "@lit/reactive-element" "^1.3.0"
-    lit-html "^2.2.0"
+    lit-html "^2.7.0"
 
-lit-html@^2.2.0:
-  version "2.2.6"
-  resolved "https://registry.npmmirror.com/lit-html/-/lit-html-2.2.6.tgz"
-  integrity sha512-xOKsPmq/RAKJ6dUeOxhmOYFjcjf0Q7aSdfBJgdJkOfCUnkmmJPxNrlZpRBeVe1Gg50oYWMlgm6ccAE/SpJgSdw==
+lit-html@^2.7.0:
+  version "2.7.3"
+  resolved "https://registry.npmmirror.com/lit-html/-/lit-html-2.7.3.tgz#903bfa61f9d3296a0ec94128695e452beb9b1a3a"
+  integrity sha512-9DyLzcn/kbRGowz2vFmSANFbRZTxYUgYYFqzie89w6GLpPUiBCDHfcdeRUV/k3Q2ueYxNjfv46yPCtKAEAPOVw==
   dependencies:
     "@types/trusted-types" "^2.0.2"
 
-lit@^2.2.6:
-  version "2.2.7"
-  resolved "https://registry.npmmirror.com/lit/-/lit-2.2.7.tgz"
-  integrity sha512-WXYujlKFwme5ZqXOZoWuRVZQAwy7scbcVT3wCbAOHefOxyscqjywWGlF2e6nnC9E64yP9l2ZQlN8wZcRlrjUMQ==
+lit@^2.6.1:
+  version "2.7.3"
+  resolved "https://registry.npmmirror.com/lit/-/lit-2.7.3.tgz#7f7920dbaba12828d359ca3439cd6f73619061da"
+  integrity sha512-0a+u+vVbmgSfPu+fyvqjMPBX0Kwbyj9QOv9MbQFZhWGlV2cyk3lEwgfUQgYN+i/lx++1Z3wZknSIp3QCKxHLyg==
   dependencies:
-    "@lit/reactive-element" "^1.3.0"
-    lit-element "^3.2.0"
-    lit-html "^2.2.0"
+    "@lit/reactive-element" "^1.6.0"
+    lit-element "^3.3.0"
+    lit-html "^2.7.0"
 
 loader-runner@^4.2.0:
   version "4.3.0"
@@ -7457,6 +7470,11 @@ minimist@^1.2.0, minimist@^1.2.3, minimist@^1.2.5:
   version "1.2.6"
   resolved "https://registry.npmjs.org/minimist/-/minimist-1.2.6.tgz"
   integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
+
+mitt@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmmirror.com/mitt/-/mitt-3.0.0.tgz#69ef9bd5c80ff6f57473e8d89326d01c414be0bd"
+  integrity sha512-7dX2/10ITVyqh4aOSVI9gdape+t9l2/8QxHrFmUXu4EEUpdlxl6RudZUPZoc+zuY2hk1j7XxVroIVIan/pD/SQ==
 
 mkdirp-classic@^0.5.2, mkdirp-classic@^0.5.3:
   version "0.5.3"
