@@ -50,7 +50,7 @@ hygen init self
 
 初始化完成后会在根目录下 生成 **_templates** 的文件夹，模板需要定义在该文件夹下，**generator** 是构建器文件夹（该文件夹不能删），**ejs.t** 文件则是模板文件
 
-![20230316200957](https://shake-picture.oss-cn-guangzhou.aliyuncs.com/Docusaurus/docs/Blog_Building/Docusaurus/20230316200957.png)
+![](assets/使用Hygen创建文章模板/image-20230426201447.png)
 
 **`_templates`** 文件夹下的目录会是 **Hygen 命令中的一部分**，比如我的文件目录为：
 
@@ -72,7 +72,8 @@ Shake-Blog
 hygen generator new [模板名称] # 如blog
 ```
 
-![20230316201411](https://shake-picture.oss-cn-guangzhou.aliyuncs.com/Docusaurus/docs/Blog_Building/Docusaurus/20230316201411.png)
+![](assets/使用Hygen创建文章模板/image-20230426201458.png)
+
 
 ### 自定义模板
 

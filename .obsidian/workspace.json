@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/CS/network/本网站CDN加速的处理.md",
+                "file": "docs/blog/Docusaurus/guides.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/CS/network/本网站CDN加速的处理.md",
+                "file": "docs/blog/Docusaurus/guides.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/CS/network/本网站CDN加速的处理.md",
+                "file": "docs/blog/Docusaurus/guides.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/CS/network/本网站CDN加速的处理.md"
+                "file": "docs/blog/Docusaurus/guides.md"
               }
             }
           }
@@ -134,7 +134,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -149,30 +150,40 @@
   },
   "active": "723d973c1cfe16c8",
   "lastOpenFiles": [
-    "obsidian/BlogPost Template.md",
+    "docs/blog/Docusaurus/docs模板示例.md",
+    "docs/blog/Docusaurus/blog模板示例.md",
+    "docs/blog/Docusaurus/自定义组件.md",
+    "docs/blog/Docusaurus/样式与界面.md",
+    "docs/blog/Docusaurus/文档编辑指南.md",
+    "docs/blog/Docusaurus/图床配置.md",
+    "docs/blog/Docusaurus/assets/图床配置/image-20230426201813.png",
+    "docs/blog/Docusaurus/assets/图床配置/image-20230426201801.png",
+    "docs/blog/Docusaurus/assets/图床配置/image-20230426201755.png",
+    "docs/blog/Docusaurus/assets/图床配置/image-20230426201750.png",
+    "docs/blog/Docusaurus/assets/图床配置/image-20230426201745.png",
+    "docs/blog/Docusaurus/assets/图床配置/image-20230426201740.png",
+    "docs/blog/Docusaurus/assets/图床配置/image-20230426201736.png",
+    "docs/blog/Docusaurus/assets/图床配置/image-20230426201731.png",
+    "docs/blog/Docusaurus/assets/图床配置/image-20230426201728.png",
+    "docs/blog/Docusaurus/assets/图床配置/image-20230426201723.png",
+    "docs/blog/Docusaurus/assets/图床配置",
+    "docs/blog/Docusaurus/搜索配置.md",
+    "docs/blog/Docusaurus/assets/搜索配置",
+    "docs/blog/Docusaurus/使用Hygen创建文章模板.md",
+    "docs/blog/Docusaurus/assets/使用Hygen创建文章模板",
+    "docs/blog/Docusaurus/评论系统.md",
+    "docs/blog/Docusaurus/assets/评论系统",
+    "docs/blog/Docusaurus/环境配置.md",
+    "docs/blog/Docusaurus/部署.md",
     "blog/CS/network/本网站CDN加速的处理.md",
+    "obsidian/BlogPost Template.md",
     "build/en/sw.js",
     "build/en/feed.json",
     "build/en/atom.xml",
     "build/en/rss.xml",
     "build/en/search-index.json",
     "build/en/docs/stack/database/redis/index.html",
-    "build/en/docs/stack/database/mongodb/index.html",
-    "build/en/docs/stack/database/elasticsearch/index.html",
-    "build/en/docs/tags/webpack/index.html",
-    "build/en/docs/tags/util/index.html",
-    "build/en/assets/images/resource/stateofjs.svg",
-    "build/en/assets/images/resource/zhubai.png",
-    "build/en/assets/images/resource/webpack.png",
-    "build/en/assets/images/resource/webgradients.png",
-    "build/en/assets/images/resource/vite.svg",
-    "build/en/assets/images/resource/vben-admin.png",
-    "build/en/assets/images/resource/uiverse.png",
-    "build/en/assets/images/resource/typing-svg.png",
-    "build/en/assets/images/resource/typescript.png",
-    "build/en/assets/images/resource/twind.svg",
     "build/README.md",
-    "docs/blog/Docusaurus/部署.md",
     "build/en/README.md",
     "assets/CDN的原理与使用/image-20230425003649.png.md",
     "obsidian/DocsPost Template.md",
@@ -184,15 +195,6 @@
     "blog/project/docusaurus/Docusaurus-Theme-Zen.md",
     "blog/project/docusaurus/obsidian模板示例.md",
     "assets/images/avatar300.png.md",
-    "blog/project/Bug-Review/BUG记录模板.md",
-    "blog/CS/network/Http协议探究.md",
-    "blog/CS/backend/为什么是Nginx.md",
-    "docs/blog/Docusaurus/docs模板示例.md",
-    "docs/blog/Docusaurus/自定义组件.md",
-    "docs/blog/Docusaurus/图床配置.md",
-    "docs/blog/Docusaurus/样式与界面.md",
-    "docs/blog/Docusaurus/环境配置.md",
-    "docs/blog/Tips/如何获取网站 favicon 图标.md",
-    "static/obsidian/BlogPost Template.md"
+    "blog/project/Bug-Review/BUG记录模板.md"
   ]
 }

@@ -1,7 +1,7 @@
 ---
 id: introduction
 slug: /blog
-title: 记录 Blog 搭建的部分过程
+title: 记录本网站搭建的部分过程
 date: 2023/01/21
 last_update:
   date: 2023/01/21
