@@ -118,7 +118,8 @@ for box in poses:
 cv2.imwrite("result.jpg", img)
 ```
 
-![result](https://img.kuizuo.cn/result.png)
+![](assets/Python中的cv2使用/image-20230426204806.png)
+
 
 ### 添加文本
 
@@ -134,7 +135,8 @@ cv2.imwrite("result.jpg", img_text)
 
 效果如下
 
-![image-20220306203918438](https://img.kuizuo.cn/image-20220306203918438.png)
+![](assets/Python中的cv2使用/image-20230426204813.png)
+
 
 ### 图片缩放
 

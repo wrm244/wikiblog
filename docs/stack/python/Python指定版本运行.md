@@ -22,7 +22,8 @@ keywords: [python]
 
 其实在安装 Python3（>=3.3）时，Python 的安装包实际上在系统中安装了一个启动器`py.exe`，默认放置在文件夹`C:\Windows\`下面。这个启动器允许我们指定使用 Python2 还是 Python3 来运行代码。
 
-![image-20200912224056257](https://img.kuizuo.cn/image-20200912224056257.png)
+![](assets/Python指定版本运行/image-20230426204721.png)
+
 
 例如：
 
@@ -32,7 +33,8 @@ keywords: [python]
 py -2 demo.py
 ```
 
-![image-20200912225223752](https://img.kuizuo.cn/image-20200912225223752.png)
+![](assets/Python指定版本运行/image-20230426204730.png)
+
 
 #### 运行 python3
 
@@ -40,7 +42,7 @@ py -2 demo.py
 py -3 demo.py
 ```
 
-![image-20200912225250066](https://img.kuizuo.cn/image-20200912225250066.png)
+![](assets/Python指定版本运行/image-20230426204747.png)
 
 只要把命令行的 python 的改成 py -2 就能以 python2 来执行。 但是，每次运行都要加入参数-2 和-3 还是比较麻烦，于是所以 py.exe 这个启动器允许你在代码中加入说明，表明这个文件应该是由 python2 或 3 来解释运行。只需要在代码文件的最开始加入一行，**一定要放到文件第一行**，编码可以放在第二行，如
 

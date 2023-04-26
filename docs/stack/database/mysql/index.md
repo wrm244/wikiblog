@@ -372,7 +372,9 @@ SELECT now() --查询当前时间
 
 一共有 7 中 JOIN 查询
 
-![img](https://img.kuizuo.cn/20201009150524563.png)
+![](assets/index/image-20230426204025.png)
+
+
 
 实际上用的最多的也就是以下三种，区别如下
 
@@ -815,7 +817,8 @@ DROP USER kuizuo
 
 在 Navicat 中，右键数据库，可逆向数据库到模型，模型的结果图如下
 
-![image-20210102213536190](https://img.kuizuo.cn/image-20210102213536190.png)
+![](assets/index/image-20230426204059.png)
+
 
 通过数据库模型，可以方便的分析该数据库中的关系，同时也可添加相应的数据等。
 

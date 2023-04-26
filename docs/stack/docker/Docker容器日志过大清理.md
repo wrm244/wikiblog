@@ -12,7 +12,8 @@ keywords: [docker]
 
 在我以 docker 容器部署了 elasticsearch 服务后的 3 个月时间，发现硬盘会不断的增大，一开始时没在意，直到硬盘报黄，就像下图这样
 
-![image-20211016180014693](https://img.kuizuo.cn/image-20211016180014693.png)
+![](assets/Docker容器日志过大清理/image-20230426204409.png)
+
 
 于是就准备找找是什么原因导致硬盘空间不断增大。
 

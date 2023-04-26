@@ -11,7 +11,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/guides",
+  "attachmentFolderPath": "./assets/Python中的cv2使用",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative"
 }

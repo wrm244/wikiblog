@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/blog/Docusaurus/guides.md",
+                "file": "docs/stack/python/Python中的cv2使用.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/blog/Docusaurus/guides.md",
+                "file": "docs/stack/python/Python中的cv2使用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/blog/Docusaurus/guides.md",
+                "file": "docs/stack/python/Python中的cv2使用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/blog/Docusaurus/guides.md"
+                "file": "docs/stack/python/Python中的cv2使用.md"
               }
             }
           }
@@ -150,51 +150,51 @@
   },
   "active": "723d973c1cfe16c8",
   "lastOpenFiles": [
+    "docs/stack/python/assets/Python中的cv2使用/image-20230426204813.png",
+    "docs/stack/python/assets/Python中的cv2使用/image-20230426204806.png",
+    "docs/stack/python/assets/Python中的cv2使用",
+    "docs/stack/python/Python指定版本运行.md",
+    "docs/stack/python/assets/Python指定版本运行/image-20230426204747.png",
+    "docs/stack/python/assets/Python指定版本运行/image-20230426204730.png",
+    "docs/stack/python/assets/Python指定版本运行/image-20230426204721.png",
+    "docs/stack/python/assets/Python指定版本运行",
+    "docs/stack/python/assets",
+    "docs/stack/python/Python爬虫总结.md",
+    "docs/stack/python/pyautogui自动化操作脚本.md",
+    "docs/stack/node/npkill快速删除node_modules文件.md",
+    "docs/stack/node/assets/npkill快速删除node_modules文件/image-20230426204645.png",
+    "docs/stack/node/assets/npkill快速删除node_modules文件/image-20230426204619.png",
+    "docs/stack/node/assets/npkill快速删除node_modules文件/image-20230426204609.png",
+    "docs/stack/node/assets/npkill快速删除node_modules文件",
+    "docs/stack/node/使用 require.context 实现模块自动导入.md",
+    "docs/stack/node/assets/使用 require.context 实现模块自动导入/image-20230426204554.png",
+    "docs/stack/node/assets/使用 require.context 实现模块自动导入/image-20230426204544.png",
+    "docs/stack/node/assets/使用 require.context 实现模块自动导入/image-20230426204529.png",
+    "docs/stack/node/assets/使用 require.context 实现模块自动导入",
+    "docs/stack/node/assets",
+    "docs/stack/js/JS打印函数调用栈.md",
+    "docs/stack/js/assets/JS打印函数调用栈",
+    "docs/stack/js/assets",
+    "docs/stack/docker/Docker容器日志过大清理.md",
+    "docs/stack/docker/Docker访问宿主机上服务.md",
+    "docs/stack/docker/assets/Docker容器日志过大清理",
+    "docs/stack/docker/Docker.md",
+    "docs/stack/docker/assets/Docker",
+    "docs/stack/docker/修改无法启动的Docker容器配置文件.md",
+    "docs/stack/database/mysql/Mysql替换函数replace.md",
+    "docs/stack/database/mysql/Mysql模糊查询like优化.md",
+    "docs/stack/database/mysql/index.md",
+    "docs/blog/Docusaurus/guides.md",
     "docs/blog/Docusaurus/docs模板示例.md",
     "docs/blog/Docusaurus/blog模板示例.md",
     "docs/blog/Docusaurus/自定义组件.md",
     "docs/blog/Docusaurus/样式与界面.md",
     "docs/blog/Docusaurus/文档编辑指南.md",
     "docs/blog/Docusaurus/图床配置.md",
-    "docs/blog/Docusaurus/assets/图床配置/image-20230426201813.png",
-    "docs/blog/Docusaurus/assets/图床配置/image-20230426201801.png",
-    "docs/blog/Docusaurus/assets/图床配置/image-20230426201755.png",
-    "docs/blog/Docusaurus/assets/图床配置/image-20230426201750.png",
-    "docs/blog/Docusaurus/assets/图床配置/image-20230426201745.png",
-    "docs/blog/Docusaurus/assets/图床配置/image-20230426201740.png",
-    "docs/blog/Docusaurus/assets/图床配置/image-20230426201736.png",
-    "docs/blog/Docusaurus/assets/图床配置/image-20230426201731.png",
-    "docs/blog/Docusaurus/assets/图床配置/image-20230426201728.png",
-    "docs/blog/Docusaurus/assets/图床配置/image-20230426201723.png",
-    "docs/blog/Docusaurus/assets/图床配置",
     "docs/blog/Docusaurus/搜索配置.md",
-    "docs/blog/Docusaurus/assets/搜索配置",
     "docs/blog/Docusaurus/使用Hygen创建文章模板.md",
-    "docs/blog/Docusaurus/assets/使用Hygen创建文章模板",
     "docs/blog/Docusaurus/评论系统.md",
-    "docs/blog/Docusaurus/assets/评论系统",
     "docs/blog/Docusaurus/环境配置.md",
-    "docs/blog/Docusaurus/部署.md",
-    "blog/CS/network/本网站CDN加速的处理.md",
-    "obsidian/BlogPost Template.md",
-    "build/en/sw.js",
-    "build/en/feed.json",
-    "build/en/atom.xml",
-    "build/en/rss.xml",
-    "build/en/search-index.json",
-    "build/en/docs/stack/database/redis/index.html",
-    "build/README.md",
-    "build/en/README.md",
-    "assets/CDN的原理与使用/image-20230425003649.png.md",
-    "obsidian/DocsPost Template.md",
-    "blog/project/hexo/hexo利用github action进行部署.md",
-    "blog/project/hexo/Obsidian与hexo结合部署到github pages上.md",
-    "blog/project/hexo/hexo插件推荐.md",
-    "blog/project/web/宝塔 Flarum 论坛的搭建与迁移.md",
-    "blog/project/web/Docker部署Overleaf包含中文字体与全套texlive镜像.md",
-    "blog/project/docusaurus/Docusaurus-Theme-Zen.md",
-    "blog/project/docusaurus/obsidian模板示例.md",
-    "assets/images/avatar300.png.md",
-    "blog/project/Bug-Review/BUG记录模板.md"
+    "docs/blog/Docusaurus/部署.md"
   ]
 }
