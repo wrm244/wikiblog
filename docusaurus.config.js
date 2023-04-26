@@ -199,10 +199,6 @@ const config = {
               to: '/about',
             },
             {
-              label: '镜像站点',
-              href: 'https://wrm244.netlify.app',
-            }, 
-            {
               label: 'GitHub',
               href: 'https://github.com/wrm244',
             },
@@ -210,6 +206,10 @@ const config = {
               label: '本站主题',
               href: 'https://github.com/wrm244/docusaurus-theme-zen',
               },
+              {
+              label: '网站统计数据',
+              href: 'https://analytics.umami.is/share/V8NiQd30wnyOEYb0/RM\'s%20Technical%20Archive',
+            }, 
           ],
         },
         {
@@ -321,6 +321,14 @@ const config = {
         s.parentNode.insertBefore(el, s);
         })(window)
       `,
+    },
+    {
+      tagName: 'script',
+      attributes: {
+        defer: "true",
+        src: 'https://analytics.umami.is/script.js',
+        'data-website-id': '6a499294-2682-4ef7-aa0a-413ba17b9e1d'
+      }
     },
     // {//先加载字体
     //   tagName: 'link',

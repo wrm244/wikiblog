@@ -70,12 +70,12 @@ jobs:
           PUBLISH_REPOSITORY: wrm244/wrm244.github.io # 公共仓库，格式：GitHub 用户名/仓库名
           BRANCH: wikiblog # 分支，填 gh-pages 就行
           PUBLISH_DIR: ./build # 部署 public 目录下的文件
-      - name: search-engines-urls-push
-        uses: 3Alan/search-engines-urls-push@v0.2.3
-        with:
-          site: ${{ secrets.SITE }}
-          sitemap: ${{ secrets.SITEMAP }}
-          baidu-token: ${{ secrets.BAIDU_TOKEN }}
+      # - name: search-engines-urls-push
+      #   uses: 3Alan/search-engines-urls-push@v0.2.3
+      #   with:
+      #     site: ${{ secrets.SITE }}
+      #     sitemap: ${{ secrets.SITEMAP }}
+      #     baidu-token: ${{ secrets.BAIDU_TOKEN }}
 
       - name: Sync to Gitee
         uses: wearerequired/git-mirror-action@master

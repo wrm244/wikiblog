@@ -67,6 +67,10 @@
     "message": "Slides",
     "description": "The label of footer link with label=幻灯片 linking to https://wrm244.gitee.io/slide/"
   },
+  "link.item.label.网站统计数据": {
+    "message": "Statistics",
+    "description": "The label of footer link with label=网站统计数据 linking to https://wrm244.gitee.io/slide/"
+  },
   "link.item.label.镜像站点": {
     "message": "Mirror",
     "description": "The label of footer link with label=镜像站点 linking to https://wrm244.gitee.io/slide/"
