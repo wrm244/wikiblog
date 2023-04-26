@@ -1,6 +1,6 @@
 const path = require('path')
-// const math = require('remark-math');
-// const katex = require('rehype-katex');
+const math = require('remark-math');
+const katex = require('rehype-katex');
 //const announcementBarContent = `🎉欢迎来到我的主页`
 
 /** @type {import('@docusaurus/types').Config} */
@@ -9,7 +9,7 @@ const config = {
   titleDelimiter: '-',
   url: 'https://wrm244.gxist.cn',
   baseUrl: '/',
-  favicon: '/favicon.ico',
+  favicon: '/assets/images/social/avatar.ico',
   organizationName: 'wrm244',
   projectName: 'blog',
   tagline: '学习记录，技术存档',
@@ -322,6 +322,14 @@ const config = {
         as: 'image',
       },
     },
+    {//先加载主页ico图片
+      tagName: 'link',
+      attributes: {
+        rel: 'preload',
+        href: '/assets/images/social/avatar.ico',
+        as: 'image',
+      },
+    },
   ],
   presets: [
     [
@@ -331,8 +339,8 @@ const config = {
         docs: {
           path: 'docs',
           sidebarPath: 'sidebars.js',
-          // remarkPlugins: [math],
-          // rehypePlugins: [katex],
+          remarkPlugins: [math],
+          rehypePlugins: [katex],
         },
         blog: false,
         theme: {
@@ -445,14 +453,14 @@ const config = {
       },
     ],
   ],
-  // stylesheets: [
-  //   {
-  //   href: 'https://jsd.onmicrosoft.cn/npm/katex@0.13.24/dist/katex.min.css',
-  //   type: 'text/css',
-  //   integrity:
-  //     'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
-  //   crossorigin: 'anonymous',
-  // },],
+  stylesheets: [
+    {
+    href: 'https://jsd.onmicrosoft.cn/npm/katex@0.13.24/dist/katex.min.css',
+    type: 'text/css',
+    integrity:
+      'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',
+    crossorigin: 'anonymous',
+  },],
   i18n: {
     defaultLocale: 'zh-CN',
     locales: ['en', 'zh-CN'],

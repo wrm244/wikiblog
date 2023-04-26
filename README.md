@@ -1,25 +1,32 @@
 
 ## 河山的技术存档(website)
-![GitHub last commit](https://img.shields.io/github/last-commit/wrm244/wrm244.github.io?label=update&logo=github) [![Netlify Status](https://api.netlify.com/api/v1/badges/77e2a74d-30e3-4788-b7f1-257d746d2361/deploy-status)](https://app.netlify.com/sites/radiant-brioche-f77a52/deploys) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
-> Build with 🦖<a href="https://docusaurus.io/">Docusaurus</a> Theme use <a href="https://kuizuo.cn/">kuizuo<a> 
-> <a href="https://wrm244.github.io">🖥 Online Preview</a>
+
+![GitHub last commit](https://img.shields.io/github/last-commit/wrm244/wrm244.github.io?label=update&logo=github) [![Netlify Status](https://api.netlify.com/api/v1/badges/5db8174d-fe3f-4ada-a963-5a52a131788c/deploy-status)](https://app.netlify.com/sites/wrm244/deploys) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
+
+<p align=center>
+Build with 🦖<a href="https://docusaurus.io/">Docusaurus</a> Theme use <a href="https://github.com/wrm244/docusaurus-theme-zen">Docusaurus-theme-zen<a> 
+<a href="https://wrm244.github.io">🖥 Online Preview</a>
+</p>
 
 <p align=center>
 <a href="https://docusaurus.io/zh-CN/" target="_blank"><img alt="Built with Docusaurus" style="height:50px;margin-top:0.5rem" src="https://wrm244.github.io/assets/images/buildwith.png" /></a> <a href="https://www.netlify.com/" target="_blank"><img alt="Built with Netlify" style="height:50px;margin-top:0.5rem " src="https://wrm244.github.io/assets/images/netlify-color-accent.svg" /></a>     
 </p>
 
-## 👋 Introduction
+## Introduction
 
-这是一个我用来记录和分享我的学习心得、个人感悟和创意项目的网站。你可以在这里找到我关于编程、设计、人工智能等各种主题的笔记和博客，也可以看到我参与或制作的一些有趣的项目。该技术存档使用🦖 <a href="https://docusaurus.io/">Docusaurus</a>搭建，遵循[MIT](./LICENSE)协议。
+这是一个我用来记录和分享我的学习心得、个人感悟和创意项目的网站。你可以在这里找到我关于编程、设计、人工智能等各种主题的笔记和博客，也可以看到我参与或制作的一些有趣的项目。该技术存档使用🦖 <a href="https://docusaurus.io/">Docusaurus</a>搭建，遵循[EPL-1.0](./LICENSE)协议。
 
 
-## 📊 Catalogue
+## Catalogue
+
 
 ```bash
 ├── blog                           # 博客
 │   ├── first-blog.md
+│   └── authors.yml                # 作者信息(可以多个作者)
 ├── docs                           # 文档/笔记
-│   └── doc.md
+│   └── stack
+│         └──introduction.md       # 笔记介绍
 ├── data                           # 项目/导航/友链数据
 │   ├── friend.ts                  # 友链
 │   ├── project.ts                 # 项目
@@ -32,12 +39,11 @@
 │   ├── plugin                     # 自定义插件
 │   └── theme                      # 自定义主题组件
 ├── static                         # 静态资源文件
-│   └── img                        # 静态图片
+│   └── assets                     # 静态文件
 ├── docusaurus.config.js           # 站点的配置信息
 ├── sidebars.js                    # 文档的侧边栏
 ├── package.json
-├── tsconfig.json
-└── yarn.lock
+└── yarn.lock                      # 建议使用yarn保留
 ```
 
 ## 📥 Install
@@ -54,7 +60,7 @@ Build
 ```sh
 yarn run build
 ```
-## ✅ Github Action CI
+## Github Action CI
 该流程会同步部署到云服务器与GitHub Pages上面：
 ```yml
 name: ci
@@ -131,6 +137,6 @@ jobs:
 ```
 
 
-## 📝License
+## License
 
-[MIT](./LICENSE) © 河山 100%
+[EPL-1.0](./LICENSE) © 河山 100%
