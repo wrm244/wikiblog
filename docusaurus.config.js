@@ -323,6 +323,21 @@ const config = {
       `,
     },
     {
+     tagName: 'link',
+     attributes:{
+      rel: "dns-prefetch",
+      href: "https://fonts.gstatic.com/"
+     },
+    },
+    {
+     tagName: 'link',
+     attributes:{
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      crossorigin: "anonymous",
+     },
+    },
+    {
       tagName: 'script',
       attributes: {
         defer: "true",

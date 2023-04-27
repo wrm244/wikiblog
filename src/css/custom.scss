@@ -259,7 +259,7 @@ html[data-theme='dark'] .theme-code-block {
 html[data-theme='dark'] .navbar {
   box-shadow: none;
   // 毛玻璃效果
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(0, 0, 0, 0);
   backdrop-filter: blur(13px);
   border-bottom: 1px solid #ffffff00;
   text-shadow: 0.5px 0.5px 0 #0c0c0c;
