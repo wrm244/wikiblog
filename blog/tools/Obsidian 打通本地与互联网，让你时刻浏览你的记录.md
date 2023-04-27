@@ -1,6 +1,6 @@
 ---
 title: Obsidian 打通本地与互联网，让你时刻浏览你的记录
-description: 
+description: Obsidian打通本地与互联网，让你时刻浏览你的笔记
 slug: /blog/tools/Obsidian-internat
 authors: RiverMountain
 tags: [Obsidian]
