@@ -71,3 +71,6 @@ thread = Start_Kernel_Thread(&project0,0,PRIORITY_NORMAL,false);
 >3. 导入软盘的首扇区数据到从内存地址0x7c00开始的一块内存区,之后跳转到这个地址,开始执行这段首扇区内的程序代码.首扇区内的代码是由位于/src/geekos目录中的fd_boot.asm编译生成的引导程序.这段汇编程序完成搜索并装载软盘中的GeekOS内核二进制文件的功能
 >4. 在装载完毕后,装载程序执行段间跳转,转入程序Setup(/src/geekos目录中的setup.asm编译生成)继续执行.Setup程序完成装载临时GDT,IDT描述符,打开A20地址线,初始化PIC中断控制器,最后由实模式跳入保护模式.完成了实模式向保护模式的转换之后,Setup跳转到内核ENTRY_POINT入口点.至此,GeekOS的引导过程结束,内核初始化过程开始。
 >5. GeekOS的内核入口点ENTRY_POINT指向的是内核Main函数的函数入口,在编译时完成对ENTRY_POINT的初始化.Main函数在src/src/geekos/main.c中实现.Main函数通过调用内核各模块的初始化函数来完成系统内核的初始化。
+
+## 参考与致谢
+- [GeekOS操作系统课程设计 project0](https://blog.csdn.net/m0_47986238/article/details/116051345)

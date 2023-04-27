@@ -146,3 +146,6 @@ static void Printrap_Handler( struct Interrupt_State* state )
 
 4. 在GeekOS系统内核中，如何运行建立好的线程？
 > 答：GeekOS操作系统为不同状态下的进程准备了不同的进程队列：就绪队列s_runQueue，等待队列s_reaperWaitQueue，销毁队列s_graveyardQueue，而运行态的只有一个g_currentThread指针指向哪个进程哪个进程就处于运行态。系统启动之后，会从Entry入口执行Main函数，执行到Init_Scheduler()函数时会建立3个最开始的进程Main、Idle和Reaper，同时调度Main。Idle在就绪队列队尾，当无进程可调度时Idle就会被调度并一直运行Yield()函数检查是否有可调度进程并让步。所以新建的线程加入到就绪队列就可以通过相应的调度算法被调度运行。
+
+## 参考与致谢
+- [GeekOS课程设计-project1](https://blog.csdn.net/qq_35008279/article/details/78984561)

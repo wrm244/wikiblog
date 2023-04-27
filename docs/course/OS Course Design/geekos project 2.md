@@ -628,3 +628,6 @@ static void Spawn_Init_Process(void)
 3. 什么是全局描述表？什么是局部描述表？
 4. 在GeekOS系统内核中，如何由ELF文件创建一个用户级线程？
 5. 在GeekOS系统内核中，如何选择一个建立好的用户级线程来运行？
+
+## 参考与致谢
+- [GeekOS课程设计-project2_geekos](https://blog.csdn.net/qq_35008279/article/details/79648917)

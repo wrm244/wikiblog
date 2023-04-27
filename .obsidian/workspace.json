@@ -4,36 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "3280c98edafa8235",
+        "id": "6e5a86b44a803f45",
         "type": "tabs",
         "children": [
           {
-            "id": "9fdac3f4a0e524ef",
+            "id": "5feaaa1262601d92",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/OS Course Design/geekos project 3.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f7debb7ce0ca22c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/course/OS Course Design/geekos project 4.md",
+                "file": "blog/tools/Obsidian 打通本地与互联网，让你时刻浏览你的记录.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -83,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309.5,
-    "collapsed": true
+    "width": 309.5
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -100,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/OS Course Design/geekos project 4.md",
+                "file": "blog/tools/Obsidian 打通本地与互联网，让你时刻浏览你的记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/OS Course Design/geekos project 4.md",
+                "file": "blog/tools/Obsidian 打通本地与互联网，让你时刻浏览你的记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/OS Course Design/geekos project 4.md"
+                "file": "blog/tools/Obsidian 打通本地与互联网，让你时刻浏览你的记录.md"
               }
             }
           }
@@ -163,8 +148,19 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "f7debb7ce0ca22c6",
+  "active": "5feaaa1262601d92",
   "lastOpenFiles": [
+    "blog/project/hexo/Obsidian与hexo结合部署到github pages上.md",
+    "blog/tools/Obsidian 打通本地与互联网，让你时刻浏览你的记录.md",
+    "docs/course/OS Course Design/geekos project 3.md",
+    "blog/project/Bug-Review/BUG记录模板.md",
+    "blog/tools",
+    "blog/CS/network/本网站CDN加速的处理.md",
+    "docs/course/OS Course Design/geekos project 4.md",
+    "docs/course/OS Course Design/geekos project 2.md",
+    "docs/course/OS Course Design/geekos project 1.md",
+    "docs/course/OS Course Design/geekos project 0.md",
+    "docs/blog/Docusaurus/部署.md",
     "docs/course/OS Course Design/assets/geekos project 4/image-20230427131306.png",
     "docs/course/OS Course Design/assets/geekos project 4/image-20230427125820.png",
     "docs/course/OS Course Design/assets/geekos project 4/image-20230427125527.png",
@@ -173,14 +169,10 @@
     "docs/course/OS Course Design/assets/geekos project 4/image-20230427124551.png",
     "docs/course/OS Course Design/assets/geekos project 4/image-20230427124537.png",
     "docs/course/OS Course Design/assets/geekos project 4",
-    "docs/course/OS Course Design/geekos project 2.md",
-    "docs/course/OS Course Design/geekos project 4.md",
     "docs/course/未命名.md",
-    "docs/course/OS Course Design/geekos project 3.md",
     "docs/course/OS Course Design/assets/geekos project 3/image-20230427123031.png",
     "docs/course/OS Course Design/assets/geekos project 3/image-20230427122930.png",
     "docs/course/OS Course Design/assets/geekos project 3/image-20230427122030.png",
-    "docs/course/OS Course Design/assets/geekos project 3/image-20230427121653.png",
     "docs/course/OS Course Design/assets/geekos project 3",
     "build/en/tags/obsidian/index.html",
     "build/en/tags/overleaf/index.html",
@@ -189,10 +181,7 @@
     "build/en/tags/hexo/index.html",
     "build/en/tags/flarum/index.html",
     "build/en/tags/docusaurus/index.html",
-    "build/en/tags/docker/index.html",
     "build/README.md",
-    "docs/course/OS Course Design/geekos project 1.md",
-    "docs/course/OS Course Design/geekos project 0.md",
     "build/en/README.md",
     "docs/stack/python/Python中的cv2使用.md",
     "docs/stack/css/记Tailwind CSS使用.md",
@@ -206,10 +195,6 @@
     "docs/stack/docker/Docker访问宿主机上服务.md",
     "docs/stack/docker/Docker.md",
     "docs/stack/docker/修改无法启动的Docker容器配置文件.md",
-    "docs/stack/database/mysql/Mysql替换函数replace.md",
-    "docs/stack/database/mysql/Mysql模糊查询like优化.md",
-    "docs/stack/database/mysql/index.md",
-    "docs/blog/Docusaurus/guides.md",
-    "docs/blog/Docusaurus/docs模板示例.md"
+    "docs/stack/database/mysql/Mysql替换函数replace.md"
   ]
 }
