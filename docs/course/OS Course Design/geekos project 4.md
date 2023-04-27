@@ -6,7 +6,7 @@ author: RiverMountain
 date: 2023/04/27
 tags: [OS]  
 keywords: [OS,geekos]
-description: 
+description: 了解虚拟存储器管理设计原理，掌握请求分页虚拟存储管理的具体实现技术
 last_update:
   date: 2023/04/27
 ---  
@@ -40,7 +40,7 @@ last_update:
 在GeekOS中，所有内核级进程共享一个页表，而每个用户级进程都有各自的页表。当系统需要运行某个进程时，就把该进程对应的页表调入内存，并使之驻留在内存中，这样就可以运行该用户级线程。此外，用户模式进程的页表也包含访问内核模式内存的入口。GeekOS的内存布局如下图所示：
 ![](assets/geekos%20project%204/image-20230427124656.png)
 
-通过编写一个初始化页表和允许在处理器中使用分页模式的函数来为内核级进程创建一个页目录和页表入口，这个函数就是<project4\src\geekos\paging.c>中的Init_ VM函数。在<paging.c>的Init _VM的Hints (提示)中，用户可以看到此函数的功能主要有以下三个：
+通过编写一个初始化页表和允许在处理器中使用分页模式的函数来为内核级进程创建一个页目录和页表入口，这个函数就是project4\src\geekos\paging.c中的Init_ VM函数。在paging.c的Init _VM的Hints (提示)中，用户可以看到此函数的功能主要有以下三个：
 
 1. 建立内核页目录表和页表；  
 2. 调用Enable_Paging函数使分页机制有效；  
