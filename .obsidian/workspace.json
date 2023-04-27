@@ -4,22 +4,36 @@
     "type": "split",
     "children": [
       {
-        "id": "a75d1a5b18b43aaf",
+        "id": "3280c98edafa8235",
         "type": "tabs",
         "children": [
           {
-            "id": "723d973c1cfe16c8",
+            "id": "9fdac3f4a0e524ef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/stack/python/Python中的cv2使用.md",
+                "file": "docs/course/OS Course Design/geekos project 3.md",
                 "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f7debb7ce0ca22c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/course/OS Course Design/geekos project 4.md",
+                "mode": "preview",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +83,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 309.5,
+    "collapsed": true
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -85,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/stack/python/Python中的cv2使用.md",
+                "file": "docs/course/OS Course Design/geekos project 4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +117,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/stack/python/Python中的cv2使用.md",
+                "file": "docs/course/OS Course Design/geekos project 4.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/stack/python/Python中的cv2使用.md"
+                "file": "docs/course/OS Course Design/geekos project 4.md"
               }
             }
           }
@@ -148,53 +163,53 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "723d973c1cfe16c8",
+  "active": "f7debb7ce0ca22c6",
   "lastOpenFiles": [
-    "docs/stack/python/assets/Python中的cv2使用/image-20230426204813.png",
-    "docs/stack/python/assets/Python中的cv2使用/image-20230426204806.png",
-    "docs/stack/python/assets/Python中的cv2使用",
+    "docs/course/OS Course Design/assets/geekos project 4/image-20230427131306.png",
+    "docs/course/OS Course Design/assets/geekos project 4/image-20230427125820.png",
+    "docs/course/OS Course Design/assets/geekos project 4/image-20230427125527.png",
+    "docs/course/OS Course Design/assets/geekos project 4/image-20230427125124.png",
+    "docs/course/OS Course Design/assets/geekos project 4/image-20230427124656.png",
+    "docs/course/OS Course Design/assets/geekos project 4/image-20230427124551.png",
+    "docs/course/OS Course Design/assets/geekos project 4/image-20230427124537.png",
+    "docs/course/OS Course Design/assets/geekos project 4",
+    "docs/course/OS Course Design/geekos project 2.md",
+    "docs/course/OS Course Design/geekos project 4.md",
+    "docs/course/未命名.md",
+    "docs/course/OS Course Design/geekos project 3.md",
+    "docs/course/OS Course Design/assets/geekos project 3/image-20230427123031.png",
+    "docs/course/OS Course Design/assets/geekos project 3/image-20230427122930.png",
+    "docs/course/OS Course Design/assets/geekos project 3/image-20230427122030.png",
+    "docs/course/OS Course Design/assets/geekos project 3/image-20230427121653.png",
+    "docs/course/OS Course Design/assets/geekos project 3",
+    "build/en/tags/obsidian/index.html",
+    "build/en/tags/overleaf/index.html",
+    "build/en/tags/linux/index.html",
+    "build/en/tags/nginx/index.html",
+    "build/en/tags/hexo/index.html",
+    "build/en/tags/flarum/index.html",
+    "build/en/tags/docusaurus/index.html",
+    "build/en/tags/docker/index.html",
+    "build/README.md",
+    "docs/course/OS Course Design/geekos project 1.md",
+    "docs/course/OS Course Design/geekos project 0.md",
+    "build/en/README.md",
+    "docs/stack/python/Python中的cv2使用.md",
+    "docs/stack/css/记Tailwind CSS使用.md",
     "docs/stack/python/Python指定版本运行.md",
-    "docs/stack/python/assets/Python指定版本运行/image-20230426204747.png",
-    "docs/stack/python/assets/Python指定版本运行/image-20230426204730.png",
-    "docs/stack/python/assets/Python指定版本运行/image-20230426204721.png",
-    "docs/stack/python/assets/Python指定版本运行",
-    "docs/stack/python/assets",
     "docs/stack/python/Python爬虫总结.md",
     "docs/stack/python/pyautogui自动化操作脚本.md",
     "docs/stack/node/npkill快速删除node_modules文件.md",
-    "docs/stack/node/assets/npkill快速删除node_modules文件/image-20230426204645.png",
-    "docs/stack/node/assets/npkill快速删除node_modules文件/image-20230426204619.png",
-    "docs/stack/node/assets/npkill快速删除node_modules文件/image-20230426204609.png",
-    "docs/stack/node/assets/npkill快速删除node_modules文件",
     "docs/stack/node/使用 require.context 实现模块自动导入.md",
-    "docs/stack/node/assets/使用 require.context 实现模块自动导入/image-20230426204554.png",
-    "docs/stack/node/assets/使用 require.context 实现模块自动导入/image-20230426204544.png",
-    "docs/stack/node/assets/使用 require.context 实现模块自动导入/image-20230426204529.png",
-    "docs/stack/node/assets/使用 require.context 实现模块自动导入",
-    "docs/stack/node/assets",
     "docs/stack/js/JS打印函数调用栈.md",
-    "docs/stack/js/assets/JS打印函数调用栈",
-    "docs/stack/js/assets",
     "docs/stack/docker/Docker容器日志过大清理.md",
     "docs/stack/docker/Docker访问宿主机上服务.md",
-    "docs/stack/docker/assets/Docker容器日志过大清理",
     "docs/stack/docker/Docker.md",
-    "docs/stack/docker/assets/Docker",
     "docs/stack/docker/修改无法启动的Docker容器配置文件.md",
     "docs/stack/database/mysql/Mysql替换函数replace.md",
     "docs/stack/database/mysql/Mysql模糊查询like优化.md",
     "docs/stack/database/mysql/index.md",
     "docs/blog/Docusaurus/guides.md",
-    "docs/blog/Docusaurus/docs模板示例.md",
-    "docs/blog/Docusaurus/blog模板示例.md",
-    "docs/blog/Docusaurus/自定义组件.md",
-    "docs/blog/Docusaurus/样式与界面.md",
-    "docs/blog/Docusaurus/文档编辑指南.md",
-    "docs/blog/Docusaurus/图床配置.md",
-    "docs/blog/Docusaurus/搜索配置.md",
-    "docs/blog/Docusaurus/使用Hygen创建文章模板.md",
-    "docs/blog/Docusaurus/评论系统.md",
-    "docs/blog/Docusaurus/环境配置.md",
-    "docs/blog/Docusaurus/部署.md"
+    "docs/blog/Docusaurus/docs模板示例.md"
   ]
 }
