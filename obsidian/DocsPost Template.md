@@ -9,7 +9,5 @@ keywords: []
 description: 
 last_update:
   date: {{date}}
----  
+---
 
-
-<!-- truncate -->

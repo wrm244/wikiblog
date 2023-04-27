@@ -9,11 +9,14 @@ keywords: [OS,geekos]
 description: 了解虚拟存储器管理设计原理，掌握请求分页虚拟存储管理的具体实现技术
 last_update:
   date: 2023/04/27
----  
+---
 
 ## 项目设计目的
+
 了解虚拟存储器管理设计原理，掌握请求分页虚拟存储管理的具体实现技术。
+
 ## 项目设计要求
+
 1. 段式先将逻辑地址映射成线性地址；
 2. 页式将线性地址映射成物理地址；
 3. 请求分页机制的实现；
@@ -40,7 +43,7 @@ last_update:
 在GeekOS中，所有内核级进程共享一个页表，而每个用户级进程都有各自的页表。当系统需要运行某个进程时，就把该进程对应的页表调入内存，并使之驻留在内存中，这样就可以运行该用户级线程。此外，用户模式进程的页表也包含访问内核模式内存的入口。GeekOS的内存布局如下图所示：
 ![](assets/geekos%20project%204/image-20230427124656.png)
 
-通过编写一个初始化页表和允许在处理器中使用分页模式的函数来为内核级进程创建一个页目录和页表入口，这个函数就是project4\src\geekos\paging.c中的Init_ VM函数。在paging.c的Init _VM的Hints (提示)中，用户可以看到此函数的功能主要有以下三个：
+通过编写一个初始化页表和允许在处理器中使用分页模式的函数来为内核级进程创建一个页目录和页表入口，这个函数就是project4/src/geekos/paging.c中的Init_ VM函数。在paging.c的Init _VM的Hints (提示)中，用户可以看到此函数的功能主要有以下三个：
 
 1. 建立内核页目录表和页表；  
 2. 调用Enable_Paging函数使分页机制有效；  
@@ -53,10 +56,10 @@ last_update:
 
 ## 实现
 1. 在<src/geekos/paging.c>文件中编写代码完成以下函数：
-
 - Init_VM()(defined in )函数将建立一个初始的内存页目录和页表，并且安装一个页面出错处理程序。
 ```c title="src/geekos/paging.c"
-// 通过为内核和物理内存构建页表来初始化虚拟内存。
+//通过为内核和物理内存构建页表来初始化虚拟内存。
+//其中页目录项和页表项也可以合在一起看作是二级页表
 void Init_VM(struct Boot_Info *bootInfo)
 {
     int kernel_pde_entries;
@@ -65,16 +68,14 @@ void Init_VM(struct Boot_Info *bootInfo)
     uint_t mem_addr;
     pte_t *cur_pte;
     // 计算物理内存的页数
-    whole_pages = bootInfo->memSizeKB / 4;
-    // Print("whole pages are %d/n",whole_pages);
+    whole_pages = bootInfo->memSizeKB / 4; //2048块
+   
     // 计算内核页目录中要多少个目录项，才能完全映射所有的物理内存页。
-    kernel_pde_entries = whole_pages / NUM_PAGE_DIR_ENTRIES + (whole_pages % NUM_PAGE_DIR_ENTRIES == 0 ? 0 : 1);
-    // mydebug
-    // Print("the kernel_pde_entries is %d/n",kernel_pde_entries);
-    // KASSERT(0);
-    // 为内核页目录分配一页空间
+    
+    kernel_pde_entries = whole_pages / NUM_PAGE_DIR_ENTRIES + (whole_pages % NUM_PAGE_DIR_ENTRIES == 0 ? 0 : 1);//看是否有余数 结果为两个目录页
+    
     g_kernel_pde = (pde_t *)Alloc_Page();
-    KASSERT(g_kernel_pde != NULL);
+    KASSERT(g_kernel_pde != NULL);//断言宏，这个函数用来检查g_kernel_pde是否为空指针，如果是，说明内核页目录没有正确分配，程序无法继续运行
     // 将页中所有位清0
     memset(g_kernel_pde, 0, PAGE_SIZE);
     
@@ -83,17 +84,13 @@ void Init_VM(struct Boot_Info *bootInfo)
     mem_addr = 0;
     for (i = 0; i < kernel_pde_entries - 1; i++)
     {
+        //这一循环的目的是创建页目录项与页表项，把页目录项指向页表项
         cur_pde_entry->present = 1;
         cur_pde_entry->flags = VM_WRITE;
-        // 置为全局页，当一个页被标明为全局的，并且CR4中的启用全局页标志（PGE）被置位时，
-        // 一旦CR3寄存器被载入或发生任务切换（此时CR3中的值会改变），TLB中的页表或指向页的页目录表项并不失效。
-        // 这个标志可以防止使TLB中频繁使用的页（比如操作系统内核或其他系统代码）失效。
-        // 注：必须先启用分页机制（通过设置CR0中的PG标志），再启用CR4中的PGE标志，才能启用全局页特性
-        // 详参《IA-32卷3：系统编程指南》
         cur_pde_entry->globalPage = 1;
         cur_pte = (pte_t *)Alloc_Page();
         KASSERT(cur_pte != NULL);
-        // 初始化最后一个页目录表项和对应的页表。注意，页表中的页表项不一定足够1024个
+        // 初始化每一个页目录表项和对应的页表。注意，页表中的页表项不一定足够1024个
         cur_pde_entry->present = 1;
         cur_pde_entry->flags = VM_WRITE;
         cur_pde_entry->globalPage = 1;
@@ -101,8 +98,7 @@ void Init_VM(struct Boot_Info *bootInfo)
         KASSERT(cur_pte != NULL);
         memset(cur_pte, 0, PAGE_SIZE);
         cur_pde_entry->pageTableBaseAddr = (uint_t)cur_pte >> 12;
-        // mydebug
-        // Print("%d----------------------/n",whole_pages);
+       
         int last_pagetable_num;
         last_pagetable_num = whole_pages % NUM_PAGE_TABLE_ENTRIES;
         // 注意当last_pagetable_num=0时，意味着最后一个页目录项对应的页表是满的，就是说页表中1024个页表项都指向一个有效的页。
@@ -132,6 +128,20 @@ void Init_VM(struct Boot_Info *bootInfo)
 }
 ```
 
+:::tip **对于第40行代码的提示**
+假设当前要映射的线性地址是0x80001000，它的最高10位是0x200，中间10位是0x000，最低12位是0x000。那么：
+
+-   cur_pde_entry指向页目录表中的第0x200项，假设它的地址是0xe000。
+-   cur_pte指向页表中的第0x000项，假设它的地址是0xf000。
+-   pageTableBaseAddr存储了页表所在物理页的基地址，假设它是0x1000。
+-   (uint_t)cur_pte >> 12得到了页表所在物理页的页号，它是0xf000 / 4096 = 0x3。
+
+这段代码就是将0x3存储到pageTableBaseAddr中，即：
+
+cur_pde_entry->pageTableBaseAddr = 0x3;
+
+这样，就建立了线性地址0x80001000到物理地址0x300000的一级映射关系。
+:::
 - Init_Paging()函数(定义在src/geekos/paging.c)初始化操作页面调度文件所需的所有数据结构。就如前面说到的，Get_Paging_Device()函数指定分页调度文件定位在哪一个设备和占用磁盘块的地址范围。
 ```c title="src/geekos/paging.c"
 void Init_Paging(void)
@@ -246,7 +256,106 @@ static struct Page *Find_Page_To_Page_Out()
 当前系统有进程号为1~5的进程正在运行，标号1打印当前页目录表的入口起始地址，标号2打印当前页表当前起始地址，标号3打印当前所在页表位置，标号4打印物理地址起始地址，标号5打印线性地址，再运行一次进程4打印当前线性地址对应物理地址。
 
 :::tip
-例如：第一进程给出的线性地址是80001000，转换成二进制后是`1000 0000 0000 0000 0001 0000 0000 0000`，最高10位`1000 0000 00`的十进制是512，中间10位`00 0000 0001`的十进制是1，最低12位`0000 0000 0000`的十进制是0。  
+页表要去内存中取值才能获取实际对应的物理地址。页表基地址字段只是一个指针，它指向页表所在的物理页的起始地址。要访问页表中的具体内容，还需要加上页表项的索引和偏移量。页表中的每个页表项也是一个指针，它指向实际对应的物理页的起始地址。要访问物理页中的具体内容，还需要加上页内偏移量。所以，要通过线性地址来访问物理内存中的数据，需要经过两级的转换，分别是页目录项和页表项。
+:::
+
+打印函数如下
+```c
+
+/*
+ * 分配文件所需要的页
+ * 失败返回-1，成功返回0
+ *
+ */
+int Alloc_User_Page(pde_t * pageDir,uint_t startAddress,uint_t sizeInMemory)
+{
+	uint_t pagedir_index=startAddress>>22;
+	uint_t page_index=(startAddress<<10)>>22;//获取线性地址的页表地址
+
+	pde_t * pagedir_entry=pageDir+pagedir_index;
+	pte_t * page_entry;
+//第一步，建立startAddress对应的页目录表项与页表
+//mydebug
+ Print("1 IN Alloc_User_Page,pagedir_entry=%x\n", pagedir_entry);
+
+//startAddress对应的页目录表项已经建立的情况
+	if(pagedir_entry->present)
+	{
+		page_entry=(pte_t *)(pagedir_entry->pageTableBaseAddr<<12);//4kb
+		Print("2 IN Alloc_User_Page,existed page_entry first=%x\n", page_entry);
+//mydebug
+//Print("IN Alloc_User_Page,page_entry=%x\n", page_entry);
+	}
+	else //startAddress对应页目录表项没有建立的情况（此时意味着对应的页表没有建立）
+	{
+		//分配一个页表
+		page_entry=(pte_t*) Alloc_Page();
+		if(page_entry==NULL)
+		{
+			Print("can not allocate page in Alloc_User_Page/n");
+			return -1;
+		}
+		memset(page_entry,0,PAGE_SIZE);
+		//设置对应的页目录表项
+		*((uint_t*)pagedir_entry)=0;
+		pagedir_entry->present=1;
+		pagedir_entry->flags=VM_WRITE | VM_READ | VM_USER;
+		pagedir_entry->globalPage=0;
+		pagedir_entry->pageTableBaseAddr=(ulong_t)page_entry >> 12;
+         //page_entry是页表的起始地址！！！
+		Print("2 IN Alloc_User_Page,new page_entry first=%x\n", page_entry);
+	}
+
+//找到页表中对应于startAddress的页表项
+	page_entry+=page_index;//page_entry是页表项起始的物理地址,相加线性地址的页表项才能得到正确的页表项的地址
+	Print("3 IN Alloc_User_Page,page_true=%x\n", page_entry);
+
+//第二步，建立startAddress对应的页表项与页
+	int num_pages;
+	void * page_addr;
+//这里算所需页数时，注意要对齐页边界
+	num_pages=Round_Up_To_Page(startAddress-Round_Down_To_Page(startAddress)+sizeInMemory)/PAGE_SIZE;
+//sizeInMemory为应用需要的内存大小
+	int i;
+	uint_t first_page_addr=0;
+	for(i=0; i<num_pages; i++)
+	{
+		//对应的页表项没有建立的情况（此时意味着对应的页没有建立）
+		if(!page_entry->present)
+		{
+			page_addr=Alloc_Pageable_Page(page_entry, Round_Down_To_Page(startAddress));
+			if(page_addr==NULL)
+			{
+				Print("can not allocate page in Alloc_User_Page/n");
+				return -1;
+			}
+			//设置页表项
+			*((uint_t*)page_entry)=0;
+			page_entry->present=1;
+			page_entry->flags=VM_WRITE | VM_READ | VM_USER;
+			page_entry->globalPage = 0;
+			page_entry->pageBaseAddr = (ulong_t)page_addr>>12;
+	//将分配的页的物理地址右移12位，相当于除以4096，得到了分配的页的物理页号。
+	//page_entry->pageBaseAddr是页表项中的一个字段，它存储了分配的页的物理页号
+			KASSERT(page_addr!= 0);
+			if(i==0)
+			{
+				first_page_addr = (uint_t) page_addr;
+			}
+		
+		Print("4 IN Alloc_User_Page,liner addr=%x\n", startAddress);
+        Print("5 IN Alloc_User_Page,phical addr=%x\n", page_addr);
+        Print("-------------------------------------------\n");
+		}
+		page_entry++;
+		startAddress+=PAGE_SIZE;
+	}
+	return 0;
+}
+```
+
+:::tip
+例如：第一进程给出的线性地址是`80001000`，转换成二进制后是`1000 0000 0000 0000 0001 0000 0000 0000`，最高10位`1000 0000 00`的十进制是512，中间10位`00 0000 0001`的十进制是1，最低12位`0000 0000 0000`的十进制是0。  
 首先，需要从当前页目录表的入口起始地址d800开始，找到第512项，即`d800 + 512 * 4 = e000`。当前页表当前起始地址e000就是第512项的内容，表示页表的物理地址。  
 然后，需要从当前页表当前起始地址e000开始，找到第1项，即`e000 + 1 * 4 = e004`。当前所在页表位置e004就是第1项的内容，表示物理页的物理起始地址。  
 最后，需要从物理页的物理起始地址f000开始，加上字节偏移量0，即`f000 + 0 = f000`。所以当前线性地址对应的物理地址为f000。

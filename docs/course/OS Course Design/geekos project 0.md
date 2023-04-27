@@ -9,7 +9,7 @@ keywords: [OS,geekos]
 description: 熟悉GeekOS的项目编译、调试和运行环境，掌握GeekOS运行工作过程。
 last_update:
   date: 2023/04/27
----  
+---
 ## 项目设计要求
 
 1. 搭建GeekOS的编译和调试平台，掌握GeekOS的内核进程工作原理。  

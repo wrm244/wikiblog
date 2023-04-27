@@ -9,7 +9,7 @@ keywords: [OS,geekos]
 description: 研究进程调度算法，掌握用信号量实现进程间同步的方法。
 last_update:
   date: 2023/04/27
----  
+---
 
 ## 项目设计目的
 

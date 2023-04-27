@@ -9,7 +9,7 @@ keywords: [OS,geekos]
 description: 扩充GeekOS操作系统内核，使得系统能够支持用户级进程的动态创建和执行。
 last_update:
   date: 2023/04/27
----  
+---
 
 ## GeekOS进程状态及转换
 

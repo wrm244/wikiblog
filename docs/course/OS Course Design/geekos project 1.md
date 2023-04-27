@@ -9,7 +9,7 @@ keywords: [geekos]
 description: 熟悉ELF文件格式，了解GeekOS系统如何将ELF格式的可执行程序装入到内存建立内核进程并运行的实现技术。
 last_update:
   date: 2023/04/27
----  
+---
 
 # geekos project 1
 
