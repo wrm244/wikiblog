@@ -1,7 +1,7 @@
 ---
 id: geekos-project-2
 slug: /geekos-project-2
-title: geekos-project-2
+title: geekos project 2
 author: RiverMountain  
 date: 2023/04/27
 tags: [OS]  

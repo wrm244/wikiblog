@@ -253,7 +253,7 @@ static struct Page *Find_Page_To_Page_Out()
 
 ![](assets/geekos%20project%204/image-20230427125527.png)
 
-当前系统有进程号为1~5的进程正在运行，标号1打印当前页目录表的入口起始地址，标号2打印当前页表当前起始地址，标号3打印当前所在页表位置，标号4打印物理地址起始地址，标号5打印线性地址，再运行一次进程4打印当前线性地址对应物理地址。
+当前系统有5个进程已经创建，根据之前的项目可以知道这5个进程分别是什么[geekos project 2](geekos%20project%202.md)。每个程序对应5个创建提示输出，标号1打印当前页目录表的入口起始地址，标号2打印当前页表当前起始地址，标号3打印当前所在页表位置，标号4打印物理地址起始地址，标号5打印线性地址。
 
 :::tip
 页表要去内存中取值才能获取实际对应的物理地址。页表基地址字段只是一个指针，它指向页表所在的物理页的起始地址。要访问页表中的具体内容，还需要加上页表项的索引和偏移量。页表中的每个页表项也是一个指针，它指向实际对应的物理页的起始地址。要访问物理页中的具体内容，还需要加上页内偏移量。所以，要通过线性地址来访问物理内存中的数据，需要经过两级的转换，分别是页目录项和页表项。
@@ -361,87 +361,10 @@ int Alloc_User_Page(pde_t * pageDir,uint_t startAddress,uint_t sizeInMemory)
 最后，需要从物理页的物理起始地址f000开始，加上字节偏移量0，即`f000 + 0 = f000`。所以当前线性地址对应的物理地址为f000。
 :::
 
-```c title="src/geekos/uservm.c"
-int Alloc_User_Page(pde_t * pageDir,uint_t startAddress,uint_t sizeInMemory)
-{
-    uint_t pagedir_index=startAddress>>22;
-    uint_t page_index=(startAddress<<10)>>22;
-    pde_t * pagedir_entry=pageDir+pagedir_index;
-    pte_t * page_entry;
-//第一步，建立startAddress对应的页目录表项与页表
- Print("1 IN Alloc_User_Page,pagedir_entry=%x\n", pagedir_entry);
-//startAddress对应的页目录表项已经建立的情况
-    if(pagedir_entry->present)
-    {
-        page_entry=(pte_t *)(pagedir_entry->pageTableBaseAddr<<12);
-        Print("2 IN Alloc_User_Page,existed page_entry first=%x\n", page_entry);
-    }
-    else //startAddress对应页目录表项没有建立的情况（此时意味着对应的页表没有建立）
-    {
-        //分配一个页表
-        page_entry=(pte_t*) Alloc_Page();
-        if(page_entry==NULL)
-        {
-            Print("can not allocate page in Alloc_User_Page/n");
-            return -1;
-        }
-        memset(page_entry,0,PAGE_SIZE);
-        //设置对应的页目录表项
-        *((uint_t*)pagedir_entry)=0;
-        pagedir_entry->present=1;
-        pagedir_entry->flags=VM_WRITE | VM_READ | VM_USER;
-        pagedir_entry->globalPage=0;
-        pagedir_entry->pageTableBaseAddr=(ulong_t)page_entry >> 12;
-//mydebug
-        Print("2 IN Alloc_User_Page,new page_entry first=%x\n", page_entry);
-    }
-  
-//找到页表中对应于startAddress的页表项
-    page_entry+=page_index;
-    Print("3 IN Alloc_User_Page,page_entry=%x\n", page_entry);
-//第二步，建立startAddress对应的页表项与页
-    int num_pages;
-    void * page_addr;
-//这里算所需页数时，注意要对齐页边界
-    num_pages=Round_Up_To_Page(startAddress-Round_Down_To_Page(startAddress)+sizeInMemory)/PAGE_SIZE;
-    int i;
-    uint_t first_page_addr=0;
-    for(i=0; i<num_pages; i++)
-    {
-        //对应的页表项没有建立的情况（此时意味着对应的页没有建立）
-        if(!page_entry->present)
-        {
-            page_addr=Alloc_Pageable_Page(page_entry, Round_Down_To_Page(startAddress));
-            if(page_addr==NULL)
-            {
-                Print("can not allocate page in Alloc_User_Page/n");
-                return -1;
-            }
-            //设置页表项
-            *((uint_t*)page_entry)=0;
-            page_entry->present=1;
-            page_entry->flags=VM_WRITE | VM_READ | VM_USER;
-            page_entry->globalPage = 0;
-            page_entry->pageBaseAddr = (ulong_t)page_addr>>12;
-            KASSERT(page_addr!= 0);
-            if(i==0)
-            {
-                first_page_addr = (uint_t) page_addr;
-            }
-//mydebug
-        Print("4 IN Alloc_User_Page,phical addr=%x\n", page_addr);
-        Print("5 IN Alloc_User_Page,liner addr=%x\n", startAddress);
-        }
-        page_entry++;
-        startAddress+=PAGE_SIZE;
-    }
-    return 0;
-}
-```
-
 ![](assets/geekos%20project%204/image-20230427125820.png)
 
-输入命令rec 4后，可以得到如上图迭代递归下的 Project4运行截图所示结果。由结果可以看出，当前进程队列下共有7个进程，进程1显示出当前页目录表入口为39ffc，进程2显示已存在页表的入口地址为3e000，进程3显示该线性地址空间下对应查找到的页表下标地址为3eff4，进程4显示对应物理地址为43000，进程5显示当前线性地址为ffffd000；最后输出此次迭代递归的搜索深度为4，在这个过程中一共递归调用过4次进程，分别是调用递归进程4、进程3、进程2，以及进程1，最后结束递归调用，程序运行结束。
+输入命令rec 4后，可以得到如上图迭代递归下的 Project4运行截图所示结果。由结果可以看出，当前进程队列下共有7个进程，接下来5个标志输出位当前rec程序页面创建地址，最后输出此次迭代递归的搜索深度为4的提示过程，在这个过程中一共递归调用过4次进程，分别是调用递归进程4、进程3、进程2，以及进程1，最后结束递归调用，程序运行结束。
+>这里在原来参考资料中是有错误的，以上面为准。
 
 ## 习题
 1. GeekOS 系统原始的内存管理方式是什么？
