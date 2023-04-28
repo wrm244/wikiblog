@@ -212,7 +212,8 @@ const config = {
               label: '本站主题',
               href: 'https://github.com/wrm244/docusaurus-theme-zen',
               },
-              {
+            
+            {
               label: '网站统计数据',
               href: 'https://analytics.umami.is/share/V8NiQd30wnyOEYb0/RM\'s%20Technical%20Archive',
             }, 
@@ -230,6 +231,10 @@ const config = {
               label: '导航',
               //position: 'right',
               to: 'resource',
+            },
+            {
+              label: '网站服务状态',
+              href: 'https://stats.uptimerobot.com/vpVWvHEY4Y',
             },
             {
               html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img alt="Built with Docusaurus" style="height:50px;margin-top:0.5rem" src="/assets/images/buildwith.png" /></a> <a href="https://www.netlify.com/" target="_blank"><img alt="Built with Netlify" style="height:50px;margin-top:0.5rem" src="/assets/images/netlify-color-accent.svg" /></a>`,
