@@ -37,7 +37,7 @@ function BlogListPageMetadata(props: Props): JSX.Element {
 
   return (
     <>
-      <PageMetadata title={title} description={blogDescription} />
+      {/* <PageMetadata title={title} description={blogDescription} /> */}
       <SearchMetadata tag="blog_posts_list" />
     </>
   )

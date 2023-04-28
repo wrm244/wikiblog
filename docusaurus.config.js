@@ -34,6 +34,12 @@ const config = {
     },
     metadata: [
       {
+
+        name: 'description',
+        content: '这是一个我用来记录和分享我的学习心得、个人感悟和创意项目的网站。你可以在这里找到我关于编程、设计、人工智能等各种主题的笔记和博客，也可以看到我参与或制作的一些有趣的项目。',
+
+      },
+      {
         name: 'keywords',
         content: '河山',
       },
@@ -300,11 +306,12 @@ const config = {
   },
   clientModules: [require.resolve('./src/clientModules/routeModules.ts')],
   headTags: [
-    {
-      tagName: 'meta',
+    {//先加载主页LOGO图片
+      tagName: 'link',
       attributes: {
-        name: 'description',
-        content: '河山的技术存档，博客与项目',
+        rel: 'preload',
+        href: '/avatar.png',
+        as: 'image',
       },
     },
     {
@@ -329,22 +336,6 @@ const config = {
         src: 'https://analytics.umami.is/script.js',
         'data-website-id': '6a499294-2682-4ef7-aa0a-413ba17b9e1d'
       }
-    },
-    // {//先加载字体
-    //   tagName: 'link',
-    //   attributes: {
-    //     rel: 'preload',
-    //     // href: 'https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap',
-    //     as: 'font',
-    //   },
-    // },
-    {//先加载主页LOGO图片
-      tagName: 'link',
-      attributes: {
-        rel: 'preload',
-        href: '/avatar.png',
-        as: 'image',
-      },
     },
   ],
   presets: [
@@ -378,8 +369,6 @@ const config = {
     // 'docusaurus-plugin-matomo',
     'docusaurus-plugin-image-zoom',
     'docusaurus-plugin-sass',
-    path.resolve(__dirname, './src/plugin/plugin-baidu-tongji'),
-    path.resolve(__dirname, './src/plugin/plugin-baidu-push'),
     [
       path.resolve(__dirname, './src/plugin/plugin-content-blog'),
       {
@@ -388,7 +377,7 @@ const config = {
         editUrl: ({ locale, blogDirPath, blogPath, permalink }) =>
           `https://github.com/wrm244/wikiblog/edit/main/${blogDirPath}/${blogPath}`,
         editLocalizedFiles: false,
-        blogDescription: '河山的技术存档',
+        blogDescription: '这是一个我用来记录和分享我的学习心得、个人感悟和创意项目的网站。你可以在这里找到我关于编程、设计、人工智能等各种主题的笔记和博客，也可以看到我参与或制作的一些有趣的项目。',
         blogSidebarCount: 10,
         blogSidebarTitle: '最近更新',
         postsPerPage: 6,
