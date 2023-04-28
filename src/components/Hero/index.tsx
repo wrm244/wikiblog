@@ -76,7 +76,7 @@ function Hero() {
           <br />
           {/* 徽章的效果 */}
           
-          <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wrm244/wrm244.github.io?label=Update&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }} /> <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/wrm244/docusaurus-theme-zen/ci.yml?label=CI&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }}></img>  <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/5db8174d-fe3f-4ada-a963-5a52a131788c/deploy-status" style={{ boxShadow: '0px 16px 30px rgb(62 196 119 / 15%)', marginTop: '14px' }}></img>
+          <img alt="GitHub last commit" src="/svg/Update-today.svg" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }} /> <img alt="GitHub Workflow Status" src="/svg/CI-passing.svg" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }}></img>  <img alt="Netlify Status" src="/svg/badge-success.svg" style={{ boxShadow: '0px 16px 30px rgb(62 196 119 / 15%)', marginTop: '14px' }}></img>
           
         </animated.p>
         <SocialLinks/>

@@ -9,14 +9,14 @@ const config = {
   titleDelimiter: '-',
   url: 'https://wrm244.gxist.cn',
   baseUrl: '/',
-  favicon: '/avatar.png',
+  favicon: '/svg/logo_blue.svg',
   organizationName: 'wrm244',
   projectName: 'blog',
   tagline: '学习记录，技术存档',
   onBrokenLinks: 'ignore',  //忽略坏链
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
-    image: '/avatar.png',
+    image: '/svg/logo_blue.svg',
     // announcementBar: {
     //   id: 'announcementBar-3',
     //   content: announcementBarContent,
@@ -65,8 +65,8 @@ const config = {
       title: '河山的技术存档',
       logo: {
         alt: '河山',
-        src: '/avatar.png',
-        srcDark: '/avatar.png',//记得加上绝对路径/
+        src: '/svg/logo_blue_sml.svg',
+        srcDark: '/svg/logo_blue_sml.svg',//记得加上绝对路径/
       },
       hideOnScroll: false,
       items: [
@@ -422,7 +422,7 @@ const config = {
           {
             tagName: 'link',
             rel: 'icon',
-            href: '/avatar.png',
+            href: '/svg/logo_blue_sml.svg',
           },
           {
             tagName: 'link',
@@ -447,18 +447,18 @@ const config = {
           {
             tagName: 'link',
             rel: 'apple-touch-icon',
-            href: '/avatar.png',
+            href: '/svg/logo_blue_sml.svg',
           },
           {
             tagName: 'link',
             rel: 'mask-icon',
-            href: '/avatar.png',
+            href: '/svg/logo_blue_sml.svg',
             color: 'rgb(37, 194, 160)',
           },
           {
             tagName: 'meta',
             name: 'msapplication-TileImage',
-            content: '/avatar.png',
+            content: '/svg/logo_blue_sml.svg',
           },
           {
             tagName: 'meta',
