@@ -35,26 +35,16 @@ function ArrowDownBtn(): JSX.Element {
   )
 }
 function Hero() {
-  const trails = useTrail(4, {
-    from: { opacity: 0, x: 2 },
-    to: { opacity: 1, x: 0 },
-    config: {
-      mass: 3,
-      tension: 400,
-      friction: 45,
-    },
-  })
-
   return (
     <animated.div className={styles.hero}>
       <div className={styles.bloghome__intro}>
-        <animated.div style={trails[0]} className={styles.hero_text}>
+        <animated.div className={styles.hero_text}>
           <Translate id="homepage.hero.greet">你好! 我是</Translate>
           <span className={styles.intro__name}>
             <Translate id="homepage.hero.name">河山</Translate>
           </span>
         </animated.div>
-        <animated.p style={trails[1]}>
+        <animated.p>
           <Translate id="homepage.hero.text">
             {`这是一个我用来记录和分享我的学习心得、个人感悟和创意项目的网站。你可以在这里找到我关于编程、设计、人工智能等各种主题的笔记和博客，也可以看到我参与或制作的一些有趣的项目。`}
           </Translate>
@@ -90,9 +80,8 @@ function Hero() {
           {/* 徽章的效果 */}
           <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wrm244/wrm244.github.io?label=Update&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }} /> <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/wrm244/docusaurus-theme-zen/ci.yml?label=CI&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }}></img>  <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/5db8174d-fe3f-4ada-a963-5a52a131788c/deploy-status" style={{ boxShadow: '0px 16px 30px rgb(62 196 119 / 15%)', marginTop: '14px' }}></img>
         </animated.p>
-
-        <SocialLinks style={trails[2]} />
-        <animated.div style={trails[3]}>
+        <SocialLinks/>
+        <animated.div>
           <a className={styles.intro} href={'./about'}>
             <Translate id="hompage.hero.introduce">自我介绍</Translate>
           </a>
