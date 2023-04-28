@@ -1,17 +1,14 @@
 import React from 'react'
-
+import Image from '@theme/IdealImage';
 import { useTrail, animated } from '@react-spring/web'
 import Translate from '@docusaurus/Translate'
 import { useThemeConfig } from '@docusaurus/theme-common'
 import { ThemeConfig } from '@docusaurus/preset-classic'
 import CodeBlock from '@theme/CodeBlock';
 import Link from '@docusaurus/Link'
-
 import HeroMain from './img/javascript_illustration.svg'
-
 import JuejinIcon from '@site/static/svg/juejin.svg'
 import { Icon } from '@iconify/react'
-// import Button from '../Button';
 import styles from './styles.module.scss'
 
 /* 桌面下滑箭头 */
@@ -78,7 +75,9 @@ function Hero() {
           </Translate>
           <br />
           {/* 徽章的效果 */}
+          
           <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wrm244/wrm244.github.io?label=Update&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }} /> <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/wrm244/docusaurus-theme-zen/ci.yml?label=CI&logo=github" style={{ boxShadow: '0px 16px 30px rgb(62 196 109 / 15%)', marginTop: '14px' }}></img>  <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/5db8174d-fe3f-4ada-a963-5a52a131788c/deploy-status" style={{ boxShadow: '0px 16px 30px rgb(62 196 119 / 15%)', marginTop: '14px' }}></img>
+          
         </animated.p>
         <SocialLinks/>
         <animated.div>

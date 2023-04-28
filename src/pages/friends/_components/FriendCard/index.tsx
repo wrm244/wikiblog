@@ -1,18 +1,17 @@
 import React, { memo } from 'react'
 import clsx from 'clsx'
 import Link from '@docusaurus/Link'
-
 import styles from './styles.module.css'
 import { type Friend } from '@site/data/friend'
 
 const FriendCard = memo(({ friend }: { friend: Friend }) => (
   <li className={clsx(styles.friendCard, 'padding-vert--sm padding-horiz--md')}>
-    <img
+     <img
       src={
         typeof friend.avatar === 'string'
           ? friend.avatar
           : friend.avatar.src.src
-      }
+      } 
       alt={friend.title}
       className={clsx(styles.friendCardImage)}
     />

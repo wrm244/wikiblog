@@ -23,6 +23,9 @@ const config = {
     // },
     mermaid: {
       theme: { light: 'neutral', dark: 'forest' },
+      options: {
+        maxTextSize: 50,
+      },
     },
     colorMode: {
       defaultMode: 'light',
@@ -249,7 +252,7 @@ const config = {
       Date("10/16/2022 8:22:00");
       Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;
       a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);
-      runtime_span.innerHTML="<br>本站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();</script><br/><a href="https://beian.miit.gov.cn" target="_blank">桂ICP备2023000559号-3</a>`,
+      runtime_span.innerHTML="<br>本站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();</script><br/><a href="https://beian.miit.gov.cn" style="color: white" target="_blank">桂ICP备2023000559号-3</a>`,
     },
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
@@ -399,7 +402,10 @@ const config = {
     [
       '@docusaurus/plugin-ideal-image',
       {
-        quality: 75,
+        quality: 70,
+        max: 1400, // 最大缩放图片尺寸。
+        min: 640, // 最小缩放图片尺寸。 如果原始值比这还低，会使用原图尺寸。
+        steps: 3, // 在 min 和 max 之间最多生成的图片数量（包含两端点）
         disableInDev: false,
       },
     ],
