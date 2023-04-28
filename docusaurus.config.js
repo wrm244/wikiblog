@@ -9,7 +9,7 @@ const config = {
   titleDelimiter: '-',
   url: 'https://wrm244.gxist.cn',
   baseUrl: '/',
-  favicon: '/assets/images/social/avatar.ico',
+  favicon: '/favicon.ico',
   organizationName: 'wrm244',
   projectName: 'blog',
   tagline: '学习记录，技术存档',
@@ -321,21 +321,6 @@ const config = {
         s.parentNode.insertBefore(el, s);
         })(window)
       `,
-    },
-    {
-     tagName: 'link',
-     attributes:{
-      rel: "dns-prefetch",
-      href: "https://fonts.gstatic.com/"
-     },
-    },
-    {
-     tagName: 'link',
-     attributes:{
-      rel: "preconnect",
-      href: "https://fonts.gstatic.com",
-      crossorigin: "anonymous",
-     },
     },
     {
       tagName: 'script',
