@@ -97,7 +97,7 @@ function Hero() {
             <Translate id="hompage.hero.introduce">自我介绍</Translate>
           </a>
           <span>　</span>
-          <a className={styles.intro} href={'./about'}>
+          <a className={styles.intro} href={'https://wrm244.gxist.cn/resume'}>
             {/* <Button isLink href={'https://wrm244.gxist.cn/resume' } target="_blank"> */}
             <Translate id="hompage.hero.text.resume">个人简历</Translate>
             {/* </Button> */}

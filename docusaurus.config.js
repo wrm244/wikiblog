@@ -9,14 +9,14 @@ const config = {
   titleDelimiter: '-',
   url: 'https://wrm244.gxist.cn',
   baseUrl: '/',
-  favicon: '/favicon.ico',
+  favicon: '/avatar.png',
   organizationName: 'wrm244',
   projectName: 'blog',
   tagline: '学习记录，技术存档',
   onBrokenLinks: 'ignore',  //忽略坏链
   /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
   themeConfig: {
-    image: '/assets/images/social/avatar.png',
+    image: '/avatar.png',
     // announcementBar: {
     //   id: 'announcementBar-3',
     //   content: announcementBarContent,
@@ -56,8 +56,8 @@ const config = {
       title: '河山的技术存档',
       logo: {
         alt: '河山',
-        src: '/assets/images/social/avatar.png',
-        srcDark: '/assets/images/social/avatar.png',//记得加上绝对路径/
+        src: '/avatar.png',
+        srcDark: '/avatar.png',//记得加上绝对路径/
       },
       hideOnScroll: false,
       items: [
@@ -342,7 +342,7 @@ const config = {
       tagName: 'link',
       attributes: {
         rel: 'preload',
-        href: '/assets/images/social/avatar.png',
+        href: '/avatar.png',
         as: 'image',
       },
     },
@@ -422,7 +422,7 @@ const config = {
           {
             tagName: 'link',
             rel: 'icon',
-            href: 'assets/images/social/avatar.png',
+            href: '/avatar.png',
           },
           {
             tagName: 'link',
@@ -447,18 +447,18 @@ const config = {
           {
             tagName: 'link',
             rel: 'apple-touch-icon',
-            href: 'assets/images/social/avatar.png',
+            href: '/avatar.png',
           },
           {
             tagName: 'link',
             rel: 'mask-icon',
-            href: 'assets/images/social/avatar.png',
+            href: '/avatar.png',
             color: 'rgb(37, 194, 160)',
           },
           {
             tagName: 'meta',
             name: 'msapplication-TileImage',
-            content: 'assets/images/social/avatar.png',
+            content: '/avatar.png',
           },
           {
             tagName: 'meta',
