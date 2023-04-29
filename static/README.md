@@ -14,7 +14,7 @@ Build with 🦖<a href="https://docusaurus.io/">Docusaurus</a> Theme use <a href
 
 ## 介绍
 
-这是一个我用来记录和分享我的学习心得、个人感悟和创意项目的网站。你可以在这里找到我关于编程、设计、人工智能等各种主题的笔记和博客，也可以看到我参与或制作的一些有趣的项目，你可以使用该主题[docusaurus-theme-zen](https://github.com/wrm244/docusaurus-theme-zen)对你的个人页面进行搭建。该技术存档使用🦖 <a href="https://docusaurus.io/">Docusaurus</a>搭建，遵循[EPL-1.0](./LICENSE)协议。
+这是一个我用来记录和分享我的学习心得、个人感悟和创意项目的网站。你可以在这里找到我关于编程、设计、人工智能等各种主题的笔记和博客，也可以看到我参与或制作的一些有趣的项目，你可以使用该主题[docusaurus-theme-zen](https://github.com/wrm244/docusaurus-theme-zen)对你的个人页面进行搭建。该技术存档使用🦖 <a href="https://docusaurus.io/">Docusaurus</a>搭建，遵循[MIT](./LICENSE)协议。
 >这是 git page 源仓库，由 deocsaurus 渲染部署生成同步到这个仓库，采用了代码压缩，所以以上代码没有参考意义，以至于写个readme来提醒，因为这仅仅是静态源码仓。This is the source repository of the git page, which is rendered and deployed by deocsaurus. The code is compressed, so it has no reference value. That’s why I wrote this readme to remind you that this is just a warehouse for static source code acquisition.
 
 
