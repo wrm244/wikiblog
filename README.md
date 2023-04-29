@@ -1,5 +1,5 @@
 
-## 河山的技术存档(website)
+## 河山的技术存档 (website) [<img src="https://wrm244.github.io/svg/logo_large.svg" width="90" height="90" align="right">](https://wrm244.gxist.cn/)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/wrm244/wrm244.github.io?label=update&logo=github) [![Netlify Status](https://api.netlify.com/api/v1/badges/5db8174d-fe3f-4ada-a963-5a52a131788c/deploy-status)](https://app.netlify.com/sites/wrm244/deploys) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 
@@ -9,15 +9,15 @@ Build with 🦖<a href="https://docusaurus.io/">Docusaurus</a> Theme use <a href
 </p>
 
 <p align=center>
-<a href="https://docusaurus.io/zh-CN/" target="_blank"><img alt="Built with Docusaurus" style="height:50px;margin-top:0.5rem" src="https://wrm244.github.io/assets/images/buildwith.png" /></a> <a href="https://www.netlify.com/" target="_blank"><img alt="Built with Netlify" style="height:50px;margin-top:0.5rem " src="https://wrm244.github.io/assets/images/netlify-color-accent.svg" /></a>     
+<a href="https://docusaurus.io/zh-CN/" target="_blank"><img alt="Built with Docusaurus" width="141" height="50" src="https://wrm244.github.io/assets/images/buildwith.png" /></a> <a href="https://www.netlify.com/" target="_blank"><img alt="Built with Netlify" height:"50px" src="https://wrm244.github.io/assets/images/netlify-color-accent.svg" /></a>     
 </p>
 
-## Introduction
+## 解释
 
-这是一个我用来记录和分享我的学习心得、个人感悟和创意项目的网站。你可以在这里找到我关于编程、设计、人工智能等各种主题的笔记和博客，也可以看到我参与或制作的一些有趣的项目。该技术存档使用🦖 <a href="https://docusaurus.io/">Docusaurus</a>搭建，遵循[EPL-1.0](./LICENSE)协议。
+这是一个我用来记录和分享我的学习心得、个人感悟和创意项目的网站。你可以在这里找到我关于编程、设计、人工智能等各种主题的笔记和博客，也可以看到我参与或制作的一些有趣的项目，你可以使用该[主题](https://github.com/wrm244/docusaurus-theme-zen)对你的个人页面进行搭建。该技术存档使用🦖 <a href="https://docusaurus.io/">Docusaurus</a>搭建，遵循[EPL-1.0](./LICENSE)协议。
 
 
-## Catalogue
+## 代码结构
 
 
 ```bash
@@ -46,20 +46,11 @@ Build with 🦖<a href="https://docusaurus.io/">Docusaurus</a> Theme use <a href
 └── yarn.lock                      # 建议使用yarn保留
 ```
 
-## 📥 Install
+## 安装
 
-```sh
-git clone https://github.com/wrm244/wiki.git
-cd blog
-yarn
-yarn start
-```
+请访问主题仓库进行部署属于自己的网站[Docusaurus-theme-zen](https://github.com/wrm244/docusaurus-theme-zen)
 
-Build
 
-```sh
-yarn run build
-```
 ## Github Action CI
 该流程会同步部署到云服务器与GitHub Pages上面：
 ```yml
@@ -137,6 +128,6 @@ jobs:
 ```
 
 
-## License
+## 协议
 
 [EPL-1.0](./LICENSE) © 河山 100%
