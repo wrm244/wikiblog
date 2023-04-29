@@ -7,6 +7,8 @@ tags: [Obsidian]
 keywords: [Obsidian,docusaurus]
 date: 2023/04/27
 hide_table_of_contents: false
+image: /assets/images/cover/note.jpg
+sticky: 2
 last_update:
   date: 2023/04/27
 ---

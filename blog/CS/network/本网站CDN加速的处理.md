@@ -7,6 +7,8 @@ tags: [CDN,computer-science]
 keywords: [network,cdn]
 date: 2023/04/25
 hide_table_of_contents: false
+image: /assets/images/cover/cdn.jpg
+sticky: 1
 last_update:
   date: 2023/04/26
 ---

@@ -4,6 +4,8 @@ title: Docker部署Overleaf包含中文字体与全套texlive镜像
 description: docker镜像里面包含中文支持字体
 tags: [docker,overleaf]
 date: 2023-04-12 16:09:48
+image: /assets/images/cover/overleaf.png
+sticky: 2
 authors: RiverMountain
 ---
 ![](assets/Docker部署Overleaf包含中文字体与全套texlive镜像/image-20230424111833.png)

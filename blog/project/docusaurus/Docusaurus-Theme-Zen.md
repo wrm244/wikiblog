@@ -1,23 +1,21 @@
 ---
 slug: /blog/project/docusaurus/Docusaurus-Theme-Zen
 title: Docusaurus-Theme-Zen
+image: /assets/images/cover/docus.png
+sticky: 2
+description: 这是使用docusaurus搭建的主题，结合了docusaurus简单易用与其他开源页面设计方案加上多设计美观、博客与文档一体的主题，为你提供了一个优秀的个人页面解决方案。
 date: 2023-04-22 14:09:58
 tags: [docusaurus]
 authors: RiverMountain
 ---
-![](assets/BUG记录模板/Pasted%20image%2020230424111505.png)
-## Docusaurus-Theme-Zen
-![GitHub last commit](https://img.shields.io/github/last-commit/wrm244/docusaurus-theme-zen?label=update&logo=github)  
-
-![Github Action](https://github.com/wrm244/docusaurus-theme-zen/actions/workflows/ci.yml/badge.svg) 
-
 
 ## 介绍
 
-这是使用docusaurus搭建的主题，结合了docusaurus简单易用与其他开源页面设计方案、支持MDX和React、可扩展和定制等优点，以及加上多设计美观、博客与文档一体的主题，为你提供了一个优秀的个人页面解决方案。该主题使用🦖 <a href="https://docusaurus.io/">Docusaurus</a>搭建，遵循[MIT](./LICENSE)协议。
+这是使用docusaurus搭建的主题，结合了docusaurus简单易用与其他开源页面设计方案、支持MDX和React、可扩展和定制等优点，以及加上多设计美观、博客与文档一体的主题，为你提供了一个优秀的个人页面解决方案。该主题使用🦖 <a href="https://docusaurus.io/">Docusaurus</a>搭建，遵循[MIT](./LICENSE)协议。[点击直达](https://github.com/wrm244/docusaurus-theme-zen)仓库页面。
 
 <!-- truncate -->
 
+![logo](assets/BUG记录模板/Pasted%20image%2020230424111505.png)
 > This is a theme built with docusaurus, which combines the simplicity and ease of use of docusaurus with other open source page design solutions, supports MDX and React, is extensible and customizable, and also has a beautiful design, a blog and documentation integrated theme, providing you with an excellent personal page solution.
 
 

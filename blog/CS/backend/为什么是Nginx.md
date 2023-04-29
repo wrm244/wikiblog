@@ -1,6 +1,9 @@
 ---
 slug: /blog/CS/backend/why-is-nginx
 title: 为什么是Nginx
+description: Nginx 是开源、高性能、高可靠的 Web 和反向代理服务器，而且支持热部署，几乎可以做到 7 * 24 小时不间断运行。
+image: /assets/images/cover/server.jpg
+sticky: 4
 date: 2023-04-14 21:10:23
 tags: [backend,nginx]
 authors: RiverMountain
@@ -31,7 +34,7 @@ Nginx 的最重要的几个使用场景：
 
 ### 正向代理
 
-:::info{title="相关知识"}
+:::info **相关知识**
 
 正向代理隐藏了真实的客户端
 
@@ -54,7 +57,7 @@ p((Proxy)) --> s(Server)
 
   
 
-:::info{title="相关知识"}
+:::info **相关知识**
 
 反向代理隐藏了真实的服务器
 
@@ -88,7 +91,7 @@ end
 
   
 
-:::info{title="相关知识"}
+:::info **相关知识**
 
 Nginx 实现负载均衡，一般来说指的是将请求转发给服务器集群。
 
@@ -158,20 +161,14 @@ Nginx 的命令在控制台中输入 nginx -h 就可以看到完整的命令�
 ```bash
 
 nginx -s reload  # 向主进程发送信号，重新加载配置文件，热重启
-
 nginx -s reopen  # 重启 Nginx
-
 nginx -s stop    # 快速关闭
-
 nginx -s quit    # 等待工作进程处理完成后关闭
-
 nginx -T         # 查看当前 Nginx 最终的配置
-
 nginx -t -c <配置路径>    # 检查配置是否有问题，如果已经在配置目录，则不需要-c
-
 ```
 
-:::tip{title="提示"}
+:::tip **提示**
 
 systemctl 是 Linux 系统应用管理工具 systemd 的主命令，用于管理系统，我们也可以用它来对 Nginx 进行管理，相关命令如下：
 
