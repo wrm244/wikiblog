@@ -102,5 +102,9 @@
   "item.label.网盘": {
     "message": "Cloudreve",
     "description": "Navbar item with label 网盘"
+  },
+  "item.label.网站服务状态": {
+    "message": "Statistics",
+    "description": "Navbar item with label 网盘"
   }
 }
