@@ -246,13 +246,13 @@ const config = {
         },
       ],
       copyright: `版权所有 © ${new Date().getFullYear()} 河山, 此网站使用 <a href="https://docusaurus.io/zh-CN/" target="_blank">Docusaurus</a> 搭建<br/>
-      <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style="color: white">本网站由 <img alt="upyunlogo" src="/assets/images/upyun-logo-white.png" width="48px" align="top"/> 提供CDN加速/云存储服务</a>
+      <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style="color: #ebedf0">本网站由 <img alt="upyunlogo" src="/assets/images/upyun-logo-white.png" width="48px" align="top"/> 提供CDN加速/云存储服务</a>
       <span id="runtime_span"></span>
       <script type="text/javascript">function show_runtime(){window.setTimeout("show_runtime()",1000);X=new 
       Date("10/16/2022 8:22:00");
       Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;
       a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);
-      runtime_span.innerHTML="<br>本站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();</script><br/><a href="https://beian.miit.gov.cn" style="color: white" target="_blank">桂ICP备2023000559号-3</a>`,
+      runtime_span.innerHTML="<br>本站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();</script><br/><a href="https://beian.miit.gov.cn" style="color: #ebedf0" target="_blank">桂ICP备2023000559号-3</a>`,
     },
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
@@ -314,14 +314,14 @@ const config = {
   },
   clientModules: [require.resolve('./src/clientModules/routeModules.ts')],
   headTags: [
-    {//先加载主页LOGO图片
-      tagName: 'link',
-      attributes: {
-        rel: 'preload',
-        href: '/avatar.png',
-        as: 'image',
-      },
-    },
+    // {//先加载主页LOGO图片
+    //   tagName: 'link',
+    //   attributes: {
+    //     rel: 'preload',
+    //     href: '/avatar.png',
+    //     as: 'image',
+    //   },
+    // },
     {
       tagName: 'script',
       attributes: {
