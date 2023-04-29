@@ -12,7 +12,7 @@ Build with 🦖<a href="https://docusaurus.io/">Docusaurus</a> Theme use <a href
 <a href="https://docusaurus.io/zh-CN/" target="_blank"><img alt="Built with Docusaurus" width="141" height="50" src="https://wrm244.github.io/assets/images/buildwith.png" /></a> <a href="https://www.netlify.com/" target="_blank"><img alt="Built with Netlify" height:"50px" src="https://wrm244.github.io/assets/images/netlify-color-accent.svg" /></a>     
 </p>
 
-## 解释
+## 介绍
 
 这是一个我用来记录和分享我的学习心得、个人感悟和创意项目的网站。你可以在这里找到我关于编程、设计、人工智能等各种主题的笔记和博客，也可以看到我参与或制作的一些有趣的项目，你可以使用该[主题](https://github.com/wrm244/docusaurus-theme-zen)对你的个人页面进行搭建。该技术存档使用🦖 <a href="https://docusaurus.io/">Docusaurus</a>搭建，遵循[EPL-1.0](./LICENSE)协议。
 

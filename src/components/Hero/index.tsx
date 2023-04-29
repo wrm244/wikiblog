@@ -6,7 +6,7 @@ import { useThemeConfig } from '@docusaurus/theme-common'
 import { ThemeConfig } from '@docusaurus/preset-classic'
 import CodeBlock from '@theme/CodeBlock';
 import Link from '@docusaurus/Link'
-import HeroMain from './img/javascript_illustration.svg'
+import HeroMain from './img/ai.svg'
 import JuejinIcon from '@site/static/svg/juejin.svg'
 import { Icon } from '@iconify/react'
 import styles from './styles.module.scss'
