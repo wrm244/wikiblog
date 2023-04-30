@@ -584,6 +584,7 @@ html[data-theme='dark'] .pagination-nav__link {
     flex-basis: var(--ifm-col-width);
     margin: auto;
 }
+
 }
 
 /* post list view adjustment */
@@ -600,6 +601,7 @@ html[data-theme='dark'] .pagination-nav__link {
   .blog__recommend {
     grid-template-columns: repeat(2, 1fr);
   }
+  
 }
 
 @media (max-width: 570px) {
@@ -619,8 +621,11 @@ html[data-theme='dark'] .pagination-nav__link {
   .post__date-container {
     margin-bottom: 1em !important;
   }
+  
 }
-
+.card__image {
+    height: 90px !important;
+  }
 @keyframes fading {
   from {
     opacity: 0;

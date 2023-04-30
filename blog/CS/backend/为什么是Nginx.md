@@ -1,7 +1,7 @@
 ---
 slug: /blog/CS/backend/why-is-nginx
 title: 为什么是Nginx
-description: Nginx 是开源、高性能、高可靠的 Web 和反向代理服务器，而且支持热部署，几乎可以做到 7 * 24 小时不间断运行。
+description: Nginx 是开源、高性能、高可靠的 Web 和反向代理服务器
 image: /assets/images/cover/server.jpg
 sticky: 4
 date: 2023-04-14 21:10:23

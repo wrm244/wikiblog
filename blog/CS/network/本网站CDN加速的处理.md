@@ -1,6 +1,6 @@
 ---
 title: 本网站CDN加速的处理
-description: 在优化个人主页的时候发现cdn的处理很智能，记录学习一下
+description: 在优化个人主页的时候发现cdn的处理很智能
 slug: /blog/CS/network/CDN
 authors: RiverMountain
 tags: [CDN,computer-science]

@@ -3,7 +3,7 @@ slug: /blog/project/docusaurus/Docusaurus-Theme-Zen
 title: Docusaurus-Theme-Zen
 image: /assets/images/cover/docus.png
 sticky: 2
-description: 这是使用docusaurus搭建的主题，结合了docusaurus简单易用与其他开源页面设计方案加上多设计美观、博客与文档一体的主题，为你提供了一个优秀的个人页面解决方案。
+description: 这是使用docusaurus搭建的主题.
 date: 2023-04-22 14:09:58
 tags: [docusaurus]
 authors: RiverMountain
