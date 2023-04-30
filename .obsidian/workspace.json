@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "49448d6115d029c8",
+        "id": "221e01b640299dfe",
         "type": "tabs",
         "children": [
           {
-            "id": "56ee6466817aae0c",
+            "id": "c0f0d786e52add62",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/CS/network/关于完善本站国内外cdn加速不平衡策略.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/CS/network/关于完善本站国内外cdn加速不平衡策略.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/CS/network/关于完善本站国内外cdn加速不平衡策略.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,16 +118,15 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "blog/CS/network/关于完善本站国内外cdn加速不平衡策略.md"
-              }
+              "state": {}
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -146,10 +139,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "56ee6466817aae0c",
+  "active": "c0f0d786e52add62",
   "lastOpenFiles": [
-    "blog/CS/network/本网站CDN加速的处理.md",
     "blog/CS/network/关于完善本站国内外cdn加速不平衡策略.md",
+    "blog/CS/network/本网站CDN加速的处理.md",
     "blog/CS/network/assets/关于完善本站国内外cdn加速不平衡策略/image-20230430191046.png",
     "blog/CS/network/assets/关于完善本站国内外cdn加速不平衡策略/image-20230430190809.png",
     "blog/CS/network/assets/关于完善本站国内外cdn加速不平衡策略/image-20230430190553.png",
