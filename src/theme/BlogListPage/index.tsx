@@ -156,7 +156,7 @@ function BlogRecommend({
             <div className="col col--12">
               <div className="bloghome__posts">
                 <ul className="blog__recommend">
-                  <Fade direction="up" duration={800} triggerOnce={true}>
+                  {/* <Fade direction="up" duration={800} triggerOnce={true}> */}
                     {recommendedPosts.map(post => (
                       <li className={clsx('card')} key={post.permalink}>
                         {post.frontMatter.image && (
@@ -176,7 +176,7 @@ function BlogRecommend({
                         </div>
                       </li>
                     ))}
-                  </Fade>
+                  {/* </Fade> */}
                 </ul>
               </div>
             </div>
