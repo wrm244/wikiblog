@@ -1,9 +1,10 @@
-## 河山的技术存档静态页面代码仓 [<img src="https://wrm244.github.io/svg/logo_large.svg" width="90" height="90" align="right">](https://wrm244.github.io/)
+## 河山的技术存档静态页面代码仓 [<img src="https://wrm244.github.io/svg/logo_large.svg" width="90" height="90" align="right">](https://wrm244.gxist.cn/)
 
 
 <p align=center>
-Build with 🦖<a href="https://docusaurus.io/">Docusaurus</a> Theme use <a href="https://github.com/wrm244/docusaurus-theme-zen">Docusaurus-theme-zen<a> 
-<a href="https://wrm244.github.io">🖥 Online Preview</a>
+Build with 🦖<a href="https://docusaurus.io/">Docusaurus</a> | Theme use <a href="https://github.com/wrm244/docusaurus-theme-zen">Docusaurus-theme-zen</a><br/>
+<a href="https://wrm244.gxist.cn"> Online Preview </a>|
+<a href="https://wrm244.github.io"> Github Pages</a>
 </p>
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/wrm244/wrm244.github.io?label=update&logo=github) [![Netlify Status](https://api.netlify.com/api/v1/badges/5db8174d-fe3f-4ada-a963-5a52a131788c/deploy-status)](https://app.netlify.com/sites/wrm244/deploys) [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)

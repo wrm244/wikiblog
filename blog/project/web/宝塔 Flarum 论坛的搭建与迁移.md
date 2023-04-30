@@ -1,7 +1,7 @@
 ---
 slug: /blog/project/web/bt-flarum-build
 title: 宝塔 Flarum 论坛的搭建与迁移
-description: 本文的重点主要记录Flarum论坛的搭建与迁移
+description: 重点记录Flarum论坛的搭建与迁移
 date: 2023-04-14T21:30:27
 tags: [Flarum]
 authors: RiverMountain

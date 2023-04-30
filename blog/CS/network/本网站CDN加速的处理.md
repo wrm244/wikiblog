@@ -1,13 +1,13 @@
 ---
 title: 本网站CDN加速的处理
-description: 在优化个人主页的时候发现cdn的处理很智能
+description: 优化个人主页的时候发现cdn的处理很智能
 slug: /blog/CS/network/CDN
 authors: RiverMountain
 tags: [CDN,computer-science]
 keywords: [network,cdn]
 date: 2023/04/25
 hide_table_of_contents: false
-image: /assets/images/cover/cdn.jpg
+image: assets/images/cover/cdn.jpg
 sticky: 1
 last_update:
   date: 2023/04/26

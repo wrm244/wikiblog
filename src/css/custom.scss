@@ -75,6 +75,7 @@ html {
   -webkit-font-smoothing: unset;
   /* 文字颜色 */
   color: hsl(214deg 37% 25%);
+  transition: all .3s linear;
 }
 
 html :is(h1, h2, h3, h4, h5, h6) {
@@ -122,7 +123,7 @@ body {
   font-family: 'Noto Serif SC','SF Pro Text','SF Pro Display','SF Pro Icons','Helvetica Neue',Helvetica,Arial,sans-serif,system-ui, ui-sans-serif,-apple-system,'Segoe UI', 'Helvetica Neue', 'Noto Sans', sans-serif, 'Apple Color Emoji',consolas,'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', consolas,sfmono-regular, menlo, monaco, 'Liberation Mono', monospace;
   -webkit-font-smoothing: antialiased;
   font-display: swap;
-  transition: all .6s linear;
+  transition: all .3s linear;
 }
 
 html,
@@ -234,7 +235,7 @@ html[data-theme='dark'] .theme-code-block {
 /* 首页背景 */
 .container-wrapper {
   background: var(--content-background-color);
-
+  transition: all .3s linear;
   /*   box-shadow: 0 -16px 24px var(--post-shadow-color);
   box-shadow: var(--blog-item-shadow); */
 }
@@ -244,7 +245,7 @@ html[data-theme='dark'] .theme-code-block {
   box-shadow: none;
   // 毛玻璃效果
   background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(13px);
+  backdrop-filter: blur(14px);
   border-bottom: 1px solid #e1e1e1;
   opacity: 1;
   text-shadow: 0.6px 0.6px 0 #fff;
@@ -259,7 +260,7 @@ html[data-theme='dark'] .navbar {
   box-shadow: none;
   // 毛玻璃效果
   background-color: rgba(0, 0, 0, 0);
-  backdrop-filter: blur(13px);
+  backdrop-filter: blur(14px);
   border-bottom: 1px solid #ffffff00;
   text-shadow: 0.5px 0.5px 0 #0c0c0c;
   opacity: 1;
@@ -624,7 +625,7 @@ html[data-theme='dark'] .pagination-nav__link {
   
 }
 .card__image {
-    height: 90px !important;
+    height: 95px !important;
   }
 @keyframes fading {
   from {

@@ -246,19 +246,23 @@ const config = {
               href: 'https://wrm244.gxist.cn/state',
             },
             {
-              html: `<a href="https://docusaurus.io/zh-CN/" target="_blank"><img alt="Built with Docusaurus" style="height:50px;margin-top:0.5rem" src="/assets/images/buildwith.png" /></a> <a href="https://www.netlify.com/" target="_blank"><img alt="Built with Netlify" style="height:50px;margin-top:0.5rem" src="/assets/images/netlify-color-accent.svg" /></a>`,
+              html: `<a href="https://docusaurus.io/zh-CN/" title="Built with Docusaurus" target="_blank"><img alt="Built with Docusaurus" style="height:50px;margin-top:0.5rem" src="/assets/images/buildwith.png" /></a> <a href="https://www.netlify.com/" title="Built with Netlify" target="_blank"><img alt="Built with Netlify" style="height:50px;margin-top:0.5rem" src="/assets/images/netlify-color-accent.svg" /></a>`,
             },
           ],
         },
       ],
-      copyright: `版权所有 © ${new Date().getFullYear()} 河山, 此网站使用 <a href="https://docusaurus.io/zh-CN/" target="_blank">Docusaurus</a> 搭建<br/>
+      copyright: `版权所有 © ${new Date().getFullYear()} 河山, 此网站使用 <a href="https://docusaurus.io/zh-CN/" style="color: #ebedf0" target="_blank">Docusaurus</a> 搭建<br/>
       <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style="color: #ebedf0">本网站由 <img alt="upyunlogo" src="/assets/images/upyun-logo-white.png" width="48px" align="top"/> 提供CDN加速/云存储服务</a>
       <span id="runtime_span"></span>
       <script type="text/javascript">function show_runtime(){window.setTimeout("show_runtime()",1000);X=new 
       Date("10/16/2022 8:22:00");
       Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;
       a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);
-      runtime_span.innerHTML="<br>本站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();</script><br/><a href="https://beian.miit.gov.cn" style="color: #ebedf0" target="_blank">桂ICP备2023000559号-3</a>`,
+      runtime_span.innerHTML="<br>本站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒  "}show_runtime();</script>
+      <a href="https://wrm244.gxist.cn/state/" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=6856212&Days=7&Design=5" /></a>
+      <br/>
+      <a href="https://beian.miit.gov.cn" style="color: #ebedf0" target="_blank">桂ICP备2023000559号-1 </a>
+      `,
     },
     prism: {
       theme: require('prism-react-renderer/themes/vsLight'),
@@ -408,10 +412,7 @@ const config = {
     [
       '@docusaurus/plugin-ideal-image',
       {
-        quality: 70,
-        max: 1400, // 最大缩放图片尺寸。
-        min: 640, // 最小缩放图片尺寸。 如果原始值比这还低，会使用原图尺寸。
-        steps: 3, // 在 min 和 max 之间最多生成的图片数量（包含两端点）
+        name: "assets/images/[name].[ext]",
         disableInDev: false,
       },
     ],
