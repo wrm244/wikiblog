@@ -5,7 +5,7 @@ slug: /{{title}}
 authors: RiverMountain
 tags: []
 keywords: []
-image: https://wrm244.github.io/
+image: assets/images/cover/ .jpg
 date: {{date}}
 hide_table_of_contents: false
 last_update:

@@ -10,7 +10,7 @@ hide_table_of_contents: false
 image: assets/images/cover/cdn.jpg
 sticky: 1
 last_update:
-  date: 2023/04/26
+  date: 2023/04/30
 ---
 
 import DisplayFlex from '@site/src/components/DisplayFlex'
@@ -82,9 +82,8 @@ CDN的全称是Content Delivery Network，即内容分发网络。其基本思�
 
 ## 缓存控制
 
-![](assets/本网站CDN加速的处理/image-20230426131731.png)
-
-在网站全是静态文件的情况下，我认为缓存可以一周，但由于最近时间更新文章比较多，所以设置在睡眠时间的6-8小时之间，这样的话可以在每天较好地刷新网站资源。
+![](assets/本网站CDN加速的处理/image-20230430180401.png)
+在网站全是静态文件的情况下，在修改样式(js、css)完毕之后，我认为缓存可以一个月，保留htm与html动态缓存或者不缓存，这样的话可以在每天加载html的时候保证文章内容在最新的情况下，获取到已经缓存的样式、脚本与图像资源，因为这些资源是来自html内嵌链接获取的。
 同时设置了分段缓存与离线模式，分段缓存的话源站云服务器那边可能设置不了，在全是静态资源的情况下，离线模式是可以支撑起来的。
 
 ## 性能优化
@@ -127,3 +126,7 @@ TLS 1.3、HTTP/2、HSTS（HTTP Strict Transport Security，HTTP 严格传输安�
 - [WebP—维基百科 ](https://zh.wikipedia.org/wiki/WebP)
 - [A new image format for the Web](https://developers.google.com/speed/webp/)
 - [又拍云](https://www.upyun.com/)
+
+## 推荐阅读
+
+- [关于完善本站国内外cdn加速不平衡策略](关于完善本站国内外cdn加速不平衡策略.md)
