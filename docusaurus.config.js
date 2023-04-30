@@ -251,8 +251,9 @@ const config = {
           ],
         },
       ],
-      copyright: `版权所有 © ${new Date().getFullYear()} 河山, 此网站使用 <a href="https://docusaurus.io/zh-CN/" style="color: #ebedf0" target="_blank">Docusaurus</a> 搭建<br/>
+      copyright: `版权所有 © ${new Date().getFullYear()} 河山, 此网站使用 <a title="访问docusaurus" href="https://docusaurus.io/zh-CN/" style="color: #ebedf0" target="_blank">Docusaurus</a> 搭建<br/>
       <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" style="color: #ebedf0">本网站由 <img alt="upyunlogo" src="/assets/images/upyun-logo-white.png" width="48px" align="top"/> 提供CDN加速/云存储服务</a>
+      <a href="https://ipw.cn/ipv6webcheck/?site=wrm244.gxist.cn" title="本站支持IPv6访问" target='_blank'><img style='width:48px;vertical-align:middle' alt="本站支持IPv6访问" src="/svg/ipv6.svg"></a>
       <span id="runtime_span"></span>
       <script type="text/javascript">function show_runtime(){window.setTimeout("show_runtime()",1000);X=new 
       Date("10/16/2022 8:22:00");
@@ -318,7 +319,7 @@ const config = {
       twitter: 'https://twitter.com/wrm244',
       csdn: 'https://blog.csdn.net/wrm244',
       juejin: 'https://juejin.cn/user/3021907877702814',
-      qq: 'tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=934978593&website=www.oicqzone.com',
+      qq: 'tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=934978593&website=wrm244.gxist.cn',
       zhihu: 'https://www.zhihu.com/people/dobet',
     },
   },
