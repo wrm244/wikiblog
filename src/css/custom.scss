@@ -625,8 +625,13 @@ html[data-theme='dark'] .pagination-nav__link {
   
 }
 .card__image {
-    height: 95px !important;
+    height: 100px !important;
+    display: flex;
+    align-items: center;
   }
+.card__body, .card__footer, .card__header {
+    padding: 0.8rem 0.8rem;
+}
 @keyframes fading {
   from {
     opacity: 0;

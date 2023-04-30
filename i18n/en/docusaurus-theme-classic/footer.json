@@ -55,8 +55,12 @@
     "message": "Links",
     "description": "The label of footer link with label=导航 linking to resource"
   },
+  "link.item.label.网站服务状态": {
+    "message": "Uptime",
+    "description": "The label of footer link with label=网站服务状态 linking to resource"
+  },
   "copyright": {
-    "message": "Copyright © 2023 RiverMountain. Built with <a href=\"https://docusaurus.io/zh-CN/\" target=\"_blank\">Docusaurus.</a><br/><a href=\"https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral\" style=\"color: white\">This website is provided by <img alt=\"upyunlogo\" src=\"/assets/images/upyun-logo-white.png\" width=\"45px\" align=\"top\"/> CDN acceleration/cloud storage services.</a> <span id=\"runtime_span\"></span><script type=\"text/javascript\">function show_runtime(){window.setTimeout(\"show_runtime()\",1000);X=new Date(\"10/16/2022 8:22:00\");Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);runtime_span.innerHTML=\"<br>This site is already operational: \"+A+\"d \"+B+\"h \"+C+\"m \"+D+\"s\"}show_runtime();</script>",
+    "message": "Copyright © 2023 RiverMountain. Built with <a href=\"https://docusaurus.io/zh-CN/\" target=\"_blank\">Docusaurus.</a><br/><a href=\"https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral\" style=\"color: white\">This website is provided by <img alt=\"upyunlogo\" src=\"/assets/images/upyun-logo-white.png\" width=\"45px\" align=\"top\"/> CDN acceleration/cloud storage services.</a> <span id=\"runtime_span\"></span><script type=\"text/javascript\">function show_runtime(){window.setTimeout(\"show_runtime()\",1000);X=new Date(\"10/16/2022 8:22:00\");Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);runtime_span.innerHTML=\"<br>This site is already operational: \"+A+\"d \"+B+\"h \"+C+\"m \"+D+\"s \"}show_runtime();</script><a href=\"https://wrm244.gxist.cn/state/\" title=\"Website Uptime Monitoring\"><img src=\"https://app.statuscake.com/button/index.php?Track=6856212&Days=7&Design=5\"/></a>",
     "description": "The footer copyright"
   },
   "link.title.博客": {
