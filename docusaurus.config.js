@@ -260,7 +260,7 @@ const config = {
       Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;
       a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);
       runtime_span.innerHTML="<br>本站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒  "}show_runtime();</script>
-      <a href="https://wrm244.gxist.cn/state/" title="Website Uptime Monitoring"><img src="https://app.statuscake.com/button/index.php?Track=6856212&Days=7&Design=5"/></a>
+      <a href="https://wrm244.gxist.cn/state/" title="Website Uptime Monitoring" target="_blank"><img src="https://app.statuscake.com/button/index.php?Track=6856212&Days=7&Design=5"/></a>
       <br/>
       <a href="https://beian.miit.gov.cn" style="color: #ebedf0" target="_blank">桂ICP备2023000559号-1 </a>
       `,
