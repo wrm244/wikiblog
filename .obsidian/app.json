@@ -11,7 +11,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/关于完善本站国内外cdn加速不平衡策略",
+  "attachmentFolderPath": "static/assets/images/article",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "livePreview": true,
