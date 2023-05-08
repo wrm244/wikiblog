@@ -251,7 +251,8 @@ static struct Page *Find_Page_To_Page_Out()
 
 ## 运行结果
 
-![](assets/geekos%20project%204/image-20230427125527.png)
+![](assets/geekos%20project%204/image-20230508160141.png)
+
 
 当前系统有5个进程已经创建，根据之前的项目可以知道这5个进程分别是什么[geekos project 2](geekos%20project%202.md)。每个程序对应5个创建提示输出，标号1打印当前页目录表的入口起始地址，标号2打印当前页表当前起始地址，标号3打印当前所在页表位置，标号4打印物理地址起始地址，标号5打印线性地址。
 

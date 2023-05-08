@@ -11,8 +11,12 @@
             "id": "c0f0d786e52add62",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "docs/course/OS Course Design/geekos project 4.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -60,6 +64,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "e60fb29ffe5dcb88",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -81,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/course/OS Course Design/geekos project 4.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "docs/course/OS Course Design/geekos project 4.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "docs/course/OS Course Design/geekos project 4.md"
+              }
             }
           }
         ]
@@ -141,6 +157,8 @@
   },
   "active": "c0f0d786e52add62",
   "lastOpenFiles": [
+    "docs/course/OS Course Design/assets/geekos project 4/image-20230508160141.png",
+    "docs/course/introduction.md",
     "blog/CS/network/关于完善本站国内外cdn加速不平衡策略.md",
     "blog/CS/network/本网站CDN加速的处理.md",
     "blog/CS/network/assets/关于完善本站国内外cdn加速不平衡策略/image-20230430191046.png",
@@ -184,7 +202,6 @@
     "docs/stack/python/Python爬虫总结.md",
     "docs/stack/python/pyautogui自动化操作脚本.md",
     "docs/stack/node/npkill快速删除node_modules文件.md",
-    "docs/stack/node/使用 require.context 实现模块自动导入.md",
-    "docs/stack/js/JS打印函数调用栈.md"
+    "docs/stack/node/使用 require.context 实现模块自动导入.md"
   ]
 }
