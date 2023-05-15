@@ -18,25 +18,25 @@ jobs:
         with:
           node-version: '18.16.0'
           
-      # - name: search-engines-urls-push
-      #   uses: 3Alan/search-engines-urls-push@v0.2.3
-      #   with:
-      #     count: 50
-      #     site: ${{ secrets.SITE }}
-      #     sitemap: ${{ secrets.SITEMAP }}
-      #     baidu-token: ${{ secrets.BAIDU_TOKEN }}
-      #     bing-token: ${{ secrets.BING_TOKEN }}
-      # - name: Cache node modules
-      #   uses: actions/cache@v1
-      #   id: cache
-      #   with:
-      #     path: node_modules
-      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-node-
+      - name: search-engines-urls-push
+        uses: 3Alan/search-engines-urls-push@v0.2.3
+        with:
+          count: 50
+          site: ${{ secrets.SITE }}
+          sitemap: ${{ secrets.SITEMAP }}
+          baidu-token: ${{ secrets.BAIDU_TOKEN }}
+          bing-token: ${{ secrets.BING_TOKEN }}
+      - name: Cache node modules
+        uses: actions/cache@v1
+        id: cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       
       - name: Install Dependencies
-        # if: steps.cache.outputs.cache-hit != 'true'
+        if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install
       
       - name: Build Project
