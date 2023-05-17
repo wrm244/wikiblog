@@ -333,21 +333,21 @@ const config = {
     //     as: 'image',
     //   },
     // },
-    {
-      tagName: 'script',
-      attributes: {
-        type: 'text/javascript',
-      },
-      innerHTML: `
-      (function(){
-        var el = document.createElement("script");
-        el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?d8f124cd7935068f963519fa2c5a1f9ad1987d8e4e573e54121a342f95ae26d030632485602430134f60bc55ca391050b680e2741bf7233a8f1da9902314a3fa";
-        el.id = "ttzz";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(el, s);
-        })(window)
-      `,
-    },
+    // {
+    //   tagName: 'script',
+    //   attributes: {
+    //     type: 'text/javascript',
+    //   },
+    //   innerHTML: `
+    //   (function(){
+    //     var el = document.createElement("script");
+    //     el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?d8f124cd7935068f963519fa2c5a1f9ad1987d8e4e573e54121a342f95ae26d030632485602430134f60bc55ca391050b680e2741bf7233a8f1da9902314a3fa";
+    //     el.id = "ttzz";
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(el, s);
+    //     })(window)
+    //   `,
+    // },
     {
       tagName: 'script',
       attributes: {
