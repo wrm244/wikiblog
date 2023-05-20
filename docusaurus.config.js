@@ -260,7 +260,7 @@ const config = {
       Y=new Date();T=(Y.getTime()-X.getTime());M=24*60*60*1000;
       a=T/M;A=Math.floor(a);b=(a-A)*24;B=Math.floor(b);c=(b-B)*60;C=Math.floor((b-B)*60);D=Math.floor((c-C)*60);
       runtime_span.innerHTML="<br>本站已运行: "+A+"天"+B+"小时"+C+"分"+D+"秒  "}show_runtime();</script>
-      <a href="https://wrm244.gxist.cn/state/" title="Website Uptime Monitoring" target="_blank"><img src="https://app.statuscake.com/button/index.php?Track=6856212&Days=7&Design=5"/></a>
+      <a href="https://wrm244.gxist.cn/state/" title="Website Uptime Monitoring" target="_blank"><img alt="updatetime" src="https://app.statuscake.com/button/index.php?Track=6856212&Days=7&Design=5"/></a>
       <br/>
       <a href="https://beian.miit.gov.cn" style="color: #ebedf0" target="_blank">桂ICP备2023000559号-1 </a>
       `,
@@ -333,21 +333,21 @@ const config = {
     //     as: 'image',
     //   },
     // },
-    {
-      tagName: 'script',
-      attributes: {
-        type: 'text/javascript',
-      },
-      innerHTML: `
-      (function(){
-        var el = document.createElement("script");
-        el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?d8f124cd7935068f963519fa2c5a1f9ad1987d8e4e573e54121a342f95ae26d030632485602430134f60bc55ca391050b680e2741bf7233a8f1da9902314a3fa";
-        el.id = "ttzz";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(el, s);
-        })(window)
-      `,
-    },
+    // {
+    //   tagName: 'script',
+    //   attributes: {
+    //     type: 'text/javascript',
+    //   },
+    //   innerHTML: `
+    //   (function(){
+    //     var el = document.createElement("script");
+    //     el.src = "https://lf1-cdn-tos.bytegoofy.com/goofy/ttzz/push.js?d8f124cd7935068f963519fa2c5a1f9ad1987d8e4e573e54121a342f95ae26d030632485602430134f60bc55ca391050b680e2741bf7233a8f1da9902314a3fa";
+    //     el.id = "ttzz";
+    //     var s = document.getElementsByTagName("script")[0];
+    //     s.parentNode.insertBefore(el, s);
+    //     })(window)
+    //   `,
+    // },
     {
       tagName: 'script',
       attributes: {

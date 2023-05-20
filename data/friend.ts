@@ -18,6 +18,12 @@ export const Friends: Friend[] = [
     avatar: '/svg/logo_round.svg',
   },
   //请按照以上格式提交请求，avatar可以是超链接。
+ {
+    title: 'Alan的简历',
+    description: 'Alan的在线简历',
+    website: 'https://alan.gxist.cn/',
+    avatar: 'https://alan.gxist.cn/assets/images/social/avatar.jpg',
+  },
 ]
 
 export type Friend = {
