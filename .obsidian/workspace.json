@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "59a358bc602f052f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "blog/tools/远程桌面的新认识.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309.5
+    "width": 309.5,
+    "collapsed": true
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -93,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/OS Course Design/geekos project 4.md",
+                "file": "blog/tools/远程桌面的新认识.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/OS Course Design/geekos project 4.md",
+                "file": "blog/tools/远程桌面的新认识.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/OS Course Design/geekos project 4.md"
+                "file": "blog/tools/远程桌面的新认识.md"
               }
             }
           }
@@ -155,8 +169,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "c0f0d786e52add62",
+  "active": "9645adc9b84ae224",
   "lastOpenFiles": [
+    "blog/tools/assets/远程桌面的新认识/image-20230522041943.png",
+    "blog/tools/assets/远程桌面的新认识",
+    "blog/tools/assets",
+    "docs/course/OS Course Design/geekos project 4.md",
+    "blog/tools/远程桌面的新认识.md",
     "docs/course/OS Course Design/assets/geekos project 4/image-20230508160141.png",
     "docs/course/introduction.md",
     "blog/CS/network/关于完善本站国内外cdn加速不平衡策略.md",
@@ -170,7 +189,6 @@
     "static/assets/images/cover/internet.jpg",
     "blog/CS/network/assets/本网站CDN加速的处理/image-20230430180401.png",
     "blog/CS/network/assets/本网站CDN加速的处理/image-20230430175558.png",
-    "docs/course/OS Course Design/geekos project 4.md",
     "obsidian/DocsPost Template.md",
     "docs/course/OS Course Design/geekos project 0.md",
     "docs/course/OS Course Design/geekos project 1.md",
@@ -186,11 +204,8 @@
     "build/en/search-index.json",
     "build/en/tags/overleaf/index.html",
     "build/en/tags/obsidian/index.html",
-    "build/en/tags/nginx/index.html",
-    "build/en/tags/linux/index.html",
     "build/en/assets/images/resource/zhubai.png",
     "build/en/assets/images/resource/webpack.png",
-    "build/en/assets/images/resource/webgradients.png",
     "blog/project/Bug-Review/BUG记录模板.md",
     "docs/blog/Docusaurus/部署.md",
     "docs/course/未命名.md",
@@ -201,7 +216,6 @@
     "docs/stack/python/Python指定版本运行.md",
     "docs/stack/python/Python爬虫总结.md",
     "docs/stack/python/pyautogui自动化操作脚本.md",
-    "docs/stack/node/npkill快速删除node_modules文件.md",
-    "docs/stack/node/使用 require.context 实现模块自动导入.md"
+    "docs/stack/node/npkill快速删除node_modules文件.md"
   ]
 }
