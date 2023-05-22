@@ -188,6 +188,24 @@ const sidebars = {
           dirName: 'course/OS Course Design',
         },
       ],
+    },
+    {
+      label: 'Data Structures And Algorithms',
+      type: 'category',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'course/Data Structures And Algorithms/DStart',
+        'course/Data Structures And Algorithms/array',
+        'course/Data Structures And Algorithms/link',
+        'course/Data Structures And Algorithms/recursion',
+        'course/Data Structures And Algorithms/queue',
+        'course/Data Structures And Algorithms/stack',
+        'course/Data Structures And Algorithms/heap',
+        'course/Data Structures And Algorithms/binary_tree',
+        'course/Data Structures And Algorithms/DStest',
+      ],
     }
   ],
 }
