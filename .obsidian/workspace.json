@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/Data Structures And Algorithms/0DSA.md",
+                "file": "docs/course/Data Structures And Algorithms/8DSA.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309.5,
-    "collapsed": true
+    "width": 309.5
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/Data Structures And Algorithms/0DSA.md",
+                "file": "docs/course/Data Structures And Algorithms/8DSA.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/Data Structures And Algorithms/0DSA.md",
+                "file": "docs/course/Data Structures And Algorithms/8DSA.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/Data Structures And Algorithms/0DSA.md"
+                "file": "docs/course/Data Structures And Algorithms/8DSA.md"
               }
             }
           }
@@ -158,6 +157,7 @@
   "active": "0d7a04f3bae66f02",
   "lastOpenFiles": [
     "imgs/image-20221108103846566.png.md",
+    "docs/course/Data Structures And Algorithms/0DSA.md",
     "imgs",
     "docs/course/OS Course Design/geekos project 4.md",
     "blog/tools/远程桌面的新认识.md",
@@ -201,7 +201,6 @@
     "docs/stack/css/记Tailwind CSS使用.md",
     "docs/stack/python/Python指定版本运行.md",
     "docs/stack/python/Python爬虫总结.md",
-    "docs/stack/python/pyautogui自动化操作脚本.md",
-    "docs/stack/node/npkill快速删除node_modules文件.md"
+    "docs/stack/python/pyautogui自动化操作脚本.md"
   ]
 }
