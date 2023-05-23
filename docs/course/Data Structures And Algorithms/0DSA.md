@@ -300,7 +300,7 @@ public static int binarySearch(int[] a, int target) {
 
 **渐进紧界**
 
-渐进紧界（asymptotic tight bounds）：从某个常数 $n_0$开始，$f(n)$ 总是在 $c_1*g(n)$ 和 $c_2*g(n)$ 之间，那么记作 $\Theta(g(n))$
+渐进紧界（asymptotic tight bounds）：从某个常数 $n_0$开始，$f(n)$ 总是在 $c_1*g(n)$ 和 $c_2*g(n)$ 之间，那么记作 $\Theta(g(n))$ ，最好最坏情况要相同函数。
 
 
 
@@ -312,7 +312,7 @@ public static int binarySearch(int[] a, int target) {
 public static int binarySearchBasic(int[] a, int target) {
     int i = 0, j = a.length - 1;    // 设置指针和初值
     while (i <= j) {                // i~j 范围内有东西
-        int m = (i + j) >>> 1;
+        int m = (i + j) >>> 1;      // 会重用空间
         if(target < a[m]) {         // 目标在左边
             j = m - 1;
         } else if (a[m] < target) { // 目标在右边
@@ -344,6 +344,8 @@ public static int binarySearchBasic(int[] a, int target) {
 
 ### 二分查找平衡版
 
+> 目的是防止按顺序下来比较次数增多
+
 ```java
 public static int binarySearchBalance(int[] a, int target) {
     int i = 0, j = a.length;
@@ -351,7 +353,7 @@ public static int binarySearchBalance(int[] a, int target) {
         int m = (i + j) >>> 1;
         if (target < a[m]) {
             j = m;
-        } else {
+        } else {   //一个if-else可以平衡（最好最坏情况都是一样的）
             i = m;
         }
     }
@@ -380,7 +382,7 @@ private static int binarySearch0(long[] a, int fromIndex, int toIndex,
 
     while (low <= high) {
         int mid = (low + high) >>> 1;
-        long midVal = a[mid];
+        int midVal = a[mid];
 
         if (midVal < key)
             low = mid + 1;
@@ -389,7 +391,7 @@ private static int binarySearch0(long[] a, int fromIndex, int toIndex,
         else
             return mid; // key found
     }
-    return -(low + 1);  // key not found.
+    return -(low + 1);  //是为了区分0，因为没有正负零区分。
 }
 ```
 
@@ -398,7 +400,29 @@ private static int binarySearch0(long[] a, int fromIndex, int toIndex,
 * 插入点取负是为了与找到情况区分
 * -1 是为了把索引 0 位置的插入点与找到的情况进行区分
 
+插入元素
+```java
+/*
 
+                ⬇
+            [2, 5, 8]       a
+            [2, 0, 0, 0]    b
+            [2, 4, 0, 0]    b
+            [2, 4, 5, 8]    b
+ 
+*/
+int[] a = {2, 5, 8};
+int target = 4;
+int i = Arrays.binarySearch(a, target);
+assertTrue(i < 0);
+        // i = -插入点 - 1  因此有 插入点 = abs(i+1)
+int insertIndex = Math.abs(i + 1); // 插入点索引
+int[] b = new int[a.length + 1];
+System.arraycopy(a, 0, b, 0, insertIndex);
+b[insertIndex] = target;
+System.arraycopy(a, insertIndex, b, insertIndex + 1, a.length - insertIndex);
+assertArrayEquals(new int[]{2, 4, 5, 8}, b);
+```
 
 ### Leftmost 与 Rightmost
 
@@ -501,7 +525,7 @@ public static int binarySearchRightmost(int[] a, int target) {
 
 * 查询 $x \lt 4$，$0 .. leftmost(4) - 1$
 * 查询 $x \leq 4$，$0 .. rightmost(4)$
-* 查询 $4 \lt x$，$rightmost(4) + 1 .. \infty $
+* 查询 $4 \lt x$，$rightmost(4) + 1 .. \infty$
 * 查询 $4 \leq x$， $leftmost(4) .. \infty$
 * 查询 $4 \leq x \leq 7$，$leftmost(4) .. rightmost(7)$
 * 查询 $4 \lt x \lt 7$，$rightmost(4)+1 .. leftmost(7)-1$
@@ -534,3 +558,6 @@ public static int binarySearchRightmost(int[] a, int target) {
 [^2]: Introduction to Algorithm 中文译作《算法导论》
 [^3]: 主要参考文档 https://en.wikipedia.org/wiki/Binary_search_algorithm
 
+## 下一篇
+
+[1Array](1Array.md)
