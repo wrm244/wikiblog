@@ -25,6 +25,7 @@ in the code and not the description, it's going to be a lot harder for them to
 locate your CL.
 
 <!-- truncate -->
+
 ## First Line {#firstline}
 
 *   Short summary of what is being done.
