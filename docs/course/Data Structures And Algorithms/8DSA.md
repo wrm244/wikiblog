@@ -177,51 +177,87 @@ public int searchInsert(int[] a, int target) {
 **参考答案**
 
 ```java
-public static int left(int[] a, int target) {
-    int i = 0, j = a.length - 1;
-    int candidate = -1;
-    while (i <= j) {
-        int m = (i + j) >>> 1;
-        if (target < a[m]) {
-            j = m - 1;
-        } else if (a[m] < target) {
-            i = m + 1;
-        } else {
-            candidate = m;
-            j = m - 1;
-        }
-    }
-    return candidate;
-}
+class Solution {
 
-public static int right(int[] a, int target) {
-    int i = 0, j = a.length - 1;
-    int candidate = -1;
-    while (i <= j) {
-        int m = (i + j) >>> 1;
-        if (target < a[m]) {
-            j = m - 1;
-        } else if (a[m] < target) {
-            i = m + 1;
-        } else {
-            candidate = m;
-            i = m + 1;
-        }
-    }
-    return candidate;
-}
-
-public static int[] searchRange(int[] nums, int target) {
-    int x = left(nums, target);
-    if(x == -1) {
-        return new int[] {-1, -1};
-    } else {
-        return new int[] {x, right(nums, target)};
-    }
+    public int[] searchRange(int[] nums, int target) {
+        return new int[]{left(nums,target),right(nums,target)};
+    }
+    public int left(int[] a,int target){
+        int i=0,j=a.length -1;
+        int candidate = -1;
+        while(i<=j){
+            int m=(i+j)>>>1;
+            if (target < a[m]){
+                j =m-1;
+            }else if (a[m]<target){
+                i = m+1;
+            }else{
+                candidate=m;
+                j = m-1;
+            }
+        }
+        return candidate;
+    }
+    public int right(int[] a,int target){
+        int i=0,j=a.length -1;
+        int candidate = -1;
+        while(i<=j){
+            int m=(i+j)>>>1;
+            if (target < a[m]){
+                j =m-1;
+            }else if (a[m]<target){
+                i = m+1;
+            }else{
+                candidate=m;
+                i = m+1;
+            }
+        }
+        return candidate;
+    }
 }
 ```
 
+### E03.  [搜索旋转排序数组](https://leetcode.cn/problems/search-in-rotated-sorted-array/)-力扣 33 题
 
+整数数组 nums 按升序排列，数组中的值互不相同 。
+在传递给函数之前，nums 在预先未知的某个下标 k（0 <= k < nums.length）上进行了 旋转，使数组变为 $[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]$（下标 从 0 开始 计数）。例如， $[0,1,2,4,5,6,7]$ 在下标 3 处经旋转后可能变为 $[4,5,6,7,0,1,2]$ 。
+给你 旋转后 的数组 nums 和一个整数 target ，如果 nums 中存在这个目标值 target ，则返回它的下标，否则返回 -1 。
+你必须设计一个时间复杂度为 $O(log n)$ 的算法解决此问题。
+
+```java
+class Solution {
+    public int search(int[] nums, int target) {
+        int lo = 0, hi = nums.length - 1;
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+            if (nums[mid] == target) {
+                return mid;
+            }
+            
+            // 先根据 nums[0] 与 target 的关系判断目标值是在左半段还是右半段
+            if (target >= nums[0]) {
+                // 目标值在左半段时，若 mid 在右半段，则将 mid 索引的值改成 inf
+                if (nums[mid] < nums[0]) {
+                    nums[mid] = Integer.MAX_VALUE;
+                }
+            } else {
+                // 目标值在右半段时，若 mid 在左半段，则将 mid 索引的值改成 -inf
+                if (nums[mid] >= nums[0]) {
+                    nums[mid] = Integer.MIN_VALUE;
+                }
+            }
+
+            if (nums[mid] < target) {
+                lo = mid + 1;
+            } else {
+                hi = mid - 1;
+            }
+        }
+        return -1;
+    }
+    
+}
+```
 
 ## 3.3 递归 - single recursion
 
