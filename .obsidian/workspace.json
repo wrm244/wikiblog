@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/Data Structures And Algorithms/8DSA.md",
+                "file": "blog/tools/Writing good CL descriptions.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/Data Structures And Algorithms/8DSA.md",
+                "file": "blog/tools/Writing good CL descriptions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/Data Structures And Algorithms/8DSA.md",
+                "file": "blog/tools/Writing good CL descriptions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/Data Structures And Algorithms/8DSA.md"
+                "file": "blog/tools/Writing good CL descriptions.md"
               }
             }
           }
@@ -156,6 +156,8 @@
   },
   "active": "0d7a04f3bae66f02",
   "lastOpenFiles": [
+    "docs/course/Data Structures And Algorithms/8DSA.md",
+    "blog/tools/Writing good CL descriptions.md",
     "imgs/image-20221108103846566.png.md",
     "docs/course/Data Structures And Algorithms/0DSA.md",
     "imgs",
@@ -199,8 +201,6 @@
     "build/en/README.md",
     "docs/stack/python/Python中的cv2使用.md",
     "docs/stack/css/记Tailwind CSS使用.md",
-    "docs/stack/python/Python指定版本运行.md",
-    "docs/stack/python/Python爬虫总结.md",
-    "docs/stack/python/pyautogui自动化操作脚本.md"
+    "docs/stack/python/Python指定版本运行.md"
   ]
 }
