@@ -1,5 +1,5 @@
 {
-  "commitMessage": "docus：files:{{numFiles}} {{date}}",
+  "commitMessage": "docs(files:{{numFiles}}):{{date}}",
   "commitDateFormat": "YYYY-MM-DD HH:mm",
   "autoSaveInterval": 0,
   "autoPushInterval": 0,
@@ -51,5 +51,5 @@
     "lastShownAuthorDisplay": "initials",
     "lastShownDateTimeFormatOptions": "date"
   },
-  "autoCommitMessage": "vault backup: {{date}}"
+  "autoCommitMessage": "docs(files:{{numFiles}}):{{date}}"
 }

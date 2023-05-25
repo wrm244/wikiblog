@@ -28,9 +28,11 @@ locate your CL.
 
 ## First Line {#firstline}
 
+
 *   Short summary of what is being done.
 *   Complete sentence, written as though it was an order.
 *   Follow by empty line.
+
 
 The **first line** of a CL description should be a short summary of
 *specifically* **what** *is being done by the CL*, followed by a blank line.

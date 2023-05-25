@@ -100,7 +100,7 @@
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": false
+                "unlinkedCollapsed": true
               }
             }
           },
@@ -141,7 +141,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -156,11 +157,9 @@
   },
   "active": "0d7a04f3bae66f02",
   "lastOpenFiles": [
-    "blog/tools/Obsidian 打通本地与互联网，让你时刻浏览你的记录.md",
-    "blog/tools/Writing good CL descriptions.md",
-    "docs/course/Data Structures And Algorithms/8DSA.md",
-    "imgs/image-20221108103846566.png.md",
     "docs/course/Data Structures And Algorithms/0DSA.md",
+    "blog/tools/Writing good CL descriptions.md",
+    "imgs/image-20221108103846566.png.md",
     "imgs",
     "docs/course/OS Course Design/geekos project 4.md",
     "blog/tools/远程桌面的新认识.md",
@@ -187,6 +186,7 @@
     "docs/course/OS Course Design/geekos project 3.md",
     "blog/project/hexo/hexo利用github action进行部署.md",
     "blog/project/hexo/Obsidian与hexo结合部署到github pages上.md",
+    "blog/tools/Obsidian 打通本地与互联网，让你时刻浏览你的记录.md",
     "build/en/sw.js",
     "build/en/feed.json",
     "build/en/atom.xml",
@@ -201,6 +201,7 @@
     "build/en/README.md",
     "docs/stack/python/Python中的cv2使用.md",
     "docs/stack/css/记Tailwind CSS使用.md",
-    "docs/stack/python/Python指定版本运行.md"
+    "docs/stack/python/Python指定版本运行.md",
+    "docs/stack/python/Python爬虫总结.md"
   ]
 }
