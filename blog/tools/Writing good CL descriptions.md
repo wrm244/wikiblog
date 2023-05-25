@@ -1,16 +1,16 @@
 ---
 title: Writing good CL descriptions
-description: 
-slug: /Writing good CL descriptions
+description: CL描述是一个公开的记录，说明正在进行修订的变化和原因，改进描述可以使得代码review高效便捷。
+slug: /Writing-good-CL-descriptions
 authors: RiverMountain
-tags: []
-keywords: []
-image: assets/images/cover/ .jpg
+tags: [git,github]
+keywords: [git]
 date: 2023/05/25
 hide_table_of_contents: false
 last_update:
   date: 2023/05/25
 ---
+
 CL描述是一个公开的记录，说明正在进行修订的变化和原因。它将成为我们版本控制记录的一个永久部分，并且有可能在近些年里被你的审查员以外的数百人阅读。
 未来的开发者会根据它的描述来搜索你的CL。未来的人可能会因为对你的变化有微弱的记忆而寻找你的变化﹐但却没有方便的具体细节。如果所有的重要信息都是在代码中﹐而不是在描述中﹐他们要找到你的CL就会困难很多。
 
