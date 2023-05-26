@@ -44,11 +44,11 @@ const config = {
       },
       {
         name: 'keywords',
-        content: '河山',
+        content: 'blog,machine learning,javascript, nginx,, react, vue, web',
       },
       {
         name: 'keywords',
-        content: 'blog,machine learning,javascript, nginx,, react, vue, web',
+        content: '河山',
       },
       {
         name: 'keywords',
@@ -64,7 +64,7 @@ const config = {
     navbar: {
       title: '河山的技术存档',
       logo: {
-        alt: '河山',
+        alt: '河山logo',
         src: '/svg/logo_round.svg',
         srcDark: '/svg/logo_round.svg',//记得加上绝对路径/
       },
@@ -405,7 +405,9 @@ const config = {
           defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
         feedOptions: {
           type: 'all',
-          title: '河山',
+          title: '河山的技术存档博客',
+          description: '河山的技术存档博客订阅源',
+          language: zh,
           copyright: `Copyright © ${new Date().getFullYear()} 河山 Built with Docusaurus.`,
         },
       },
