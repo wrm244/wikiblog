@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "e426a2d32d93e263",
+        "id": "345010d68afbb59d",
         "type": "tabs",
         "children": [
           {
-            "id": "527d393430bd9e9c",
+            "id": "bf50e19807b141dd",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/tools/远程桌面的新认识.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -93,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/tools/远程桌面的新认识.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/tools/远程桌面的新认识.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -132,12 +126,19 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "blog/tools/远程桌面的新认识.md"
-              }
+              "state": {}
+            }
+          },
+          {
+            "id": "f45a97c82f816918",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -152,11 +153,13 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-memos:Memos": false
     }
   },
-  "active": "527d393430bd9e9c",
+  "active": "bf50e19807b141dd",
   "lastOpenFiles": [
+    "blog/tools/远程桌面的新认识.md",
     "obsidian/BlogPost Template.md",
     "obsidian/DocsPost Template.md",
     "blog/tools/Writing good CL descriptions.md",
@@ -164,7 +167,6 @@
     "imgs/image-20221108103846566.png.md",
     "imgs",
     "docs/course/OS Course Design/geekos project 4.md",
-    "blog/tools/远程桌面的新认识.md",
     "blog/tools/assets/远程桌面的新认识/image-20230522041943.png",
     "blog/tools/assets/远程桌面的新认识",
     "blog/tools/assets",
