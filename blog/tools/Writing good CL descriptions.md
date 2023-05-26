@@ -1,7 +1,7 @@
 ---
 title: Writing good CL descriptions
 description: CL描述是一个公开的记录，说明正在进行修订的变化和原因，改进描述可以使得代码review高效便捷。
-slug: /Writing-good-CL-descriptions
+slug: /blog/tools/Writing-good-CL-descriptions
 authors: RiverMountain
 tags: [git,github]
 keywords: [git]

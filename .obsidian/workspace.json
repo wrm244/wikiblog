@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/tools/Writing good CL descriptions.md",
+                "file": "obsidian/BlogPost Template.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/tools/Writing good CL descriptions.md",
+                "file": "obsidian/BlogPost Template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/tools/Writing good CL descriptions.md",
+                "file": "obsidian/BlogPost Template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/tools/Writing good CL descriptions.md"
+                "file": "obsidian/BlogPost Template.md"
               }
             }
           }
@@ -157,8 +157,10 @@
   },
   "active": "0d7a04f3bae66f02",
   "lastOpenFiles": [
-    "docs/course/Data Structures And Algorithms/0DSA.md",
+    "obsidian/DocsPost Template.md",
+    "obsidian/BlogPost Template.md",
     "blog/tools/Writing good CL descriptions.md",
+    "docs/course/Data Structures And Algorithms/0DSA.md",
     "imgs/image-20221108103846566.png.md",
     "imgs",
     "docs/course/OS Course Design/geekos project 4.md",
@@ -175,11 +177,9 @@
     "blog/CS/network/assets/关于完善本站国内外cdn加速不平衡策略/image-20230430190553.png",
     "blog/CS/network/assets/关于完善本站国内外cdn加速不平衡策略/image-20230430185859.png",
     "blog/CS/network/assets/关于完善本站国内外cdn加速不平衡策略",
-    "obsidian/BlogPost Template.md",
     "static/assets/images/cover/internet.jpg",
     "blog/CS/network/assets/本网站CDN加速的处理/image-20230430180401.png",
     "blog/CS/network/assets/本网站CDN加速的处理/image-20230430175558.png",
-    "obsidian/DocsPost Template.md",
     "docs/course/OS Course Design/geekos project 0.md",
     "docs/course/OS Course Design/geekos project 1.md",
     "docs/course/OS Course Design/geekos project 2.md",
