@@ -407,7 +407,7 @@ const config = {
           type: 'all',
           title: '河山的技术存档博客',
           description: '河山的技术存档博客订阅源',
-          language: zh,
+          language: 'zh-CN',
           copyright: `Copyright © ${new Date().getFullYear()} 河山 Built with Docusaurus.`,
         },
       },
