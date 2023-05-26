@@ -69,7 +69,7 @@ function DocsCard(props: Props): JSX.Element {
   if (isOutbound) {
     return (
       <docs-card class={className}>
-        <a className={clsx(styles.card, 'docs-card')} href={props.href} target="_blank">
+        <a className={clsx(styles.card, 'docs-card')} href={props.href} target="_blank" rel="docs-card">
           {content}
         </a>
       </docs-card>

@@ -1,10 +1,8 @@
 import React from 'react'
-import Image from '@theme/IdealImage';
 import { useTrail, animated } from '@react-spring/web'
 import Translate from '@docusaurus/Translate'
 import { useThemeConfig } from '@docusaurus/theme-common'
 import { ThemeConfig } from '@docusaurus/preset-classic'
-import CodeBlock from '@theme/CodeBlock';
 import Link from '@docusaurus/Link'
 import HeroMain from './img/ai.svg'
 import JuejinIcon from '@site/static/svg/juejin.svg'
@@ -115,22 +113,22 @@ export function SocialLinks({ ...prop }) {
 
   return (
     <animated.div className={styles.social__links} {...prop}>
-      <a href="/rss.xml" target="_blank" aria-label="Really Simple Syndication">
+      <a href="/rss.xml" target="_blank" aria-label="Really Simple Syndication" rel="rss">
         <Icon icon="ri:rss-line" />
       </a>
-      <a href={socials.github} target="_blank" aria-label="github">
+      <a href={socials.github} target="_blank" aria-label="github" rel="github">
         <Icon icon="ri:github-line" />
       </a>
-      <a href={socials.juejin} target="_blank" aria-label="juejin">
+      <a href={socials.juejin} target="_blank" aria-label="juejin" rel="juejin">
         <JuejinIcon />
       </a>
-      <a href={socials.qq} target="_blank" aria-label="QQ">
+      <a href={socials.qq} target="_blank" aria-label="QQ" rel="QQ">
         <Icon icon="ri:qq-line" />
       </a>
-      <a href={socials.twitter} target="_blank" aria-label="twitter">
+      <a href={socials.twitter} target="_blank" aria-label="twitter" rel="twitter">
         <Icon icon="ri:twitter-line" />
       </a>
-      <a href={socials.zhihu} target="_blank" aria-label="zhihu">
+      <a href={socials.zhihu} target="_blank" aria-label="zhihu" rel="zhihu">
         <Icon icon="ri:zhihu-line" />
       </a>
     </animated.div>

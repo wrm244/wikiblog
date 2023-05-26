@@ -30,7 +30,7 @@ export default function BrowserWindow({
           <span className={styles.dot} style={{background: '#58cb42'}} />
         </div>
         <div className={clsx(styles.browserWindowAddressBar, 'text--truncate')}>
-          <a href={url} target="_blank" >{url}</a>
+          <a href={url} target="_blank" rel="text">{url}</a>
         </div>
         <div className={styles.browserWindowMenuIcon}>
           <div>
