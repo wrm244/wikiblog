@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fa367724d3cd0b58",
+        "id": "e426a2d32d93e263",
         "type": "tabs",
         "children": [
           {
-            "id": "0d7a04f3bae66f02",
+            "id": "527d393430bd9e9c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "obsidian/BlogPost Template.md",
+                "file": "blog/tools/远程桌面的新认识.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "obsidian/BlogPost Template.md",
+                "file": "blog/tools/远程桌面的新认识.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "obsidian/BlogPost Template.md",
+                "file": "blog/tools/远程桌面的新认识.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "obsidian/BlogPost Template.md"
+                "file": "blog/tools/远程桌面的新认识.md"
               }
             }
           }
@@ -155,10 +155,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "0d7a04f3bae66f02",
+  "active": "527d393430bd9e9c",
   "lastOpenFiles": [
-    "obsidian/DocsPost Template.md",
     "obsidian/BlogPost Template.md",
+    "obsidian/DocsPost Template.md",
     "blog/tools/Writing good CL descriptions.md",
     "docs/course/Data Structures And Algorithms/0DSA.md",
     "imgs/image-20221108103846566.png.md",

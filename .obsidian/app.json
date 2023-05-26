@@ -12,7 +12,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/BlogPost Template",
+  "attachmentFolderPath": "./assets/远程桌面的新认识",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "livePreview": true,
