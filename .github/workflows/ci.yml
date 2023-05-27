@@ -61,15 +61,15 @@ jobs:
       #   run:
       #     find ./build/assets/images -type f \( -name "*.jpg" -o -name "*.png" \) -exec identify -format '%w %h %i\n' {} \; | awk '$1>1000 || $2>1000 {print $3}' | xargs -I {} convert {} +write {} -resize 76% {}
       
-      # - name: SSH Deploy
-      #   uses: easingthemes/ssh-deploy@v2.2.11
-      #   env:
-      #     SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-      #     ARGS: '-avzr --delete'
-      #     SOURCE: './build'
-      #     REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-      #     REMOTE_USER: 'root'
-      #     TARGET: '/www/wwwroot/wrm244'
+      - name: SSH Deploy
+        uses: easingthemes/ssh-deploy@v2.2.11
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          ARGS: '-avzr --delete'
+          SOURCE: './build'
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: 'root'
+          TARGET: '/www/wwwroot/wrm244'
 
       - name: Github page Deploy
         uses: wrm244/docusaurus-deploy-action@master # 
