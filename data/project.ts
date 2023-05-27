@@ -28,6 +28,16 @@ export const projects: Project[] = [
     type: 'web',
   },
   {
+    title: '操作系统系统课设',
+    description:
+      '基于Geekos编写模拟操作系统程序',
+    preview: '/assets/images/project/geekos.webp',
+    website: 'https://wrm244.gxist.cn/docs/category/os-course-design',
+    source: 'https://github.com/wrm244/geekos',
+    tags: ['opensource','design'],
+    type: 'Curriculum Design',
+  },
+  {
     title: '图书管理系统课设',
     description:
       '基于C# + Mysql编写图书管理统一终端',
@@ -36,6 +46,16 @@ export const projects: Project[] = [
     source: 'https://github.com/wrm244/BookManagementSystem',
     tags: ['opensource','design'],
     type: 'Curriculum Design',
+  },
+  {
+    title: 'GUET本科毕业学位LaTex模板',
+    description:
+      'Pull requests GUET-LATEX-Thesis-Template',
+    preview: '/assets/images/project/thesis.png',
+    website: 'https://github.com/wrm244/GUEThesis',
+    source: 'https://github.com/wrm244/GUEThesis',
+    tags: ['opensource','design'],
+    type: 'LaTex',
   },
 ]
 
@@ -53,7 +73,7 @@ export type TagType =
   | 'large'
   | 'personal'
 
-export type ProjectType = 'personal' | 'web' | 'app' | 'Curriculum Design'| 'toy' | 'other' 
+export type ProjectType = 'personal' | 'web' | 'app' | 'Curriculum Design'| 'toy' |'LaTex'| 'other' 
 
 export type Project = {
   title: string
