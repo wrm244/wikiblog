@@ -884,4 +884,10 @@ div[class^='announcementBar_'] {
   background: #ffffff00 !important;
   backdrop-filter: blur(10px) !important;
 }
+.col--1 {
+  --ifm-col-width: 15%;
+}
+.col--11 {
+  --ifm-col-width: 84%;
+}
 @import "local.google.fonts.css";

@@ -512,7 +512,7 @@ export const resourceData: ResourceCategory[] = [
       {
         name: 'TailwindCSS',
         desc: 'Tailwind CSS 是一个功能类优先的 CSS 框架，它集成了诸如 flex, pt-4, text-center 和 rotate-90 这样的的类，它们能直接在脚本标记语言中组合起来，构建出任何设计',
-        logo: 'https://www.tailwindcss.cn/favicon-32x32.png',
+        logo: 'https://www.tailwindcss.cn/favicons/android-chrome-192x192.png',
         href: 'https://www.tailwindcss.cn',
         tags: ['Css', '框架'],
       },
@@ -533,7 +533,7 @@ export const resourceData: ResourceCategory[] = [
       {
         name: 'UnoCSS',
         desc: '即时按需原子 CSS 引擎',
-        logo: 'https://uno.antfu.me//favicon.svg',
+        logo: 'https://uno.antfu.me/favicon.svg',
         href: 'https://uno.antfu.me/',
         tags: ['Css', '框架'],
       },
