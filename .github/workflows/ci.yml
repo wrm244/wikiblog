@@ -80,7 +80,7 @@ jobs:
           # 注意替换为你的 Gitee 目标仓库地址
           destination-repo: git@gitee.com:wrm244/wikiblog.git
       - name: rm .git
-        run: rm -rf ./build/.git
+        run: sudo rm -rf ./build/.git
       - name: SSH Deploy
         uses: easingthemes/ssh-deploy@v2.2.11
         env:
