@@ -36,7 +36,7 @@ jobs:
             ${{ runner.os }}-node-
       
       - name: Install Dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
+        #if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install
       
       - name: Build Project
@@ -60,16 +60,6 @@ jobs:
       # - name: images size to 70%
       #   run:
       #     find ./build/assets/images -type f \( -name "*.jpg" -o -name "*.png" \) -exec identify -format '%w %h %i\n' {} \; | awk '$1>1000 || $2>1000 {print $3}' | xargs -I {} convert {} +write {} -resize 76% {}
-      
-      - name: SSH Deploy
-        uses: easingthemes/ssh-deploy@v2.2.11
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          ARGS: '-avzr --delete'
-          SOURCE: './build'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: 'root'
-          TARGET: '/www/wwwroot/wrm244'
 
       - name: Github page Deploy
         uses: wrm244/docusaurus-deploy-action@master # 
@@ -89,7 +79,15 @@ jobs:
           source-repo: git@github.com:wrm244/wikiblog.git
           # 注意替换为你的 Gitee 目标仓库地址
           destination-repo: git@gitee.com:wrm244/wikiblog.git
-      
+      - name: SSH Deploy
+        uses: easingthemes/ssh-deploy@v2.2.11
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          ARGS: '-avzr --delete'
+          SOURCE: './build'
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: 'root'
+          TARGET: '/www/wwwroot/wrm244'
       #仅仅支持英文      
       # - name: Install Prince
       #   run: |
