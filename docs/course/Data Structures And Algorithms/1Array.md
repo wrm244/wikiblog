@@ -85,7 +85,7 @@ int[] array = {1, 2, 3, 4, 5};
 ```java
 public class DynamicArray implements Iterable<Integer> {
     private int size = 0; // 逻辑大小
-    private int capacity = 8; // 容量
+    private int capacity = 8; // 容量(java初始值为10)
     private int[] array = {};
 
 
@@ -112,9 +112,16 @@ public class DynamicArray implements Iterable<Integer> {
             // 向后挪动, 空出待插入位置
             System.arraycopy(array, index,
                     array, index + 1, size - index);
+            array[index] = element;
+	        size++;
+        }else if(index == size){
+	        array[index] = element;
+	        size++;
         }
-        array[index] = element;
-        size++;
+	    /**可以保留一个代码块即可
+	    array[index] = element;
+	        size++;
+	    **/
     }
 
     private void checkAndGrow() {
