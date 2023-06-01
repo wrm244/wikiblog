@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "345010d68afbb59d",
+        "id": "d93f04b56017cfd3",
         "type": "tabs",
         "children": [
           {
-            "id": "bf50e19807b141dd",
+            "id": "7a7771588b8f5757",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/course/Data Structures And Algorithms/1Array.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -77,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309.5,
-    "collapsed": true
+    "width": 309.5
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -94,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/Data Structures And Algorithms/1Array.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/Data Structures And Algorithms/1Array.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "docs/course/Data Structures And Algorithms/1Array.md"
-              }
+              "state": {}
             }
           },
           {
@@ -165,8 +156,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "9645adc9b84ae224",
+  "active": "7a7771588b8f5757",
   "lastOpenFiles": [
+    "docs/course/Data Structures And Algorithms/1Array.md",
     "build/assets/fonts/H4chBXePl9DZ0Xe7gG9cyOj7oqP0dTpxZbB9E9gjjmzKvaeKHUTtJDWv3z-us4bxD8F5og.89-f3149c466db6c4dcf7ab920598a6fd7c.woff2",
     "build/assets/fonts/H4chBXePl9DZ0Xe7gG9cyOj7oqP0dTpxZbB9E9gjjmzKvaeKHUTtJDWv3z-us4bxD8F5og.86-4dc6bb8604cdac270fd2afcfa0b8d4cc.woff2",
     "build/assets/fonts/H4chBXePl9DZ0Xe7gG9cyOj7oqP0dTpxZbB9E9gjjmzKvaeKHUTtJDWv3z-us4bxD8F5og.85-bea028683ced7cab55245356ff2f48a3.woff2",
@@ -177,7 +169,6 @@
     "build/assets/fonts/H4chBXePl9DZ0Xe7gG9cyOj7oqP0dTpxZbB9E9gjjmzKvaeKHUTtJDWv3z-us4bxD8F5og.80-f758d50f68a8d511725580c8b6be6d49.woff2",
     "build/assets/fonts/H4chBXePl9DZ0Xe7gG9cyOj7oqP0dTpxZbB9E9gjjmzKvaeKHUTtJDWv3z-us4bxD8F5og.79-c576f8bca7da7a2d9e7233b170fa3475.woff2",
     "build/assets/fonts/H4chBXePl9DZ0Xe7gG9cyOj7oqP0dTpxZbB9E9gjjmzKvaeKHUTtJDWv3z-us4bxD8F5og.78-1b6166fba509f5b5e7c9c97a4b5d9794.woff2",
-    "build/assets/fonts/H4chBXePl9DZ0Xe7gG9cyOj7oqP0dTpxZbB9E9gjjmzKvaeKHUTtJDWv3z-us4bxD8F5og.77-4f187111461855be2ba0e5b07cb13bc5.woff2",
     "build/assets/images/正方形不是长方形-09e04e8a22f962447ccfe5075b07e709.png",
     "build/assets/images/接口隔离原则1-e44a18f294c6f9b608e0ec6dc578cbc2.png",
     "build/assets/images/接口隔离原则-764831a7160d32c8651053f5926c7e02.png",
