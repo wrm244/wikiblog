@@ -11,8 +11,12 @@
             "id": "bf50e19807b141dd",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "docs/course/Data Structures And Algorithms/1Array.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -73,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309.5
+    "width": 309.5,
+    "collapsed": true
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -89,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/course/Data Structures And Algorithms/1Array.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "docs/course/Data Structures And Algorithms/1Array.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +133,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "docs/course/Data Structures And Algorithms/1Array.md"
+              }
             }
           },
           {
@@ -158,6 +167,10 @@
   },
   "active": "bf50e19807b141dd",
   "lastOpenFiles": [
+    "imges/image-20221104114132056.png.md",
+    "imges",
+    "static/assets/images/project/thesis.png",
+    "static/assets/images/project/geekos.webp",
     "blog/tools/远程桌面的新认识.md",
     "obsidian/BlogPost Template.md",
     "obsidian/DocsPost Template.md",
@@ -180,7 +193,6 @@
     "blog/CS/network/assets/关于完善本站国内外cdn加速不平衡策略",
     "static/assets/images/cover/internet.jpg",
     "blog/CS/network/assets/本网站CDN加速的处理/image-20230430180401.png",
-    "blog/CS/network/assets/本网站CDN加速的处理/image-20230430175558.png",
     "docs/course/OS Course Design/geekos project 0.md",
     "docs/course/OS Course Design/geekos project 1.md",
     "docs/course/OS Course Design/geekos project 2.md",
@@ -193,8 +205,6 @@
     "build/en/atom.xml",
     "build/en/rss.xml",
     "build/en/search-index.json",
-    "build/en/tags/overleaf/index.html",
-    "build/en/assets/images/resource/zhubai.png",
     "blog/project/Bug-Review/BUG记录模板.md",
     "docs/blog/Docusaurus/部署.md",
     "docs/course/未命名.md",
@@ -202,7 +212,6 @@
     "build/en/README.md",
     "docs/stack/python/Python中的cv2使用.md",
     "docs/stack/css/记Tailwind CSS使用.md",
-    "docs/stack/python/Python指定版本运行.md",
-    "docs/stack/python/Python爬虫总结.md"
+    "docs/stack/python/Python指定版本运行.md"
   ]
 }
