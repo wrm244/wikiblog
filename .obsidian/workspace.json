@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/计算机专业英语/Unit 1 Hardware I.md",
+                "file": "docs/course/编译原理课设/1 Lex和yacc的使用.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/计算机专业英语/Unit 1 Hardware I.md",
+                "file": "docs/course/编译原理课设/1 Lex和yacc的使用.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/计算机专业英语/Unit 1 Hardware I.md",
+                "file": "docs/course/编译原理课设/1 Lex和yacc的使用.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/计算机专业英语/Unit 1 Hardware I.md"
+                "file": "docs/course/编译原理课设/1 Lex和yacc的使用.md"
               }
             }
           },
@@ -167,6 +167,12 @@
   },
   "active": "7a7771588b8f5757",
   "lastOpenFiles": [
+    "docs/course/编译原理课设/assets/1 Lex和yacc的使用/image-20230603193939.png",
+    "docs/course/编译原理课设/assets/1 Lex和yacc的使用",
+    "docs/course/编译原理课设/assets",
+    "docs/course/Advanced Mathematics/函数与极限.md",
+    "docs/course/编译原理课设/1 Lex和yacc的使用.md",
+    "docs/course/编译原理课设",
     "docs/course/计算机专业英语/Unit 1 Hardware I.md",
     "docs/course/Data Structures And Algorithms/0DSA.md",
     "blog/project/web/Docker部署Overleaf包含中文字体与全套texlive镜像.md",
@@ -178,14 +184,10 @@
     "docs/stack/git/assets/Git 基础命令",
     "docs/stack/git/assets",
     "docs/stack/git/约定式提交.md",
-    "docs/course/Advanced Mathematics/函数与极限.md",
     "build/en/sw.js",
     "build/en/feed.json",
     "build/en/atom.xml",
     "build/en/rss.xml",
-    "build/en/docs/stack/database/redis/index.html",
-    "build/en/docs/stack/database/elasticsearch/index.html",
-    "build/en/docs/tags/高等数学/index.html",
     "build/en/assets/images/social/Savatar.png",
     "build/en/assets/images/social/rss.svg",
     "build/en/assets/images/social/music.svg",
@@ -210,8 +212,6 @@
     "node_modules/source-map-support/LICENSE.md",
     "docs/stack/java/Design_Pattern02.md",
     "node_modules/scheduler/README.md",
-    "node_modules/immutable/README.md",
-    "docs/stack/java/Design_Pattern01.md",
-    "node_modules/convert-source-map/node_modules/safe-buffer/README.md"
+    "node_modules/immutable/README.md"
   ]
 }
