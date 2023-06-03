@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/Advanced Mathematics/函数与极限.md",
+                "file": "docs/stack/git/Git 基础命令.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309.5
+    "width": 309.5,
+    "collapsed": true
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/Advanced Mathematics/函数与极限.md",
+                "file": "docs/stack/git/Git 基础命令.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/Advanced Mathematics/函数与极限.md",
+                "file": "docs/stack/git/Git 基础命令.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/Advanced Mathematics/函数与极限.md"
+                "file": "docs/stack/git/Git 基础命令.md"
               }
             }
           },
@@ -164,8 +165,14 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "7a7771588b8f5757",
+  "active": "9645adc9b84ae224",
   "lastOpenFiles": [
+    "docs/stack/git/assets/Git 基础命令/image-20230603093502.png",
+    "docs/stack/git/assets/Git 基础命令",
+    "docs/stack/git/assets",
+    "docs/stack/git/约定式提交.md",
+    "docs/stack/git/Git 基础命令.md",
+    "docs/course/Advanced Mathematics/函数与极限.md",
     "build/en/sw.js",
     "build/en/feed.json",
     "build/en/atom.xml",
@@ -174,9 +181,6 @@
     "build/en/docs/stack/database/elasticsearch/index.html",
     "build/en/docs/tags/高等数学/index.html",
     "build/en/docs/tags/操作系统/index.html",
-    "build/en/docs/tags/函数与极限/index.html",
-    "build/en/docs/tags/webpack/index.html",
-    "build/en/docs/tags/util/index.html",
     "build/en/assets/images/social/Savatar.png",
     "build/en/assets/images/social/rss.svg",
     "build/en/assets/images/social/music.svg",
@@ -189,7 +193,6 @@
     "build/en/assets/images/resource/webgradients.png",
     "build/README.md",
     "docs/course/Data Structures And Algorithms/0DSA.md",
-    "docs/course/Advanced Mathematics/函数与极限.md",
     "docs/course/introduction.md",
     "docs/course/Data Structures And Algorithms/1Array.md",
     "docs/stack/java/DP01.md",
@@ -209,8 +212,6 @@
     "node_modules/convert-source-map/node_modules/safe-buffer/README.md",
     "node_modules/convert-source-map/README.md",
     "node_modules/ws/README.md",
-    "node_modules/shelljs/README.md",
-    "node_modules/shelljs/CHANGELOG.md",
-    "node_modules/is-bigint/README.md"
+    "node_modules/shelljs/README.md"
   ]
 }
