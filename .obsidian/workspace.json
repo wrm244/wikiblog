@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/stack/git/Git 基础命令.md",
+                "file": "docs/course/计算机专业英语/Unit 1 Hardware I.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309.5,
-    "collapsed": true
+    "width": 309.5
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/stack/git/Git 基础命令.md",
+                "file": "docs/course/计算机专业英语/Unit 1 Hardware I.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/stack/git/Git 基础命令.md",
+                "file": "docs/course/计算机专业英语/Unit 1 Hardware I.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/stack/git/Git 基础命令.md"
+                "file": "docs/course/计算机专业英语/Unit 1 Hardware I.md"
               }
             }
           },
@@ -162,16 +161,23 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-translator:Translate": false
     }
   },
-  "active": "9645adc9b84ae224",
+  "active": "7a7771588b8f5757",
   "lastOpenFiles": [
+    "docs/course/计算机专业英语/Unit 1 Hardware I.md",
+    "docs/course/Data Structures And Algorithms/0DSA.md",
+    "blog/project/web/Docker部署Overleaf包含中文字体与全套texlive镜像.md",
+    "blog/CS/backend/为什么是Nginx.md",
+    "docs/blog/Docusaurus/部署.md",
+    "docs/stack/git/Git 基础命令.md",
+    "docs/course/计算机专业英语",
     "docs/stack/git/assets/Git 基础命令/image-20230603093502.png",
     "docs/stack/git/assets/Git 基础命令",
     "docs/stack/git/assets",
     "docs/stack/git/约定式提交.md",
-    "docs/stack/git/Git 基础命令.md",
     "docs/course/Advanced Mathematics/函数与极限.md",
     "build/en/sw.js",
     "build/en/feed.json",
@@ -180,7 +186,6 @@
     "build/en/docs/stack/database/redis/index.html",
     "build/en/docs/stack/database/elasticsearch/index.html",
     "build/en/docs/tags/高等数学/index.html",
-    "build/en/docs/tags/操作系统/index.html",
     "build/en/assets/images/social/Savatar.png",
     "build/en/assets/images/social/rss.svg",
     "build/en/assets/images/social/music.svg",
@@ -190,9 +195,7 @@
     "build/en/assets/images/social/about.svg",
     "build/en/assets/images/resource/zhubai.png",
     "build/en/assets/images/resource/webpack.png",
-    "build/en/assets/images/resource/webgradients.png",
     "build/README.md",
-    "docs/course/Data Structures And Algorithms/0DSA.md",
     "docs/course/introduction.md",
     "docs/course/Data Structures And Algorithms/1Array.md",
     "docs/stack/java/DP01.md",
@@ -209,9 +212,6 @@
     "node_modules/scheduler/README.md",
     "node_modules/immutable/README.md",
     "docs/stack/java/Design_Pattern01.md",
-    "node_modules/convert-source-map/node_modules/safe-buffer/README.md",
-    "node_modules/convert-source-map/README.md",
-    "node_modules/ws/README.md",
-    "node_modules/shelljs/README.md"
+    "node_modules/convert-source-map/node_modules/safe-buffer/README.md"
   ]
 }
