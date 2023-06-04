@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/编译原理课设/1 Lex和yacc的使用.md",
+                "file": "docs/course/计算机专业英语/Unit 1 Hardware I.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/编译原理课设/1 Lex和yacc的使用.md",
+                "file": "docs/course/计算机专业英语/Unit 1 Hardware I.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/编译原理课设/1 Lex和yacc的使用.md",
+                "file": "docs/course/计算机专业英语/Unit 1 Hardware I.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/编译原理课设/1 Lex和yacc的使用.md"
+                "file": "docs/course/计算机专业英语/Unit 1 Hardware I.md"
               }
             }
           },
@@ -165,15 +165,16 @@
       "obsidian-translator:Translate": false
     }
   },
-  "active": "7a7771588b8f5757",
+  "active": "9645adc9b84ae224",
   "lastOpenFiles": [
+    "docs/course/introduction.md",
+    "docs/course/计算机专业英语/Unit 1 Hardware I.md",
+    "docs/course/编译原理课设/1 Lex和yacc的使用.md",
     "docs/course/编译原理课设/assets/1 Lex和yacc的使用/image-20230603193939.png",
     "docs/course/编译原理课设/assets/1 Lex和yacc的使用",
     "docs/course/编译原理课设/assets",
     "docs/course/Advanced Mathematics/函数与极限.md",
-    "docs/course/编译原理课设/1 Lex和yacc的使用.md",
     "docs/course/编译原理课设",
-    "docs/course/计算机专业英语/Unit 1 Hardware I.md",
     "docs/course/Data Structures And Algorithms/0DSA.md",
     "blog/project/web/Docker部署Overleaf包含中文字体与全套texlive镜像.md",
     "blog/CS/backend/为什么是Nginx.md",
@@ -196,9 +197,7 @@
     "build/en/assets/images/social/avatar.jpg",
     "build/en/assets/images/social/about.svg",
     "build/en/assets/images/resource/zhubai.png",
-    "build/en/assets/images/resource/webpack.png",
     "build/README.md",
-    "docs/course/introduction.md",
     "docs/course/Data Structures And Algorithms/1Array.md",
     "docs/stack/java/DP01.md",
     "docs/stack/java/DP03.md",
