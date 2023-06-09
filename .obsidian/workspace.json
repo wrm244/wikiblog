@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/lifestyle/计算机科学与技术就业考研研讨会(就业篇).md",
+                "file": "blog/lifestyle/计算机科学与技术就业考研研讨会(考公考研篇).md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "blog/lifestyle/计算机科学与技术就业考研研讨会(就业篇).md",
+                "file": "blog/lifestyle/计算机科学与技术就业考研研讨会(考公考研篇).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "blog/lifestyle/计算机科学与技术就业考研研讨会(就业篇).md",
+                "file": "blog/lifestyle/计算机科学与技术就业考研研讨会(考公考研篇).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "blog/lifestyle/计算机科学与技术就业考研研讨会(就业篇).md"
+                "file": "blog/lifestyle/计算机科学与技术就业考研研讨会(考公考研篇).md"
               }
             }
           },
@@ -161,13 +161,22 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-translator:Translate": false
+      "obsidian-translator:Translate": false,
+      "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
   "active": "7a7771588b8f5757",
   "lastOpenFiles": [
-    "blog/project/web/宝塔 Flarum 论坛的搭建与迁移.md",
+    "static/assets/images/cover/mountain1.jpg",
+    "static/assets/images/cover/network.jpg",
+    "static/assets/images/cover/social.jpg",
+    "static/assets/images/cover/update.jpg",
+    "static/assets/images/cover/overleaf.png",
+    "static/assets/images/cover/note.jpg",
+    "static/assets/images/cover/deadline.jpg",
+    "blog/lifestyle/计算机科学与技术就业考研研讨会(考公考研篇).md",
     "blog/lifestyle/计算机科学与技术就业考研研讨会(就业篇).md",
+    "blog/project/web/宝塔 Flarum 论坛的搭建与迁移.md",
     "docs/course/编译原理课设/2 词法分析.md",
     "blog/lifestyle",
     "docs/course/编译原理课设/1 Lex和yacc的使用.md",
@@ -193,12 +202,6 @@
     "docs/stack/git/约定式提交.md",
     "build/en/sw.js",
     "build/en/feed.json",
-    "build/en/assets/images/social/Savatar.png",
-    "build/en/assets/images/social/rss.svg",
-    "build/en/assets/images/social/music.svg",
-    "build/en/assets/images/social/github.svg",
-    "build/en/assets/images/social/avatar.png",
-    "build/en/assets/images/social/avatar.jpg",
     "build/README.md",
     "docs/course/Data Structures And Algorithms/1Array.md",
     "docs/stack/java/DP01.md",
@@ -209,8 +212,6 @@
     "docs/stack/java/Design_Pattern03.md",
     "node_modules/@xtuc/long/README.md",
     "node_modules/@xtuc/ieee754/README.md",
-    "node_modules/source-map-support/README.md",
-    "node_modules/source-map-support/LICENSE.md",
-    "docs/stack/java/Design_Pattern02.md"
+    "node_modules/source-map-support/README.md"
   ]
 }
