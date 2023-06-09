@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/编译原理课设/2 词法分析.md",
+                "file": "blog/lifestyle/计算机科学与技术就业考研研讨会(就业篇).md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/编译原理课设/2 词法分析.md",
+                "file": "blog/lifestyle/计算机科学与技术就业考研研讨会(就业篇).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/编译原理课设/2 词法分析.md",
+                "file": "blog/lifestyle/计算机科学与技术就业考研研讨会(就业篇).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/编译原理课设/2 词法分析.md"
+                "file": "blog/lifestyle/计算机科学与技术就业考研研讨会(就业篇).md"
               }
             }
           },
@@ -146,12 +146,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -167,11 +166,14 @@
   },
   "active": "7a7771588b8f5757",
   "lastOpenFiles": [
+    "blog/project/web/宝塔 Flarum 论坛的搭建与迁移.md",
+    "blog/lifestyle/计算机科学与技术就业考研研讨会(就业篇).md",
+    "docs/course/编译原理课设/2 词法分析.md",
+    "blog/lifestyle",
+    "docs/course/编译原理课设/1 Lex和yacc的使用.md",
     "docs/course/编译原理课设/assets/2 词法分析/mermaid-diagram-2023-06-09-112538.svg",
     "docs/course/编译原理课设/assets/2 词法分析/mermaid-diagram-2023-06-09-104815.svg",
     "docs/course/编译原理课设/assets/2 词法分析",
-    "docs/course/编译原理课设/1 Lex和yacc的使用.md",
-    "docs/course/编译原理课设/2 词法分析.md",
     "docs/course/计算机专业英语/Unit 1 Hardware I.md",
     "docs/course/introduction.md",
     "docs/course/编译原理课设/assets/1 Lex和yacc的使用/image-20230603193939.png",
@@ -191,14 +193,12 @@
     "docs/stack/git/约定式提交.md",
     "build/en/sw.js",
     "build/en/feed.json",
-    "build/en/atom.xml",
     "build/en/assets/images/social/Savatar.png",
     "build/en/assets/images/social/rss.svg",
     "build/en/assets/images/social/music.svg",
     "build/en/assets/images/social/github.svg",
     "build/en/assets/images/social/avatar.png",
     "build/en/assets/images/social/avatar.jpg",
-    "build/en/assets/images/social/about.svg",
     "build/README.md",
     "docs/course/Data Structures And Algorithms/1Array.md",
     "docs/stack/java/DP01.md",
@@ -211,7 +211,6 @@
     "node_modules/@xtuc/ieee754/README.md",
     "node_modules/source-map-support/README.md",
     "node_modules/source-map-support/LICENSE.md",
-    "docs/stack/java/Design_Pattern02.md",
-    "node_modules/scheduler/README.md"
+    "docs/stack/java/Design_Pattern02.md"
   ]
 }
