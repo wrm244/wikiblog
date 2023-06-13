@@ -12,7 +12,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/1 Hadoop介绍与安装",
+  "attachmentFolderPath": "./assets/2 HDFS文件存储原理",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "livePreview": true,
