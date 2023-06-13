@@ -146,12 +146,11 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -166,7 +165,7 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "7a7771588b8f5757",
+  "active": "3a4771917cb14888",
   "lastOpenFiles": [
     "docs/course/大数据/assets/1 Hadoop介绍与安装/image-20230613150109.png",
     "docs/course/大数据/assets/1 Hadoop介绍与安装",

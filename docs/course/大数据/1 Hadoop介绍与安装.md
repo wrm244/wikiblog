@@ -261,3 +261,47 @@ drwxr-xr-x   - hadoop supergroup          0 2023-06-13 14:23 /user/hadoop/.Trash
 </property>
 ```
 >不推荐可以给网页浏览加以高权限，有很大的安全问题，造成数据的泄露与丢失
+
+## 配置NFS
+> network files system
+
+#### 添加 core-site.xml 配置
+```xml
+<property>
+    <name>hadoop.proxyuser.hadoop.groups</name>
+    <value>*</value>
+</property>
+<property>
+    <name>hadoop.proxyuser.hadoop.hosts</name>
+    <value>*</value>
+</property>
+```
+> proxyuser.hadoop.groups 允许代理任何用户组
+> proxyuser.hadoop.hosts 允许代理任意服务器请求
+
+#### 添加 hdfs-site.xml 配置
+```xml
+<property>
+    <name>nfs.superuser</name>
+    <value>hadoop</value>
+</property>
+<property>
+    <name>nfs.dump.dir</name>
+    <value>/temp/.hdfs-nfs</value>
+</property>
+<property>
+    <name>nfs.exports.allowed.hosts</name>
+    <value>192.168.3.1 rw</value>
+</property>
+```
+> proxyuser.hadoop.groups 允许代理任何用户组
+> proxyuser.hadoop.hosts 允许代理任意服务器请求
+
+#### 启动nfs
+1. 分发以上配置好的文件
+2. 重启集群
+3. 停止系统原先自带的nfs相关进程，同时卸载掉自带的``rpcbind``
+> yum remove -y rpcbind
+4. 启动portmap：``hdfs --daemon start portmap`` (**要在root下执行**)
+5. 启动nfs：``hdfs --daemon start nfs3``（**在hadoop下执行**）
+> windows挂载nfs: net use X: \\192.168.3.133\!
