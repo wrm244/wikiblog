@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/Advanced Mathematics/函数与极限.md",
+                "file": "docs/course/大数据/1 Hadoop介绍与安装.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/Advanced Mathematics/函数与极限.md",
+                "file": "docs/course/大数据/1 Hadoop介绍与安装.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/Advanced Mathematics/函数与极限.md",
+                "file": "docs/course/大数据/1 Hadoop介绍与安装.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/Advanced Mathematics/函数与极限.md"
+                "file": "docs/course/大数据/1 Hadoop介绍与安装.md"
               }
             }
           },
@@ -168,6 +168,12 @@
   },
   "active": "7a7771588b8f5757",
   "lastOpenFiles": [
+    "docs/course/大数据/assets/1 Hadoop介绍与安装/image-20230613150109.png",
+    "docs/course/大数据/assets/1 Hadoop介绍与安装",
+    "docs/course/大数据/assets",
+    "docs/course/Advanced Mathematics/函数与极限.md",
+    "docs/course/大数据/1 Hadoop介绍与安装.md",
+    "docs/course/大数据",
     "docs/course/Advanced Mathematics/assets/函数与极限/image-20230610144705.png",
     "docs/course/Advanced Mathematics/assets/函数与极限/image-20230610144653.png",
     "docs/course/Advanced Mathematics/assets/函数与极限",
@@ -186,22 +192,17 @@
     "blog/project/web/宝塔 Flarum 论坛的搭建与迁移.md",
     "blog/lifestyle",
     "docs/course/编译原理课设/assets/2 词法分析/mermaid-diagram-2023-06-09-112538.svg",
-    "docs/course/编译原理课设/assets/2 词法分析/mermaid-diagram-2023-06-09-104815.svg",
     "docs/course/编译原理课设/assets/2 词法分析",
     "docs/course/计算机专业英语/Unit 1 Hardware I.md",
     "docs/course/introduction.md",
     "docs/course/编译原理课设/assets/1 Lex和yacc的使用",
     "docs/course/编译原理课设/assets",
-    "docs/course/Advanced Mathematics/函数与极限.md",
     "docs/course/编译原理课设",
     "docs/course/Data Structures And Algorithms/0DSA.md",
     "blog/project/web/Docker部署Overleaf包含中文字体与全套texlive镜像.md",
     "blog/CS/backend/为什么是Nginx.md",
     "docs/blog/Docusaurus/部署.md",
     "docs/stack/git/Git 基础命令.md",
-    "docs/course/计算机专业英语",
-    "docs/stack/git/assets/Git 基础命令",
-    "docs/stack/git/assets",
     "docs/stack/git/约定式提交.md",
     "build/README.md",
     "docs/course/Data Structures And Algorithms/1Array.md",
@@ -212,7 +213,6 @@
     "docs/stack/java/DP04.md",
     "docs/stack/java/Design_Pattern03.md",
     "node_modules/@xtuc/long/README.md",
-    "node_modules/@xtuc/ieee754/README.md",
-    "node_modules/source-map-support/README.md"
+    "node_modules/@xtuc/ieee754/README.md"
   ]
 }
