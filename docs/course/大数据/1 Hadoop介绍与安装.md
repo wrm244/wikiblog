@@ -203,7 +203,7 @@ WARNING: Attempting to execute replacement "hdfs --daemon stop" instead.
 > 参考 [Apache Hadoop 3.3.5 – FileSystemShell](https://hadoop.apache.org/docs/r3.3.5/hadoop-project-dist/hadoop-common/FileSystemShell.html)
 
 两条重要前缀：
-
+>hdfs: Hadoop Distributed File System
 ```bash
 hadoop fs <args>
 hdfs dfs <args>
