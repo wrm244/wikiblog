@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/大数据/2 HDFS文件存储原理.md",
+                "file": "docs/course/大数据/3 分布式计算与资源调度.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/大数据/2 HDFS文件存储原理.md",
+                "file": "docs/course/大数据/3 分布式计算与资源调度.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/大数据/2 HDFS文件存储原理.md",
+                "file": "docs/course/大数据/3 分布式计算与资源调度.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/大数据/2 HDFS文件存储原理.md"
+                "file": "docs/course/大数据/3 分布式计算与资源调度.md"
               }
             }
           },
@@ -169,38 +169,38 @@
   },
   "active": "7a7771588b8f5757",
   "lastOpenFiles": [
+    "docs/course/大数据/1 Hadoop介绍与安装.md",
+    "docs/course/大数据/3 分布式计算与资源调度.md",
+    "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615213227.png",
+    "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615213202.png",
+    "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615211858.png",
+    "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615211631.png",
+    "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615211526.png",
+    "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615210423.png",
+    "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615205544.png",
+    "docs/course/大数据/assets/3 分布式计算与资源调度",
+    "docs/course/大数据/2 HDFS文件存储原理.md",
     "docs/course/大数据/assets/2 HDFS文件存储原理/image-20230615203343.png",
     "docs/blog/Docusaurus/文档编辑指南.md",
-    "docs/course/大数据/2 HDFS文件存储原理.md",
     "docs/course/大数据/assets/2 HDFS文件存储原理/image-20230615202040.png",
     "docs/course/大数据/assets/2 HDFS文件存储原理",
-    "docs/course/大数据/1 Hadoop介绍与安装.md",
     "docs/course/大数据/assets/1 Hadoop介绍与安装/image-20230613150109.png",
     "docs/course/大数据/assets/1 Hadoop介绍与安装",
     "docs/course/大数据/assets",
     "docs/course/Advanced Mathematics/函数与极限.md",
     "docs/course/大数据",
-    "docs/course/Advanced Mathematics/assets/函数与极限/image-20230610144705.png",
-    "docs/course/Advanced Mathematics/assets/函数与极限/image-20230610144653.png",
     "docs/course/Advanced Mathematics/assets/函数与极限",
     "docs/course/Advanced Mathematics/assets",
     "docs/course/编译原理课设/2 词法分析.md",
     "docs/course/编译原理课设/1 Lex和yacc的使用.md",
     "blog/lifestyle/计算机科学与技术就业考研研讨会(就业篇).md",
     "blog/lifestyle/计算机科学与技术就业考研研讨会(考公考研篇).md",
-    "static/assets/images/cover/mountain1.jpg",
-    "static/assets/images/cover/network.jpg",
-    "static/assets/images/cover/social.jpg",
-    "static/assets/images/cover/update.jpg",
-    "static/assets/images/cover/overleaf.png",
-    "static/assets/images/cover/note.jpg",
     "blog/project/web/宝塔 Flarum 论坛的搭建与迁移.md",
     "blog/lifestyle",
     "docs/course/编译原理课设/assets/2 词法分析",
     "docs/course/计算机专业英语/Unit 1 Hardware I.md",
     "docs/course/introduction.md",
     "docs/course/编译原理课设/assets/1 Lex和yacc的使用",
-    "docs/course/编译原理课设/assets",
     "docs/course/Data Structures And Algorithms/0DSA.md",
     "blog/project/web/Docker部署Overleaf包含中文字体与全套texlive镜像.md",
     "blog/CS/backend/为什么是Nginx.md",
@@ -213,7 +213,6 @@
     "docs/stack/java/DP03.md",
     "docs/stack/java/DP02.md",
     "build/en/README.md",
-    "docs/stack/java/DP04.md",
-    "docs/stack/java/Design_Pattern03.md"
+    "docs/stack/java/DP04.md"
   ]
 }

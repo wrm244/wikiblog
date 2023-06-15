@@ -12,7 +12,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/2 HDFS文件存储原理",
+  "attachmentFolderPath": "./assets/3 分布式计算与资源调度",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "livePreview": true,
