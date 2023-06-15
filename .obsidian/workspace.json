@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309.5
+    "width": 309.5,
+    "collapsed": true
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -150,7 +151,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -167,8 +169,12 @@
   },
   "active": "7a7771588b8f5757",
   "lastOpenFiles": [
-    "docs/course/大数据/1 Hadoop介绍与安装.md",
+    "docs/course/大数据/assets/2 HDFS文件存储原理/image-20230615203343.png",
+    "docs/blog/Docusaurus/文档编辑指南.md",
     "docs/course/大数据/2 HDFS文件存储原理.md",
+    "docs/course/大数据/assets/2 HDFS文件存储原理/image-20230615202040.png",
+    "docs/course/大数据/assets/2 HDFS文件存储原理",
+    "docs/course/大数据/1 Hadoop介绍与安装.md",
     "docs/course/大数据/assets/1 Hadoop介绍与安装/image-20230613150109.png",
     "docs/course/大数据/assets/1 Hadoop介绍与安装",
     "docs/course/大数据/assets",
@@ -188,7 +194,6 @@
     "static/assets/images/cover/update.jpg",
     "static/assets/images/cover/overleaf.png",
     "static/assets/images/cover/note.jpg",
-    "static/assets/images/cover/deadline.jpg",
     "blog/project/web/宝塔 Flarum 论坛的搭建与迁移.md",
     "blog/lifestyle",
     "docs/course/编译原理课设/assets/2 词法分析",
@@ -196,7 +201,6 @@
     "docs/course/introduction.md",
     "docs/course/编译原理课设/assets/1 Lex和yacc的使用",
     "docs/course/编译原理课设/assets",
-    "docs/course/编译原理课设",
     "docs/course/Data Structures And Algorithms/0DSA.md",
     "blog/project/web/Docker部署Overleaf包含中文字体与全套texlive镜像.md",
     "blog/CS/backend/为什么是Nginx.md",
@@ -210,8 +214,6 @@
     "docs/stack/java/DP02.md",
     "build/en/README.md",
     "docs/stack/java/DP04.md",
-    "docs/stack/java/Design_Pattern03.md",
-    "node_modules/@xtuc/long/README.md",
-    "node_modules/@xtuc/ieee754/README.md"
+    "docs/stack/java/Design_Pattern03.md"
   ]
 }

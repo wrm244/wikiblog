@@ -35,6 +35,7 @@ last_update:
 </property>
 ```
 > 请修改所有服务器上的配置
+
 ### 命令修改
 ```bash
 hadoop fs -D dfs.replication=2 -put <args>
@@ -121,7 +122,7 @@ FSCK ended at Tue Jun 13 18:03:49 CST 2023 in 2 milliseconds
 ```
 
 ## 设置block大小
-#### 添加 hdfs-site.xml 配置
+### 添加 hdfs-site.xml 配置
 ```xml
 <property>
     <name>dfs.blocksize</name>
@@ -129,3 +130,53 @@ FSCK ended at Tue Jun 13 18:03:49 CST 2023 in 2 milliseconds
 </property>
 ```
 > 请修改所有服务器上的配置
+
+## NameNode
+> 负责记录整理文件block块关系
+
+### edits文件
+>流水账，记录hdfs每次操作，有时间，路径，文件大小等。
+
+- 有多个edits也是防止单个记录文件过大，那问题是如何查找检索文件？
+- 请注意，流水账的意思是记录了修改不了，也就是如果你的文件被删除，他会记录新的，但不一定是最终状态。
+- 所以对edits进行压缩，压缩的是每个事务(文件)的最终状态。
+### fsimage 文件
+> 将全部edits文件合并压缩后得到的文件，所以你查看文件的信息是读取fsimage
+
+**文件生成步骤**：
+- 不存在该文件，将全部edits合并为第一个fsimage
+- 如存在，将全部的edits和已存在的fsimage进行合并，形成新的fsimage
+
+### 文件合并控制参数
+
+- dfs.namenode.checkpoint.period 默认3600s，一个小时
+- dfs.namenode.checkpoint.txns 默认100w次事务执行一次
+
+### SecondaryNameNode(辅助程序)
+
+> edits由NameNode生成，合并由辅助程序执行（如果辅助程序不开启，会卡顿，没程序合并）
+
+## 数据写入
+
+### 数据的写入流程
+
+![](assets/2%20HDFS文件存储原理/image-20230615202040.png)
+
+1. 客户端写入请求(hadoop fs、hdfs dfs)，客户端向NameNode发起请求
+2. NameNode审核权限、空间等，满足条件允许写入，告知地址
+3. 客户端向指定的DataNode发送数据包（找一个发送）
+4. 后续由NameNode通知完成副本的复制备份
+5. 写入完成客户端通知NameNode，NameNode做元数据记录（edits）
+
+  
+:::tip  
+- NameNode不负责数据写入，只负责事务记录和权限审批
+- 客户端直接向1台DataNode写数据，选择网络距离最近的
+- 数据块备份复制由DataNode之间自行完成
+:::
+
+
+## 数据读取
+
+![](assets/2%20HDFS文件存储原理/image-20230615203343.png)
+
