@@ -1,7 +1,7 @@
 ---
 id: Lex和yacc的使用
 slug: /Lex和yacc的使用
-title: Lex和yacc的使用
+title: 1 Lex和yacc的使用
 author: RiverMountain  
 date: 2023/06/03
 tags: [编译原理,lex]  
