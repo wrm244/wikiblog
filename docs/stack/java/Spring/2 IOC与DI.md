@@ -70,12 +70,12 @@ last_update:
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!--name:为bean指定别名，别名可以有多个，使用逗号，分号，空格进行分隔-->
-    <bean id="bookService" name="service service4 bookEbi" class="com.itheima.service.impl.BookServiceImpl">
+    <bean id="bookService" name="service service4 bookEbi" class="com.wrm244.service.impl.BookServiceImpl">
         <property name="bookDao" ref="bookDao"/>
     </bean>
 
     <!--scope：为bean设置作用范围，可选值为单例singloton，非单例prototype-->
-    <bean id="bookDao" name="dao" class="com.itheima.dao.impl.BookDaoImpl"/>
+    <bean id="bookDao" name="dao" class="com.wrm244.dao.impl.BookDaoImpl"/>
 </beans>
 ```
 
@@ -100,7 +100,7 @@ public class AppForName {
 
 ![image-20210729184337603](assets/image-20210729184337603.png)
 
-==注意事项:==
+注意事项:
 
 - bean依赖注入的ref属性指定bean，必须在容器中存在
 
@@ -114,11 +114,11 @@ public class AppForName {
 
   ![1629771972886](assets/1629771972886.png)
 
-  获取bean无论是通过id还是name获取，如果无法获取到，将抛出异常==NoSuchBeanDefinitionException==
+  获取bean无论是通过id还是name获取，如果无法获取到，将抛出异常``NoSuchBeanDefinitionException``
 
-#### 4.1.3 bean作用范围scope配置
+#### bean作用范围scope配置
 
-关于bean的作用范围是bean属性配置的一个==重点==内容。
+关于bean的作用范围是bean属性配置的一个重点内容。
 
 看到这个作用范围，我们就得思考bean的作用范围是来控制bean哪块内容的?
 
@@ -126,7 +126,7 @@ public class AppForName {
 
 ![image-20210729183628138](assets/image-20210729183628138.png)
 
-##### 4.1.3.1 验证IOC容器中对象是否为单例
+##### 验证IOC容器中对象是否为单例
 
 ###### 验证思路
 
@@ -158,20 +158,20 @@ public class AppForName {
 
 获取到结论后，问题就来了，那如果我想创建出来非单例的bean对象，该如何实现呢?
 
-##### 4.1.3.2 配置bean为非单例
+##### 配置bean为非单例
 
 在Spring配置文件中，配置scope属性来实现bean的非单例创建
 
 - 在Spring的配置文件中，修改`<bean>`的scope属性
 
   ```xml
-  <bean id="bookDao" name="dao" class="com.itheima.dao.impl.BookDaoImpl" scope=""/>
+  <bean id="bookDao" name="dao" class="com.wrm244.dao.impl.BookDaoImpl" scope=""/>
   ```
 
 - 将scope设置为`singleton`
 
   ```xml
-  <bean id="bookDao" name="dao" class="com.itheima.dao.impl.BookDaoImpl" scope="singleton"/>
+  <bean id="bookDao" name="dao" class="com.wrm244.dao.impl.BookDaoImpl" scope="singleton"/>
   ```
 
   运行AppForScope，打印看结果
@@ -181,7 +181,7 @@ public class AppForName {
 - 将scope设置为`prototype`
 
   ```
-  <bean id="bookDao" name="dao" class="com.itheima.dao.impl.BookDaoImpl" scope="prototype"/>
+  <bean id="bookDao" name="dao" class="com.wrm244.dao.impl.BookDaoImpl" scope="prototype"/>
   ```
 
   运行AppForScope，打印看结果
@@ -191,9 +191,9 @@ public class AppForName {
 - 结论，使用bean的`scope`属性可以控制bean的创建是否为单例：
 
   - `singleton`默认为单例
-  - `prototype`为非单例
+  - `prototype`为原型
 
-##### 4.1.3.3 scope使用后续思考
+##### scope使用后续思考
 
 介绍完`scope`属性以后，我们来思考几个问题:
 
@@ -213,13 +213,13 @@ public class AppForName {
 - 哪些bean对象不适合交给容器进行管理?
   - 封装实例的域对象，因为会引发线程安全问题，所以不适合。
 
-#### 4.14 bean基础配置小结
+#### bean基础配置小结
 
 关于bean的基础配置中，需要大家掌握以下属性:
 
 ![1631529887695](assets/1631529887695.png)
 
-### 4.2 bean实例化
+### bean实例化
 
 对象已经能交给Spring的IOC容器来创建了，但是容器是如何来创建对象的呢?
 
@@ -234,7 +234,7 @@ bean本质上就是对象，对象在new的时候会使用构造方法完成，�
 
 基于这个知识点出发，我们来验证spring中bean的三种创建方式，
 
-#### 4.2.1 环境准备
+#### 环境准备
 
 为了方便大家阅读代码，重新准备个开发环境，
 
@@ -246,7 +246,7 @@ bean本质上就是对象，对象在new的时候会使用构造方法完成，�
 
 ![1629775585694](assets/1629775585694.png)
 
-#### 4.2.2 构造方法实例化
+#### 构造方法实例化
 
 在上述的环境下，我们来研究下Spring中的第一种bean的创建方式`构造方法实例化`:
 
@@ -276,7 +276,7 @@ public class BookDaoImpl implements BookDao {
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
+	<bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl"/>
 
 </beans>
 ```
@@ -353,37 +353,37 @@ public class BookDaoImpl implements BookDao {
 
 ![1629776331499](assets/1629776331499.png)
 
-#### 4.2.3 分析Spring的错误信息
+#### 分析Spring的错误信息
 
 接下来，我们主要研究下Spring的报错信息来学一学如阅读。
 
 - 错误信息从下往上依次查看，因为上面的错误大都是对下面错误的一个包装，最核心错误是在最下面
-- Caused by: java.lang.NoSuchMethodException: com.itheima.dao.impl.BookDaoImpl.`<init>`()
+- Caused by: java.lang.NoSuchMethodException: com.wrm244.dao.impl.BookDaoImpl.`<init>`()
   - Caused by 翻译为`引起`，即出现错误的原因
   - java.lang.NoSuchMethodException:抛出的异常为`没有这样的方法异常`
-  - com.itheima.dao.impl.BookDaoImpl.`<init>`():哪个类的哪个方法没有被找到导致的异常，`<init>`()指定是类的构造方法，即该类的无参构造方法
+  - com.wrm244.dao.impl.BookDaoImpl.`<init>`():哪个类的哪个方法没有被找到导致的异常，`<init>`()指定是类的构造方法，即该类的无参构造方法
 
 如果最后一行错误获取不到错误信息，接下来查看第二层:
 
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.itheima.dao.impl.BookDaoImpl]: No default constructor found; nested exception is java.lang.NoSuchMethodException: com.itheima.dao.impl.BookDaoImpl.`<init>`()
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.wrm244.dao.impl.BookDaoImpl]: No default constructor found; nested exception is java.lang.NoSuchMethodException: com.wrm244.dao.impl.BookDaoImpl.`<init>`()
 
 - nested:嵌套的意思，后面的异常内容和最底层的异常是一致的
-- Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.itheima.dao.impl.BookDaoImpl]: No default constructor found; 
+- Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.wrm244.dao.impl.BookDaoImpl]: No default constructor found; 
   - Caused by: `引发`
   - BeanInstantiationException:翻译为`bean实例化异常`
   - No default constructor found:没有一个默认的构造函数被发现
 
 看到这其实错误已经比较明显，给大家个练习，把倒数第三层的错误分析下吧:
 
-Exception in thread "main" org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookDao' defined in class path resource [applicationContext.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.itheima.dao.impl.BookDaoImpl]: No default constructor found; nested exception is java.lang.NoSuchMethodException: com.itheima.dao.impl.BookDaoImpl.`<init>`()。
+Exception in thread "main" org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookDao' defined in class path resource [applicationContext.xml]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.wrm244.dao.impl.BookDaoImpl]: No default constructor found; nested exception is java.lang.NoSuchMethodException: com.wrm244.dao.impl.BookDaoImpl.`<init>`()。
 
 至此，关于Spring的构造方法实例化就已经学习完了，因为每一个类默认都会提供一个无参构造函数，所以其实真正在使用这种方式的时候，我们什么也不需要做。这也是我们以后比较常用的一种方式。
 
-#### 4.2.4 静态工厂实例化
+#### 静态工厂实例化
 
 接下来研究Spring中的第二种bean的创建方式`静态工厂实例化`:
 
-##### 4.2.4.1 工厂方式创建bean
+##### 工厂方式创建bean
 
 在讲这种方式之前，我们需要先回顾一个知识点是使用工厂来创建对象的方式:
 
@@ -401,7 +401,7 @@ public class OrderDaoImpl implements OrderDao {
 }
 ```
 
-(2)创建一个工厂类OrderDaoFactory并提供一个==静态方法==
+(2)创建一个工厂类OrderDaoFactory并提供一个静态方法
 
 ```java
 //静态工厂创建对象
@@ -430,14 +430,14 @@ public class AppForInstanceOrder {
 
 如果代码中对象是通过上面的这种方式来创建的，如何将其交给Spring来管理呢?
 
-##### 4.2.4.2 静态工厂实例化
+##### 静态工厂实例化
 
 这就要用到Spring中的静态工厂实例化的知识了，具体实现步骤为:
 
 (1)在spring的配置文件application.properties中添加以下内容:
 
 ```xml
-<bean id="orderDao" class="com.itheima.factory.OrderDaoFactory" factory-method="getOrderDao"/>
+<bean id="orderDao" class="com.wrm244.factory.OrderDaoFactory" factory-method="getOrderDao"/>
 ```
 
 class:工厂类的类全名
@@ -486,13 +486,13 @@ public class OrderDaoFactory {
 
 ![1629788036885](assets/1629788036885.png)
 
-介绍完静态工厂实例化后，这种方式一般是用来兼容早期的一些老系统，所以==了解为主==。
+介绍完静态工厂实例化后，这种方式一般是用来兼容早期的一些老系统，所以了解为主。
 
-#### 4.2.5 实例工厂与FactoryBean
+#### 实例工厂与FactoryBean
 
 接下来继续来研究Spring的第三种bean的创建方式`实例工厂实例化`:
 
-##### 4.2.3.1 环境准备
+##### 环境准备
 
 (1)准备一个UserDao和UserDaoImpl类
 
@@ -538,14 +538,14 @@ public class AppForInstanceUser {
 
 对于上面这种实例工厂的方式如何交给Spring管理呢?
 
-##### 4.2.3.2 实例工厂实例化
+##### 实例工厂实例化
 
 具体实现步骤为:
 
 (1)在spring的配置文件中添加以下内容:
 
 ```xml
-<bean id="userFactory" class="com.itheima.factory.UserDaoFactory"/>
+<bean id="userFactory" class="com.wrm244.factory.UserDaoFactory"/>
 <bean id="userDao" factory-method="getUserDao" factory-bean="userFactory"/>
 ```
 
@@ -582,7 +582,7 @@ public class AppForInstanceUser {
 
 实例工厂实例化的方式就已经介绍完了，配置的过程还是比较复杂，所以Spring为了简化这种配置方式就提供了一种叫`FactoryBean`的方式来简化开发。
 
-##### 4.2.3.3 FactoryBean的使用
+##### FactoryBean的使用
 
 具体的使用步骤为:
 
@@ -604,7 +604,7 @@ public class UserDaoFactoryBean implements FactoryBean<UserDao> {
 (2)在Spring的配置文件中进行配置
 
 ```xml
-<bean id="userDao" class="com.itheima.factory.UserDaoFactoryBean"/>
+<bean id="userDao" class="com.wrm244.factory.UserDaoFactoryBean"/>
 ```
 
 (3)AppForInstanceUser运行类不用做任何修改，直接运行
@@ -678,7 +678,7 @@ public class UserDaoFactoryBean implements FactoryBean<UserDao> {
 
 从结果中可以看出现在已经是非单例了，但是一般情况下我们都会采用单例，也就是采用默认即可。所以isSingleton()方法一般不需要进行重写。
 
-#### 4.2.6 bean实例化小结
+#### bean实例化小结
 
 通过这一节的学习，需要掌握:
 
@@ -699,7 +699,7 @@ public class UserDaoFactoryBean implements FactoryBean<UserDao> {
 
 需要注意的一点是，构造方法在类中默认会提供，但是如果重写了构造方法，默认的就会消失，在使用的过程中需要注意，如果需要重写构造方法，最好把默认的构造方法也重写下。
 
-### 4.3 bean的生命周期
+### bean的生命周期
 
 关于bean的相关知识还有最后一个是`bean的生命周期`,对于生命周期，我们主要围绕着`bean生命周期控制`来讲解:
 
@@ -712,7 +712,7 @@ public class UserDaoFactoryBean implements FactoryBean<UserDao> {
 
 现在我们面临的问题是如何在bean的创建之后和销毁之前把我们需要添加的内容添加进去。
 
-#### 4.3.1 环境准备
+#### 环境准备
 
 还是老规矩，为了方便大家后期代码的阅读，我们重新搭建下环境:
 
@@ -763,7 +763,7 @@ public class BookServiceImpl implements BookService{
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
+    <bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl"/>
 </beans>
 ```
 
@@ -780,7 +780,7 @@ public class AppForLifeCycle {
 }
 ```
 
-#### 4.3.2 生命周期设置
+#### 生命周期设置
 
 接下来，在上面这个环境中来为BookDao添加生命周期的控制方法，具体的控制有两个阶段:
 
@@ -789,7 +789,7 @@ public class AppForLifeCycle {
 
 ##### 步骤1:添加初始化和销毁方法
 
-针对这两个阶段，我们在BooDaoImpl类中分别添加两个方法，==方法名任意==
+针对这两个阶段，我们在BooDaoImpl类中分别添加两个方法，方法名任意
 
 ```java
 public class BookDaoImpl implements BookDao {
@@ -812,7 +812,7 @@ public class BookDaoImpl implements BookDao {
 在配置文件添加配置，如下:
 
 ```xml
-<bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl" init-method="init" destroy-method="destory"/>
+<bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl" init-method="init" destroy-method="destory"/>
 ```
 
 ##### 步骤3:运行程序
@@ -830,7 +830,7 @@ public class BookDaoImpl implements BookDao {
 
 知道了出现问题的原因，具体该如何解决呢?
 
-#### 4.3.3 close关闭容器
+#### close关闭容器
 
 - ApplicationContext中没有close方法
 
@@ -851,7 +851,7 @@ public class BookDaoImpl implements BookDao {
 
   ![1629792857608](assets/1629792857608.png)
 
-#### 4.3.4 注册钩子关闭容器
+#### 注册钩子关闭容器
 
 - 在容器未关闭之前，提前设置好回调函数，让JVM在退出之前回调此函数来关闭容器
 
@@ -861,7 +861,7 @@ public class BookDaoImpl implements BookDao {
   ctx.registerShutdownHook();
   ```
 
-  **注意:**registerShutdownHook在ApplicationContext中也没有
+  **注意:** registerShutdownHook在ApplicationContext中也没有
 
 - 运行后，查询打印结果
 
@@ -934,7 +934,7 @@ public class BookServiceImpl implements BookService, InitializingBean, Disposabl
 
     验证的结果和我们猜想的结果是一致的，所以初始化方法会在类中属性设置之后执行。
 
-#### 4.3.5 bean生命周期小结
+#### bean生命周期小结
 
 (1)关于Spring中对bean生命周期控制提供了两种方式:
 
@@ -947,11 +947,11 @@ public class BookServiceImpl implements BookService, InitializingBean, Disposabl
   - 1.创建对象(内存分配)
   - 2.执行构造方法
   - 3.执行属性注入(set操作)
-  - ==4.执行bean初始化方法==
+  - 4.执行bean初始化方法
 - 使用bean
   - 1.执行业务操作
 - 关闭/销毁容器
-  - ==1.执行bean销毁方法==
+  - 1.执行bean销毁方法
 
 (3)关闭容器的两种方式:
 
@@ -976,18 +976,18 @@ Spring就是基于上面这些知识点，为我们提供了两种注入方式�
 
 - setter注入
   - 简单类型
-  - ==引用类型==
+  - 引用类型
 - 构造器注入
   - 简单类型
   - 引用类型
 
 依赖注入的方式已经介绍完，接下来挨个学习下:
 
-### 5.1 setter注入
+### setter注入
 
 1. 对于setter方式注入引用类型的方式之前已经学习过，快速回顾下:
 
-- 在bean中定义引用类型属性，并提供可访问的==set==方法
+- 在bean中定义引用类型属性，并提供可访问的set方法
 
 ```java
 public class BookServiceImpl implements BookService {
@@ -998,17 +998,17 @@ public class BookServiceImpl implements BookService {
 }
 ```
 
-- 配置中使用==property==标签==ref==属性注入引用类型对象
+- 配置中使用property标签ref属性注入引用类型对象
 
 ```xml
-<bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
+<bean id="bookService" class="com.wrm244.service.impl.BookServiceImpl">
 	<property name="bookDao" ref="bookDao"/>
 </bean>
 
-<bean id="bookDao" class="com.itheima.dao.imipl.BookDaoImpl"/>
+<bean id="bookDao" class="com.wrm244.dao.imipl.BookDaoImpl"/>
 ```
 
-#### 5.1.1 环境准备
+#### 环境准备
 
 为了更好的学习下面内容，我们依旧准备一个新环境:
 
@@ -1067,8 +1067,8 @@ public class BookServiceImpl implements BookService{
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
-    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
+    <bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl"/>
+    <bean id="bookService" class="com.wrm244.service.impl.BookServiceImpl">
         <property name="bookDao" ref="bookDao"/>
     </bean>
 </beans>
@@ -1088,7 +1088,7 @@ public class AppForDISet {
 
 接下来，在上面这个环境中来完成setter注入的学习:
 
-#### 5.1.2 注入引用数据类型
+#### 注入引用数据类型
 
 > 需求:在bookServiceImpl对象中注入userDao
 >
@@ -1132,9 +1132,9 @@ public class BookServiceImpl implements BookService{
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
-    <bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl"/>
-    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
+    <bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl"/>
+    <bean id="userDao" class="com.wrm244.dao.impl.UserDaoImpl"/>
+    <bean id="bookService" class="com.wrm244.service.impl.BookServiceImpl">
         <property name="bookDao" ref="bookDao"/>
         <property name="userDao" ref="userDao"/>
     </bean>
@@ -1147,7 +1147,7 @@ public class BookServiceImpl implements BookService{
 
 ![1629799873386](assets/1629799873386.png)
 
-#### 5.1.3 注入简单数据类型
+#### 注入简单数据类型
 
 > 需求：给BookDaoImpl注入一些简单数据类型的数据
 >
@@ -1199,12 +1199,12 @@ public class BookDaoImpl implements BookDao {
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl">
+    <bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl">
         <property name="databaseName" value="mysql"/>
      	<property name="connectionNum" value="10"/>
     </bean>
-    <bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl"/>
-    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
+    <bean id="userDao" class="com.wrm244.dao.impl.UserDaoImpl"/>
+    <bean id="bookService" class="com.wrm244.service.impl.BookServiceImpl">
         <property name="bookDao" ref="bookDao"/>
         <property name="userDao" ref="userDao"/>
     </bean>
@@ -1227,14 +1227,14 @@ value:后面跟的是简单数据类型，对于参数类型，Spring在注入�
 
 ![1629800324721](assets/1629800324721.png)
 
-**注意:**两个property注入标签的顺序可以任意。
+**注意:** 两个property注入标签的顺序可以任意。
 
 对于setter注入方式的基本使用就已经介绍完了，
 
 - 对于引用数据类型使用的是`<property name="" ref=""/>`
 - 对于简单数据类型使用的是`<property name="" value=""/>`
 
-### 5.2 构造器注入
+### 构造器注入
 
 #### 5.2.1 环境准备
 
@@ -1299,8 +1299,8 @@ public class BookServiceImpl implements BookService{
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
-    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
+    <bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl"/>
+    <bean id="bookService" class="com.wrm244.service.impl.BookServiceImpl">
         <property name="bookDao" ref="bookDao"/>
     </bean>
 </beans>
@@ -1359,8 +1359,8 @@ public class BookServiceImpl implements BookService{
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
-    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
+    <bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl"/>
+    <bean id="bookService" class="com.wrm244.service.impl.BookServiceImpl">
         <constructor-arg name="bookDao" ref="bookDao"/>
     </bean>
 </beans>
@@ -1422,9 +1422,9 @@ public class BookServiceImpl implements BookService{
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
-    <bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl"/>
-    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
+    <bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl"/>
+    <bean id="userDao" class="com.wrm244.dao.impl.UserDaoImpl"/>
+    <bean id="bookService" class="com.wrm244.service.impl.BookServiceImpl">
         <constructor-arg name="bookDao" ref="bookDao"/>
         <constructor-arg name="userDao" ref="userDao"/>
     </bean>
@@ -1479,12 +1479,12 @@ public class BookDaoImpl implements BookDao {
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl">
+    <bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl">
         <constructor-arg name="databaseName" value="mysql"/>
         <constructor-arg name="connectionNum" value="666"/>
     </bean>
-    <bean id="userDao" class="com.itheima.dao.impl.UserDaoImpl"/>
-    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
+    <bean id="userDao" class="com.wrm244.dao.impl.UserDaoImpl"/>
+    <bean id="bookService" class="com.wrm244.service.impl.BookServiceImpl">
         <constructor-arg name="bookDao" ref="bookDao"/>
         <constructor-arg name="userDao" ref="userDao"/>
     </bean>
@@ -1511,7 +1511,7 @@ public class BookDaoImpl implements BookDao {
 方式一:删除name属性，添加type属性，按照类型注入
 
 ```xml
-<bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl">
+<bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl">
     <constructor-arg type="int" value="10"/>
     <constructor-arg type="java.lang.String" value="mysql"/>
 </bean>
@@ -1523,7 +1523,7 @@ public class BookDaoImpl implements BookDao {
 方式二:删除type属性，添加index属性，按照索引下标注入，下标从0开始
 
 ```xml
-<bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl">
+<bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl">
     <constructor-arg index="1" value="100"/>
     <constructor-arg index="0" value="mysql"/>
 </bean>
@@ -1663,8 +1663,8 @@ public class BookServiceImpl implements BookService{
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
-    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
+    <bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl"/>
+    <bean id="bookService" class="com.wrm244.service.impl.BookServiceImpl">
         <property name="bookDao" ref="bookDao"/>
     </bean>
 </beans>
@@ -1700,9 +1700,9 @@ public class AppForAutoware {
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="com.itheima.dao.impl.BookDaoImpl"/>
+    <bean class="com.wrm244.dao.impl.BookDaoImpl"/>
     <!--autowire属性：开启自动装配，通常使用按类型装配-->
-    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl" autowire="byType"/>
+    <bean id="bookService" class="com.wrm244.service.impl.BookServiceImpl" autowire="byType"/>
 
 </beans>
 ```
@@ -1721,9 +1721,9 @@ public class AppForAutoware {
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="com.itheima.dao.impl.BookDaoImpl"/>
+    <bean class="com.wrm244.dao.impl.BookDaoImpl"/>
     <!--autowire属性：开启自动装配，通常使用按类型装配-->
-    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl" autowire="byName"/>
+    <bean id="bookService" class="com.wrm244.service.impl.BookServiceImpl" autowire="byName"/>
 
 </beans>
 ```
@@ -1824,7 +1824,7 @@ public class BookDaoImpl implements BookDao {
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
+    <bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl"/>
 </beans>
 ```
 
@@ -1850,7 +1850,7 @@ public class AppForDICollection {
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl">
+    <bean id="bookDao" class="com.wrm244.dao.impl.BookDaoImpl">
         
     </bean>
 </beans>
@@ -1874,7 +1874,7 @@ public class AppForDICollection {
 <property name="list">
     <list>
         <value>itcast</value>
-        <value>itheima</value>
+        <value>wrm244</value>
         <value>boxuegu</value>
         <value>chuanzhihui</value>
     </list>
@@ -1887,7 +1887,7 @@ public class AppForDICollection {
 <property name="set">
     <set>
         <value>itcast</value>
-        <value>itheima</value>
+        <value>wrm244</value>
         <value>boxuegu</value>
         <value>boxuegu</value>
     </set>

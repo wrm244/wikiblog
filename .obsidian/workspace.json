@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/stack/java/Spring/1 Spring概念与IOC.md",
+                "file": "docs/stack/java/Spring/2 IOC与DI.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/stack/java/Spring/1 Spring概念与IOC.md",
+                "file": "docs/stack/java/Spring/2 IOC与DI.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/stack/java/Spring/1 Spring概念与IOC.md",
+                "file": "docs/stack/java/Spring/2 IOC与DI.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/stack/java/Spring/1 Spring概念与IOC.md"
+                "file": "docs/stack/java/Spring/2 IOC与DI.md"
               }
             }
           },
@@ -168,8 +168,8 @@
   },
   "active": "0a3b917b86df9b7f",
   "lastOpenFiles": [
-    "docs/course/编译原理课设/2 词法分析.md",
     "docs/stack/java/Spring/1 Spring概念与IOC.md",
+    "docs/course/编译原理课设/2 词法分析.md",
     "docs/stack/java/设计模式/DP07.md",
     "assets/162714811435.png.md",
     "assets",

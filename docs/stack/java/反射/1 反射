@@ -1,0 +1,24 @@
+---
+id: 1 反射的概念
+slug: /1反射的概念
+title: 1 反射的概念
+author: RiverMountain  
+date: 2023/06/16
+tags: [Java,反射]  
+keywords: [Java,反射]  
+description: 反射的概念
+last_update:
+  date: 2023/06/16
+---
+
+## 什么是反射
+反射是允许对类的成员变量，成员方法和构造方法的信息进行编程访问（所有信息都获取）。
+> 例如idea的方法与参数提示
+
+反射的获取是通过字节码class获取。
+
+## 获取class对象的方法
+1. Class.forName("全类名") - 源代码阶段
+2. 类名.class - 加载阶段
+3. 对象.getClass(); - 运行阶段
+
