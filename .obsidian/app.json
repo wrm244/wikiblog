@@ -12,7 +12,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/3 语法分析",
+  "attachmentFolderPath": "./assets/1 Spring概念与IOC",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "livePreview": true,
