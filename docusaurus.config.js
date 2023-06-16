@@ -68,7 +68,7 @@ const config = {
         src: '/svg/logo_round.svg',
         srcDark: '/svg/logo_round.svg',//记得加上绝对路径/
       },
-      hideOnScroll: false,
+      hideOnScroll: true,
       items: [
         {
           label: '博客',
