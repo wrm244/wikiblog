@@ -1236,7 +1236,7 @@ value:后面跟的是简单数据类型，对于参数类型，Spring在注入�
 
 ### 构造器注入
 
-#### 5.2.1 环境准备
+#### 环境准备
 
 构造器注入也就是构造方法注入，学习之前，还是先准备下环境:
 
@@ -1318,7 +1318,7 @@ public class AppForDIConstructor {
 }
 ```
 
-#### 5.2.2 构造器注入引用数据类型
+#### 构造器注入引用数据类型
 
 接下来，在上面这个环境中来完成构造器注入的学习:
 
@@ -1380,7 +1380,7 @@ public class BookServiceImpl implements BookService{
 
 ![1629802656916](assets/1629802656916.png)
 
-#### 5.2.3 构造器注入多个引用数据类型
+#### 构造器注入多个引用数据类型
 
 > 需求:在BookServiceImpl使用构造函数注入多个引用数据类型，比如userDao
 >
@@ -1431,7 +1431,7 @@ public class BookServiceImpl implements BookService{
 </beans>
 ```
 
-**说明:**这两个`<contructor-arg>`的配置顺序可以任意
+**说明:** 这两个`<contructor-arg>`的配置顺序可以任意
 
 ##### 步骤3:运行程序
 
@@ -1439,7 +1439,7 @@ public class BookServiceImpl implements BookService{
 
 ![1629802697318](assets/1629802697318.png)
 
-#### 5.2.4 构造器注入多个简单数据类型
+#### 构造器注入多个简单数据类型
 
 > 需求:在BookDaoImpl中，使用构造函数注入databaseName和connectionNum两个参数。
 >
@@ -1491,7 +1491,7 @@ public class BookDaoImpl implements BookDao {
 </beans>
 ```
 
-**说明:**这两个`<contructor-arg>`的配置顺序可以任意
+**说明:** 这两个`<contructor-arg>`的配置顺序可以任意
 
 ##### 步骤3:运行程序
 
@@ -1541,9 +1541,10 @@ public class BookDaoImpl implements BookDao {
 3. Spring框架倡导使用构造器，第三方框架内部大多数采用构造器注入的形式进行数据初始化，相对严谨
 4. 如果有必要可以两者同时使用，使用构造器注入完成强制依赖的注入，使用setter注入完成可选依赖的注入
 5. 实际开发过程中还要根据实际情况分析，如果受控对象没有提供setter方法就必须使用构造器注入
-6. **==自己开发的模块推荐使用setter注入==**
+6. **自己开发的模块推荐使用setter注入**
 
-这节中主要讲解的是Spring的依赖注入的实现方式:
+#### 依赖注入总结
+Spring的依赖注入的实现方式:
 
 - setter注入
 
@@ -1586,9 +1587,9 @@ public class BookDaoImpl implements BookDao {
   - 建议使用setter注入
   - 第三方技术根据情况选择
 
-### 5.3 自动配置
+### 自动配置
 
-前面花了大量的时间把Spring的注入去学习了下，总结起来就一个字==麻烦==。
+前面花了大量的时间把Spring的注入去学习了下，总结起来就一个字麻烦。
 
 问:麻烦在哪?
 
@@ -1600,18 +1601,18 @@ public class BookDaoImpl implements BookDao {
 
 什么是自动配置以及如何实现自动配置，就是接下来要学习的内容：
 
-#### 5.3.1 什么是依赖自动装配?
+#### 什么是依赖自动装配?
 
 - IoC容器根据bean所依赖的资源在容器中自动查找并注入到bean中的过程称为自动装配
 
-#### 5.3.2 自动装配方式有哪些?
+#### 自动装配方式有哪些?
 
-- ==按类型（常用）==
+- 按类型（常用）
 - 按名称
 - 按构造方法
 - 不启用自动装配
 
-#### 5.3.3 准备下案例环境
+#### 准备下案例环境
 
 - 创建一个Maven项目
 - pom.xml添加依赖
@@ -1682,7 +1683,7 @@ public class AppForAutoware {
 }
 ```
 
-#### 5.3.4 完成自动装配的配置
+#### 完成自动装配的配置
 
 接下来，在上面这个环境中来完成`自动装配`的学习:
 
@@ -1707,7 +1708,7 @@ public class AppForAutoware {
 </beans>
 ```
 
-==注意事项:==
+注意事项:
 
 - 需要注入属性的类中对应属性的setter方法不能省略
 - 被注入的对象必须要被Spring的IOC容器管理
@@ -1745,7 +1746,7 @@ public class AppForAutoware {
 
 - 当某一个类型在IOC容器中有多个对象，按照名称注入只找其指定名称对应的bean对象，不会报错 
 
-两种方式介绍完后，以后用的更多的是==按照类型==注入。
+两种方式介绍完后，以后用的更多的是按照类型注入。
 
 最后对于依赖注入，需要注意一些其他的配置特征:
 
@@ -1754,9 +1755,9 @@ public class AppForAutoware {
 3. 使用按名称装配时（byName）必须保障容器中具有指定名称的bean，因变量名与配置耦合，不推荐使用
 4. 自动装配优先级低于setter注入与构造器注入，同时出现时自动装配配置失效
 
-### 5.4 集合注入
+### 集合注入
 
-前面我们已经能完成引入数据类型和简单数据类型的注入，但是还有一种数据类型==集合==，集合中既可以装简单数据类型也可以装引用数据类型，对于集合，在Spring中该如何注入呢?
+前面我们已经能完成引入数据类型和简单数据类型的注入，但是还有一种数据类型集合，集合中既可以装简单数据类型也可以装引用数据类型，对于集合，在Spring中该如何注入呢?
 
 先来回顾下，常见的集合类型有哪些?
 
@@ -1768,7 +1769,7 @@ public class AppForAutoware {
 
 针对不同的集合类型，该如何实现注入呢?
 
-#### 5.4.1 环境准备
+#### 环境准备
 
 - 创建一个Maven项目
 - pom.xml添加依赖
@@ -1856,7 +1857,7 @@ public class AppForDICollection {
 </beans>
 ```
 
-#### 5.4.2 注入数组类型数据
+#### 注入数组类型数据
 
 ```xml
 <property name="array">
@@ -1868,7 +1869,7 @@ public class AppForDICollection {
 </property>
 ```
 
-#### 5.4.3 注入List类型数据
+#### 注入List类型数据
 
 ```xml
 <property name="list">
@@ -1881,7 +1882,7 @@ public class AppForDICollection {
 </property>
 ```
 
-#### 5.4.4 注入Set类型数据
+#### 注入Set类型数据
 
 ```xml
 <property name="set">
@@ -1894,7 +1895,7 @@ public class AppForDICollection {
 </property>
 ```
 
-#### 5.4.5 注入Map类型数据
+#### 注入Map类型数据
 
 ```xml
 <property name="map">
@@ -1906,7 +1907,7 @@ public class AppForDICollection {
 </property>
 ```
 
-#### 5.4.6 注入Properties类型数据
+#### 注入Properties类型数据
 
 ```xml
 <property name="properties">
