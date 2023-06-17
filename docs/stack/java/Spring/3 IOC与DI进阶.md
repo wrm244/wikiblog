@@ -6,7 +6,7 @@ author: RiverMountain
 date: 2023/06/17
 tags: [Java,Spring,IOC,DI]    
 keywords: [Java,Spring,IOC,DI]  
-description: 
+description: IOC与DI的面向注解开发模式
 last_update:
   date: 2023/06/17
 ---
