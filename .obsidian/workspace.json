@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/stack/java/Spring/2 IOC与DI.md",
+                "file": "docs/stack/java/Spring/3 IOC与DI进阶.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 230.5
+    "width": 230.5,
+    "collapsed": true
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/stack/java/Spring/2 IOC与DI.md",
+                "file": "docs/stack/java/Spring/3 IOC与DI进阶.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/stack/java/Spring/2 IOC与DI.md",
+                "file": "docs/stack/java/Spring/3 IOC与DI进阶.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/stack/java/Spring/2 IOC与DI.md"
+                "file": "docs/stack/java/Spring/3 IOC与DI进阶.md"
               }
             }
           },
@@ -168,6 +169,8 @@
   },
   "active": "0a3b917b86df9b7f",
   "lastOpenFiles": [
+    "docs/stack/java/Spring/2 IOC与DI.md",
+    "docs/stack/java/Spring/3 IOC与DI进阶.md",
     "docs/stack/java/Spring/1 Spring概念与IOC.md",
     "docs/course/编译原理课设/2 词法分析.md",
     "docs/stack/java/设计模式/DP07.md",
@@ -211,8 +214,6 @@
     "blog/project/web/Docker部署Overleaf包含中文字体与全套texlive镜像.md",
     "blog/CS/backend/为什么是Nginx.md",
     "docs/blog/Docusaurus/部署.md",
-    "docs/stack/git/Git 基础命令.md",
-    "docs/stack/git/约定式提交.md",
-    "build/README.md"
+    "docs/stack/git/Git 基础命令.md"
   ]
 }
