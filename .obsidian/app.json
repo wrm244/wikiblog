@@ -12,7 +12,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/introduction",
+  "attachmentFolderPath": "./assets/4 分布式计算SQL体系",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "livePreview": true,

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/stack/introduction.md",
+                "file": "docs/course/大数据/4 分布式计算SQL体系.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 230.5
+    "width": 230.5,
+    "collapsed": true
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/stack/introduction.md",
+                "file": "docs/course/大数据/4 分布式计算SQL体系.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/stack/introduction.md",
+                "file": "docs/course/大数据/4 分布式计算SQL体系.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/stack/introduction.md"
+                "file": "docs/course/大数据/4 分布式计算SQL体系.md"
               }
             }
           },
@@ -166,8 +167,17 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "0a3b917b86df9b7f",
+  "active": "9645adc9b84ae224",
   "lastOpenFiles": [
+    "docs/course/大数据/assets/4 分布式计算SQL体系/image-20230618143932.png",
+    "docs/course/大数据/assets/4 分布式计算SQL体系/image-20230618143807.png",
+    "docs/course/大数据/assets/4 分布式计算SQL体系/image-20230618143439.png",
+    "docs/course/大数据/assets/4 分布式计算SQL体系/image-20230618134734.png",
+    "docs/course/大数据/assets/4 分布式计算SQL体系/image-20230618134642.png",
+    "docs/course/大数据/assets/4 分布式计算SQL体系",
+    "docs/course/大数据/3 分布式计算与资源调度.md",
+    "docs/course/大数据/4 分布式计算SQL体系.md",
+    "docs/stack/introduction.md",
     "docs/blog/introduction.md",
     "docs/course/introduction.md",
     "docs/stack/java/Spring/3 IOC与DI进阶.md",
@@ -186,15 +196,10 @@
     "docs/course/编译原理课设/assets/3 语法分析/image-20230615232303.png",
     "docs/course/编译原理课设/assets/3 语法分析",
     "docs/course/编译原理课设/1 Lex和yacc的使用.md",
-    "docs/course/大数据/3 分布式计算与资源调度.md",
     "README.md",
     "docs/course/大数据/1 Hadoop介绍与安装.md",
     "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615213227.png",
     "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615213202.png",
-    "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615211858.png",
-    "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615211631.png",
-    "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615211526.png",
-    "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615210423.png",
     "docs/course/大数据/assets/3 分布式计算与资源调度",
     "docs/course/大数据/2 HDFS文件存储原理.md",
     "docs/blog/Docusaurus/文档编辑指南.md",
@@ -208,11 +213,7 @@
     "blog/lifestyle/计算机科学与技术就业考研研讨会(就业篇).md",
     "blog/lifestyle/计算机科学与技术就业考研研讨会(考公考研篇).md",
     "blog/project/web/宝塔 Flarum 论坛的搭建与迁移.md",
-    "blog/lifestyle",
     "docs/course/计算机专业英语/Unit 1 Hardware I.md",
-    "docs/course/Data Structures And Algorithms/0DSA.md",
-    "blog/project/web/Docker部署Overleaf包含中文字体与全套texlive镜像.md",
-    "blog/CS/backend/为什么是Nginx.md",
-    "docs/blog/Docusaurus/部署.md"
+    "docs/course/Data Structures And Algorithms/0DSA.md"
   ]
 }
