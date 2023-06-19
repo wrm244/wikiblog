@@ -413,13 +413,13 @@ public class App {
 
 * 问题一:键值对的key为`username`引发的问题
 
-  1.在properties中配置键值对的时候，如果key设置为`username`
+  1. 在properties中配置键值对的时候，如果key设置为`username`
 
   ```
   username=root666
   ```
 
-  2.在applicationContext.xml注入该属性
+  2. 在applicationContext.xml注入该属性
 
   ```xml
   <?xml version="1.0" encoding="UTF-8"?>
@@ -440,7 +440,7 @@ public class App {
   </beans>
   ```
 
-  3.运行后，在控制台打印的却不是`root666`，而是自己电脑的用户名
+  3. 运行后，在控制台打印的却不是`root666`，而是自己电脑的用户名
 
   ![1629975934694](assets/1629975934694.png)
 
@@ -544,9 +544,9 @@ public class App {
     ${key}
     ```
 
-## 2，核心容器
+## 核心容器
 
-前面已经完成bean与依赖注入的相关知识学习，接下来我们主要学习的是IOC容器中的==核心容器==。
+前面已经完成bean与依赖注入的相关知识学习，接下来我们主要学习的是IOC容器中的核心容器。
 
 这里所说的核心容器，大家可以把它简单的理解为`ApplicationContext`，前面虽然已经用到过，但是并没有系统的学习，接下来咱们从以下几个问题入手来学习下容器的相关知识:
 
@@ -555,7 +555,7 @@ public class App {
 * 容器类的层次结构是什么?
 * BeanFactory是什么?
 
-### 2.1 环境准备
+### 环境准备
 
 在学习和解决上述问题之前，先来准备下案例环境:
 

@@ -54,7 +54,6 @@ const sidebars = {
   ],
   stack: [
     'stack/introduction',
-    
     {
       label: 'Java',
       type: 'category',

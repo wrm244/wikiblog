@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/大数据/4 分布式计算SQL体系.md",
+                "file": "docs/stack/java/Spring/3 IOC与DI进阶.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 230.5,
-    "collapsed": true
+    "width": 230.5
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/大数据/4 分布式计算SQL体系.md",
+                "file": "docs/stack/java/Spring/3 IOC与DI进阶.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/大数据/4 分布式计算SQL体系.md",
+                "file": "docs/stack/java/Spring/3 IOC与DI进阶.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/大数据/4 分布式计算SQL体系.md"
+                "file": "docs/stack/java/Spring/3 IOC与DI进阶.md"
               }
             }
           },
@@ -167,8 +166,9 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "9645adc9b84ae224",
+  "active": "0a3b917b86df9b7f",
   "lastOpenFiles": [
+    "docs/course/大数据/4 分布式计算SQL体系.md",
     "docs/course/大数据/assets/4 分布式计算SQL体系/image-20230618143932.png",
     "docs/course/大数据/assets/4 分布式计算SQL体系/image-20230618143807.png",
     "docs/course/大数据/assets/4 分布式计算SQL体系/image-20230618143439.png",
@@ -176,7 +176,6 @@
     "docs/course/大数据/assets/4 分布式计算SQL体系/image-20230618134642.png",
     "docs/course/大数据/assets/4 分布式计算SQL体系",
     "docs/course/大数据/3 分布式计算与资源调度.md",
-    "docs/course/大数据/4 分布式计算SQL体系.md",
     "docs/stack/introduction.md",
     "docs/blog/introduction.md",
     "docs/course/introduction.md",
@@ -199,7 +198,6 @@
     "README.md",
     "docs/course/大数据/1 Hadoop介绍与安装.md",
     "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615213227.png",
-    "docs/course/大数据/assets/3 分布式计算与资源调度/image-20230615213202.png",
     "docs/course/大数据/assets/3 分布式计算与资源调度",
     "docs/course/大数据/2 HDFS文件存储原理.md",
     "docs/blog/Docusaurus/文档编辑指南.md",
