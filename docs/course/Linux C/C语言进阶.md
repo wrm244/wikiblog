@@ -574,7 +574,6 @@ collect2: 错误：ld 返回 1
 ```c
 #ifndef EXTERN_H__
 #define EXTERN_H__
-
 void func();
 
 #endif
@@ -583,12 +582,11 @@ void func();
 ```c
 #include "extern.h"
 
-extern int i; // 不定义 而是引用了其他地方的i
+extern int i; // 不定义 而是引用了其他地方的i ，也可以不用声明数据类型，编译器会帮你补充
 int func() {
   printf("[%s]%d\n", __FUNCTION__, i);
 }
 ```
-
 
 ```c
 #include "stdlib.h"
@@ -601,6 +599,9 @@ int main() {
   printf("[%s]%d\n", __FUNCTION__, i);
 }
 ```
+
+![](assets/C语言进阶/image-20230620021340.png)
+
 
 ### 表达式
 
