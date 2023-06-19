@@ -456,6 +456,119 @@ int main() {
 :::tip
 作用范围永远是内部屏蔽外部的
 :::
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+int i=0;
+
+void fun (void){
+        for(i= 0;i<5;i++)
+                printf("%c",'*');
+        printf("\n");
+        printf("[%s]%d\n", __FUNCTION__, i);
+}
+int main(){
+        for( i= 0;i<5;i++)
+                fun();
+        exit(0);
+}
+//运行结果：
+cc     fun.c   -o fun
+*****
+[fun]5
+```
+
+##### 补充project工程实现
+> 多个c文件
+
+:::tip
+使用 ``vim * -p`` 打开文件夹下所有文件，使用gt命令切换文件编辑。
+:::
+```c
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#include "proj.h"
+int i=10;
+int main(){
+        printf("[%s]:i = %d\n",__FUNCTION__,i);
+        fun();
+        exit(0);
+}
+```
+
+```c
+//proj.c
+#include <stdio.h>
+#include <stdlib.h>
+#include "proj.h"
+int i =100;
+void fun(void){
+        printf("[%s]:i = %d\n",__FUNCTION__,i);
+        exit(0);
+}
+```
+
+```h
+#ifndef PROJ_H__
+#define PROJ_H__
+void fun(void);
+#endif
+```
+结果会冲突：
+```bash
+[root@node1 minproject]# gcc main.c proj.c
+/usr/bin/ld: /tmp/cc2v50cH.o:(.data+0x0): multiple definition of `i'; /tmp/cc63AEzU.o:(.data+0x0): first defined here
+collect2: 错误：ld 返回 1
+```
+
+加了static后编译成功：
+
+```bash
+[root@node1 minproject]# gcc main.c proj.c
+[root@node1 minproject]# ls
+a.out  main.c  proj.c  proj.h
+[root@node1 minproject]# ./a.out 
+[main]:i = 10
+[fun]:i = 100
+```
+
+:::tip
+以上例子说明常用来修饰一个变量或者函数(防止当前函数对外扩展)
+:::
+
+同理在函数前面添加static：
+```c
+static void fun(void){
+        printf("[%s]:i = %d\n",__FUNCTION__,i);
+        exit(0);
+}
+```
+结果如下：
+```bash
+[root@node1 minproject]# gcc main.c proj.c
+proj.c:5:1: 错误：对‘fun’的静态声明出现在非静态声明之后 #这里是语法错误
+    5 | static void fun(void){
+      | ^~~~~~
+In file included from proj.c:3:
+proj.h:3:6: 附注：previous declaration of ‘fun’ with type ‘void(void)’
+    3 | void fun(void);
+      |      ^~~
+[root@node1 minproject]# vim proj.h
+[root@node1 minproject]# gcc main.c proj.c
+In file included from main.c:4:
+proj.h:3:13: 警告：‘fun’使用过但从未定义
+    3 | static void fun(void);#这里是运行错误
+      |             ^~~
+/usr/bin/ld: /tmp/ccVlu3p6.o: in function `main':
+main.c:(.text+0x21): undefined reference to `fun'
+collect2: 错误：ld 返回 1
+```
+:::tip
+以上例子也说明了``static``常用来修饰一个变量或者函数(防止当前函数对外扩展)，如何解决static隐藏函数？可以使用非静态函数call_fun来间接调用静态函数（就像面向对象的思路，c也可以间接完成面向对象的设计）。
+:::
 
 ##### extern的用法
 ```c
