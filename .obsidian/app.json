@@ -12,7 +12,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/JDBC",
+  "attachmentFolderPath": "./assets/Mybits",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "livePreview": true,
