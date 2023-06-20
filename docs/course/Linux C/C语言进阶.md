@@ -10,7 +10,7 @@ description: 关于C语言进阶与细节拾遗(嵌入式C语言)
 last_update:
   date: 2023/06/19
 ---
-
+# 再次了解C
 ## c的历史
 - 1960 原型A语言->ALGOL语言
 - 1963 CPL语言
@@ -47,7 +47,7 @@ last_update:
 
 ## 环境搭建与"Hello world"
 ## 环境
-- 当前测试环境是安装了基于`Redhat`的`Rocky`发行版的``ESXI``虚拟机
+- 当前测试环境是安装了基于`Redhat`的`Rocky`发行版，搭建在``ESXI 6.4``虚拟机上
 ```bash
 [root@node1 ~]# gcc --version
 gcc (GCC) 11.3.1 20221121 (Red Hat 11.3.1-4)
@@ -604,7 +604,9 @@ int main() {
 ![](assets/C语言进阶/image-20230620021340.png)
 
 
-### 表达式
+## 运算符与表达式
+### 运算符
+![](assets/C语言进阶/image-20230620080521.png)
 
 #### 逻辑运算符的短路性
 ```c
@@ -614,14 +616,19 @@ int main() {
 int main() {
   int a = 1, b = 2, c = 3, d = 4;
   int m = 1, n = 1;
-  
+  //逻辑与和或的短路性
   (m = a > b) && (n = c > d);
-  
+  //与运算如果左边的表达式为假没必要运算右边的表达式
+  //或运算如果左边的表达式为真没必要运算右边的表达式
   printf("m = %d\n n = %d\n", m, n); // m : 0 n : 1
 }
 ```
 
-#### sizeof
+#### 等号(赋值)扩展运算的顺序
+![](assets/C语言进阶/image-20230620081812.png)
+> 从右往左计算数值
+
+#### 求字节数sizeof
 
 ```c
 #include <stdio.h>
@@ -646,31 +653,74 @@ int main() {
 
 > 应用
 
-将操作数中的第n位置1 其他位不变 num = num | 1 << n;
-将操作数中的第n位置0 其他位不变 num = num & ~(1<<n);
-测试第n位: if(num & (1<<n))
+- 将操作数中的第n位置1 其他位不变 ``num = num | 1 << n;``
+- 将操作数中的第n位置0 其他位不变 ``num = num & ~(1<<n);``
+- 测试第n位: if(num & (1<<n))
 
 
-## IO
-- printf
+## I/O操作
+- 标准IO
+- 文件IO
+### 格式化输入输出
+#### printf()
+```bash
+int printf(const char *format, ...);
 
-#### 变长参数 
-
-```c
-int main() {
-  int i = 123;
-  printf("%4d\n", i);
-  
-  float f = 1.23455;
-  printf("%.3f\n", f);
-  
-  char* s= "helloworld";
-  printf("%10.5s\n", s);
-}
+format: "%[修饰符] 格式字符"
+printf(format,输出表项);
 ```
 
-#### 刷新缓冲区
+```bash
+RETURN VALUE
+    Upon  successful  return,  these  functions  return  the number of characters printed (excluding the null byte used to end output to strings). 
+    The functions snprintf() and vsnprintf() do not write more  than  size  byte(including  the  terminating  null byte ('\0')).  If the output was truncated due to this limit, then the return value is the number of characters (exclud‐ing  the  terminating  null  byte) which would have been written to the final string if enough space had been available.  Thus, a return value of  size  or more means that the output was truncated.  (See also below under NOTES.)
+	If an output error is encountered, a negative value is returned.
+	
+	成功返回后，这些函数将返回打印的字符数（不包括用于结束字符串输出的空字节）。
+    函数 snprintf()和 vsnprintf()写入的字节不会超过大小字节（包括终止空字节 （'0'））。 如果输出由于此限制而被截断，则返回值是字符数（不包括终止空字节），如果有足够的可用空间，该字符数将写入最终字符串。 因此，大小或更大的返回值意味着输出被截断。 （另请参阅下面的注释。
+	如果遇到输出错误，则返回负值。
+```
 
+| 格式控制符                           | 说明                                                                                                                                                                                      |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| %c                                   | 输出一个单一的字符                                                                                                                                                                        |
+| %hd、%d、%ld                         | 以十进制、有符号的形式输出 short、int、long 类型的整数                                                                                                                                    |
+| %hu、%u、%lu                         | 以十进制、无符号的形式输出 short、int、long 类型的整数                                                                                                                                    |
+| %ho、%o、%lo                         | 以八进制、不带前缀、无符号的形式输出 short、int、long 类型的整数                                                                                                                          |
+| %#ho、%#o、%#lo                      | 以八进制、带前缀、无符号的形式输出 short、int、long 类型的整数                                                                                                                            |
+| %hx、%x、%lx  <br>%hX、%X、%lX       | 以十六进制、不带前缀、无符号的形式输出 short、int、long 类型的整数。如果 x 小写，那么输出的十六进制数字也小写；如果 X 大写，那么输出的十六进制数字也大写。                                |
+| %#hx、%#x、%#lx  <br>%#hX、%#X、%#lX | 以十六进制、带前缀、无符号的形式输出 short、int、long 类型的整数。如果 x 小写，那么输出的十六进制数字和前缀都小写；如果 X 大写，那么输出的十六进制数字和前缀都大写。                      |
+| %f、%lf                              | 以十进制的形式输出 float、double 类型的小数                                                                                                                                               |
+| %e、%le  <br>%E、%lE                 | 以指数的形式输出 float、double 类型的小数。如果 e 小写，那么输出结果中的 e 也小写；如果 E 大写，那么输出结果中的 E 也大写。                                                               |
+| %g、%lg  <br>%G、%lG                 | 以十进制和指数中较短的形式输出 float、double 类型的小数，并且小数部分的最后不会添加多余的 0。如果 g 小写，那么当以指数形式输出时 e 也小写；如果 G 大写，那么当以指数形式输出时 E 也大写。 |
+| %s                                   | 输出一个字符串                                                                                                                                                                            |
+
+![](assets/C语言进阶/image-20230620091650.png)
+##### 格式化输出注意事项
+:::tip
+如果没有数字没有类型定义的话。在数字后面添加单位L，表示把数字识别成long类型
+尤其是在单独数字运算的时候。
+:::
+
+```bash
+[root@node1 ~]# make main
+cc     main.c   -o main
+main.c: 在函数‘main’中:
+main.c:3:25: 警告：integer overflow in expression of type ‘int’ results in ‘784224832’ [-Woverflow]
+    3 | #define TIME (6670*60*24*3659)
+      |                         ^
+main.c:5:30: 附注：in expansion of macro ‘TIME’
+    5 |         printf("times=%ld\n",TIME);
+      |                              ^~~~
+```
+
+:::tip
+如果是单纯是字符串的话，会扫描字符是否有``%``，如果没有就直接输出。
+
+如果输出表项参数没有对应的话，不会报严重的错误。如果没有，对应会查找压栈的二进制数来格式输出。
+:::
+
+##### 刷新缓冲区(``\n``)
 
 ```c
 int main() {
@@ -678,7 +728,12 @@ int main() {
   while(1);
   printf("[%s:%d] after while().", __FUNCTION__, __LINE__);
 }
+//运行结果是没有输出的，全缓冲设备下
 ```
+
+:::danger
+如果没有换行输出``\n``，会在以下情况输出缓冲区：1、缓冲区满 2、程序运行结束(会刷新缓存) 
+:::
 
 正确写法
 ```c
@@ -696,32 +751,60 @@ int main() {
 
 ```
 
-- scanf
+#### scanf()
+
+```bash
+int scanf(const char *format, ...);
+
+format: "%[修饰符] 格式字符"
+printf(format,&输出表项);
+
+其中输入格式要匹配，这是重点
+
+```
 
 ```c
 int main() {
   int i;
-  scanf("%d", &i);
+  scanf("%d", &i); //不能输入\n
   printf("%d\n", i);
 }
 ```
 
-> scanf 在使用 `%s` 的时候要特别小心
+:::danger
+scanf 在使用 `%s` 的时候要特别小心，他会识别到间隔符就结束输入。如果出现越界的情况，输出结果是正常的，但是内存上已经出现了错误。
+:::
 
 ```c
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-  char S[3];
-
+  char S[3]; //只能接受到3个字符
+  //数组不用输入地址符，本身数字标识就是地址。
   scanf("%s", S); // 如果输入 abcdef
   printf("%s", S); // 可能会出现段错误
 }
 
 ```
+##### 输入在循环中的使用
 
-> scanf 在循环中使用的时候要特别小心
+:::danger
+ scanf 在循环中使用的时候要特别小心，如果scanf 不匹配你的输入的话，会跳过输入，一直循环其他语句如果不加判断的话会死循环
+:::
+
+> 为什么会出现以上警告？因为scanf有缓存区，当输入非法字符（要求的类型与输入的类型不符合），scanf会直接跳过，该输入及不会被接受也不会被清除，被存放在scanf的缓存区，当下次调用scanf函数时，会直接从缓存区读取非法字符，造成死循环。
+
+以下是用判断控制scanf()的返回正确性：
+
+> scanf 的返回值说明
+
+```bash
+RETURN VALUE
+    成功后，这些函数返回成功匹配和分配的输入项数;在早期编译器匹配失败的情况下，这可能少于规定，甚至为零。
+    The  value  EOF  is returned if the end of input is reached before either thefirst successful conversion or a matching failure occurs.  EOF  is  also  re-turned  if  a  read  error  occurs, in which case the error indicator for the stream (see ferror(3)) is set, and errno is set to indicate the error.
+```
+
 
 ```c
 int main() {
@@ -740,7 +823,10 @@ int main() {
 }
 ```
 
-> 处理换行
+ ##### 处理换行
+> 在输入格式定义为%c时候，根据%c，scanf会读取每一个字符，包括空白。而其他格式字符，会跳过空白字符。``\n`` 会正常当做输入进行处理，但这换行没意义的情况占绝大多数，所以我们需要对他进行处理。
+
+- 使用scanf修饰符中的抑制符：``*``
 
 ```c
 int main() {
@@ -748,17 +834,57 @@ int main() {
   char c = 0;
   
   scanf("%d", &i);
-  scanf("%*c%c", &c);
+  scanf("%*c%c", &c);//抑制符吃掉一个换行符
   // 或者
-  //getchar();
+  //getchar(); //吃掉换行
   //scanf("%c", &c);
   printf("i = %d, c = %c", i, c);
 }
 ```
 
+### 字符输入输出
+
+#### getchar
+```bash
+int getchar(void);
+RETURN VALUE
+    fgetc(), getc(), and getchar() return the character read as an unsigned  char cast to an int or EOF(-1) on end of file or error.
+```
+#### putchar
+
+```bash
+int putchar(int c);
+RETURN VALUE
+    fputc(),  putc(),  and  putchar() return the character written as an unsigned char cast to an int or EOF on error.
+    可以理解返回值为字符的ASCII码
+```
+
+### 字符串输入输出
+#### gets() 
+
+:::danger
+No check for buffer overrun is performed , gets 函数是危险的（但是还是可以正常输出），但是！如果你字符越界到栈保护元素，会直接报错；建议使用fget()函数或者getline()。
+:::
+
+```bash
+char *gets(char *s);
+	gets() reads a line from stdin into the buffer pointed to by s until either aterminating newline or EOF, which it replaces with a null  byte  ('\0').   No check for buffer overrun is performed (see BUGS below).
+```
+
+#### puts()
+
+```bash
+int puts(const char *s);
+	puts() writes the string s and a trailing newline to stdout.
+```
 
 # 流程控制
-跳过
+
+> 由于流程再熟悉不过了，所以就不用参考了，但是如何以有限状态机来思考程序则极为重要。
+
+## 遇到流程出错
+
+> 如果在条件与判断语句遇到出错的情况下，可以使用 ``_exit(0)`` 来停止程序不刷新缓冲区等，也可以使用信号量``sig``让操作系统来判断与debug。
 
 # 数组
 构造类型 连续存放
