@@ -375,7 +375,7 @@ Mybatis 官网也是推荐使用 Mapper 代理的方式。下图是截止官网�
 
 ![](assets/image-20210726223216517.png)
 
-#### 2.3.3  案例代码实现
+#### 案例代码实现
 
 * 在 `com.wrm244.mapper` 包下创建 UserMapper接口，代码如下：
 
@@ -444,7 +444,7 @@ Mybatis 官网也是推荐使用 Mapper 代理的方式。下图是截止官网�
 
 
 
-### 2.4  核心配置文件
+### 核心配置文件
 
 核心配置文件中现有的配置之前已经给大家进行了解释，而核心配置文件中还可以配置很多内容。我们可以通过查询官网看可以配置的内容
 
@@ -452,7 +452,7 @@ Mybatis 官网也是推荐使用 Mapper 代理的方式。下图是截止官网�
 
 接下来我们先对里面的一些配置进行讲解。
 
-#### 2.4.1  多环境配置
+#### 多环境配置
 
 在核心配置文件的 `environments` 标签中其实是可以配置多个 `environment` ，使用 `id` 给每段环境起名，在 `environments` 中使用 `default='环境id'` 来指定使用哪儿段配置。我们一般就配置一个 `environment` 即可。
 
@@ -479,10 +479,10 @@ Mybatis 官网也是推荐使用 Mapper 代理的方式。下图是截止官网�
             <property name="password" value="1234"/>
         </dataSource>
     </environment>
-</environments>=
+</environments>
 ```
 
-#### 2.4.2  类型别名
+#### 类型别名
 
 在映射配置文件中的 `resultType` 属性需要配置数据封装的类型（类的全限定名）。而每次这样写是特别麻烦的，Mybatis 提供了 `类型别名`(typeAliases) 可以简化这部分的书写。
 
