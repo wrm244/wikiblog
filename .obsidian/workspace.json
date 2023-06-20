@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/Linux C/指针与函数.md",
+                "file": "docs/course/Linux C/C语言进阶(基本概念).md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/Linux C/指针与函数.md",
+                "file": "docs/course/Linux C/C语言进阶(基本概念).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/Linux C/指针与函数.md",
+                "file": "docs/course/Linux C/C语言进阶(基本概念).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/Linux C/指针与函数.md"
+                "file": "docs/course/Linux C/C语言进阶(基本概念).md"
               }
             }
           },
@@ -167,6 +167,7 @@
   },
   "active": "0a3b917b86df9b7f",
   "lastOpenFiles": [
+    "docs/course/Linux C/指针与函数.md",
     "docs/course/Linux C/C语言进阶(基本概念).md",
     "docs/course/Linux C/assets/C语言进阶(基本概念)/image-20230620091650.png",
     "docs/course/Linux C/assets/C语言进阶(基本概念)/image-20230620081812.png",
@@ -211,7 +212,6 @@
     "blog/lifestyle/计算机科学与技术就业考研研讨会(就业篇).md",
     "blog/lifestyle/计算机科学与技术就业考研研讨会(考公考研篇).md",
     "blog/project/web/宝塔 Flarum 论坛的搭建与迁移.md",
-    "docs/course/计算机专业英语/Unit 1 Hardware I.md",
-    "docs/course/Data Structures And Algorithms/0DSA.md"
+    "docs/course/计算机专业英语/Unit 1 Hardware I.md"
   ]
 }
