@@ -944,7 +944,7 @@ int main() {
 c对数组不进行越界检查，需要格外小心
 :::
 
-### 数组练习
+### 一维数组练习
 1. 斐波那契数列：
 ```c
 #include <stdio.h>
@@ -1077,47 +1077,150 @@ int main() {
   }
 }
 ```
+### 二维数组练习
+
+1. 行列互换
+```c
+int a[M][N],b[N][M];
+for(int i=0;i<M;i++){
+	for(int j= 0 ;j<N;j++){
+		b[j][i] = a[i][j];
+	}
+}
+```
+
+2. 求最大值
+```c
+int a[M][N] = {43,23,6,32,14,78};
+int i,j;
+int max = a[0][0],row = 0;colum=0;
+for(i=0;i<M;i++){
+	for(j=0;j<n;j++){
+		if(max<a[i][j]){
+			max =a[i][j];
+			row =i;
+			colum=j;
+		}
+	}
+	
+}
+```
+
+3. 求各行各列的和(可以多出一行一列和存在这里)
+```c
+int a[5][4] = {{1,2,3},{4,5,6},{7,8,9},{10,11,12}} 
+for(i=0;i<4;i++){
+	for(j=0;j<5;j++){
+		a[4][3] + =a[i][j];
+		a[4][j] + = a[i][j];
+		a[i][3] + = a[i][j];
+	}
+}
+```
+
+4. 矩阵乘积
+```c
+static void mul(void){
+	int a[M][N]={1,2,3,4,5,6};
+	int a[N][K]={1,0,0,1,1,0};
+	int c[M][K];
+	for(i=0;i<M;i++){
+		for(j=0;j<K;j++){
+			for(k=0;k<N;k++){
+				c[i][j] += a[i][k]*b[k][j];
+			}
+	}
+}
+}
+```
+
 
 #### 深入理解二维数组
-a[2][3] = b[3] + c[3]
-a[0] = b[0]
-a[1] = c[0]
+> 多个一维数组连续组成的
+
+```
+熟悉行指针和列指针
+```
 
 
 ## 字符数组
 ### 定义以及初始化
-[存储类型] char 标识符[]
+``[存储类型] char 标识符[下标]``
 
-**注意部分初始化的时候，剩余部分会自动初始化为'\0'**
+- 单个字符初始化``{'a','b','c'}``
+- 用字符串常量初始化``"abc"``  
 
-### IO
-scanf 无法获取带有分隔符的字符串(`\t`, `\n`, ` `)
+:::tip
+注意字符串初始化的时候，尾部部分会自动初始化为'\0'
+:::
 
+### 输入输出字符数组
+#### gets()&puts()
+```c
+char str[N]；
+gets(str);
+puts(str);
+```
+#### 格式化输入输出
 
-### 常用函数
+:::danger
+scanf 的%s格式标记无法获取带有分隔符的字符串(`\t`, `\n`, ` `)
+:::
+### string函数
+> ``#include <string.h>``
+
 - strlen & sizeof
+> 计算字符串长度
+> size_t strlen(const char *s);The  strlen()  function  calculates the length of the string pointed to by s,excluding the terminating null byte (``'\0'``).
+> sizeof 的方法是包含字符串所有元素，而strlen在``\0``之后不判断自动忽略
+
 - strcpy & strncpy
+> 拷贝字符串
+> char *strcpy(char *dest, const char *src);
+> char *strncpy(char *dest, const char *src, size_t n);
+```c
+strcpy(str,"abcde"); //把abcd给str，str要记得不越界
+strncpy(str,"abcdefg",size_t-1)//把abcd复制size_t给str
+```
+
 - strcat & strncat
+>连接字符串
+> char *strcat(char *dest, const char *src);
+> char *strncat(char *dest, const char *src, size_t n);
+> The  strcat() function appends the src string to the dest string, overwriting the terminating null byte (``\0``) at the end of dest, and then adds  a  termi‐nating null byte.  The strings may not overlap, and the dest string must have enough space for the result
+```c
+strcat(str," ")
+strcat(str,"world!")
+```
+
 - strcmp & strncmp
+>int strcmp(const char *s1, const char *s2);
+>int strncmp(const char *s1, const char *s2, size_t n);
+>The  strcmp() function compares the two strings s1 and s2.  The locale is not taken into account (for a locale-aware comparison, see strcoll(3)).  The comparison is done using unsigned characters.
+```c
+char str[32]="hello";
+char str1[32]="world";
+strcmp(str,str1); //返回ascii的差值，相等输出为0
+strncmp(str,str1,5);//比较前5个字符
+```
 
 > 单词统计
 
 ```c
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
+#include <stdlib.h> //exit(0);
+#include <string.h> 
 #define STRSIZE 1024
 
 int main() {
   char str[STRSIZE] = {};
   fgets(str, STRSIZE, stdin);
-  int count= 0, flag = 0;
+  int count= 0, flag = 0; //flag初始值已经决定第一个单词已经解决
 
   for (int i = 0;str[i] != '\0';i++){
     if (str[i] == ' ') {
       flag = 0;
-    } else if(!flag) {
+    } else if(flag == 0) {
       count++;
       flag = 1;
     }
@@ -1126,3 +1229,6 @@ int main() {
 }
 
 ```
+
+## 多维数组
+> 搞定二位按照思路扩展即可
