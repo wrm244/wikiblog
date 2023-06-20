@@ -1585,7 +1585,7 @@ void deleteByIds(int[] ids);
 > delete from tb_brand where id in (1,2,3);
 > ```
 
-#### 1.9.3  编写测试方法
+#### 编写测试方法
 
 在 `test/java` 下的 `com.itheima.mapper`  包下的 `MybatisTest类中` 定义测试方法
 
@@ -1613,7 +1613,7 @@ public void testDeleteByIds() throws IOException {
 }
 ```
 
-### 1.10  Mybatis参数传递
+### Mybatis参数传递
 
 Mybatis 接口方法中可以接收各种各样的参数，如下：
 
@@ -1626,7 +1626,7 @@ Mybatis 接口方法中可以接收各种各样的参数，如下：
   * Array 类型
   * 其他类型
 
-#### 1.10.1  多个参数
+#### 多个参数
 
 如下面的代码，就是接收两个参数，而接收多个参数需要使用 `@Param` 注解，那么为什么要加该注解呢？这个问题要弄明白就必须来研究Mybatis 底层对于这些参数是如何处理的。
 
@@ -1692,7 +1692,7 @@ User select(@Param("username") String username,@Param("password") String passwor
 
 * 运行代码结果如下
 
-  <img src="assets/image-20210805230303461.png" alt="image-20210805230303461" style="zoom:80%;" />
+  ![](assets/image-20210805230303461.png)
 
   在映射配合文件的SQL语句中使用用 `arg` 开头的和 `param` 书写，代码的可读性会变的特别差，此时可以使用 `@Param` 注解。
 
@@ -1744,9 +1744,9 @@ User select(@Param("username") String username,@Param("password") String passwor
 
   ![image-20210805231727206](assets/image-20210805231727206.png)
 
-==结论：以后接口参数是多个时，在每个参数上都使用 `@Param` 注解。这样代码的可读性更高。==
+结论：以后接口参数是多个时，在每个参数上都使用 `@Param` 注解。这样代码的可读性更高。
 
-#### 1.10.2  单个参数
+#### 单个参数
 
 * POJO 类型
 
@@ -1764,7 +1764,7 @@ User select(@Param("username") String username,@Param("password") String passwor
   >
   > map.put("collection"，collection集合;
 
-  ==可以使用 `@Param` 注解替换map集合中默认的 arg 键名。==
+  可以使用 `@Param` 注解替换map集合中默认的 arg 键名。
 
 * List 集合类型
 
@@ -1776,7 +1776,7 @@ User select(@Param("username") String username,@Param("password") String passwor
   >
   > map.put("list"，list集合);
 
-  ==可以使用 `@Param` 注解替换map集合中默认的 arg 键名。==
+  可以使用 `@Param` 注解替换map集合中默认的 arg 键名。
 
 * Array 类型
 
@@ -1786,13 +1786,13 @@ User select(@Param("username") String username,@Param("password") String passwor
   >
   > map.put("array"，数组);
 
-  ==可以使用 `@Param` 注解替换map集合中默认的 arg 键名。==
+  可以使用 `@Param` 注解替换map集合中默认的 arg 键名。
 
 * 其他类型
 
   比如int类型，`参数占位符名称` 叫什么都可以。尽量做到见名知意
 
-## 2，注解实现CRUD
+## 注解实现CRUD
 
 使用注解开发会比配置文件开发更加方便。如下就是使用注解进行开发
 
@@ -1801,7 +1801,7 @@ User select(@Param("username") String username,@Param("password") String passwor
 public User select(int id);
 ```
 
-> ==注意：==
+> 注意：
 >
 > * 注解是用来替换映射配置文件方式配置的，所以使用了注解，就不需要再映射配置文件中书写对应的 `statement`
 
@@ -1818,25 +1818,25 @@ Mybatis 针对 CURD 操作都提供了对应的注解，已经做到见名知意
 
 * 将之前案例中 `UserMapper.xml` 中的 根据id查询数据 的 `statement` 注释掉
 
-  <img src="assets/image-20210805235229938.png" alt="image-20210805235229938" style="zoom:70%;" />
+  ![](assets/image-20210805235229938.png)
 
 * 在 `UserMapper` 接口的 `selectById` 方法上添加注解
 
-  <img src="assets/image-20210805235405070.png" alt="image-20210805235405070" style="zoom:70%;" />
+  ![](assets/image-20210805235405070.png)
 
 * 运行测试程序也能正常查询到数据
 
 我们课程上只演示这一个查询的注解开发，其他的同学们下来可以自己实现，都是比较简单。
 
-==注意：==在官方文档中 `入门` 中有这样的一段话：
+注意：在官方文档中 `入门` 中有这样的一段话：
 
 ![image-20210805234302849](assets/image-20210805234302849.png)
 
-所以，==注解完成简单功能，配置文件完成复杂功能。==
+所以，注解完成简单功能，配置文件完成复杂功能。
 
 而我们之前写的动态 SQL 就是复杂的功能，如果用注解使用的话，就需要使用到 Mybatis 提供的SQL构建器来完成，而对应的代码如下：
 
-<img src="assets/image-20210805234842497.png" alt="image-20210805234842497" style="zoom:70%;" />
+![](assets/image-20210805234842497.png)
 
 上述代码将java代码和SQL语句融到了一块，使得代码的可读性大幅度降低。
 
