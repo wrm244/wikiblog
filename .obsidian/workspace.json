@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/Linux C/C语言进阶(基本概念).md",
+                "file": "docs/course/Linux C/指针与函数.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/Linux C/C语言进阶(基本概念).md",
+                "file": "docs/course/Linux C/指针与函数.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/Linux C/C语言进阶(基本概念).md",
+                "file": "docs/course/Linux C/指针与函数.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/Linux C/C语言进阶(基本概念).md"
+                "file": "docs/course/Linux C/指针与函数.md"
               }
             }
           },
@@ -167,6 +167,7 @@
   },
   "active": "0a3b917b86df9b7f",
   "lastOpenFiles": [
+    "docs/course/Linux C/C语言进阶(基本概念).md",
     "docs/course/Linux C/assets/C语言进阶(基本概念)/image-20230620091650.png",
     "docs/course/Linux C/assets/C语言进阶(基本概念)/image-20230620081812.png",
     "docs/course/Linux C/assets/C语言进阶(基本概念)/image-20230620080521.png",
@@ -195,7 +196,6 @@
     "docs/stack/java/设计模式/DP06.md",
     "docs/stack/java/设计模式/DP01.md",
     "docs/course/编译原理课设/3 语法分析.md",
-    "docs/course/编译原理课设/assets/3 语法分析/image-20230615232651.png",
     "docs/course/编译原理课设/assets/3 语法分析",
     "docs/course/编译原理课设/1 Lex和yacc的使用.md",
     "README.md",
