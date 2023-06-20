@@ -21,7 +21,7 @@ last_update:
 >
 > 全称：( Java DataBase Connectivity ) Java 数据库连接
 
-<img src="assets/image-20210725130537815.png" alt="image-20210725130537815" />
+![](assets/image-20210725130537815.png)
 
 我们开发的同一套Java代码是无法操作不同的关系型数据库，因为每一个关系型数据库的底层实现细节都不一样。如果这样，问题就很大了，在公司中可以在开发阶段使用的是MySQL数据库，而上线时公司最终选用oracle数据库，我们就需要对代码进行大批量修改，这显然并不是我们想看到的。我们要做到的是同一套Java代码操作不同的关系型数据库，而此时sun公司就指定了一套标准接口（JDBC），JDBC中定义了所有操作关系型数据库的规则。众所周知接口是无法直接使用的，我们需要使用接口的实现类，而这套实现类（称之为：驱动）就由各自的数据库厂商给出。
 
@@ -44,7 +44,7 @@ last_update:
 
 先来看看通过Java操作数据库的流程
 
-<img src="assets/image-20210725163745153.png" alt="image-20210725163745153"  />
+![](assets/image-20210725163745153.png)
 
 第一步：编写Java代码
 
@@ -58,7 +58,7 @@ last_update:
 
 - 创建工程，导入驱动jar包
 
-  <img src="assets/image-20210725133015535.png" alt="image-20210725133015535" />
+![](assets/image-20210725133015535.png)
 
 -  注册驱动
 
@@ -101,36 +101,36 @@ last_update:
 
 - 创建新的空的项目
 
-<img src="assets/image-20210725165156501.png" alt="image-20210725165156501" />
+![](assets/image-20210725165156501.png)
 
 - 定义项目的名称，并指定位置
 
-<img src="assets/image-20210725165220829.png" alt="image-20210725165220829" />
+![](assets/image-20210725165220829.png)
 
 - 对项目进行设置，JDK版本、编译版本
 
-<img src="assets/image-20210725165349564.png" alt="image-20210725165349564" />
+![](assets/image-20210725165349564.png)
 
 - 创建模块，指定模块的名称及位置
 
-<img src="assets/image-20210725165536898.png" alt="image-20210725165536898" />
+![](assets/image-20210725165536898.png)
 
 - 导入驱动包
 
   将mysql的驱动包放在模块下的lib目录（随意命名）下，并将该jar包添加为库文件
 
-<img src="assets/image-20210725165657556.png" alt="image-20210725165657556" />
+![](assets/image-20210725165657556.png)
 
 - 在添加为库文件的时候，有如下三个选项
   - Global Library  ： 全局有效
   - Project Library :   项目有效
   - Module Library ： 模块有效
 
-<img src="assets/image-20210725165751273.png" alt="image-20210725165751273" />
+![](assets/image-20210725165751273.png)
 
 - 在src下创建类
 
-<img src="assets/image-20210725170004319.png" alt="image-20210725170004319" />
+![](assets/image-20210725170004319.png)
 
 - 编写代码如下
 
@@ -178,12 +178,12 @@ DriverManager（驱动管理类）作用：
   registerDriver方法是用于注册驱动的，但是我们之前做的入门案例并不是这样写的。而是如下实现
 
   ```java
-  Class.forName("com.mysql.jdbc.Driver");
+  Class.forName("com.mysql.cj.jdbc.Driver"); //mysql 8.0 以上
   ```
 
   我们查询MySQL提供的Driver类，看它是如何实现的，源码如下：
 
-  <img src="assets/image-20210725171635432.png" alt="image-20210725171635432" />
+  ![](assets/image-20210725171635432.png)
 
   在该类中的静态代码块中已经执行了 `DriverManager` 对象的 `registerDriver()` 方法进行驱动的注册了，那么我们只需要加载 `Driver` 类，该静态代码块就会执行。而 `Class.forName("com.mysql.jdbc.Driver");` 就可以加载 `Driver` 类。
 
@@ -213,7 +213,7 @@ DriverManager（驱动管理类）作用：
   - user ：用户名
   - poassword ：密码
 
-### 3.2  Connection
+### Connection
 
 Connection（数据库连接对象）作用：
 
@@ -244,7 +244,7 @@ Connection（数据库连接对象）作用：
   CallableStatement prepareCall(sql)
   ```
 
-  通过这种方式获取的 `CallableStatement` 执行对象是用来执行存储过程的，而存储过程在MySQL中不常用，所以这个我们将不进行讲解。
+  通过这种方式获取的 `CallableStatement` 执行对象是用来执行存储过程的，而存储过程在MySQL中不常用。
 
 #### 事务管理
 
@@ -276,7 +276,7 @@ Connection几口中定义了3个对应的方法：
 
 具体代码实现如下：
 
-```sql
+```java
 /**
  - JDBC API 详解：Connection
  */
@@ -333,15 +333,21 @@ public class JDBCDemo3_Connection {
 Statement对象的作用就是用来执行SQL语句。而针对不同类型的SQL语句使用的方法也不一样。
 
 - 执行DDL、DML语句
+:::tip
+DML(Data Manipulation Language)数据操纵语言：
+适用范围：对数据库中的数据进行一些简单操作，如insert,delete,update,select等.
+DDL(Data Definition Language)数据定义语言：
+适用范围：对数据库中的某些对象(例如，database,table)进行管理，如Create,Alter和Drop.
 
+:::
   ![image-20210725175151272](assets/image-20210725175151272.png)
 
 - 执行DQL语句
+> 数据查询语言全称是Data Query Language，所以是用来进行数据库中数据的查询的，即最常用的select语句
 
-  <img src="assets/image-20210725175131533.png" alt="image-20210725175131533" />
+![](assets/image-20210725175131533.png)
 
   该方法涉及到了 `ResultSet` 对象，而这个对象我们还没有学习，一会再重点讲解。
-
 
 
 #### 代码实现
@@ -414,7 +420,7 @@ Statement对象的作用就是用来执行SQL语句。而针对不同类型的SQ
 
   > 注意：
   >
-  > - 以后开发很少使用java代码操作DDL语句
+  > 以后开发很少使用java代码操作DDL语句
 
 ### ResultSet
 
@@ -426,7 +432,7 @@ ResultSet（结果集对象）作用：
 
 而执行了DQL语句后就会返回该对象，对应执行DQL语句的方法如下：
 
-```sql
+```java
 ResultSet  executeQuery(sql)：执行DQL 语句，返回 ResultSet 对象
 ```
 
@@ -450,7 +456,7 @@ ResultSet  executeQuery(sql)：执行DQL 语句，返回 ResultSet 对象
 
 如下图为执行SQL语句后的结果
 
-<img src="assets/image-20210725181320813.png" alt="image-20210725181320813" />
+![](assets/image-20210725181320813.png)
 
 一开始光标指定于第一行前，如图所示红色箭头指向于表头行。当我们调用了 `next()` 方法后，光标就下移到第一行数据，并且方法返回true，此时就可以通过 `getInt("id")` 获取当前行id字段的值，也可以通过 `getString("name")` 获取当前行name字段的值。如果想获取下一行的数据，继续调用 `next()`  方法，以此类推。
 
@@ -471,13 +477,13 @@ public void testResultSet() throws  Exception {
     String password = "1234";
     Connection conn = DriverManager.getConnection(url, username, password);
     //3. 定义sql
-    String sql = "select - from account";
+    String sql = "select * from account";
     //4. 获取statement对象
     Statement stmt = conn.createStatement();
     //5. 执行sql
     ResultSet rs = stmt.executeQuery(sql);
     //6. 处理结果， 遍历rs中的所有数据
-    /- // 6.1 光标向下移动一行，并且判断当前行是否有数据
+    // 6.1 光标向下移动一行，并且判断当前行是否有数据
         while (rs.next()){
             //6.2 获取数据  getXxx()
             int id = rs.getInt(1);
@@ -490,7 +496,7 @@ public void testResultSet() throws  Exception {
 
             System.out.println("--------------");
 
-        }*/
+        }
     // 6.1 光标向下移动一行，并且判断当前行是否有数据
     while (rs.next()){
         //6.2 获取数据  getXxx()
@@ -516,7 +522,7 @@ public void testResultSet() throws  Exception {
 
 - 需求：查询account账户表数据，封装为Account对象中，并且存储到ArrayList集合中
 
-  <img src="assets/image-20210725182352433.png" alt="image-20210725182352433" />
+  ![](assets/image-20210725182352433.png)
 
 - 代码实现
 
@@ -528,7 +534,7 @@ public void testResultSet() throws  Exception {
     - 3. 将Account对象存入ArrayList集合中
     */
   @Test
-  public void testResultSet2() throws  Exception {
+  public void testResultSet2() throws Exception {
       //1. 注册驱动
       //Class.forName("com.mysql.jdbc.Driver");
       //2. 获取连接：如果连接的是本机mysql并且端口是默认的 3306 可以简化书写
@@ -538,7 +544,7 @@ public void testResultSet() throws  Exception {
       Connection conn = DriverManager.getConnection(url, username, password);
   
       //3. 定义sql
-      String sql = "select - from account";
+      String sql = "select * from account";
   
       //4. 获取statement对象
       Statement stmt = conn.createStatement();
@@ -552,17 +558,14 @@ public void testResultSet() throws  Exception {
       // 6.1 光标向下移动一行，并且判断当前行是否有数据
       while (rs.next()){
           Account account = new Account();
-  
           //6.2 获取数据  getXxx()
           int id = rs.getInt("id");
           String name = rs.getString("name");
           double money = rs.getDouble("money");
-  
           //赋值
           account.setId(id);
           account.setName(name);
           account.setMoney(money);
-  
           // 存入集合
           list.add(account);
       }
@@ -607,25 +610,24 @@ create database test;
 
 在命令提示符中运行今天资料下的 `day03-JDBC\资料\2. sql注入演示\sql.jar` 这个jar包。
 
-<img src="assets/image-20210725184701026.png" alt="image-20210725184701026" /> 
+![](assets/image-20210725184701026.png)
 
 此时我们就能在数据库中看到user表
 
-<img src="assets/image-20210725184817731.png" alt="image-20210725184817731" />
-
+![](assets/image-20210725184817731.png)
 接下来在浏览器的地址栏输入 `localhost:8080/login.html` 就能看到如下页面
 
-<img src="assets/image-20210725185024731.png" alt="image-20210725185024731" />
+![](assets/image-20210725185024731.png)
 
 我们就可以在如上图中输入用户名和密码进行登陆。用户名和密码输入正确就登陆成功，跳转到首页。用户名和密码输入错误则给出错误提示，如下图
 
-<img src="assets/image-20210725185320875.png" alt="image-20210725185320875" />
+![](assets/image-20210725185320875.png)
 
 但是我可以通过输入一些特殊的字符登陆到首页。
 
 用户名随意写，密码写成 `' or '1' ='1`
 
-<img src="assets/image-20210725185603112.png" alt="image-20210725185603112" />
+![](assets/image-20210725185603112.png)
 
 这就是SQL注入漏洞，也是很危险的。当然现在市面上的系统都不会存在这种问题了，所以大家也不要尝试用这种方式去试其他的系统。
 
@@ -645,7 +647,7 @@ public void testLogin() throws  Exception {
     // 接收用户输入 用户名和密码
     String name = "sjdljfld";
     String pwd = "' or '1' = '1";
-    String sql = "select - from tb_user where username = '"+name+"' and password = '"+pwd+"'";
+    String sql = "select * from tb_user where username = '"+name+"' and password = '"+pwd+"'";
     // 获取stmt对象
     Statement stmt = conn.createStatement();
     // 执行sql
@@ -667,7 +669,7 @@ public void testLogin() throws  Exception {
 上面代码是将用户名和密码拼接到sql语句中，拼接后的sql语句如下
 
 ```sql
-select - from tb_user where username = 'sjdljfld' and password = ''or '1' = '1'
+select * from tb_user where username = 'sjdljfld' and password = '' or '1' = '1'
 ```
 
 从上面语句可以看出条件 `username = 'sjdljfld' and password = ''` 不管是否满足，而 `or` 后面的 `'1' = '1'` 是始终满足的，最终条件是成立的，就可以正常的进行登陆了。
@@ -682,12 +684,12 @@ select - from tb_user where username = 'sjdljfld' and password = ''or '1' = '1'
 
 - 获取 PreparedStatement 对象
 
-  ```java
-  // SQL语句中的参数值，使用？占位符替代
-  String sql = "select - from user where username = ? and password = ?";
-  // 通过Connection对象获取，并传入对应的sql语句
-  PreparedStatement pstmt = conn.prepareStatement(sql);
-  ```
+```java
+// SQL语句中的参数值，使用？占位符替代
+String sql = "select * from user where username = ? and password = ?";
+// 通过Connection对象获取，并传入对应的sql语句
+PreparedStatement pstmt = conn.prepareStatement(sql);
+```
 
 - 设置参数值
 
@@ -699,9 +701,9 @@ select - from tb_user where username = 'sjdljfld' and password = ''or '1' = '1'
   >
   > - 参数：
   >
-  >   - 参数1： ？的位置编号，从1 开始
+  > - 参数1： ？的位置编号，从1 开始
   >
-  >   - 参数2： ？的值
+  > - 参数2： ？的值
 
 - 执行SQL语句
 
@@ -729,7 +731,7 @@ public void testPreparedStatement() throws  Exception {
     String pwd = "' or '1' = '1";
 
     // 定义sql
-    String sql = "select - from tb_user where username = ? and password = ?";
+    String sql = "select * from tb_user where username = ? and password = ?";
     // 获取pstmt对象
     PreparedStatement pstmt = conn.prepareStatement(sql);
     // 设置？的值
@@ -757,7 +759,6 @@ select - from tb_user where username = 'sjdljfld' and password = '\'or \'1\' = \
 ```
 
 
-
 #### PreparedStatement原理
 
 > PreparedStatement 好处：
@@ -765,7 +766,7 @@ select - from tb_user where username = 'sjdljfld' and password = '\'or \'1\' = \
 > - 预编译SQL，性能更高
 > - 防止SQL注入：将敏感字符进行转义
 
-<img src="assets/image-20210725195756848.png" alt="image-20210725195756848" />
+![](assets/image-20210725195756848.png)
 
 Java代码操作数据库流程如图所示：
 
@@ -790,25 +791,26 @@ Java代码操作数据库流程如图所示：
   在代码中编写url时需要加上以下参数。而我们之前根本就没有开启预编译功能，只是解决了SQL注入漏洞。
 
   ```sql
-  useServerPrepStmts=true
+useServerPrepStmts=true
   ```
 
 - 配置MySQL执行日志（重启mysql服务后生效）
 
   在mysql配置文件（my.ini）中添加如下配置
 
-  ```
+```ini
   log-output=FILE
   general-log=1
   general_log_file="D:\mysql.log"
   slow-query-log=1
   slow_query_log_file="D:\mysql_slow.log"
   long_query_time=2
-  ```
+```
+
 
 - java测试代码如下：
 
-  ```java
+```java
    /**
      - PreparedStatement原理
      - @throws Exception
@@ -893,7 +895,7 @@ Java代码操作数据库流程如图所示：
 
 而数据库使用了数据库连接池后，就能达到Connection对象的复用，如下图
 
-<img src="assets/image-20210725210432985.png" alt="image-20210725210432985" />
+![](assets/image-20210725210432985.png)
 
 连接池是在一开始就创建好了一些连接（Connection）对象存储起来。用户需要连接数据库时，不需要自己创建连接，而只需要从连接池中获取一个连接进行使用，使用完毕后再将连接对象归还给连接池；这样就可以起到资源重用，也节省了频繁创建连接销毁连接所花费的时间，从而提升了系统响应的速度。
 
@@ -933,11 +935,11 @@ Java代码操作数据库流程如图所示：
 
 现在通过代码实现，首先需要先将druid的jar包放到项目下的lib下并添加为库文件
 
-<img src="assets/image-20210725212911980.png" alt="image-20210725212911980" />
+![](assets/image-20210725212911980.png)
 
 项目结构如下：
 
-<img src="assets/image-20210725213210091.png" alt="image-20210725213210091" />
+![](assets/image-20210725213210091.png)
 
 编写配置文件如下：
 
@@ -1032,7 +1034,7 @@ public class DruidDemo {
    */
   public class Brand {
       // id 主键
-      private Integer id;
+      private Integer id; //使用包装类型可以防止默认值给业务影响
       // 品牌名称
       private String brandName;
       // 企业名称
