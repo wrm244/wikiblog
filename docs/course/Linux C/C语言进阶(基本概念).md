@@ -893,30 +893,31 @@ loop:
 > 如果在条件与判断语句遇到出错的情况下，可以使用 ``_exit(0)`` 来停止程序不刷新缓冲区等，也可以使用信号量``sig``让操作系统来判断与debug。
 
 # 数组
-构造类型 连续存放
+> 构造类型之一连续存放
 ## 一维数组
-[存储类型] 数据类型 标识符[下标]
-### 初始化
+> 在内存顺序存放
 
-- static
+``[存储类型] 数据类型 标识符[下标]``
+
+### 初始化
+- ``auto`` 会自动开辟空间，但不赋值
+- ``static`` 会被初始化为**全零**
 
 ```c
 static int a[10];
 ```
 
-- {}
+- {} ，可以部分初始化，其他元素为零
 
 ```c
 int a[3] = {1, 2, 3};
 ```
 
-### 元素引用
-- arr[i]
-- arr+i
+### 数组定义原理
 
 #### 数组名
 
-一个**常量**
+数组名是一个**常量**，主要存放地址：
 
 ```c
 #include <stdio.h>
@@ -926,21 +927,25 @@ int main() {
   int arr[3] = {1, 2, 3};
   printf("%ld\n", sizeof(arr));
   // 下面这句是错的
-  arr = {4, 5, 6};
+  arr = {4, 5, 6}; //因为无法给常量赋值
   for (int i = 0;i < sizeof(arr)/sizeof(int);i++) {
     printf("%d", *(arr+i));
   }
 }
 
 ```
+#### 数组在计算机的表达
 
+数组在计算机的表达是：``a[i] = *(a+i)`` 这个表达式在C语言在看来，不管你``i``等于多少，他都是合法的，所以就有数组越界问题存在，不能靠编译器检测出来。
 
+#### 数组越界
 
-### 数组越界
+:::danger
 c对数组不进行越界检查，需要格外小心
+:::
 
-### 练习
-
+### 数组练习
+1. 斐波那契数列：
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -948,25 +953,39 @@ c对数组不进行越界检查，需要格外小心
 int main() {
   int fib[10] = {1, 1};
 
-  for (int i = 2;i < 10;i++) {
-    fib[i] = fib[i-1]+ fib[i-2];
+  for (int i = 2;i < sizeof(fib)/sizeof(fib[0]);i++) {
+    fib[i] = fib[i-1]+ fib[i-2]; //动态规划
+  }
+  for (int i = 0;i < 10;i++) {
+    printf("%d ", fib[i]);
+  }
+  //逆序存放：
+  i = 0;
+  j = sizeof(fib)/sizeof(fib[0])-1;
+  while(i < j){
+	tmp = fib[i];
+	fib[i] = fib[j];
+	fib[j] = temp; 
   }
   for (int i = 0;i < 10;i++) {
     printf("%d ", fib[i]);
   }
 }
-
 ```
 
+2. 冒泡排序：
+> 每一趟排序会选择出最大的数，逐步减小排序数列大小
+> 哈哈哈哈，这个代码已经写了5年了，还是会忘记。
 
 ```c
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-  int arr[] = {2, 3, 5, 4, 6, 7, 1, 9};
-  for (int i = 0;i < sizeof(arr)/sizeof(int);i++) {
-    for (int j = 0;j < sizeof(arr)/sizeof(int)-1-i;j++) {
+  int arr[8] = {2, 3, 5, 4, 6, 7, 1, 9};
+  for (int i = 0;i < sizeof(arr)/sizeof(arr[0]);i++) {
+    for (int j = 0;j < sizeof(arr)/sizeof(arr[0])-1-i;j++) {
+    //这里的sizeof(arr)/sizeof(arr[0])-1-i ，减去i表示当前已经筛选出最大的值
       if(arr[j] > arr[j+1]) {
         int tmp = arr[j];
         arr[j] = arr[j+1];
@@ -981,42 +1000,76 @@ int main() {
 
 ```
 
+3. 选择排序：
+> 先选取基准值，与之后的数值比较，把最小的与在原先基准值的位置交换
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
 
 int main() {
-  int arr[] = {3, 2, 5, 4, 9, 7, 1, 6};
+  int arr[8] = {3, 2, 5, 4, 9, 7, 1, 6};
   for (int i = 0;i < sizeof(arr)/sizeof(int);i++) {
     int m = i;
     for (int j = i+1;j < sizeof(arr)/sizeof(int);j++) {
       if(arr[j] < arr[m]) {
         m = j;
       }
-    }
-    if (m != i) {
+      if (m != i) {
       int tmp = arr[i];
       arr[i] = arr[m];
       arr[m] = tmp;
-    }
-  }
+    }   
+ }
   for (int i = 0; i < sizeof(arr) / sizeof(int); i++) {
     printf("%d ", arr[i]);
   }
+  exit(0);
 }
 
 ```
 
+3. 进制转换
+```c
+static void base_convert(void){
+	int num,base;
+	int n[128];
+	do{
+		n[i] = num%base;
+		num = num/base;
+		i++;
+	}while(num ! = 0);
+	for(i -- ; i>=0;i--){ //从后往前输出
+		if(n[i]>=10)
+			printf("%c ",n[i]-10+'a');
+		else printf("%d",n[i]);
+	}
+}
+```
 
+3. 删除法求质数
+```c
+static void primer(void){
+	char primer[1001] = {0};
+	for(i=2;i<1001;i++){
+		if(primer[i]==0){
+		for(j = i*2;j<1001;j+=i){ //j跳过i的倍数
+			primer[j] = -1;
+		}
+	}
+	}
+}
+```
 
 ## 二维数组
-[存储类型] 数据类型 标识符[行下标][列下标]
+``[存储类型] 数据类型 标识符[行下标][列下标]``
+> 在内存中二维数组是以行为顺序从上往下排列
 
 ```c
 int main() {
   int a[M][N] = {1, 2, 3, 4, 5};
-  int b[][N] = {1, 2, 3, 4, 5};
-  int c[M][] = {1, 2, 3, 4, 5}; // 错误
+  int b[][N] = {1, 2, 3, 4, 5}; //行可以缺省，会自动计算行数
+  int c[M][] = {1, 2, 3, 4, 5}; //这个会发生歧义错误
   for (int i = 0;i < M;i++) {
     for (int j = 0;j < N;j++) {
       printf("%d ", *(a+i+j*));
