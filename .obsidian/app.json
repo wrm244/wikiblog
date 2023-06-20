@@ -12,9 +12,10 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/C语言进阶",
+  "attachmentFolderPath": "./assets/C语言进阶(基本概念)",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "livePreview": true,
-  "showLineNumber": false
+  "showLineNumber": false,
+  "alwaysUpdateLinks": true
 }
