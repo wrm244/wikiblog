@@ -1247,29 +1247,28 @@ public void testSelectByConditionSingle() throws IOException {
 
 执行测试方法结果如下：
 
-<img src="assets/image-20210729214548756.png" alt="image-20210729214548756" style="zoom:70%;" />
+![](assets/image-20210729214548756.png)
 
 ### 1.6  添加数据
 
-<img src="assets/image-20210729214917317.png" alt="image-20210729214917317" style="zoom:70%;" />
+![](assets/image-20210729214917317.png)
 
 如上图是我们平时在添加数据时展示的页面，而我们在该页面输入想要的数据后添加 `提交` 按钮，就会将这些数据添加到数据库中。接下来我们就来实现添加数据的操作。
 
 * 编写接口方法
 
-  <img src="assets/image-20210729215351651.png" alt="image-20210729215351651" style="zoom:80%;" />
-
+  ![](assets/image-20210729215351651.png)
   参数：除了id之外的所有的数据。id对应的是表中主键值，而主键我们是 ==自动增长== 生成的。
 
 * 编写SQL语句
 
-  <img src="assets/image-20210729215537167.png" alt="image-20210729215537167" style="zoom:80%;" />
+  ![](assets/image-20210729215537167.png)
 
 * 编写测试方法并执行
 
 明确了该功能实现的步骤后，接下来我们进行具体的操作。
 
-#### 1.6.1  编写接口方法
+#### 编写接口方法
 
 在 `BrandMapper` 接口中定义添加方法。
 
@@ -1280,7 +1279,7 @@ public void testSelectByConditionSingle() throws IOException {
 void add(Brand brand);
 ```
 
-#### 1.6.2  编写SQL语句
+#### 编写SQL语句
 
 在 `BrandMapper.xml` 映射配置文件中编写添加数据的 `statement`
 
@@ -1291,7 +1290,7 @@ void add(Brand brand);
 </insert>
 ```
 
-#### 1.6.3  编写测试方法
+#### 编写测试方法
 
 在 `test/java` 下的 `com.itheima.mapper`  包下的 `MybatisTest类中` 定义测试方法
 
@@ -1335,23 +1334,23 @@ public void testAdd() throws IOException {
 
 ![image-20210729220348255](assets/image-20210729220348255.png)
 
-#### 1.6.4  添加-主键返回
+#### 添加-主键返回
 
 在数据添加成功后，有时候需要获取插入数据库数据的主键（主键是自增长）。
 
 比如：添加订单和订单项，如下图就是京东上的订单
 
-<img src="assets/image-20210729221207962.png" alt="image-20210729221207962" style="zoom:80%;" />
+![](assets/image-20210729221207962.png)
 
 订单数据存储在订单表中，订单项存储在订单项表中。
 
 * 添加订单数据
 
-  <img src="assets/image-20210729221049462.png" alt="image-20210729221049462" style="zoom:80%;" />
+  ![](assets/image-20210729221049462.png)
 
 * 添加订单项数据，订单项中需要设置所属订单的id
 
-  <img src="assets/image-20210729221058898.png" alt="image-20210729221058898" style="zoom:80%;" />
+ ![](assets/image-20210729221058898.png)
 
 明白了什么时候 `主键返回` 。接下来我们简单模拟一下，在添加完数据后打印id属性值，能打印出来说明已经获取到了。
 
@@ -1369,15 +1368,14 @@ public void testAdd() throws IOException {
 > * useGeneratedKeys：是够获取自动增长的主键值。true表示获取
 > * keyProperty  ：指定将获取到的主键值封装到哪儿个属性里
 
-### 1.7  修改
+### 修改
 
-<img src="assets/image-20210729222642700.png" alt="image-20210729222642700" style="zoom:80%;" />
-
+![](assets/image-20210729222642700.png)
 如图所示是修改页面，用户在该页面书写需要修改的数据，点击 `提交` 按钮，就会将数据库中对应的数据进行修改。注意一点，如果哪儿个输入框没有输入内容，我们是将表中数据对应字段值替换为空白还是保留字段之前的值？答案肯定是保留之前的数据。
 
 接下来我们就具体来实现
 
-#### 1.7.1  编写接口方法
+#### 编写接口方法
 
 在 `BrandMapper` 接口中定义修改方法。
 
@@ -1390,7 +1388,7 @@ void update(Brand brand);
 
 > 上述方法参数 Brand 就是封装了需要修改的数据，而id肯定是有数据的，这也是和添加方法的区别。
 
-#### 1.7.2  编写SQL语句
+#### 编写SQL语句
 
 在 `BrandMapper.xml` 映射配置文件中编写修改数据的 `statement`。
 
@@ -1420,7 +1418,7 @@ void update(Brand brand);
 
 > *set* 标签可以用于动态包含需要更新的列，忽略其它不更新的列。
 
-#### 1.7.3  编写测试方法
+#### 编写测试方法
 
 在 `test/java` 下的 `com.itheima.mapper`  包下的 `MybatisTest类中` 定义测试方法
 
@@ -1469,7 +1467,7 @@ public void testUpdate() throws IOException {
 
 从结果中SQL语句可以看出，只修改了 `status`  字段值，因为我们给的数据中只给Brand实体对象的 `status` 属性设置值了。这就是 `set` 标签的作用。
 
-### 1.8  删除一行数据
+### 删除一行数据
 
 ![image-20210729224549305](assets/image-20210729224549305.png)
 
@@ -1477,7 +1475,7 @@ public void testUpdate() throws IOException {
 
 接下来就来实现该功能。
 
-#### 1.8.1  编写接口方法
+#### 编写接口方法
 
 在 `BrandMapper` 接口中定义根据id删除方法。
 
@@ -1488,7 +1486,7 @@ public void testUpdate() throws IOException {
 void deleteById(int id);
 ```
 
-#### 1.8.2  编写SQL语句
+#### 编写SQL语句
 
 在 `BrandMapper.xml` 映射配置文件中编写删除一行数据的 `statement`
 
@@ -1498,7 +1496,7 @@ void deleteById(int id);
 </delete>
 ```
 
-#### 1.8.3  编写测试方法
+#### 编写测试方法
 
 在 `test/java` 下的 `com.itheima.mapper`  包下的 `MybatisTest类中` 定义测试方法
 
@@ -1528,9 +1526,9 @@ public void testDeleteById() throws IOException {
 
 运行过程只要没报错，直接到数据库查询数据是否还存在。
 
-### 1.9  批量删除
+### 批量删除
 
-<img src="assets/image-20210729225713894.png" alt="image-20210729225713894" style="zoom:70%;" />
+![](assets/image-20210729225713894.png)
 
 
 
@@ -1538,7 +1536,7 @@ public void testDeleteById() throws IOException {
 
 
 
-#### 1.9.1  编写接口方法
+#### 编写接口方法
 
 在 `BrandMapper` 接口中定义删除多行数据的方法。
 
@@ -1551,7 +1549,7 @@ void deleteByIds(int[] ids);
 
 > 参数是一个数组，数组中存储的是多条数据的id
 
-#### 1.9.2  编写SQL语句
+#### 编写SQL语句
 
 在 `BrandMapper.xml` 映射配置文件中编写删除多条数据的 `statement`。
 
