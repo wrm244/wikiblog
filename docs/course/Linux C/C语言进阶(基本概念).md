@@ -1,12 +1,12 @@
 ---
 id: C语言进阶基本概念
 slug: /C语言进阶基本概念
-title: C 语言进阶基本概念
+title: 基本概念
 author: RiverMountain  
 date: 2023/06/19
 tags: [C,Linux]
 keywords: [C,Linux]
-description: 基本概念部分细节拾遗(嵌入式C语言)
+description: C语言基本概念部分细节拾遗(嵌入式C语言)
 last_update:
   date: 2023/06/19
 ---
