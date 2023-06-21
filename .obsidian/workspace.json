@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/stack/java/JavaWeb/数据库连接/Mybatis.md",
+                "file": "docs/course/Linux C/指针与函数.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/stack/java/JavaWeb/数据库连接/Mybatis.md",
+                "file": "docs/course/Linux C/指针与函数.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/stack/java/JavaWeb/数据库连接/Mybatis.md",
+                "file": "docs/course/Linux C/指针与函数.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/stack/java/JavaWeb/数据库连接/Mybatis.md"
+                "file": "docs/course/Linux C/指针与函数.md"
               }
             }
           },
@@ -169,6 +169,7 @@
   },
   "active": "e60aceea397f448c",
   "lastOpenFiles": [
+    "docs/stack/java/JavaWeb/数据库连接/Mybatis.md",
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729184156019.png",
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729182223137.png",
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729180709318.png",
@@ -179,9 +180,7 @@
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729172544230.png",
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729171208737.png",
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729171146911.png",
-    "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729165724838.png",
     "docs/stack/java/JavaWeb/数据库连接/JDBC.md",
-    "docs/stack/java/JavaWeb/数据库连接/Mybatis.md",
     "assets/image-20210726203656847.png.md",
     "docs/course/Linux C/指针与函数.md",
     "docs/course/Linux C/C语言进阶(基本概念).md",
