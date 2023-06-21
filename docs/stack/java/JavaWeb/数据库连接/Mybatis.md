@@ -1,15 +1,16 @@
 ---
-id: Mybits
-slug: /Mybits
-title: Mybits基础的使用与原理
+id: Mybatis
+slug: /Mybatis
+title: Mybatis基础的使用与原理
 author: RiverMountain  
 date: 2023/06/20
-tags: [JavaWeb,Mybits,JavaSE]  
-keywords: [JavaWeb,Mybits,JavaSE]  
-description: Java语言操作关系型数据库的一套API-JDBC
+tags: [JavaWeb,Mybatis,JavaSE]  
+keywords: [JavaWeb,Mybatis,JavaSE]  
+description: Mybatis持久层框架，用于简化 JDBC 开发
 last_update:
   date: 2023/06/20
 ---
+
 ## Mybatis
 
 ### Mybatis概述
@@ -727,7 +728,7 @@ public void testSelectAll() throws IOException {
 
 * 将需要复用的SQL片段抽取到 `sql` 标签中
 
-  ```xml
+```xml
   <sql id="brand_column">
   	id, brand_name as brandName, company_name as companyName, ordered, description, status
   </sql>
@@ -856,7 +857,7 @@ Brand selectById(int id);
 </select>
 ```
 
-> 注意：上述SQL中的 #{id}先这样写，一会我们再详细讲解
+> 注意：上述SQL中的 ``#{id}``先这样写，一会我们再详细讲解
 
 #### 编写测试方法
 
@@ -932,7 +933,7 @@ mybatis提供了两种参数占位符：
 
 ![](assets/image-20210729184756094.png)
 
-可以看出报错了，因为映射配置文件是xml类型的问题，而 > < 等这些字符在xml中有特殊含义，所以此时我们需要将这些符号进行转义，可以使用以下两种方式进行转义
+可以看出报错了，因为映射配置文件是xml类型的问题，而 ``> <`` 等这些字符在xml中有特殊含义，所以此时我们需要将这些符号进行转义，可以使用以下两种方式进行转义
 
 * 转义字符
 
@@ -1096,7 +1097,7 @@ select * from tb_brand where status = #{status} and company_name like #{companNa
   <select id="selectByCondition" resultMap="brandResultMap">
       select *
       from tb_brand
-      where
+      where 1=1 <!--恒等式代替-->
           <if test="status != null">
               and status = #{status}
           </if>
@@ -1145,7 +1146,7 @@ select * from tb_brand where status = #{status} and company_name like #{companNa
       from tb_brand
       <where>
           <if test="status != null">
-              and status = #{status}
+              status = #{status}
           </if>
           <if test="companyName != null and companyName != '' ">
               and company_name like #{companyName}
@@ -1161,8 +1162,7 @@ select * from tb_brand where status = #{status} and company_name like #{companNa
 
 ### 单个条件（动态SQL）
 
-<img src="assets/image-20210729213613029.png" alt="image-20210729213613029" style="zoom:80%;" />
-
+![](assets/image-20210729213613029.png)
 如上图所示，在查询时只能选择 `品牌名称`、`当前状态`、`企业名称` 这三个条件中的一个，但是用户到底选择哪儿一个，我们并不能确定。这种就属于单个条件的动态SQL语句。 
 
 这种需求需要使用到  `choose（when，otherwise）标签`  实现，  而 `choose` 标签类似于Java 中的switch语句。
@@ -1249,7 +1249,7 @@ public void testSelectByConditionSingle() throws IOException {
 
 ![](assets/image-20210729214548756.png)
 
-### 1.6  添加数据
+### 添加数据
 
 ![](assets/image-20210729214917317.png)
 
@@ -1258,7 +1258,7 @@ public void testSelectByConditionSingle() throws IOException {
 * 编写接口方法
 
   ![](assets/image-20210729215351651.png)
-  参数：除了id之外的所有的数据。id对应的是表中主键值，而主键我们是 ==自动增长== 生成的。
+  参数：除了id之外的所有的数据。id对应的是表中主键值，而主键我们是自动增长生成的。
 
 * 编写SQL语句
 
@@ -1530,11 +1530,7 @@ public void testDeleteById() throws IOException {
 
 ![](assets/image-20210729225713894.png)
 
-
-
 如上图所示，用户可以选择多条数据，然后点击上面的 `删除` 按钮，就会删除数据库中对应的多行数据。
-
-
 
 #### 编写接口方法
 
@@ -1580,10 +1576,9 @@ void deleteByIds(int[] ids);
 ```
 
 > 假如数组中的id数据是{1,2,3}，那么拼接后的sql语句就是：
->
-> ```sql
-> delete from tb_brand where id in (1,2,3);
-> ```
+```sql
+ delete from tb_brand where id in (1,2,3); 
+```
 
 #### 编写测试方法
 
@@ -1662,19 +1657,19 @@ User select(@Param("username") String username,@Param("password") String passwor
 
 * 在 `UserMapper` 接口中定义如下方法
 
-  ```java
-  User select(String username,String password);
-  ```
+```java
+User select(String username,String password);
+```
 
 * 在 `UserMapper.xml` 映射配置文件中定义SQL
 
-  ```xml
-  <select id="select" resultType="user">
-  	select *
-      from tb_user
-      where 
-      	username=#{arg0}
-      	and password=#{arg1}
+```xml
+<select id="select" resultType="user">
+  select *
+    from tb_user
+    where 
+      username=#{arg0}
+      and password=#{arg1}
   </select>
   ```
 
@@ -1802,7 +1797,6 @@ public User select(int id);
 ```
 
 > 注意：
->
 > * 注解是用来替换映射配置文件方式配置的，所以使用了注解，就不需要再映射配置文件中书写对应的 `statement`
 
 Mybatis 针对 CURD 操作都提供了对应的注解，已经做到见名知意。如下：
