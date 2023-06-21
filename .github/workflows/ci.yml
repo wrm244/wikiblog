@@ -28,7 +28,7 @@ jobs:
       #     bing-token: ${{ secrets.BING_TOKEN }}
       - name: Cache node modules
         uses: actions/cache@v3
-        id: cache
+        id: cache1
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -37,7 +37,7 @@ jobs:
 
       - name: Cache docusaurus 
         uses: actions/cache@v3
-        id: cache
+        id: cache2
         with:
           path: ./.docusaurus
           key: ${{ runner.os }}-docusaurus-${{ hashFiles('**/docusaurus.config.js') }}
