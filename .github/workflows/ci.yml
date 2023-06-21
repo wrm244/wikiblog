@@ -34,7 +34,16 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      
+
+      - name: Cache docusaurus 
+        uses: actions/cache@v3
+        id: cache
+        with:
+          path: ./.docusaurus
+          key: ${{ runner.os }}-docusaurus-${{ hashFiles('**/docusaurus.config.js') }}
+          restore-keys: |
+            ${{ runner.os }}-docusaurus
+
       - name: Install Dependencies
         #if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install
