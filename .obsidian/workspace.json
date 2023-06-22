@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/Linux C/指针与函数.md",
+                "file": "docs/course/大数据/4 分布式计算SQL体系.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/Linux C/指针与函数.md",
+                "file": "docs/course/大数据/4 分布式计算SQL体系.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/Linux C/指针与函数.md",
+                "file": "docs/course/大数据/4 分布式计算SQL体系.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/Linux C/指针与函数.md"
+                "file": "docs/course/大数据/4 分布式计算SQL体系.md"
               }
             }
           },
@@ -169,8 +169,12 @@
   },
   "active": "e60aceea397f448c",
   "lastOpenFiles": [
-    "docs/course/Linux C/C语言进阶(基本概念).md",
+    "docs/course/大数据/assets/4 分布式计算SQL体系/image-20230622002529.png",
+    "docs/course/大数据/assets/4 分布式计算SQL体系/image-20230621234314.png",
     "docs/course/Linux C/指针与函数.md",
+    "docs/course/Linux C/assets/指针与函数/image-20230621173148.png",
+    "docs/course/Linux C/assets/指针与函数",
+    "docs/course/Linux C/C语言进阶(基本概念).md",
     "docs/stack/java/JavaWeb/数据库连接/Mybatis.md",
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729184156019.png",
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729182223137.png",
@@ -180,8 +184,6 @@
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729180106714.png",
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729173210433.png",
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729172544230.png",
-    "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729171208737.png",
-    "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729171146911.png",
     "docs/stack/java/JavaWeb/数据库连接/JDBC.md",
     "assets/image-20210726203656847.png.md",
     "docs/course/Linux C/assets/C语言进阶(基本概念)",
@@ -212,7 +214,6 @@
     "docs/course/大数据/assets/2 HDFS文件存储原理",
     "docs/course/大数据/assets/1 Hadoop介绍与安装",
     "docs/course/大数据/assets",
-    "docs/course/Advanced Mathematics/函数与极限.md",
-    "docs/course/大数据"
+    "docs/course/Advanced Mathematics/函数与极限.md"
   ]
 }
