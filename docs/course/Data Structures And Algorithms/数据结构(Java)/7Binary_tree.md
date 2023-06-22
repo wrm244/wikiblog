@@ -78,7 +78,7 @@ last_update:
 
 #### 深度优先
 
-![image-20230221110443230](./imgs/image-20230221110443230.png)
+![image-20230221110443230](imgs/image-20230221110443230.png)
 
 | 栈暂存    | 已处理                                     | 前序遍历 | 中序遍历 |
 | --------- | ------------------------------------------ | -------- | -------- |
@@ -256,7 +256,7 @@ public static void colorPrintln(String origin, int color) {
 
 一张图演示三种遍历
 
-![Sorted_binary_tree_ALL_RGB.svg](./imgs/Sorted_binary_tree_ALL_RGB.svg.png)
+![Sorted_binary_tree_ALL_RGB.svg](imgs/Sorted_binary_tree_ALL_RGB.svg.png)
 
 * 红色：前序遍历顺序
 * 绿色：中序遍历顺序

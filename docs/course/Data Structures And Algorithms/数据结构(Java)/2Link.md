@@ -576,13 +576,13 @@ public class DoublyLinkedListSentinel implements Iterable<Integer> {
 
 双向环形链表带哨兵，这时哨兵**既作为头，也作为尾**
 
-![image-20221229144232651](./imgs/image-20221229144232651.png)
+![image-20221229144232651](imgs/image-20221229144232651.png)
 
-![image-20221229143756065](./imgs/image-20221229143756065.png)
+![image-20221229143756065](imgs/image-20221229143756065.png)
 
-![image-20221229153338425](./imgs/image-20221229153338425.png)
+![image-20221229153338425](imgs/image-20221229153338425.png)
 
-![image-20221229154248800](./imgs/image-20221229154248800.png)
+![image-20221229154248800](imgs/image-20221229154248800.png)
 
 参考实现
 
