@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/大数据/4 分布式计算SQL体系.md",
+                "file": "docs/course/Linux C/指针与函数.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/大数据/4 分布式计算SQL体系.md",
+                "file": "docs/course/Linux C/指针与函数.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/大数据/4 分布式计算SQL体系.md",
+                "file": "docs/course/Linux C/指针与函数.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/大数据/4 分布式计算SQL体系.md"
+                "file": "docs/course/Linux C/指针与函数.md"
               }
             }
           },
@@ -167,14 +167,15 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "e60aceea397f448c",
+  "active": "9645adc9b84ae224",
   "lastOpenFiles": [
+    "docs/course/Linux C/C语言进阶(基本概念).md",
+    "docs/course/大数据/4 分布式计算SQL体系.md",
     "docs/course/大数据/assets/4 分布式计算SQL体系/image-20230622002529.png",
     "docs/course/大数据/assets/4 分布式计算SQL体系/image-20230621234314.png",
     "docs/course/Linux C/指针与函数.md",
     "docs/course/Linux C/assets/指针与函数/image-20230621173148.png",
     "docs/course/Linux C/assets/指针与函数",
-    "docs/course/Linux C/C语言进阶(基本概念).md",
     "docs/stack/java/JavaWeb/数据库连接/Mybatis.md",
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729184156019.png",
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729182223137.png",
@@ -183,13 +184,11 @@
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729180118287.png",
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729180106714.png",
     "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729173210433.png",
-    "docs/stack/java/JavaWeb/数据库连接/assets/image-20210729172544230.png",
     "docs/stack/java/JavaWeb/数据库连接/JDBC.md",
     "assets/image-20210726203656847.png.md",
     "docs/course/Linux C/assets/C语言进阶(基本概念)",
     "docs/course/Linux C/assets",
     "docs/stack/java/Spring/3 IOC与DI进阶.md",
-    "docs/course/大数据/4 分布式计算SQL体系.md",
     "docs/course/大数据/assets/4 分布式计算SQL体系",
     "docs/course/大数据/3 分布式计算与资源调度.md",
     "docs/stack/introduction.md",
