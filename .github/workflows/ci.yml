@@ -49,11 +49,11 @@ jobs:
          cd ./resume
          rm -rf ./.git
          cd ..
-         
+
       - name: deploy slides
         run: |
          cd ./build
-         git clone -b gp-pages https://github.com/wrm244/slides.git ./slides
+         git clone -b gh-pages https://github.com/wrm244/slides.git ./slides
          cd ./slides
          rm -rf ./.git
          cd ..
