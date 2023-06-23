@@ -50,13 +50,6 @@ jobs:
          rm -rf ./.git
          cd ..
 
-      - name: deploy slides
-        run: |
-         cd ./build
-         git clone -b gh-pages https://github.com/wrm244/slides.git ./slides
-         cd ./slides
-         rm -rf ./.git
-         cd ..
       # - name: Install pngquant # 安装ImageMagick
       #   run: sudo apt-get install pngquant imagemagick -y
 
