@@ -12,7 +12,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/1 算法绪论",
+  "attachmentFolderPath": "./assets/指针与函数",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "livePreview": true,
