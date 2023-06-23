@@ -201,7 +201,7 @@ const config = {
             },
             {
               label: '幻灯片',
-              href: 'https://wrm244.gitee.io/slide/',
+              href: '/slide/',
             },
           ],
         },
