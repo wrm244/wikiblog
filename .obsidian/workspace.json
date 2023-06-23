@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/Linux C/指针与函数.md",
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/Linux C/指针与函数.md",
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/Linux C/指针与函数.md",
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/Linux C/指针与函数.md"
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md"
               }
             }
           },
@@ -167,7 +167,13 @@
   },
   "active": "591ab3199cd83626",
   "lastOpenFiles": [
+    "docs/course/Linux C/数据结构(C语言)/assets/1 线性表/image-20230623233641.png",
+    "docs/course/Linux C/数据结构(C语言)/assets/1 线性表/image-20230623233622.png",
+    "docs/course/Linux C/数据结构(C语言)/assets/1 线性表/image-20230623233523.png",
+    "docs/course/Linux C/数据结构(C语言)/assets/1 线性表/image-20230623233215.png",
     "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+    "docs/course/Linux C/数据结构(C语言)/assets/1 线性表/image-20230623233248.png",
+    "docs/course/Linux C/指针与函数.md",
     "docs/course/Data Structures And Algorithms/算法设计与分析/1 算法绪论.md",
     "docs/course/OS/操作系统课设/geekos project 4.md",
     "docs/course/OS/操作系统课设/geekos project 3.md",
@@ -180,10 +186,6 @@
     "docs/course/OS/操作系统课设/assets/geekos project 1/image-20230427094309.png",
     "docs/course/OS/操作系统课设/assets/geekos project 1/image-20230427091614.png",
     "docs/course/OS/操作系统课设/assets/geekos project 1/image-20230427090521.png",
-    "docs/course/OS/操作系统课设/assets/geekos project 1/image-20230427090435.png",
-    "docs/course/OS/操作系统课设/assets/geekos project 3/image-20230427123031.png",
-    "docs/course/OS/操作系统课设/assets/geekos project 3/image-20230427122930.png",
-    "docs/course/OS/操作系统课设/assets/geekos project 3/image-20230427122030.png",
     "docs/course/OS/操作系统课设/assets/geekos project 1",
     "docs/course/OS/操作系统课设/assets/geekos project 3",
     "docs/course/OS/操作系统课设/assets/geekos project 2",
@@ -201,7 +203,6 @@
     "docs/course/OS/geekos project 0.md",
     "docs/course/Data Structures And Algorithms/数据结构(Java)/0DSA.md",
     "docs/course/Data Structures And Algorithms/数据结构(Java)/8DSA.md",
-    "docs/course/Linux C/指针与函数.md",
     "docs/course/Linux C/C语言进阶(基本概念).md",
     "docs/course/Data Structures And Algorithms/数据结构(Java)/1Array.md",
     "docs/course/Linux C/未命名.md",
@@ -211,7 +212,6 @@
     "docs/stack/java/JavaWeb/数据库连接/JDBC.md",
     "assets/image-20210726203656847.png.md",
     "docs/stack/java/Spring/3 IOC与DI进阶.md",
-    "docs/course/大数据/3 分布式计算与资源调度.md",
-    "docs/stack/introduction.md"
+    "docs/course/大数据/3 分布式计算与资源调度.md"
   ]
 }
