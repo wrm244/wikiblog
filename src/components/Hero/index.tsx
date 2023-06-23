@@ -87,6 +87,12 @@ function Hero() {
             <Translate id="hompage.hero.text.resume">个人简历</Translate>
             {/* </Button> */}
           </a>
+          <span>　</span>
+          <a className={styles.intro} href={'https://wrm244.gitee.io/slides/'}>
+            {/* <Button isLink href={'https://wrm244.gxist.cn/resume' } target="_blank"> */}
+            <Translate id="hompage.hero.text.resume">幻灯片</Translate>
+            {/* </Button> */}
+          </a>
         </animated.div>
       </div>
       <div className={styles.bloghome__image}>
