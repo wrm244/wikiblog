@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "307ecf403751403c",
+        "id": "53654e00cd0d3949",
         "type": "tabs",
         "children": [
           {
-            "id": "591ab3199cd83626",
+            "id": "bf53be84c0b6c36e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/Linux C/以自动机视角设计C程序.md",
+                "file": "docs/stack/java/JavaWeb/JavaScript入门.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5
+    "width": 310.5,
+    "collapsed": true
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/Linux C/以自动机视角设计C程序.md",
+                "file": "docs/stack/java/JavaWeb/JavaScript入门.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/Linux C/以自动机视角设计C程序.md",
+                "file": "docs/stack/java/JavaWeb/JavaScript入门.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/Linux C/以自动机视角设计C程序.md"
+                "file": "docs/stack/java/JavaWeb/JavaScript入门.md"
               }
             }
           },
@@ -166,20 +167,24 @@
       "obsidian-advanced-slides:Show Slide Preview": false
     }
   },
-  "active": "591ab3199cd83626",
+  "active": "bf53be84c0b6c36e",
   "lastOpenFiles": [
-    "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+    "docs/stack/java/JavaWeb/数据库连接/JDBC.md",
+    "docs/stack/java/JavaWeb/JavaScript入门.md",
+    "docs/stack/java/JavaWeb/assets/image-20210816225925955.png",
+    "docs/stack/java/JavaWeb/assets/查看文档.png",
+    "docs/stack/java/JavaWeb/assets/image-20210816235112754.png",
+    "docs/stack/java/JavaWeb/assets/image-20210816225913961.png",
+    "docs/stack/java/JavaWeb/assets/image-20210816220149093.png",
+    "docs/stack/java/JavaWeb/assets/image-20210816215235969.png",
+    "docs/stack/java/JavaWeb/assets/image-20210816215102677.png",
+    "docs/stack/java/JavaWeb/assets/image-20210816214900928.png",
+    "docs/stack/java/JavaWeb/assets/image-20210816194333252.png",
+    "docs/stack/java/JavaWeb/assets/image-20210816194143246.png",
+    "docs/stack/java/JavaWeb/assets",
+    "docs/stack/java/JavaWeb/JavaSpring.md",
     "docs/course/Linux C/以自动机视角设计C程序.md",
-    "docs/course/Linux C/assets/以自动机视角设计C程序/image-20230624010455.png",
-    "docs/course/Linux C/assets/以自动机视角设计C程序/image-20230624010030.png",
-    "docs/course/Linux C/assets/以自动机视角设计C程序/image-20230624010003.png",
-    "docs/course/Linux C/assets/以自动机视角设计C程序/image-20230624005924.png",
-    "docs/course/Linux C/assets/以自动机视角设计C程序/image-20230624005838.png",
-    "docs/course/Linux C/assets/以自动机视角设计C程序/image-20230624005505.png",
-    "docs/course/Linux C/assets/以自动机视角设计C程序/image-20230624005405.png",
-    "docs/course/Linux C/assets/以自动机视角设计C程序/image-20230624003353.png",
-    "docs/course/Linux C/assets/以自动机视角设计C程序/image-20230624003243.png",
-    "docs/course/Linux C/assets/以自动机视角设计C程序/image-20230624003026.png",
+    "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
     "docs/course/Linux C/assets/以自动机视角设计C程序",
     "docs/course/Linux C/指针与函数.md",
     "docs/course/Data Structures And Algorithms/算法设计与分析/1 算法绪论.md",
@@ -196,7 +201,6 @@
     "docs/course/OS/操作系统课设/assets",
     "docs/course/OS/操作系统课设",
     "docs/course/OS/assets/geekos project 3",
-    "docs/course/OS/assets/geekos project 4",
     "docs/course/OS/geekos project 4.md",
     "docs/course/OS/geekos project 3.md",
     "docs/course/OS/geekos project 2.md",
@@ -209,9 +213,6 @@
     "docs/course/Data Structures And Algorithms/数据结构(Java)/2Link.md",
     "docs/course/大数据/4 分布式计算SQL体系.md",
     "docs/stack/java/JavaWeb/数据库连接/Mybatis.md",
-    "docs/stack/java/JavaWeb/数据库连接/JDBC.md",
-    "assets/image-20210726203656847.png.md",
-    "docs/stack/java/Spring/3 IOC与DI进阶.md",
-    "docs/course/大数据/3 分布式计算与资源调度.md"
+    "assets/image-20210726203656847.png.md"
   ]
 }
