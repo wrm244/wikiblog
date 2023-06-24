@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+                "file": "docs/course/Linux C/以自动机视角设计C程序.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+                "file": "docs/course/Linux C/以自动机视角设计C程序.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+                "file": "docs/course/Linux C/以自动机视角设计C程序.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md"
+                "file": "docs/course/Linux C/以自动机视角设计C程序.md"
               }
             }
           },
@@ -168,6 +168,7 @@
   },
   "active": "591ab3199cd83626",
   "lastOpenFiles": [
+    "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
     "docs/course/Linux C/以自动机视角设计C程序.md",
     "docs/course/Linux C/assets/以自动机视角设计C程序/image-20230624010455.png",
     "docs/course/Linux C/assets/以自动机视角设计C程序/image-20230624010030.png",
@@ -181,7 +182,6 @@
     "docs/course/Linux C/assets/以自动机视角设计C程序/image-20230624003026.png",
     "docs/course/Linux C/assets/以自动机视角设计C程序",
     "docs/course/Linux C/指针与函数.md",
-    "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
     "docs/course/Data Structures And Algorithms/算法设计与分析/1 算法绪论.md",
     "docs/course/OS/操作系统课设/geekos project 4.md",
     "docs/course/OS/操作系统课设/geekos project 3.md",

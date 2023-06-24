@@ -6,7 +6,7 @@ author: RiverMountain
 date: 2023/06/24
 tags: [C,Linux]  
 keywords: [C,Linux]
-description: 
+description: 以自动机视角设计C程序
 last_update:
   date: 2023/06/24
 ---
