@@ -23,9 +23,6 @@ const config = {
     // },
     mermaid: {
       theme: { light: 'neutral', dark: 'forest' },
-      options: {
-        maxTextSize: 50,
-      },
     },
     colorMode: {
       defaultMode: 'light',
