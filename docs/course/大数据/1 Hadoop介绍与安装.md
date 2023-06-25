@@ -250,6 +250,8 @@ drwxr-xr-x   - hadoop supergroup          0 2023-06-13 14:23 /user/hadoop/.Trash
 
 ### 网页查看文件
 
+网站端口：``localhost:9870``
+
 ![网页查看文件](assets/1%20Hadoop介绍与安装/image-20230613150109.png)
 > 这里问什么会出现  ``Permission denied: user=dr.who`` 因为我们在浏览网页的时候相当于是匿名用户，没有权限。
 
