@@ -90,7 +90,7 @@ function Hero() {
           <span>　</span>
           <a className={styles.intro} href={'https://wrm244.gitee.io/slides/'}>
             {/* <Button isLink href={'https://wrm244.gxist.cn/resume' } target="_blank"> */}
-            <Translate id="hompage.hero.text.resume">幻灯片</Translate>
+            <Translate id="hompage.hero.text.slides">幻灯片</Translate>
             {/* </Button> */}
           </a>
         </animated.div>

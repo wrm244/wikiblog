@@ -20,15 +20,15 @@ Request是请求对象，Response是响应对象。这两个对象在我们使�
 ![1628735746602](assets/1628735746602.png)
 
 * request:获取请求数据
-  * 浏览器会发送HTTP请求到后台服务器[Tomcat]
-  * HTTP的请求中会包含很多请求数据[请求行+请求头+请求体]
-  * 后台服务器[Tomcat]会对HTTP请求中的数据进行解析并把解析结果存入到一个对象中
+  * 浏览器会发送HTTP请求到后台服务器``[Tomcat]``
+  * HTTP的请求中会包含很多请求数据``[请求行+请求头+请求体]``
+  * 后台服务器``[Tomcat]``会对HTTP请求中的数据进行解析并把解析结果存入到一个对象中
   * 所存入的对象即为request对象，所以我们可以从request对象中获取请求的相关参数
   * 获取到数据后就可以继续后续的业务，比如获取用户名和密码就可以实现登录操作的相关业务
-* response:==设置==响应数据
+* response:设置响应数据
   * 业务处理完后，后台就需要给前端返回业务处理的结果即响应数据
   * 把响应数据封装到response对象中
-  * 后台服务器[Tomcat]会解析response对象,按照[响应行+响应头+响应体]格式拼接结果
+  * 后台服务器``[Tomcat]``会解析response对象,按照``[响应行+响应头+响应体]``格式拼接结果
   * 浏览器最终解析结果，把内容展示在浏览器给用户浏览
 
 对于上述所讲的内容，我们通过一个案例来初步体验下request和response对象的使用。
@@ -71,9 +71,9 @@ public class ServletDemo3 extends HttpServlet {
 * request获取请求参数
 * request请求转发
 
-## 2，Request对象
+## Request对象
 
-### 2.1 Request继承体系
+### Request继承体系
 
 在学习这节内容之前，我们先思考一个问题，前面在介绍Request和Reponse对象的时候，比较细心的同学可能已经发现：
 
@@ -90,7 +90,7 @@ public class ServletDemo3 extends HttpServlet {
 
 ![1628740441008](assets/1628740441008.png)
 
-从上图中可以看出，ServletRequest和HttpServletRequest都是Java提供的，所以我们可以打开JavaEE提供的API文档[参考: 资料/JavaEE7-api.chm],打开后可以看到:
+从上图中可以看出，ServletRequest和HttpServletRequest都是Java提供的，所以我们可以打开JavaEE提供的API文档,打开后可以看到:
 
 ![1628741839475](assets/1628741839475.png)
 
@@ -101,7 +101,7 @@ public class ServletDemo3 extends HttpServlet {
 这个时候，我们就需要用到Request继承体系中的`RequestFacade`:
 
 * 该类实现了HttpServletRequest接口，也间接实现了ServletRequest接口。
-* Servlet类中的service方法、doGet方法或者是doPost方法最终都是由Web服务器[Tomcat]来调用的，所以Tomcat提供了方法参数接口的具体实现类，并完成了对象的创建
+* Servlet类中的service方法、doGet方法或者是doPost方法最终都是由Web服务器``[Tomcat]``来调用的，所以Tomcat提供了方法参数接口的具体实现类，并完成了对象的创建
 * 要想了解RequestFacade中都提供了哪些方法，我们可以直接查看JavaEE的API文档中关于ServletRequest和HttpServletRequest的接口文档，因为RequestFacade实现了其接口就需要重写接口中的方法
 
 对于上述结论，要想验证，可以编写一个Servlet，在方法中把request对象打印下，就能看到最终的对象是不是RequestFacade,代码如下:
@@ -126,49 +126,49 @@ public class ServletDemo2 extends HttpServlet {
 
 **小结**
 
-* Request的继承体系为ServletRequest-->HttpServletRequest-->RequestFacade
+* Request的继承体系为``ServletRequest-->HttpServletRequest-->RequestFacade``
 * Tomcat需要解析请求数据，封装为request对象,并且创建request对象传递到service方法
 * 使用request对象，可以查阅JavaEE API文档的HttpServletRequest接口中方法说明
 
-### 2.2 Request获取请求数据
+### Request获取请求数据
 
-HTTP请求数据总共分为三部分内容，分别是==请求行、请求头、请求体==，对于这三部分内容的数据，分别该如何获取，首先我们先来学习请求行数据如何获取?
+HTTP请求数据总共分为三部分内容，分别是请求行、请求头、请求体，对于这三部分内容的数据，分别该如何获取，首先我们先来学习请求行数据如何获取?
 
-#### 2.2.1 获取请求行数据
+#### 获取请求行数据
 
-请求行包含三块内容，分别是`请求方式`、`请求资源路径`、`HTTP协议及版本`
+请求行包含三块内容，分别是``请求方式``、``请求资源路径``、``HTTP协议及版本``
 
 ![1628748240075](assets/1628748240075.png)
 
 对于这三部分内容，request对象都提供了对应的API方法来获取，具体如下:
 
-* 获取请求方式: `GET`
+* 获取请求方式: ``GET``
 
-```
+```java
 String getMethod()
 ```
 
-* 获取虚拟目录(项目访问路径): `/request-demo`
+* 获取虚拟目录(项目访问路径): ``/request-demo``
 
-```
+```java
 String getContextPath()
 ```
 
-* 获取URL(统一资源定位符): `http://localhost:8080/request-demo/req1`
-
-```
+* 获取URL(统一资源定位符): ``http://localhost:8080/request-demo/req1``
+  
+```java
 StringBuffer getRequestURL()
 ```
 
-* 获取URI(统一资源标识符): `/request-demo/req1`
+* 获取URI(统一资源标识符): ``/request-demo/req1``
 
-```
+```java
 String getRequestURI()
 ```
 
-* 获取请求参数(GET方式): `username=zhangsan&password=123`
+* 获取请求参数(GET方式): ``username=zhangsan&password=123``
 
-```
+```java
 String getQueryString()
 ```
 
@@ -204,19 +204,19 @@ public class RequestDemo1 extends HttpServlet {
 }
 ```
 
-启动服务器，访问`http://localhost:8080/request-demo/req1?username=zhangsan&passwrod=123`，获取的结果如下:
+启动服务器，访问``http://localhost:8080/request-demo/req1?username=zhangsan&passwrod=123``，获取的结果如下:
 
 ![1628762794935](assets/1628762794935.png)
 
-#### 2.2.2 获取请求头数据
+#### 获取请求头数据
 
-对于请求头的数据，格式为`key: value`如下:
+对于请求头的数据，格式为``key: value``如下:
 
 ![1628768652535](assets/1628768652535.png)
 
 所以根据请求头名称获取对应值的方法为:
 
-```
+```java
 String getHeader(String name)
 ```
 
@@ -241,11 +241,11 @@ public class RequestDemo1 extends HttpServlet {
 
 ```
 
-重新启动服务器后，`http://localhost:8080/request-demo/req1?username=zhangsan&passwrod=123`，获取的结果如下:
+重新启动服务器后，``http://localhost:8080/request-demo/req1?username=zhangsan&passwrod=123``，获取的结果如下:
 
 ![1628769145524](assets/1628769145524.png)
 
-#### 2.2.3 获取请求体数据
+#### 获取请求体数据
 
 浏览器在发送GET请求的时候是没有请求体的，所以需要把请求方式变更为POST，请求体中的数据格式如下:
 
@@ -255,14 +255,14 @@ public class RequestDemo1 extends HttpServlet {
 
 * 获取字节输入流，如果前端发送的是字节数据，比如传递的是文件数据，则使用该方法
 
-```
+```java
 ServletInputStream getInputStream()
-该方法可以获取字节
+//该方法可以获取字节
 ```
 
 * 获取字符输入流，如果前端发送的是纯文本数据，则使用该方法
 
-```
+```java
 BufferedReader getReader()
 ```
 
@@ -270,15 +270,15 @@ BufferedReader getReader()
 
 >具体实现的步骤如下:
 >
->1.准备一个页面，在页面中添加form表单,用来发送post请求
+>1. 准备一个页面，在页面中添加form表单,用来发送post请求
 >
->2.在Servlet的doPost方法中获取请求体数据
+>2. 在Servlet的doPost方法中获取请求体数据
 >
->3.在doPost方法中使用request的getReader()或者getInputStream()来获取
+>3. 在doPost方法中使用request的getReader()或者getInputStream()来获取
 >
->4.访问测试
+>4. 访问测试
 
-1. 在项目的webapp目录下添加一个html页面，名称为：`req.html`
+1. 在项目的webapp目录下添加一个html页面，名称为：``req.html``
 
 ```html
 <!DOCTYPE html>
@@ -341,22 +341,21 @@ public class RequestDemo1 extends HttpServlet {
     }
 }
 ```
-
-==注意==
-
+:::tip
 BufferedReader流是通过request对象来获取的，当请求完成后request对象就会被销毁，request对象被销毁后，BufferedReader流就会自动关闭，所以此处就不需要手动关闭流了。
+:::
 
-4. 启动服务器，通过浏览器访问`http://localhost:8080/request-demo/req.html`
+4. 启动服务器，通过浏览器访问``http://localhost:8080/request-demo/req.html``
 
 ![1628770516387](assets/1628770516387.png)
 
-点击`提交`按钮后，就可以在控制台看到前端所发送的请求数据
+点击``提交``按钮后，就可以在控制台看到前端所发送的请求数据
 
 ![1628770585480](assets/1628770585480.png)
 
 **小结**
 
-HTTP请求数据中包含了`请求行`、`请求头`和`请求体`，针对这三部分内容，Request对象都提供了对应的API方法来获取对应的值:
+HTTP请求数据中包含了``请求行``、``请求头``和``请求体``，针对这三部分内容，Request对象都提供了对应的API方法来获取对应的值:
 
 * 请求行
   * getMethod()获取请求方式
@@ -367,11 +366,11 @@ HTTP请求数据中包含了`请求行`、`请求头`和`请求体`，针对这�
 * 请求头
   * getHeader(String name)根据请求头名称获取其对应的值
 * 请求体
-  * 注意: ==浏览器发送的POST请求才有请求体==
+  * 注意: **浏览器发送的POST请求才有请求体**
   * 如果是纯文本数据:getReader()
   * 如果是字节数据如文件数据:getInputStream()
 
-#### 2.2.4 获取请求参数的通用方式
+#### 获取请求参数的通用方式
 
 在学习下面内容之前，我们先提出两个问题:
 
@@ -410,13 +409,13 @@ HTTP请求数据中包含了`请求行`、`请求头`和`请求体`，针对这�
 
 * GET方式:
 
-```
+```java
 String getQueryString()
 ```
 
 * POST方式:
 
-```
+```java
 BufferedReader getReader();
 ```
 
@@ -457,11 +456,11 @@ public class RequestDemo1 extends HttpServlet {
 
 当然，也可以在doGet中调用doPost,在doPost中完成参数的获取和打印,另外需要注意的是，doGet和doPost方法都必须存在，不能删除任意一个。
 
-==GET请求和POST请求获取请求参数的方式不一样，在获取请求参数这块该如何实现呢?==
+GET请求和POST请求获取请求参数的方式不一样，在获取请求参数这块该如何实现呢?
 
-要想实现，我们就需要==思考==:
+要想实现，我们就需要思考:
 
-GET请求方式和POST请求方式区别主要在于获取请求参数的方式不一样，是否可以提供一种==统一==获取请求参数的方式，从而==统一==doGet和doPost方法内的代码?
+GET请求方式和POST请求方式区别主要在于获取请求参数的方式不一样，是否可以提供一种统一获取请求参数的方式，从而统一doGet和doPost方法内的代码?
 
 解决方案一:
 
@@ -515,19 +514,19 @@ request对象已经将上述获取请求参数的方法进行了封装，并且r
 
 * 获取所有参数Map集合
 
-```
+```java
 Map<String,String[]> getParameterMap()
 ```
 
 * 根据名称获取参数值（数组）
 
-```
+```java
 String[] getParameterValues(String name)
 ```
 
 * 根据名称获取参数值(单个值)
 
-```
+```java
 String getParameter(String name)
 ```
 
@@ -680,7 +679,7 @@ public class RequestDemo1 extends HttpServlet {
 }
 ```
 
-### 2.3 IDEA快速创建Servlet
+### IDEA快速创建Servlet
 
 使用通用方式获取请求参数后，屏蔽了GET和POST的请求方式代码的不同，则代码可以定义如下格式:
 
@@ -696,13 +695,13 @@ public class RequestDemo1 extends HttpServlet {
 
 ![1628782117420](assets/1628782117420.png)
 
-### 2.4 请求参数中文乱码问题
+### 请求参数中文乱码问题
 
 问题展示:
 
 (1)将req.html页面的请求方式修改为get
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -762,7 +761,7 @@ public class RequestDemo4 extends HttpServlet {
 
 通过上面的案例，会发现，不管是GET还是POST请求，在发送的请求参数中如果有中文，在后台接收的时候，都会出现中文乱码的问题。具体该如何解决呢？
 
-#### 2.4.1 POST请求解决方案
+#### POST请求解决方案
 
 * 分析出现中文乱码的原因：
   * POST的请求参数是通过request的getReader()来获取流中的数据
@@ -802,14 +801,14 @@ public class RequestDemo4 extends HttpServlet {
 
 至此POST请求中文乱码的问题就已经解决，但是这种方案不适用于GET请求，这个原因是什么呢，咱们下面再分析。
 
-#### 2.4.2 GET请求解决方案
+#### GET请求解决方案
 
-刚才提到一个问题是`POST请求的中文乱码解决方案为什么不适用GET请求？`
+刚才提到一个问题是``POST请求的中文乱码解决方案为什么不适用GET请求？``
 
-* GET请求获取请求参数的方式是`request.getQueryString()`
-* POST请求获取请求参数的方式是`request.getReader()`
-* request.setCharacterEncoding("utf-8")是设置request处理流的编码
-* getQueryString方法并没有通过流的方式获取数据
+* GET请求获取请求参数的方式是``request.getQueryString()``
+* POST请求获取请求参数的方式是``request.getReader()``
+* ``request.setCharacterEncoding("utf-8")``是设置request处理流的编码
+* ``getQueryString``方法并没有通过流的方式获取数据
 
 所以GET请求不能用设置编码的方式来解决中文乱码问题，那问题又来了，如何解决GET请求的中文乱码呢? 
 
@@ -817,21 +816,21 @@ public class RequestDemo4 extends HttpServlet {
 
  ![1628829610823](assets/1628829610823.png)
 
-(1)浏览器通过HTTP协议发送请求和数据给后台服务器（Tomcat)
+(1)浏览器通过HTTP协议发送请求和数据给后台服务器``(Tomcat)``
 
-(2)浏览器在发送HTTP的过程中会对中文数据进行URL==编码==
+(2)浏览器在发送HTTP的过程中会对中文数据进行URL编码
 
-(3)在进行URL编码的时候会采用页面`<meta>`标签指定的UTF-8的方式进行编码，`张三`编码后的结果为`%E5%BC%A0%E4%B8%89`
+(3)在进行URL编码的时候会采用页面``<meta>``标签指定的UTF-8的方式进行编码，``张三``编码后的结果为``%E5%BC%A0%E4%B8%89``
 
-(4)后台服务器(Tomcat)接收到`%E5%BC%A0%E4%B8%89`后会默认按照`ISO-8859-1`进行URL==解码==
+(4)后台服务器``(Tomcat)``接收到``%E5%BC%A0%E4%B8%89``后会默认按照``ISO-8859-1``进行URL解码
 
 (5)由于前后编码与解码采用的格式不一样，就会导致后台获取到的数据为乱码。
 
-思考: 如果把`req.html`页面的`<meta>`标签的charset属性改成`ISO-8859-1`,后台不做操作，能解决中文乱码问题么?
+思考: 如果把``req.html``页面的``<meta>``标签的charset属性改成``ISO-8859-1``,后台不做操作，能解决中文乱码问题么?
 
-答案是否定的，因为`ISO-8859-1`本身是不支持中文展示的，所以改了<meta>标签的charset属性后，会导致页面上的中文内容都无法正常展示。
+答案是否定的，因为``ISO-8859-1``本身是不支持中文展示的，所以改了``<meta>``标签的charset属性后，会导致页面上的中文内容都无法正常展示。
 
-分析完上面的问题后，我们会发现，其中有两个我们不熟悉的内容就是==URL编码==和==URL解码==，什么是URL编码，什么又是URL解码呢?
+分析完上面的问题后，我们会发现，其中有两个我们不熟悉的内容就是URL编码和URL解码，什么是URL编码，什么又是URL解码呢?
 
 **URL编码**
 
@@ -841,15 +840,15 @@ public class RequestDemo4 extends HttpServlet {
 
 (2)每个字节转为2个16进制数并在前边加上%
 
-`张三`按照UTF-8的方式转换成二进制的结果为:
+``张三``按照UTF-8的方式转换成二进制的结果为:
 
-```
+```bash
 1110 0101 1011 1100 1010 0000 1110 0100 1011 1000 1000 1001
 ```
 
 这个结果是如何计算的?
 
-使用`http://www.mytju.com/classcode/tools/encode_utf8.asp`，输入`张三`
+使用``http://www.mytju.com/classcode/tools/encode_utf8.asp``，输入`张三`
 
 ![1628833310473](assets/1628833310473.png)
 
@@ -857,7 +856,7 @@ public class RequestDemo4 extends HttpServlet {
 
 ![1628833496171](assets/1628833496171.png)
 
-在计算的十六进制结果中，每两位前面加一个%,就可以获取到`%E5%BC%A0%E4%B8%89`。
+在计算的十六进制结果中，每两位前面加一个%,就可以获取到``%E5%BC%A0%E4%B8%89``。
 
 当然你从上面所提供的网站中就已经能看到编码16进制的结果了:
 
@@ -877,9 +876,9 @@ java.net.URLEncoder.encode("需要被编码的内容","字符集(UTF-8)")
 java.net.URLDecoder.decode("需要被解码的内容","字符集(UTF-8)")
 ```
 
-接下来咱们对`张三`来进行编码和解码
+接下来咱们对``张三``来进行编码和解码
 
-```
+```java
 public class URLDemo {
 
   public static void main(String[] args) throws UnsupportedEncodingException {
@@ -899,9 +898,9 @@ public class URLDemo {
 
 到这，我们就可以分析出GET请求中文参数出现乱码的原因了，
 
-* 浏览器把中文参数按照`UTF-8`进行URL编码
-* Tomcat对获取到的内容进行了`ISO-8859-1`的URL解码
-* 在控制台就会出现类上`å¼ ä¸`的乱码，最后一位是个空格
+* 浏览器把中文参数按照``UTF-8``进行URL编码
+* Tomcat对获取到的内容进行了``ISO-8859-1``的URL解码
+* 在控制台就会出现类上``å¼ ä¸``的乱码，最后一位是个空格
 
 2. 清楚了出现乱码的原因，接下来我们就需要想办法进行解决
 
@@ -909,25 +908,25 @@ public class URLDemo {
 
 从上图可以看住，
 
-* 在进行编码和解码的时候，不管使用的是哪个字符集，他们对应的`%E5%BC%A0%E4%B8%89`是一致的
+* 在进行编码和解码的时候，不管使用的是哪个字符集，他们对应的``%E5%BC%A0%E4%B8%89``是一致的
 
 * 那他们对应的二进制值也是一样的，为:
 
-  * ```
+  * ```bash
     1110 0101 1011 1100 1010 0000 1110 0100 1011 1000 1000 1001
     ```
 
-* 为所以我们可以考虑把`å¼ ä¸`转换成字节，在把字节转换成`张三`，在转换的过程中是它们的编码一致，就可以解决中文乱码问题。
+* 为所以我们可以考虑把``å¼ ä¸``转换成字节，在把字节转换成``张三``，在转换的过程中是它们的编码一致，就可以解决中文乱码问题。
 
 具体的实现步骤为:
 
->1.按照ISO-8859-1编码获取乱码`å¼ ä¸`对应的字节数组
+>1.按照ISO-8859-1编码获取乱码``å¼ ä¸``对应的字节数组
 >
 >2.按照UTF-8编码获取字节数组对应的字符串
 
 实现代码如下:
 
-```
+```java
 public class URLDemo {
 
   public static void main(String[] args) throws UnsupportedEncodingException {
@@ -953,7 +952,7 @@ public class URLDemo {
 }
 ```
 
-**说明**:在第18行中打印的数据是`-27 -68 -96 -28 -72 -119`和`张三`转换成的二进制数据`1110 0101 1011 1100 1010 0000 1110 0100 1011 1000 1000 1001`为什么不一样呢？
+**说明**:在第18行中打印的数据是``-27 -68 -96 -28 -72 -119``和``张三``转换成的二进制数据``1110 0101 1011 1100 1010 0000 1110 0100 1011 1000 1000 1001``为什么不一样呢？
 
 其实打印出来的是十进制数据，我们只需要使用计算机换算下就能得到他们的对应关系，如下图:
 
@@ -998,10 +997,10 @@ public class RequestDemo4 extends HttpServlet {
 
 **注意**
 
-* 把`request.setCharacterEncoding("UTF-8")`代码注释掉后，会发现GET请求参数乱码解决方案同时也可也把POST请求参数乱码的问题也解决了
+* 把``request.setCharacterEncoding("UTF-8")``代码注释掉后，会发现GET请求参数乱码解决方案同时也可也把POST请求参数乱码的问题也解决了
 * 只不过对于POST请求参数一般都会比较多，采用这种方式解决乱码起来比较麻烦，所以对于POST请求还是建议使用设置编码的方式进行。
 
-另外需要说明一点的是==Tomcat8.0之后，已将GET请求乱码问题解决，设置默认的解码方式为UTF-8==
+另外需要说明一点的是Tomcat8.0之后，已将GET请求乱码问题解决，设置默认的解码方式为UTF-8
 
 **小结**
 
@@ -1013,14 +1012,14 @@ public class RequestDemo4 extends HttpServlet {
 
 * POST请求解决方案是:设置输入流的编码
 
-  ```
+  ```java
   request.setCharacterEncoding("UTF-8");
   注意:设置的字符集要和页面保持一致
   ```
 
 * 通用方式（GET/POST）：需要先解码，再编码
 
-  ```
+  ```java
   new String(username.getBytes("ISO-8859-1"),"UTF-8");
   ```
 
@@ -1028,19 +1027,19 @@ public class RequestDemo4 extends HttpServlet {
 
 * 编码:
 
-  ```
+  ```java
   URLEncoder.encode(str,"UTF-8");
   ```
 
 * 解码:
 
-  ```
+  ```java
   URLDecoder.decode(s,"ISO-8859-1");
   ```
 
-### 2.5 Request请求转发
+### Request请求转发
 
-1. ==请求转发(forward):一种在服务器内部的资源跳转方式。==
+1. 请求转发(forward):一种在服务器内部的资源跳转方式。
 
 ![1628851404283](assets/1628851404283.png)
 
@@ -1050,11 +1049,11 @@ public class RequestDemo4 extends HttpServlet {
 
 (3)资源B处理完后将结果响应给浏览器
 
-(4)请求从资源A到资源B的过程就叫==请求转发==
+(4)请求从资源A到资源B的过程就叫请求转发
 
 2. 请求转发的实现方式:
 
-```
+```java
 req.getRequestDispatcher("资源B路径").forward(req,resp);
 ```
 
@@ -1064,9 +1063,9 @@ req.getRequestDispatcher("资源B路径").forward(req,resp);
 
 针对上述需求，具体的实现步骤为:
 
->1.创建一个RequestDemo5类，接收/req5的请求，在doGet方法中打印`demo5`
+>1.创建一个RequestDemo5类，接收/req5的请求，在doGet方法中打印``demo5``
 >
->2.创建一个RequestDemo6类，接收/req6的请求，在doGet方法中打印`demo6`
+>2.创建一个RequestDemo6类，接收/req6的请求，在doGet方法中打印``demo6``
 >
 >3.在RequestDemo5的方法中使用
 >
@@ -1142,29 +1141,29 @@ public class RequestDemo5 extends HttpServlet {
 
 ![1628855192876](assets/1628855192876.png)
 
-说明请求已经转发到了`/req6`
+说明请求已经转发到了``/req6``
 
 3. 请求转发资源间共享数据:使用Request对象
 
-此处主要解决的问题是把请求从`/req5`转发到`/req6`的时候，如何传递数据给`/req6`。
+此处主要解决的问题是把请求从``/req5``转发到``/req6``的时候，如何传递数据给``/req6``。
 
 需要使用request对象提供的三个方法:
 
-* 存储数据到request域[范围,数据是存储在request对象]中
+* 存储数据到request域``[范围,数据是存储在request对象]``中
 
-```
+```java
 void setAttribute(String name,Object o);
 ```
 
 * 根据key获取值
 
-```
+```java
 Object getAttribute(String name);
 ```
 
 * 根据key删除该键值对
 
-```
+```java
 void removeAttribute(String name);
 ```
 
@@ -1236,7 +1235,7 @@ public class RequestDemo6 extends HttpServlet {
 
 * 浏览器地址栏路径不发生变化
 
-  虽然后台从`/req5`转发到`/req6`,但是浏览器的地址一直是`/req5`,未发生变化
+  虽然后台从``/req5``转发到``/req6``,但是浏览器的地址一直是``/req5``,未发生变化
 
   ![1628857365153](assets/1628857365153.png)
 
@@ -1246,16 +1245,16 @@ public class RequestDemo6 extends HttpServlet {
 
 * 一次请求，可以在转发资源间使用request共享数据
 
-  虽然后台从`/req5`转发到`/req6`，但是这个==只有一次请求==
+  虽然后台从``/req5``转发到``/req6``，但是这个只有一次请求
 
-## 3，Response对象
+## Response对象
 
 前面讲解完Request对象，接下来我们回到刚开始的那张图:
 
 ![1628857632899](assets/1628857632899.png)
 
-* Request:使用request对象来==获取==请求数据
-* Response:使用response对象来==设置==响应数据
+* Request:使用request对象来获取请求数据
+* Response:使用response对象来设置响应数据
 
 Reponse的继承体系和Request的继承体系也非常相似:
 
@@ -1268,9 +1267,9 @@ Reponse的继承体系和Request的继承体系也非常相似:
 * Response响应字符数据
 * Response响应字节数据
 
-### 3.1 Response设置响应数据功能介绍
+### Response设置响应数据功能介绍
 
-HTTP响应数据总共分为三部分内容，分别是==响应行、响应头、响应体==，对于这三部分内容的数据，respone对象都提供了哪些方法来进行设置?
+HTTP响应数据总共分为三部分内容，分别是响应行、响应头、响应体，对于这三部分内容的数据，respone对象都提供了哪些方法来进行设置?
 
 1. 响应行
 
@@ -1278,7 +1277,7 @@ HTTP响应数据总共分为三部分内容，分别是==响应行、响应头�
 
 对于响应头，比较常用的就是设置响应状态码:
 
-```
+```java
 void setStatus(int sc);
 ```
 
@@ -1288,7 +1287,7 @@ void setStatus(int sc);
 
 设置响应头键值对：
 
-```
+```java
 void setHeader(String name,String value);
 ```
 
@@ -1300,35 +1299,35 @@ void setHeader(String name,String value);
 
 获取字符输出流:
 
-```
+```java
 PrintWriter getWriter();
 ```
 
 获取字节输出流
 
-```
+```java
 ServletOutputStream getOutputStream();
 ```
 
 介绍完这些方法后，后面我们会通过案例把这些方法都用一用，首先先来完成下重定向的功能开发。
 
-### 3.2 Respones请求重定向
+### Respones请求重定向
 
-1. ==Response重定向(redirect):一种资源跳转方式。==
+1. Response重定向(redirect):一种资源跳转方式。
 
 ![1628859860279](assets/1628859860279.png)
 
 (1)浏览器发送请求给服务器，服务器中对应的资源A接收到请求
 
-(2)资源A现在无法处理该请求，就会给浏览器响应一个302的状态码+location的一个访问资源B的路径
+(2)资源A现在无法处理该请求，就会给浏览器响应一个302的状态码``+location``的一个访问资源B的路径
 
 (3)浏览器接收到响应状态码为302就会重新发送请求到location对应的访问地址去访问资源B
 
-(4)资源B接收到请求后进行处理并最终给浏览器响应结果，这整个过程就叫==重定向==
+(4)资源B接收到请求后进行处理并最终给浏览器响应结果，这整个过程就叫重定向
 
 2. 重定向的实现方式:
 
-```
+```java
 resp.setStatus(302);
 resp.setHeader("location","资源B的访问路径");
 ```
@@ -1339,15 +1338,15 @@ resp.setHeader("location","资源B的访问路径");
 
 针对上述需求，具体的实现步骤为:
 
-> 1.创建一个ResponseDemo1类，接收/resp1的请求，在doGet方法中打印`resp1....`
+> 1.创建一个``ResponseDemo1``类，接收``/resp1``的请求，在doGet方法中打印`resp1....`
 >
-> 2.创建一个ResponseDemo2类，接收/resp2的请求，在doGet方法中打印`resp2....`
+> 2.创建一个``ResponseDemo2``类，接收``/resp2``的请求，在``doGet``方法中打印``resp2....``
 >
 > 3.在ResponseDemo1的方法中使用
 >
-> ​	response.setStatus(302);
+> ​	``response.setStatus(302);``
 >
-> ​	response.setHeader("Location","/request-demo/resp2") 来给前端响应结果数据
+> ​	``response.setHeader("Location","/request-demo/resp2")`` 来给前端响应结果数据
 >
 > 4.启动测试
 
@@ -1409,15 +1408,15 @@ public class ResponseDemo1 extends HttpServlet {
 
 (4)启动测试
 
-访问`http://localhost:8080/request-demo/resp1`,就可以在控制台看到如下内容:
+访问``http://localhost:8080/request-demo/resp1``,就可以在控制台看到如下内容:
 
 ![1628861404699](assets/1628861404699.png)
 
-说明`/resp1`和`/resp2`都被访问到了。到这重定向就已经完成了。
+说明``/resp1``和``/resp2``都被访问到了。到这重定向就已经完成了。
 
 虽然功能已经实现，但是从设置重定向的两行代码来看，会发现除了重定向的地址不一样，其他的内容都是一模一样，所以request对象给我们提供了简化的编写方式为:
 
-```
+```java
 resposne.sendRedirect("/request-demo/resp2")
 ```
 
@@ -1456,15 +1455,15 @@ public class ResponseDemo1 extends HttpServlet {
 
   因为浏览器发送了两次请求，是两个不同的request对象，就无法通过request对象进行共享数据
 
-介绍完==请求重定向==和==请求转发==以后，接下来需要把这两个放在一块对比下:
+介绍完``请求重定向``和``请求转发``以后，接下来需要把这两个放在一块对比下:
 
 ![1628862170296](assets/1628862170296.png)
 
 以后到底用哪个，还是需要根据具体的业务来决定。
 
-### 3.3 路径问题
+### 路径问题
 
-1. 问题1：转发的时候路径上没有加`/request-demo`而重定向加了，那么到底什么时候需要加，什么时候不需要加呢?
+1. 问题1：转发的时候路径上没有加``/request-demo``而重定向加了，那么到底什么时候需要加，什么时候不需要加呢?
 
 ![1628862652700](assets/1628862652700.png)
 
@@ -1479,10 +1478,10 @@ public class ResponseDemo1 extends HttpServlet {
 
 掌握了这个规则，接下来就通过一些练习来强化下知识的学习:
 
-* `<a href='路劲'>`
-* `<form action='路径'>`
-* req.getRequestDispatcher("路径")
-* resp.sendRedirect("路径")
+* ``<a href='路劲'>``
+* ``<form action='路径'>``
+* `req.getRequestDispatcher("路径")`
+* `resp.sendRedirect("路径")`
 
 答案:
 
@@ -1493,7 +1492,7 @@ public class ResponseDemo1 extends HttpServlet {
 4.重定向，是由浏览器进行跳转，需要加。
 ```
 
-2. 问题2：在重定向的代码中，`/request-demo`是固定编码的，如果后期通过Tomcat插件配置了项目的访问路径，那么所有需要重定向的地方都需要重新修改，该如何优化?
+2. 问题2：在重定向的代码中，``/request-demo``是固定编码的，如果后期通过Tomcat插件配置了项目的访问路径，那么所有需要重定向的地方都需要重新修改，该如何优化?
 
 ![1628863270545](assets/1628863270545.png)
 
@@ -1521,17 +1520,17 @@ public class ResponseDemo1 extends HttpServlet {
 
 重新启动访问测试，功能依然能够实现，此时就可以动态获取项目访问的虚拟路径，从而降低代码的耦合度。
 
-### 3.4 Response响应字符数据
+### Response响应字符数据
 
 要想将字符数据写回到浏览器，我们需要两个步骤:
 
-* 通过Response对象获取字符输出流： PrintWriter writer = resp.getWriter();
+* 通过Response对象获取字符输出流： ``PrintWriter writer = resp.getWriter();``
 
-* 通过字符输出流写数据: writer.write("aaa");
+* 通过字符输出流写数据: ``writer.write("aaa");``
 
 接下来，我们实现通过些案例把响应字符数据给实际应用下:
 
-1. 返回一个简单的字符串`aaa`
+1. 返回一个简单的字符串``aaa``
 
 ```java
 /**
@@ -1557,7 +1556,7 @@ public class ResponseDemo3 extends HttpServlet {
 
 2. 返回一串html字符串，并且能被浏览器解析
 
-```
+```java
 PrintWriter writer = response.getWriter();
 //content-type，告诉浏览器返回的数据类型是HTML类型数据，这样浏览器才会解析HTML标签
 response.setHeader("content-type","text/html");
@@ -1566,11 +1565,11 @@ writer.write("<h1>aaa</h1>");
 
 ![1628864140820](assets/1628864140820.png)
 
-==注意:==一次请求响应结束后，response对象就会被销毁掉，所以不要手动关闭流。
+注意:一次请求响应结束后，response对象就会被销毁掉，所以不要手动关闭流。
 
-3. 返回一个中文的字符串`你好`，需要注意设置响应数据的编码为`utf-8`
+3. 返回一个中文的字符串``你好``，需要注意设置响应数据的编码为``utf-8``
 
-```
+```java
 //设置响应的数据格式及数据的编码
 response.setContentType("text/html;charset=utf-8");
 writer.write("你好");
@@ -1578,13 +1577,13 @@ writer.write("你好");
 
 ![1628864390263](assets/1628864390263.png)
 
-### 3.3 Response响应字节数据
+### Response响应字节数据
 
 要想将字节数据写回到浏览器，我们需要两个步骤:
 
-- 通过Response对象获取字节输出流：ServletOutputStream outputStream = resp.getOutputStream();
+- 通过Response对象获取字节输出流：``ServletOutputStream outputStream = resp.getOutputStream()``;
 
-- 通过字节输出流写数据: outputStream.write(字节数据);
+- 通过字节输出流写数据: ``outputStream.write(字节数据);``
 
 接下来，我们实现通过些案例把响应字符数据给实际应用下:
 
@@ -1634,7 +1633,7 @@ public class ResponseDemo4 extends HttpServlet {
 
 (2)调用工具类方法
 
-```
+```java
 //fis:输入流
 //os:输出流
 IOUtils.copy(fis,os);
@@ -1666,39 +1665,39 @@ public class ResponseDemo4 extends HttpServlet {
 }
 ```
 
-## 4，用户注册登录案例
+## 用户注册登录案例
 
-接下来我们通过两个比较常见的案例，一个是==注册==，一个是==登录==来对今天学习的内容进行一个实战演练，首先来实现用户登录。
+接下来我们通过两个比较常见的案例，一个是注册，一个是登录来对今天学习的内容进行一个实战演练，首先来实现用户登录。
 
-### 4.1 用户登录
+### 用户登录
 
-#### 4.1.1 需求分析
+#### 需求分析
 
 ![1628865728305](assets/1628865728305.png)
 
 1. 用户在登录页面输入用户名和密码，提交请求给LoginServlet
-2. 在LoginServlet中接收请求和数据[用户名和密码]
+2. 在LoginServlet中接收请求和数据``[用户名和密码]``
 3. 在LoginServlt中通过Mybatis实现调用UserMapper来根据用户名和密码查询数据库表
 4. 将查询的结果封装到User对象中进行返回
 5. 在LoginServlet中判断返回的User对象是否为null
 6. 如果为nul，说明根据用户名和密码没有查询到用户，则登录失败，返回"登录失败"数据给前端
 7. 如果不为null,则说明用户存在并且密码正确，则登录成功，返回"登录成功"数据给前端
 
-#### 4.1.2 环境准备
+#### 环境准备
 
 1. 复制资料中的静态页面到项目的webapp目录下
 
-参考`资料\1. 登陆注册案例\1. 静态页面`,拷贝完效果如下:
+参考``资料\1. 登陆注册案例\1. 静态页面``,拷贝完效果如下:
 
 ![1628866248169](assets/1628866248169.png)
 
 2. 创建db1数据库，创建tb_user表，创建User实体类
 
-2.1 将`资料\1. 登陆注册案例\2. MyBatis环境\tb_user.sql`中的sql语句执行下:
+2.1 将``资料\1. 登陆注册案例\2. MyBatis环境\tb_user.sql``中的sql语句执行下:
 
 ![1628866403891](assets/1628866403891.png)
 
- 2.2 将`资料\1. 登陆注册案例\2. MyBatis环境\User.java`拷贝到com.itheima.pojo
+ 2.2 将``资料\1. 登陆注册案例\2. MyBatis环境\User.java``拷贝到com.itheima.pojo
 
 ![1628866560738](assets/1628866560738.png)
 
@@ -1720,7 +1719,7 @@ public class ResponseDemo4 extends HttpServlet {
 
 4. 创建mybatis-config.xml核心配置文件，UserMapper.xml映射文件,UserMapper接口
 
-4.1  将`资料\1. 登陆注册案例\2. MyBatis环境\mybatis-config.xml`拷贝到resources目录下
+4.1  将``资料\1. 登陆注册案例\2. MyBatis环境\mybatis-config.xml``拷贝到resources目录下
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -1764,15 +1763,15 @@ public interface UserMapper {
 }
 ```
 
-4.3 将`资料\1. 登陆注册案例\2. MyBatis环境\UserMapper.xml`拷贝到resources目录下
+4.3 将``资料\1. 登陆注册案例\2. MyBatis环境\UserMapper.xml``拷贝到resources目录下
 
-==注意：在resources下创建UserMapper.xml的目录时，要使用/分割==
+注意：在resources下创建UserMapper.xml的目录时，要使用/分割
 
 ![1628867237329](assets/1628867237329.png)
 
 至此我们所需要的环境就都已经准备好了，具体该如何实现?
 
-#### 4.1.3 代码实现
+#### 代码实现
 
 1. 在UserMapper接口中提供一个根据用户名和密码查询用户对象的方法
 
@@ -1881,21 +1880,21 @@ public class LoginServlet extends HttpServlet {
 
 至此用户的登录功能就已经完成了~
 
-### 4.2 用户注册
+### 用户注册
 
-#### 4.2.1 需求分析
+#### 需求分析
 
 ![1628867904783](assets/1628867904783.png)
 
 1. 用户在注册页面输入用户名和密码，提交请求给RegisterServlet
-2. 在RegisterServlet中接收请求和数据[用户名和密码]
+2. 在RegisterServlet中接收请求和数据``[用户名和密码]``
 3. 在RegisterServlet中通过Mybatis实现调用UserMapper来根据用户名查询数据库表
 4. 将查询的结果封装到User对象中进行返回
 5. 在RegisterServlet中判断返回的User对象是否为null
 6. 如果为nul，说明根据用户名可用，则调用UserMapper来实现添加用户
 7. 如果不为null,则说明用户不可以，返回"用户名已存在"数据给前端
 
-#### 4.2.2 代码编写
+#### 代码编写
 
 1. 编写UserMapper提供根据用户名查询用户数据方法和添加用户方法
 
@@ -1963,7 +1962,6 @@ void add(User user);
         </div>
         <br class="clear">
     </form>
-
 </div>
 </body>
 </html>
@@ -2026,9 +2024,9 @@ public class RegisterServlet extends HttpServlet {
 
 4.1 如果测试成功，则在数据库中就能查看到新注册的数据
 
-4.2 如果用户已经存在，则在页面上展示 `用户名已存在` 的提示信息
+4.2 如果用户已经存在，则在页面上展示 ``用户名已存在`` 的提示信息
 
-### 4.3 SqlSessionFactory工具类抽取
+### SqlSessionFactory工具类抽取
 
 上面两个功能已经实现，但是在写Servlet的时候，因为需要使用Mybatis来完成数据库的操作，所以对于Mybatis的基础操作就出现了些重复代码，如下
 

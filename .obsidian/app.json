@@ -12,7 +12,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/README",
+  "attachmentFolderPath": "./assets/Request&Response",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "livePreview": true,

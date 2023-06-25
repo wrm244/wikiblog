@@ -33,7 +33,9 @@
 "hompage.hero.text.resume":{
   "message": "Resume"
 },
-  
+"hompage.hero.text.slides":{
+  "message": "Slides"
+},
   "theme.blog.archive.posts.total": {
     "message": "Total {total} posts"
   },
