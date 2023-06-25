@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "53654e00cd0d3949",
+        "id": "713683dc0f513a53",
         "type": "tabs",
         "children": [
           {
-            "id": "bf53be84c0b6c36e",
+            "id": "af861ae0087b298f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/stack/java/JavaWeb/JavaScript入门.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -77,8 +73,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5,
-    "collapsed": true
+    "width": 310.5
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -94,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/stack/java/JavaWeb/JavaScript入门.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/stack/java/JavaWeb/JavaScript入门.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "docs/stack/java/JavaWeb/JavaScript入门.md"
-              }
+              "state": {}
             }
           },
           {
@@ -163,14 +154,17 @@
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-translator:Translate": false,
-      "obsidian-advanced-slides:Show Slide Preview": false
+      "obsidian-translator:Translate": false
     }
   },
-  "active": "bf53be84c0b6c36e",
+  "active": "af861ae0087b298f",
   "lastOpenFiles": [
-    "docs/stack/java/JavaWeb/数据库连接/JDBC.md",
+    "README.md",
+    "static/avatar.png",
+    "assets/image-20210726203656847.png.md",
+    "assets/162714811435.png.md",
     "docs/stack/java/JavaWeb/JavaScript入门.md",
+    "docs/stack/java/JavaWeb/数据库连接/JDBC.md",
     "docs/stack/java/JavaWeb/assets/image-20210816225925955.png",
     "docs/stack/java/JavaWeb/assets/查看文档.png",
     "docs/stack/java/JavaWeb/assets/image-20210816235112754.png",
@@ -180,7 +174,6 @@
     "docs/stack/java/JavaWeb/assets/image-20210816215102677.png",
     "docs/stack/java/JavaWeb/assets/image-20210816214900928.png",
     "docs/stack/java/JavaWeb/assets/image-20210816194333252.png",
-    "docs/stack/java/JavaWeb/assets/image-20210816194143246.png",
     "docs/stack/java/JavaWeb/assets",
     "docs/stack/java/JavaWeb/JavaSpring.md",
     "docs/course/Linux C/以自动机视角设计C程序.md",
@@ -211,8 +204,6 @@
     "docs/course/Linux C/C语言进阶(基本概念).md",
     "docs/course/Data Structures And Algorithms/数据结构(Java)/1Array.md",
     "docs/course/Data Structures And Algorithms/数据结构(Java)/2Link.md",
-    "docs/course/大数据/4 分布式计算SQL体系.md",
-    "docs/stack/java/JavaWeb/数据库连接/Mybatis.md",
-    "assets/image-20210726203656847.png.md"
+    "docs/course/大数据/4 分布式计算SQL体系.md"
   ]
 }

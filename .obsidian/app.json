@@ -12,7 +12,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/JavaScript入门",
+  "attachmentFolderPath": "./assets/README",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "livePreview": true,
