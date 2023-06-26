@@ -356,6 +356,8 @@ echo "集群全部已经启动成功！"
 ### 一键关闭脚本
 
 > 请根据需求修改：``software``,``hadoop``,``spark``的可执行路径
+
+
 ```bash
 #!/bin/bash
 

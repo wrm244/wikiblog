@@ -1235,7 +1235,7 @@ public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatc
 
 CharacterEncodingFilter是在spring-web包中，所以用之前需要导入对应的jar包。
 
-### 4.3 五种类型参数传递
+### 五种类型参数传递
 
 前面我们已经能够使用GET或POST来发送请求和数据，所携带的数据都是比较简单的数据，接下来在这个基础上，我们来研究一些比较复杂的参数传递，常见的参数种类有:
 
@@ -1247,7 +1247,7 @@ CharacterEncodingFilter是在spring-web包中，所以用之前需要导入对�
 
 这些参数如何发送，后台改如何接收?我们一个个来学习。
 
-#### 4.3.1 普通参数
+#### 普通参数
 
 * 普通参数:url地址传参，地址参数名与形参变量名相同，定义形参即可接收参数。
 
