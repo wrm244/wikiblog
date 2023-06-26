@@ -252,7 +252,7 @@ drwxr-xr-x   - hadoop supergroup          0 2023-06-13 14:23 /user/hadoop/.Trash
 
 网站端口：``localhost:9870``
 
-![网页查看文件](assets/1%20Hadoop介绍与安装/image-20230613150109.png)
+![网页查看文件](assets%201/1%20Hadoop介绍与安装/image-20230613150109.png)
 > 这里问什么会出现  ``Permission denied: user=dr.who`` 因为我们在浏览网页的时候相当于是匿名用户，没有权限。
 
 也可在配置文件修改权限(core-site.xml)，需要重启集群：
@@ -307,3 +307,90 @@ drwxr-xr-x   - hadoop supergroup          0 2023-06-13 14:23 /user/hadoop/.Trash
 4. 启动portmap：``hdfs --daemon start portmap`` (**要在root下执行**)
 5. 启动nfs：``hdfs --daemon start nfs3``（**在hadoop下执行**）
 > windows挂载nfs: net use X: \\192.168.3.133\!
+
+## 启动与停止脚本
+### 一键启动脚本
+
+>请根据需求修改：``software``,``hadoop``,``spark``的可执行路径
+
+```bash
+#!/bin/bash
+software="/export/server"
+hadoop="$software/hadoop"
+spark="$software/spark"
+log_file="$software/logs/startlogs/$(date +%Y-%m-%d_%H-%M-%S).log"
+
+if jps | grep -q "NameNode"; then
+    echo "Hadoop已经在运行"
+else
+    echo "正在启动你的集群,默认软件路径为$software --"
+    sleep 1s
+    echo "正在启动hadoop------------------------"
+    start-dfs.sh 2>&1 | tee -a $log_file
+fi
+
+if jps | grep -q "ResourceManager"; then
+    echo "Yarn已经在运行"
+else
+    echo "正在启动yarn--------------------------"
+    start-yarn.sh 2>&1 | tee -a $log_file
+fi
+
+if jps | grep -q "JobHistoryServer"; then
+    echo "历史服务器已经在运行"
+else
+    echo "启动hadoop与yarn成功,正在启动历史服务器---"
+    mapred --daemon start historyserver 2>&1 | tee -a $log_file
+fi
+
+if jps | grep -q "Master"; then
+    echo "Spark已经在运行"
+else
+    echo "正在启动spark-------------------------"
+    sleep 1s
+    $spark/sbin/start-history-server.sh 2>&1 | tee -a $log_file
+    $spark/sbin/start-all.sh 2>&1 | tee -a $log_file
+fi
+echo "集群全部已经启动成功！"
+```
+### 一键关闭脚本
+
+> 请根据需求修改：``software``,``hadoop``,``spark``的可执行路径
+```bash
+#!/bin/bash
+
+# Set the log file name
+software="/export/server"
+hadoop="$software/hadoop"
+spark="$software/spark"
+log_file="$software/logs/stoplogs/$(date +%Y-%m-%d_%H-%M-%S).log"
+
+# Stop Spark and save the output to the log file and print to the console
+if jps | grep -q "Master"; then
+    $spark/sbin/stop-all.sh 2>&1 | tee -a $log_file
+    $spark/sbin/stop-history-server.sh 2>&1 | tee -a $log_file
+else
+    echo "Spark已经停止"
+fi
+
+# Stop MapReduce history server and save the output to the log file and print to the console
+if jps | grep -q "JobHistoryServer"; then
+    mapred --daemon stop historyserver 2>&1 | tee -a $log_file
+else
+    echo "历史服务器已经停止"
+fi
+
+# Stop YARN and save the output to the log file and print to the console
+if jps | grep -q "ResourceManager"; then
+    stop-yarn.sh 2>&1 | tee -a $log_file
+else
+    echo "Yarn已经停止"
+fi
+
+# Stop HDFS and save the output to the log file and print to the console
+if jps | grep -q "NameNode"; then
+    stop-dfs.sh 2>&1 | tee -a $log_file
+else
+    echo "Hadoop已经停止"
+fi
+```

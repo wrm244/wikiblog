@@ -12,7 +12,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/Request&Response",
+  "attachmentFolderPath": "./assets/SpringMVC_day01",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "livePreview": true,
