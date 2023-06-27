@@ -1291,7 +1291,7 @@ public String commonParamDifferentName(String userName , int age){
 
 **注意:写上@RequestParam注解框架就不需要自己去解析注入，能提升框架处理性能**
 
-#### 4.3.2 POJO数据类型
+#### POJO数据类型
 
 简单数据类型一般处理的是参数个数比较少的请求，如果参数比较多，那么后台接收参数的时候就比较复杂，这个时候我们可以考虑使用POJO数据类型。
 
@@ -1328,7 +1328,7 @@ public String pojoParam(User user){
 * POJO参数接收，前端GET和POST发送请求数据的方式不变。
 * 请求参数key的名称要和POJO中属性的名称一致，否则无法封装。
 
-#### 4.3.3 嵌套POJO类型参数
+#### 嵌套POJO类型参数
 
 如果POJO对象中嵌套了其他的POJO类，如
 
@@ -1368,7 +1368,7 @@ public String pojoParam(User user){
 
 请求参数key的名称要和POJO中属性的名称一致，否则无法封装
 
-#### 4.3.4 数组类型参数
+#### 数组类型参数
 
 举个简单的例子，如果前端需要获取用户的爱好，爱好绝大多数情况下都是多个，如何发送请求数据和接收数据呢?
 
@@ -1390,7 +1390,7 @@ public String pojoParam(User user){
     }
 ```
 
-#### 4.3.5 集合类型参数
+#### 集合类型参数
 
 数组能接收多个值，那么集合是否也可以实现这个功能呢?
 
@@ -1440,7 +1440,7 @@ public String listParam(@RequestParam List<String> likes){
 | 作用     | 绑定请求参数与处理器方法形参间的关系                   |
 | 相关参数 | required：是否为必传参数 <br/>defaultValue：参数默认值 |
 
-### 4.4 JSON数据传输参数
+### JSON数据传输参数
 
 前面我们说过，现在比较流行的开发方式为异步调用。前后台以异步方式进行交换，传输的数据使用的是JSON,所以前端如果发送的是JSON数据，后端该如何接收?
 
@@ -1620,7 +1620,7 @@ SpringMVC接收JSON数据的实现步骤为:
   * 后期开发中，发送json格式数据为主，@RequestBody应用较广
   * 如果发送非json格式数据，选用@RequestParam接收请求参数
 
-### 4.5 日期类型参数传递
+### 日期类型参数传递
 
 前面我们处理过简单数据类型、POJO数据类型、数组和集合数据类型以及JSON数据类型，接下来我们还得处理一种开发中比较常见的一种数据类型，`日期类型`
 
@@ -1687,8 +1687,9 @@ public String dataParam(Date date,Date date1)
 
 发送请求和数据后，页面会报400，控制台会报出一个错误
 
+```java
 Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'java.util.Date'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.util.Date] for value '2088-08-08'; nested exception is java.lang.IllegalArgumentException]
-
+```
 从错误信息可以看出，错误的原因是在将`2088-08-08`转换成日期类型的时候失败了，原因是SpringMVC默认支持的字符串转日期的格式为`yyyy/MM/dd`,而我们现在传递的不符合其默认格式，SpringMVC就无法进行格式转换，所以报错。
 
 解决方案也比较简单，需要使用`@DateTimeFormat`
@@ -1800,7 +1801,7 @@ Converter接口的实现类
 
 **注意:SpringMVC的配置类把@EnableWebMvc当做标配配置上去，不要省略**
 
-### 4.6 响应
+### 响应
 
 SpringMVC接收到请求和数据后，进行一些了的处理，当然这个处理可以是转发给Service，Service层再调用Dao层完成的，不管怎样，处理完以后，都需要将结果告知给用户。
 
@@ -1815,7 +1816,7 @@ SpringMVC接收到请求和数据后，进行一些了的处理，当然这个�
 
 因为异步调用是目前常用的主流方式，所以我们需要更关注的就是如何返回JSON数据，对于其他只需要认识了解即可。
 
-#### 4.6.1 环境准备
+#### 环境准备
 
 - 创建一个Web的Maven项目
 
@@ -1938,7 +1939,7 @@ SpringMVC接收到请求和数据后，进行一些了的处理，当然这个�
 
 ![1630497314131](assets/1630497314131.png)
 
-#### 4.6.2 响应页面[了解]
+#### 响应页面[了解]
 
 ##### 步骤1:设置返回页面
 
@@ -1966,7 +1967,7 @@ public class UserController {
 
 ![1630497496785](assets/1630497496785.png)
 
-#### 4.6.3 返回文本数据[了解]
+#### 返回文本数据[了解]
 
 ##### 步骤1:设置返回文本内容
 
@@ -1991,7 +1992,7 @@ public class UserController {
 
 ![1630497741388](assets/1630497741388.png)
 
-#### 4.6.4 响应JSON数据
+#### 响应JSON数据
 
 ##### 响应POJO对象
 
@@ -2073,7 +2074,7 @@ public class UserController {
 * 对象转Json数据(POJO -> json)
 * 集合转Json数据(Collection -> json)
 
-## 5，Rest风格
+## Rest风格
 
 对于Rest风格，我们需要学习的内容包括:
 
@@ -2082,7 +2083,7 @@ public class UserController {
 * REST快速开发
 * 案例:基于RESTful页面数据交互
 
-### 5.1 REST简介
+### REST简介
 
 * REST（Representational State Transfer），表现形式状态转换,它是一种软件架构风格
 
@@ -2136,9 +2137,9 @@ public class UserController {
 
 后期我们在进行开发的过程中，大多是都是遵从REST风格来访问我们的后台服务，所以可以说咱们以后都是基于RESTful来进行开发的。
 
-### 5.2 RESTful入门案例
+### RESTful入门案例
 
-#### 5.2.1 环境准备
+#### 环境准备
 
 - 创建一个Web的Maven项目
 
@@ -2330,7 +2331,7 @@ public class UserController {
 
 ![1630503741455](assets/1630503741455.png)
 
-#### 5.2.2 思路分析
+#### 思路分析
 
 > 需求:将之前的增删改查替换成RESTful的开发方式。
 >
@@ -2344,7 +2345,7 @@ public class UserController {
 >
 > 3.发送请求的过程中如何设置请求参数?
 
-#### 5.2.3 修改RESTful风格
+#### 修改RESTful风格
 
 ##### 新增
 
@@ -2536,7 +2537,7 @@ public String delete(@PathVariable Integer id){
   * 如果发送非json格式数据，选用@RequestParam接收请求参数
   * 采用RESTful进行开发，当参数数量较少时，例如1个，可以采用@PathVariable接收请求路径变量，通常用于传递id值
 
-### 5.3 RESTful快速开发
+### RESTful快速开发
 
 做完了RESTful的开发，你会发现好麻烦，麻烦在哪?
 
@@ -2631,9 +2632,9 @@ public class BookController {
 | 作用     | 设置当前控制器方法请求访问路径与请求动作，每种对应一个请求动作，<br/>例如@GetMapping对应GET请求 |
 | 相关属性 | value（默认）：请求访问路径                                  |
 
-### 5.4 RESTful案例
+### RESTful案例
 
-#### 5.4.1 需求分析
+#### 需求分析
 
 需求一:图片列表查询，从后台返回数据，将数据展示在页面上
 
@@ -2663,7 +2664,7 @@ public class BookController {
 >
 > 8.完成页面数据的展示
 
-#### 5.4.2 环境准备
+#### 环境准备
 
 - 创建一个Web的Maven项目
 
@@ -2778,7 +2779,7 @@ public class BookController {
 
 ![1630508864017](assets/1630508864017.png)
 
-#### 5.4.2 后台接口开发
+#### 后台接口开发
 
 ##### 步骤1:编写Controller类并使用RESTful进行配置
 
@@ -2840,7 +2841,7 @@ public class BookController {
 
 ![](assets/image-20210805140307371.png)
 
-#### 5.4.3 页面访问处理
+#### 页面访问处理
 
 ##### 步骤1:拷贝静态页面
 
