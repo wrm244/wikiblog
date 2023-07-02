@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/stack/java/Spring/SpringMVC/SpringMVC_day01.md",
+                "file": "docs/stack/java/Spring/SpringMVC/SpringMVC_day02.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/stack/java/Spring/SpringMVC/SpringMVC_day01.md",
+                "file": "docs/stack/java/Spring/SpringMVC/SpringMVC_day02.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/stack/java/Spring/SpringMVC/SpringMVC_day01.md",
+                "file": "docs/stack/java/Spring/SpringMVC/SpringMVC_day02.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/stack/java/Spring/SpringMVC/SpringMVC_day01.md"
+                "file": "docs/stack/java/Spring/SpringMVC/SpringMVC_day02.md"
               }
             }
           },
@@ -167,6 +167,7 @@
   },
   "active": "af861ae0087b298f",
   "lastOpenFiles": [
+    "docs/stack/java/Spring/SpringMVC/SpringMVC_day01.md",
     "docs/course/大数据/生产实习/生产实习01.md",
     "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
     "docs/course/大数据/hadoop/4 分布式计算SQL体系.md",
@@ -177,7 +178,6 @@
     "docs/course/Linux C/数据结构(C语言)/assets/1 线性表/image-20230626090231.png",
     "docs/course/Linux C/数据结构(C语言)/assets/1 线性表/image-20230626085930.png",
     "docs/course/Linux C/数据结构(C语言)/assets/1 线性表/image-20230626085812.png",
-    "docs/stack/java/Spring/SpringMVC/SpringMVC_day01.md",
     "docs/stack/java/JavaWeb/Web原理与配置/Request&Response.md",
     "docs/stack/java/JavaWeb/Web原理与配置/HTTP&Tomcat&Servlet.md",
     "README.md",
