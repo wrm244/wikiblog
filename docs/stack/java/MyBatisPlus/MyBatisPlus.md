@@ -382,8 +382,8 @@ class Mybatisplus01QuickstartApplicationTests {
 List<T> selectList(Wrapper<T> queryWrapper)
 ```
 
-- Wrapper：用来构建条件查询的条件，目前我们没有可直接传为Null
-- List<T>:因为查询的是所有，所以返回的数据是一个集合
+- ``Wrapper：用来构建条件查询的条件，目前我们没有可直接传为Null``
+- ``List<T>:因为查询的是所有，所以返回的数据是一个集合``
 
 在测试类中进行新增操作:
 
