@@ -7,14 +7,12 @@ import { Friends, type Friend } from '@site/data/friend'
 import styles from './styles.module.css'
 
 const TITLE = '友情链接'
-const DESCRIPTION = '申请友链请点击下方申请'
 const ADD_FRIEND_URL = 'https://github.com/wrm244/wikiblog/edit/main/data/friend.ts'
 
 function FriendHeader() {
   return (
     <section className="margin-top--lg margin-bottom--lg text--center">
       <h1>{TITLE}</h1>
-      <p>{DESCRIPTION}</p>
       <a
         className="button button--primary"
         href={ADD_FRIEND_URL}
@@ -44,7 +42,7 @@ function FriendCards() {
 
 function FriendLink(): JSX.Element {
   return (
-    <Layout title={TITLE} description={DESCRIPTION}>
+    <Layout title={TITLE}>
       <main className="margin-vert--lg">
         <FriendHeader />
         <FriendCards />

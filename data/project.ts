@@ -19,6 +19,16 @@ export const projects: Project[] = [
     type: 'web',
   },
   {
+    title: '基于Spark大数据集群对全球抑郁症患者的数据分析',
+    description:
+      '基于hadoop + spark + SpringBoot分析全球抑郁症患者的数据，希望以可视化展示让大家重视抑郁症',
+    preview: '/assets/images/project/bigdata.png',
+    website: 'https://wrm244.github.io/depression_demo/',
+    source: 'https://github.com/wrm244/depression_demo',
+    tags: ['favorite','design'],
+    type: 'web',
+  },
+  {
     title: 'docusaurus-theme-zen',
     description: '基于Docusaurus v2 个人网站主题',
     preview: '/assets/images/project/blogtheme.png',
