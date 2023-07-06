@@ -190,7 +190,7 @@ const config = {
           items: [
             {
               label: '笔记',
-              to: 'docs',
+              to: 'docs/stack',
             },
             {
               label: '项目',

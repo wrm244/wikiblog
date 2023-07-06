@@ -298,7 +298,7 @@ export const resourceData: ResourceCategory[] = [
       {
         name: 'Gitea',
         desc: 'Gitea 是一个开源社区驱动的轻量级代码托管解决方案，后端采用 Go 编写，采用 MIT 许可证.',
-        logo: 'https://gitea.io/images/favicon.png',
+        logo: '/assets/images/resource/gitea.svg',
         href: 'https://gitea.io/',
         tags: ['代码托管'],
       },
@@ -533,14 +533,14 @@ export const resourceData: ResourceCategory[] = [
       {
         name: 'UnoCSS',
         desc: '即时按需原子 CSS 引擎',
-        logo: 'https://uno.antfu.me/favicon.svg',
+        logo: '/assets/images/resource/USCC.png',
         href: 'https://uno.antfu.me/',
         tags: ['Css', '框架'],
       },
       {
         name: 'Bootstrap',
         desc: 'Bootstrap 是全球最受欢迎的前端开源工具库，它支持 Sass 变量和 mixin、响应式栅格系统、自带大量组件和众多强大的 JavaScript 插件。基于 Bootstrap 提供的强大功能，能够让你快速设计并定制你的网站',
-        logo: 'https://img.kuizuo.cn/20210907055816.png',
+        logo: '/assets/images/resource/bootstrap.png',
         href: 'https://v5.bootcss.com/',
         tags: ['Css', '框架'],
       },
@@ -631,7 +631,7 @@ export const resourceData: ResourceCategory[] = [
       {
         name: 'Coolors',
         desc: '创建调色板',
-        logo: 'img/resource/coolors.png',
+        logo: '/assets/images/resource/coolors.png',
         href: 'https://coolors.co/',
         tags: ['Css'],
       },
@@ -678,8 +678,8 @@ export const resourceData: ResourceCategory[] = [
       {
         name: 'Vuetify',
         desc: 'Vuetify 是一个 Vue UI 库，包含手工制作的精美材料组件。不需要设计技能 - 创建令人惊叹的应用程序所需的一切都触手可及',
-        logo: 'https://vuetify.cn/favicon.ico',
-        href: 'https://vuetify.cn/',
+        logo: 'https://vuetifyjs.com/favicon.ico',
+        href: 'https://vuetifyjs.com/zh-Hans/',
         tags: ['组件库', 'react'],
       },
       {
@@ -765,14 +765,14 @@ export const resourceData: ResourceCategory[] = [
       {
         name: 'Node',
         desc: 'Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时',
-        logo: 'https://nodejs.org/static/images/favicons/apple-touch-icon.png',
+        logo: 'https://img.nodejs.cn/favicon.png',
         href: 'http://nodejs.cn/',
         tags: ['后端', 'Nodejs', '文档'],
       },
       {
         name: 'Deno',
         desc: '一个现代的JavaScript和TypeScript运行时',
-        logo: 'https://deno.land/logo.svg',
+        logo: '/assets/images/resource/bun.svg',
         href: 'https://bun.sh/',
         tags: ['Nodejs', 'Deno', 'JavaScript', 'TypeScript'],
       },
