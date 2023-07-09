@@ -20,7 +20,7 @@ function ArrowDownBtn(): JSX.Element {
         fill="currentColor"
         onClick={() => {
           window.scrollTo({
-            top: window.innerHeight - 45,
+            top: window.innerHeight,
             behavior: "smooth",
           })
         }}>
