@@ -415,7 +415,7 @@ postman:  接口测工具，模拟用户发起的各类HTTP请求，获取对应
 1. **执行sky.sql文件**
 
 ![](assets/image-20221107102152285.png)
-![](assets/image-20221107102416034.png")
+![](assets/image-20221107102416034.png)
 ![](assets/image-20221107104738200.png)
 
 执行完成后，共创建出11张表
