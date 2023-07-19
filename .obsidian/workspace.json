@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+                "file": "docs/stack/java/项目/外卖平台/day01.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,8 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 230.50043487548828,
-    "collapsed": true
+    "width": 230.50043487548828
   },
   "right": {
     "id": "022e8cbd77fe97ad",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+                "file": "docs/stack/java/项目/外卖平台/day01.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+                "file": "docs/stack/java/项目/外卖平台/day01.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md"
+                "file": "docs/stack/java/项目/外卖平台/day01.md"
               }
             }
           },
@@ -168,16 +167,28 @@
   },
   "active": "af861ae0087b298f",
   "lastOpenFiles": [
-    "docs/course/Linux C/数据结构(C语言)/assets/1 线性表/image-20230717234424.png",
-    "docs/course/Linux C/指针与函数.md",
+    "docs/stack/java/项目/外卖平台/assets/image-20221107185742061.png",
+    "docs/stack/java/项目/外卖平台/assets/image-20221107185630516.png",
+    "docs/stack/java/项目/外卖平台/assets/image-20221107185304117.png",
+    "docs/stack/java/项目/外卖平台/assets/image-20221107184854861.png",
+    "docs/stack/java/项目/外卖平台/assets/image-20221107184823104.png",
+    "docs/stack/java/项目/外卖平台/assets/image-20221107181446913.png",
+    "docs/stack/java/项目/外卖平台/assets/image-20221107175649468.png",
+    "docs/stack/java/项目/外卖平台/assets/image-20221107173137506.png",
+    "docs/stack/java/项目/外卖平台/assets/image-20221107173033632.png",
+    "docs/stack/java/项目/外卖平台/assets/image-20221107165149915.png",
+    "docs/stack/java/项目/外卖平台/assets/image-20221107164813643.png",
+    "docs/stack/java/项目/外卖平台/assets",
     "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+    "docs/stack/java/项目/外卖平台/day01.md",
+    "docs/stack/java/项目/外卖平台",
+    "docs/stack/java/项目",
+    "docs/course/Linux C/指针与函数.md",
     "docs/stack/js/基础篇/01JS基础.md",
-    "docs/stack/js/基础篇/assets/01JS基础/image-20230714003745.png",
-    "docs/stack/js/基础篇/assets/01JS基础/image-20230710222718.png",
     "docs/stack/js/基础篇/assets/01JS基础",
     "docs/stack/js/基础篇/assets",
     "docs/stack/js/技巧篇/查询字符串与JSON互转.md",
-    "docs/stack/java/MyBatisPlus/MyBatisPlus.md",
+    "docs/stack/java/Spring/MyBatisPlus/MyBatisPlus.md",
     "docs/stack/java/Spring/SpringMVC/SpringMVC_day02.md",
     "docs/stack/java/Spring/SpringMVC/SpringMVC_day01.md",
     "docs/course/大数据/生产实习/生产实习01.md",
@@ -185,21 +196,13 @@
     "docs/course/大数据/hadoop/assets",
     "docs/course/大数据/hadoop",
     "docs/course/大数据/生产实习",
-    "docs/course/Linux C/数据结构(C语言)/assets/1 线性表/image-20230626090311.png",
-    "docs/course/Linux C/数据结构(C语言)/assets/1 线性表/image-20230626090231.png",
-    "docs/course/Linux C/数据结构(C语言)/assets/1 线性表/image-20230626085930.png",
-    "docs/course/Linux C/数据结构(C语言)/assets/1 线性表/image-20230626085812.png",
     "docs/stack/java/JavaWeb/Web原理与配置/Request&Response.md",
     "docs/stack/java/JavaWeb/Web原理与配置/HTTP&Tomcat&Servlet.md",
     "README.md",
-    "static/avatar.png",
     "assets/image-20210726203656847.png.md",
     "assets/162714811435.png.md",
     "docs/stack/java/JavaWeb/JavaScript入门.md",
     "docs/stack/java/JavaWeb/数据库连接/JDBC.md",
-    "docs/stack/java/JavaWeb/assets/image-20210816225925955.png",
-    "docs/stack/java/JavaWeb/assets/查看文档.png",
-    "docs/stack/java/JavaWeb/assets/image-20210816235112754.png",
     "docs/stack/java/JavaWeb/assets",
     "docs/stack/java/JavaWeb/JavaSpring.md",
     "docs/course/Linux C/以自动机视角设计C程序.md",
@@ -209,10 +212,6 @@
     "docs/course/OS/操作系统课设/geekos project 3.md",
     "docs/course/OS/操作系统课设/geekos project 2.md",
     "docs/course/OS/操作系统课设/geekos project 1.md",
-    "docs/course/OS/操作系统课设/geekos project 0.md",
-    "docs/course/OS/操作系统课设/assets/geekos project 1",
-    "docs/course/OS/操作系统课设/assets/geekos project 3",
-    "docs/course/OS/操作系统课设/assets/geekos project 2",
-    "docs/course/OS/geekos project 4.md"
+    "docs/course/OS/操作系统课设/geekos project 0.md"
   ]
 }
