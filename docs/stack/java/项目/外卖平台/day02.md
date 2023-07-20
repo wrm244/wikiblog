@@ -871,7 +871,7 @@ public class PageResult implements Serializable {
 
 ```
 
-员工信息分页查询后端返回的对象类型为: Result<PageResult>
+员工信息分页查询后端返回的对象类型为: `Result<PageResult>`
 
 ```java
 package com.sky.result;
