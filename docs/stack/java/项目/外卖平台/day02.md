@@ -798,7 +798,7 @@ public class JwtTokenAdminInterceptor implements HandlerInterceptor {
 
 找到资料-->项目接口文档-->苍穹外卖-管理端接口.html
 
-![](assets/image-20221111220031113.png")
+![](assets/image-20221111220031113.png)
 ![](assets/image-20221111220041965.png)
 
 **注意事项：**

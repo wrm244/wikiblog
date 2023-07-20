@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/stack/java/项目/外卖平台/day01.md",
+                "file": "docs/stack/java/项目/外卖平台/day02.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/stack/java/项目/外卖平台/day01.md",
+                "file": "docs/stack/java/项目/外卖平台/day02.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/stack/java/项目/外卖平台/day01.md",
+                "file": "docs/stack/java/项目/外卖平台/day02.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/stack/java/项目/外卖平台/day01.md"
+                "file": "docs/stack/java/项目/外卖平台/day02.md"
               }
             }
           },
@@ -167,6 +167,7 @@
   },
   "active": "af861ae0087b298f",
   "lastOpenFiles": [
+    "docs/stack/java/项目/外卖平台/day01.md",
     "docs/stack/java/项目/外卖平台/assets/image-20221107185742061.png",
     "docs/stack/java/项目/外卖平台/assets/image-20221107185630516.png",
     "docs/stack/java/项目/外卖平台/assets/image-20221107185304117.png",
@@ -177,10 +178,8 @@
     "docs/stack/java/项目/外卖平台/assets/image-20221107173137506.png",
     "docs/stack/java/项目/外卖平台/assets/image-20221107173033632.png",
     "docs/stack/java/项目/外卖平台/assets/image-20221107165149915.png",
-    "docs/stack/java/项目/外卖平台/assets/image-20221107164813643.png",
     "docs/stack/java/项目/外卖平台/assets",
     "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
-    "docs/stack/java/项目/外卖平台/day01.md",
     "docs/stack/java/项目/外卖平台",
     "docs/stack/java/项目",
     "docs/course/Linux C/指针与函数.md",

@@ -12,7 +12,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/day01",
+  "attachmentFolderPath": "./assets/day02",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "livePreview": true,
