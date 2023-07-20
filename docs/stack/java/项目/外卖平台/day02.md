@@ -1548,7 +1548,7 @@ public class JacksonObjectMapper extends ObjectMapper {
 
 **2). 分类分页查询**
 
-![](assets/image-20221112163209383.png")
+![](assets/image-20221112163209383.png)
 ![](assets/image-20221112163233212.png)
 
 **3). 根据id删除分类**
