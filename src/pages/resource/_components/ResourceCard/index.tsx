@@ -1,19 +1,19 @@
-import React, { memo } from 'react'
-import clsx from 'clsx'
-import Link from '@docusaurus/Link'
+import React, { memo } from "react";
+import clsx from "clsx";
+import Link from "@docusaurus/Link";
 
-import styles from './styles.module.css'
-import { type Resource } from '@site/data/resource'
-import Tooltip from '../../../project/_components/ShowcaseTooltip'
+import styles from "./styles.module.css";
+import { type Resource } from "@site/data/resource";
+import Tooltip from "../../../project/_components/ShowcaseTooltip";
 
 const ResourceCard = memo(({ resource }: { resource: Resource }) => (
   <li
     key={resource.name}
-    className={clsx(styles.resourceCard, 'padding-vert--sm padding-horiz--md')}
+    className={clsx(styles.resourceCard, "padding-vert--sm padding-horiz--md")}
   >
     <img
       src={
-        typeof resource.logo === 'string'
+        typeof resource.logo === "string"
           ? resource.logo
           : (resource.logo as any)?.src?.src
       }
@@ -38,6 +38,6 @@ const ResourceCard = memo(({ resource }: { resource: Resource }) => (
       </Tooltip>
     </div>
   </li>
-))
+));
 
-export default ResourceCard
+export default ResourceCard;

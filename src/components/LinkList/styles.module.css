@@ -9,7 +9,6 @@
 .item:hover {
   /* background-color: rgb(185, 185, 185); */
   background-color: #05a1ec;
-
 }
 
 .item a {
@@ -18,7 +17,6 @@
   align-items: center;
   font-weight: 1000;
   padding: 3px;
-  
 }
 
 .item a > img {
@@ -37,6 +35,6 @@
   color: white;
 }
 
-[data-theme="dark"] .item:hover{
+[data-theme="dark"] .item:hover {
   background-color: #7390d2;
 }

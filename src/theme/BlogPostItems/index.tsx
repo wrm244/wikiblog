@@ -1,8 +1,8 @@
-import React from 'react'
-import { BlogPostProvider } from '@docusaurus/theme-common/internal'
-import BlogPostItem from '@theme/BlogPostItem'
-import type { Props } from '@theme/BlogPostItems'
-import { Fade } from 'react-awesome-reveal'
+import React from "react";
+import { BlogPostProvider } from "@docusaurus/theme-common/internal";
+import BlogPostItem from "@theme/BlogPostItem";
+import type { Props } from "@theme/BlogPostItems";
+import { Fade } from "react-awesome-reveal";
 
 export default function BlogPostItems({
   items,
@@ -23,5 +23,5 @@ export default function BlogPostItems({
         </BlogPostProvider>
       ))}
     </>
-  )
+  );
 }

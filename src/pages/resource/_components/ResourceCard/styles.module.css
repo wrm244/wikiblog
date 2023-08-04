@@ -14,7 +14,7 @@
   transform: translateY(-5px);
 }
 
-html[data-theme='dark'] .resourceCard:hover {
+html[data-theme="dark"] .resourceCard:hover {
   box-shadow: 0 10px 20px -10px rgb(255 255 255 / 20%);
   transform: translateY(-5px);
 }

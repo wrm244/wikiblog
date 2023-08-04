@@ -1,13 +1,14 @@
-import React from 'react'
-import Layout from '@theme/Layout'
+import React from "react";
+import Layout from "@theme/Layout";
 
-import FriendCard from './_components/FriendCard'
-import { Friends, type Friend } from '@site/data/friend'
+import FriendCard from "./_components/FriendCard";
+import { Friends, type Friend } from "@site/data/friend";
 
-import styles from './styles.module.css'
+import styles from "./styles.module.css";
 
-const TITLE = '友情链接'
-const ADD_FRIEND_URL = 'https://github.com/wrm244/wikiblog/edit/main/data/friend.ts'
+const TITLE = "友情链接";
+const ADD_FRIEND_URL =
+  "https://github.com/wrm244/wikiblog/edit/main/data/friend.ts";
 
 function FriendHeader() {
   return (
@@ -22,22 +23,22 @@ function FriendHeader() {
         🔗 申请友链
       </a>
     </section>
-  )
+  );
 }
 
 function FriendCards() {
-  const friends = Friends
+  const friends = Friends;
   return (
     <section className="margin-top--lg margin-bottom--lg">
       <div className="container">
         <ul className={styles.showcaseList}>
-          {friends.map(friend => (
+          {friends.map((friend) => (
             <FriendCard key={friend.avatar} friend={friend} />
           ))}
         </ul>
       </div>
     </section>
-  )
+  );
 }
 
 function FriendLink(): JSX.Element {
@@ -48,7 +49,7 @@ function FriendLink(): JSX.Element {
         <FriendCards />
       </main>
     </Layout>
-  )
+  );
 }
 
-export default FriendLink
+export default FriendLink;

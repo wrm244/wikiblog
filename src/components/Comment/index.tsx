@@ -1,8 +1,8 @@
-import {useColorMode} from '@docusaurus/theme-common';
-import BrowserOnly from '@docusaurus/BrowserOnly';
-import React, { forwardRef, useEffect, useState } from 'react';
-import Giscus, { GiscusProps } from '@giscus/react';
-import { useThemeConfig, ThemeConfig } from '@docusaurus/theme-common';
+import { useColorMode } from "@docusaurus/theme-common";
+import BrowserOnly from "@docusaurus/BrowserOnly";
+import React, { forwardRef, useEffect, useState } from "react";
+import Giscus, { GiscusProps } from "@giscus/react";
+import { useThemeConfig, ThemeConfig } from "@docusaurus/theme-common";
 
 interface CustomThemeConfig extends ThemeConfig {
   giscus: GiscusProps & { darkTheme: string };
@@ -10,7 +10,7 @@ interface CustomThemeConfig extends ThemeConfig {
 
 export const Comment = forwardRef<HTMLDivElement>((_props, ref) => {
   const themeConfig = useThemeConfig() as any;
-  const theme = useColorMode().colorMode === 'dark' ? 'dark' : 'light';
+  const theme = useColorMode().colorMode === "dark" ? "dark" : "light";
   const { giscus } = useThemeConfig() as CustomThemeConfig;
   const [routeDidUpdate, setRouteDidUpdate] = useState(false);
 
@@ -19,10 +19,10 @@ export const Comment = forwardRef<HTMLDivElement>((_props, ref) => {
       setRouteDidUpdate(true);
     }
 
-    window.emitter.on('onRouteDidUpdate', eventHandler);
+    window.emitter.on("onRouteDidUpdate", eventHandler);
 
     return () => {
-      window.emitter.off('onRouteDidUpdate', eventHandler);
+      window.emitter.off("onRouteDidUpdate", eventHandler);
     };
   }, []);
 
@@ -32,10 +32,10 @@ export const Comment = forwardRef<HTMLDivElement>((_props, ref) => {
 
   const options: GiscusProps = {
     ...(themeConfig.giscus as GiscusProps),
-    id: 'comments',
-    reactionsEnabled: '1',
-    emitMetadata: '0',
-    inputPosition: 'top',
+    id: "comments",
+    reactionsEnabled: "1",
+    emitMetadata: "0",
+    inputPosition: "top",
     theme,
   };
   return (

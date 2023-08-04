@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from '@emotion/styled'
+import React from "react";
+import styled from "@emotion/styled";
 
 function Button({ isLink = false, children, ...rest }) {
   return (
-    <StyledButton as={isLink ? 'a' : 'button'} {...rest}>
+    <StyledButton as={isLink ? "a" : "button"} {...rest}>
       {children}
     </StyledButton>
-  )
+  );
 }
 
 const StyledButton = styled.button`
@@ -22,13 +22,13 @@ const StyledButton = styled.button`
   );
   box-shadow: 0px 0px 32px rgba(0, 105, 165, 0.35);
   border-radius: 7px;
-  font-family: 'Yuanti SC', 'Youyuan', 'You Yuan', '幼圆', 'PingFang SC',
-    'Microsoft Yahei', Helvetica, sans-serif;
+  font-family: "Yuanti SC", "Youyuan", "You Yuan", "幼圆", "PingFang SC",
+    "Microsoft Yahei", Helvetica, sans-serif;
 
   :hover {
     color: white;
     text-decoration: none;
   }
-`
+`;
 
-export default Button
+export default Button;

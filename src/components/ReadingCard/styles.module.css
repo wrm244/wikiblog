@@ -18,7 +18,7 @@
     -webkit-backdrop-filter: blur( 16px );
     border: 1px solid rgba( 255, 255, 255, 0.18 );
   } */
-  
+
 /*Retro Style Card*/
 
 .card {
@@ -32,8 +32,8 @@
   margin: 1rem 0.8rem 1.8rem 0.5rem;
 }
 
-[data-theme='dark'] .card{
-  background: #2e303d ;
+[data-theme="dark"] .card {
+  background: #2e303d;
   box-shadow: 15px 15px 0 -2.5px #2e303d, 15px 15px 0 0 #000;
 }
 
@@ -61,7 +61,7 @@
   padding: 0rem 1rem 0.3rem 1rem;
 }
 
-[data-theme='dark'] .card .card__content,
-[data-theme='dark'] .card .card__title {
+[data-theme="dark"] .card .card__content,
+[data-theme="dark"] .card .card__title {
   color: #cbccdc;
 }

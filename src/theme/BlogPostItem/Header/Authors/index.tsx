@@ -1,9 +1,9 @@
-import React from 'react'
-import clsx from 'clsx'
-import { useBlogPost } from '@docusaurus/theme-common/internal'
-import BlogPostItemHeaderAuthor from '@theme/BlogPostItem/Header/Author'
-import type { Props } from '@theme/BlogPostItem/Header/Authors'
-import styles from './styles.module.css'
+import React from "react";
+import clsx from "clsx";
+import { useBlogPost } from "@docusaurus/theme-common/internal";
+import BlogPostItemHeaderAuthor from "@theme/BlogPostItem/Header/Author";
+import type { Props } from "@theme/BlogPostItem/Header/Authors";
+import styles from "./styles.module.css";
 
 // Component responsible for the authors layout
 export default function BlogPostItemHeaderAuthors({
@@ -12,25 +12,25 @@ export default function BlogPostItemHeaderAuthors({
   const {
     metadata: { authors },
     assets,
-  } = useBlogPost()
-  const authorsCount = authors.length
+  } = useBlogPost();
+  const authorsCount = authors.length;
   if (authorsCount === 0) {
-    return null
+    return null;
   }
-  const imageOnly = authors.every(({ name }) => !name)
+  const imageOnly = authors.every(({ name }) => !name);
   return (
     <div
       className={clsx(
-        'margin-top--md margin-bottom--sm',
-        imageOnly ? styles.imageOnlyAuthorRow : 'row',
-        className,
+        "margin-top--md margin-bottom--sm",
+        imageOnly ? styles.imageOnlyAuthorRow : "row",
+        className
       )}
     >
       {authors.map((author, idx) => (
         <div
           className={clsx(
-            !imageOnly && 'col col--6',
-            imageOnly ? styles.imageOnlyAuthorCol : styles.authorCol,
+            !imageOnly && "col col--6",
+            imageOnly ? styles.imageOnlyAuthorCol : styles.authorCol
           )}
           key={idx}
         >
@@ -44,5 +44,5 @@ export default function BlogPostItemHeaderAuthors({
         </div>
       ))}
     </div>
-  )
+  );
 }

@@ -21,7 +21,7 @@
   transition: box-shadow 0.2s;
 }
 
-html[data-theme='dark'] .apiTable tbody tr:hover {
+html[data-theme="dark"] .apiTable tbody tr:hover {
   outline: none;
   box-shadow: 1000px 1000px 0 0 inset rgb(164, 166, 168);
   cursor: pointer;

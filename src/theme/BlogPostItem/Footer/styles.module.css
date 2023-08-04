@@ -50,6 +50,6 @@
   margin: 0.25rem 0;
 }
 
-html[data-theme='dark'] .divider {
+html[data-theme="dark"] .divider {
   background-color: #2f3336;
 }

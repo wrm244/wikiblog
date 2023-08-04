@@ -1,14 +1,14 @@
-import React from 'react'
-import Translate from '@docusaurus/Translate'
-import Link from '@docusaurus/Link'
-import Image from '@theme/IdealImage'
-import clsx from 'clsx'
+import React from "react";
+import Translate from "@docusaurus/Translate";
+import Link from "@docusaurus/Link";
+import Image from "@theme/IdealImage";
+import clsx from "clsx";
 
 const Playgrounds = [
   {
-    name: '📦 CodeSandbox',
-    image: require('@site/static/img/playgrounds/codesandbox.png'),
-    url: 'https://new.docusaurus.io/codesandbox',
+    name: "📦 CodeSandbox",
+    image: require("@site/static/img/playgrounds/codesandbox.png"),
+    url: "https://new.docusaurus.io/codesandbox",
     description: (
       <Translate id="playground.codesandbox.description">
         CodeSandbox is a popular playground solution. Runs Docusaurus in a
@@ -17,9 +17,9 @@ const Playgrounds = [
     ),
   },
   {
-    name: '⚡ StackBlitz 🆕',
-    image: require('@site/static/img/playgrounds/stackblitz.png'),
-    url: 'https://new.docusaurus.io/stackblitz',
+    name: "⚡ StackBlitz 🆕",
+    image: require("@site/static/img/playgrounds/stackblitz.png"),
+    url: "https://new.docusaurus.io/stackblitz",
     description: (
       <Translate
         id="playground.stackblitz.description"
@@ -32,18 +32,18 @@ const Playgrounds = [
         }}
       >
         {
-          'StackBlitz uses a novel {webContainersLink} technology to run Docusaurus directly in your browser.'
+          "StackBlitz uses a novel {webContainersLink} technology to run Docusaurus directly in your browser."
         }
       </Translate>
     ),
   },
-]
+];
 
 function PlaygroundCard({ name, image, url, description }) {
   return (
     <div className="col col--6 margin-bottom--lg">
-      <div className={clsx('card')}>
-        <div className={clsx('card__image')}>
+      <div className={clsx("card")}>
+        <div className={clsx("card__image")}>
           <Link to={url}>
             <Image img={image} alt={`${name}'s image`} />
           </Link>
@@ -61,15 +61,15 @@ function PlaygroundCard({ name, image, url, description }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export function PlaygroundCardsRow() {
   return (
     <div className="row">
-      {Playgrounds.map(playground => (
+      {Playgrounds.map((playground) => (
         <PlaygroundCard key={playground.name} {...playground} />
       ))}
     </div>
-  )
+  );
 }

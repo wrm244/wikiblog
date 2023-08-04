@@ -44,7 +44,7 @@
   margin-top: 0;
 }
 
-html[data-theme='dark'] .bloghome__intro > p {
+html[data-theme="dark"] .bloghome__intro > p {
   color: #dfdfdf;
 }
 
@@ -71,9 +71,9 @@ html[data-theme='dark'] .bloghome__intro > p {
   fill: #2a2b3b;
 }
 
-[data-theme='dark'] :global(.hero_main_svg__js) g,
-[data-theme='dark'] :global(.hero_main_svg__todo) path:nth-child(1),
-[data-theme='dark'] :global(.hero_main_svg__magnifier) path:nth-child(1) {
+[data-theme="dark"] :global(.hero_main_svg__js) g,
+[data-theme="dark"] :global(.hero_main_svg__todo) path:nth-child(1),
+[data-theme="dark"] :global(.hero_main_svg__magnifier) path:nth-child(1) {
   fill: #abaff1;
 }
 
@@ -299,17 +299,16 @@ html[data-theme='dark'] .bloghome__intro > p {
   justify-content: center;
 
   /* 布局测试 */
-  min-width:100%;
-  max-width: 100%
-  
+  min-width: 100%;
+  max-width: 100%;
 }
 
 .arrowDownBtnWrapper svg {
   width: 3%;
   height: auto;
-/*手机上的大小*/
-  min-width:3%;
-  max-width: 15%
+  /*手机上的大小*/
+  min-width: 3%;
+  max-width: 15%;
 }
 
 .arrowDownBtn {
@@ -362,7 +361,7 @@ html[data-theme='dark'] .bloghome__intro > p {
 
 /*******************************/
 /** 在移动设备上，缩小 padding */
-@media screen and (max-width: 996px){
+@media screen and (max-width: 996px) {
   .button_social2 {
     width: 100px;
     height: 40px;
@@ -376,17 +375,17 @@ html[data-theme='dark'] .bloghome__intro > p {
     align-items: center;
     background: royalblue;
     color: #f5f5f5;
-  
+
     display: flex;
     position: relative;
-  
-    cursor:pointer;
+
+    cursor: pointer;
   }
-  
+
   .button_social2:hover {
     box-shadow: 0 0 20px 0px #2e2e2e3a;
   }
-  
+
   .button_social2 .icon {
     position: absolute;
     height: 25px;
@@ -396,26 +395,26 @@ html[data-theme='dark'] .bloghome__intro > p {
     align-items: center;
     transition: all 0.3s;
   }
-  
+
   .button_social2 .text {
     transform: translateX(30px);
     transition: all 0.3s;
     margin: 0 0.5em 0 0.35em;
   }
-  
+
   .button_social2:hover .icon {
     width: 75px;
   }
-  
+
   .button_social2:hover .text {
     transition: all 0.3s;
     opacity: 0;
   }
-  
+
   .button_social2:focus {
     outline: none;
   }
-  
+
   .button_social2:active .icon {
     transform: scale(0.25);
   }

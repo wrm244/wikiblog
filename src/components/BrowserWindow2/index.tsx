@@ -5,10 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import React, {type ReactNode} from 'react';
-import clsx from 'clsx';
+import React, { type ReactNode } from "react";
+import clsx from "clsx";
 
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
 interface Props {
   children: ReactNode;
@@ -19,18 +19,20 @@ interface Props {
 export default function BrowserWindow({
   children,
   minHeight,
-  url = 'http://localhost:3000',
+  url = "http://localhost:3000",
 }: Props): JSX.Element {
   return (
-    <div className={styles.browserWindow} style={{minHeight}}>
+    <div className={styles.browserWindow} style={{ minHeight }}>
       <div className={styles.browserWindowHeader}>
         <div className={styles.buttons}>
-          <span className={styles.dot} style={{background: '#f25f58'}} />
-          <span className={styles.dot} style={{background: '#fbbe3c'}} />
-          <span className={styles.dot} style={{background: '#58cb42'}} />
+          <span className={styles.dot} style={{ background: "#f25f58" }} />
+          <span className={styles.dot} style={{ background: "#fbbe3c" }} />
+          <span className={styles.dot} style={{ background: "#58cb42" }} />
         </div>
-        <div className={clsx(styles.browserWindowAddressBar, 'text--truncate')}>
-          <a href={url} target="_blank" rel="text">{url}</a>
+        <div className={clsx(styles.browserWindowAddressBar, "text--truncate")}>
+          <a href={url} target="_blank" rel="text">
+            {url}
+          </a>
         </div>
         <div className={styles.browserWindowMenuIcon}>
           <div>

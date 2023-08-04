@@ -20,7 +20,7 @@
 }
 
 .row::after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -34,7 +34,7 @@
   width: 10%;
 }
 
-[data-theme='light'] {
+[data-theme="light"] {
   --ifm-background-color: #fff;
 }
 
@@ -49,7 +49,7 @@
   user-select: text;
 }
 
-[data-theme='dark'] .browserWindowAddressBar {
+[data-theme="dark"] .browserWindowAddressBar {
   color: var(--ifm-color-gray-300);
 }
 
