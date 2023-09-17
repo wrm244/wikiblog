@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "d8b67e509e35bfc1",
+        "id": "ba298d355cc0839e",
         "type": "tabs",
         "children": [
           {
-            "id": "02e28cbd8b46e850",
+            "id": "bd4a1dc7016770d1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md"
+              }
             }
           },
           {
@@ -135,6 +143,16 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {}
+            }
+          },
+          {
+            "id": "b0bb4cd3da2bef63",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
+              }
             }
           }
         ],
@@ -157,8 +175,10 @@
       "obsidian-translator:Translate": false
     }
   },
-  "active": "02e28cbd8b46e850",
+  "active": "bd4a1dc7016770d1",
   "lastOpenFiles": [
+    "docs/course/Data Structures And Algorithms/算法设计与分析/1 算法绪论.md",
+    "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
     "docs/stack/java/项目/外卖平台/day02.md",
     "docs/stack/java/项目/外卖平台/day01.md",
     "docs/stack/java/项目/外卖平台/assets/image-20221107185742061.png",
@@ -172,7 +192,6 @@
     "docs/stack/java/项目/外卖平台/assets/image-20221107173033632.png",
     "docs/stack/java/项目/外卖平台/assets/image-20221107165149915.png",
     "docs/stack/java/项目/外卖平台/assets",
-    "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
     "docs/stack/java/项目/外卖平台",
     "docs/stack/java/项目",
     "docs/course/Linux C/指针与函数.md",
@@ -199,7 +218,6 @@
     "docs/stack/java/JavaWeb/JavaSpring.md",
     "docs/course/Linux C/以自动机视角设计C程序.md",
     "docs/course/Linux C/assets/以自动机视角设计C程序",
-    "docs/course/Data Structures And Algorithms/算法设计与分析/1 算法绪论.md",
     "docs/course/OS/操作系统课设/geekos project 4.md",
     "docs/course/OS/操作系统课设/geekos project 3.md",
     "docs/course/OS/操作系统课设/geekos project 2.md",
