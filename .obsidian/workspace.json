@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表课后编程题.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表课后编程题.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表课后编程题.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md"
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表课后编程题.md"
               }
             }
           },
@@ -177,8 +177,10 @@
   },
   "active": "bd4a1dc7016770d1",
   "lastOpenFiles": [
-    "docs/course/Data Structures And Algorithms/算法设计与分析/1 算法绪论.md",
     "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+    "docs/course/Linux C/数据结构(C语言)/1 线性表课后编程题.md",
+    "docs/course/Linux C/未命名.md",
+    "docs/course/Data Structures And Algorithms/算法设计与分析/1 算法绪论.md",
     "docs/stack/java/项目/外卖平台/day02.md",
     "docs/stack/java/项目/外卖平台/day01.md",
     "docs/stack/java/项目/外卖平台/assets/image-20221107185742061.png",
@@ -220,8 +222,6 @@
     "docs/course/Linux C/assets/以自动机视角设计C程序",
     "docs/course/OS/操作系统课设/geekos project 4.md",
     "docs/course/OS/操作系统课设/geekos project 3.md",
-    "docs/course/OS/操作系统课设/geekos project 2.md",
-    "docs/course/OS/操作系统课设/geekos project 1.md",
-    "docs/course/OS/操作系统课设/geekos project 0.md"
+    "docs/course/OS/操作系统课设/geekos project 2.md"
   ]
 }
