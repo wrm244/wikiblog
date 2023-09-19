@@ -12,7 +12,7 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "attachmentFolderPath": "./assets/1 线性表课后编程题",
+  "attachmentFolderPath": "./assets/2栈、队列和数组",
   "useMarkdownLinks": true,
   "newLinkFormat": "relative",
   "livePreview": true,
