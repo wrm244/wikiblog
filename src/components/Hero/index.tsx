@@ -111,9 +111,9 @@ function Hero() {
           {/*  </Button> */}
           {/* </a> */}
           <span>　</span>
-          <a className={styles.intro} href={"https://wrm244.gitee.io/slides/"}>
+          <a className={styles.intro} href={"https://wrm244.gxist.cn/resume"}>
             {/* <Button isLink href={'https://wrm244.gxist.cn/resume' } target="_blank"> */}
-            <Translate id="hompage.hero.text.slides">幻灯片</Translate>
+            <Translate id="hompage.hero.text.resume">简历</Translate>
             {/* </Button> */}
           </a>
         </animated.div>
