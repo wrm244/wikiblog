@@ -45,7 +45,7 @@ jobs:
       - name: deploy resume
         run: |
          cd ./build
-         git clone -b gp-pages https://github.com/wrm244/resume.git ./resume
+         git clone https://github.com/wrm244/resumepage.git ./resume
          cd ./resume
          rm -rf ./.git
          cd ..
