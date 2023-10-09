@@ -38,7 +38,15 @@ jobs:
       - name: Install Dependencies
         #if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install
-      
+      - name: SSH Deploy
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          ARGS: '-rlgoDzvc -i --delete'
+          SOURCE: './data'
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: 'root'
+          TARGET: '/www/wwwroot/wrm244.gxist.cn/aaa'      
       - name: Build Project
         run: yarn run build
           
@@ -73,10 +81,10 @@ jobs:
       - name: rm .git
         run: sudo rm -rf ./build/.git
       - name: SSH Deploy
-        uses: easingthemes/ssh-deploy@v2.2.11
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          ARGS: '-avzr --delete --ignore-existing'
+          ARGS: '-rlgoDzvc -i --delete'
           SOURCE: './build'
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: 'root'
