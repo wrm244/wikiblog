@@ -38,7 +38,7 @@ jobs:
       - name: Install Dependencies
         #if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install
-        
+
       - name: Build Project
         run: yarn run build
           
@@ -71,7 +71,9 @@ jobs:
 
     
       - name: rm .git
-        run: sudo rm -rf ./build/.git
+        run: | 
+          sudo rm -rf ./build/.git
+          sudo chmod -R 777 ./build
       - name: SSH Deploy
         uses: easingthemes/ssh-deploy@main
         env:
