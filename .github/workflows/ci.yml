@@ -72,15 +72,15 @@ jobs:
     
       - name: rm .git
         run: sudo rm -rf ./build/.git
-      # - name: SSH Deploy
-      #   uses: easingthemes/ssh-deploy@v2.2.11
-      #   env:
-      #     SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-      #     ARGS: '-avzr --delete --ignore-existing'
-      #     SOURCE: './build'
-      #     REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-      #     REMOTE_USER: 'root'
-      #     TARGET: '/www/wwwroot/wrm244.gxist.cn'
+      - name: SSH Deploy
+        uses: easingthemes/ssh-deploy@v2.2.11
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+          ARGS: '-avzr --delete --ignore-existing'
+          SOURCE: './build'
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: 'root'
+          TARGET: '/www/wwwroot/wrm244.gxist.cn'
       #仅仅支持英文      
       # - name: Install Prince
       #   run: |
