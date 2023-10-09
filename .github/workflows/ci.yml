@@ -68,21 +68,20 @@ jobs:
           PUBLISH_REPOSITORY: wrm244/wrm244.github.io # 公共仓库，格式：GitHub 用户名/仓库名
           BRANCH: wikiblog # 分支，填 gh-pages 就行
           PUBLISH_DIR: ./build # 部署 public 目录下的文件
-
-    
-      - name: rm .git
-        run: | 
-          sudo rm -rf ./build/.git
-          sudo chmod -R 777 ./build
-      - name: SSH Deploy
-        uses: easingthemes/ssh-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-          ARGS: '-rlgoDzvc -i --delete'
-          SOURCE: './build'
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: 'root'
-          TARGET: '/www/wwwroot/wrm244.gxist.cn'
+          
+      # - name: rm .git
+      #   run: | 
+      #     sudo rm -rf ./build/.git
+      #     sudo chmod -R 777 ./build
+      # - name: SSH Deploy
+      #   uses: easingthemes/ssh-deploy@main
+      #   env:
+      #     SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+      #     ARGS: '-rlgoDzvc -i --delete'
+      #     SOURCE: './build'
+      #     REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+      #     REMOTE_USER: 'root'
+      #     TARGET: '/www/wwwroot/wrm244.gxist.cn'
       #仅仅支持英文      
       # - name: Install Prince
       #   run: |
