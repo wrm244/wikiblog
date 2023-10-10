@@ -313,7 +313,7 @@ const config = {
     },
     socials: {
       github: 'https://github.com/wrm244',
-      twitter: 'https://twitter.com/wrm244',
+      twitter: 'mailto:wrm244@qq.com',
       csdn: 'https://blog.csdn.net/wrm244',
       juejin: 'https://juejin.cn/user/3021907877702814',
       qq: 'tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=934978593&website=wrm244.gxist.cn',
