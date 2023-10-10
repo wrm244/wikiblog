@@ -47,6 +47,15 @@ export const projects: Project[] = [
     type: "Curriculum Design",
   },
   {
+    title: "井盖识别监控手机端界面",
+    description: "基于Flutter设计井盖识别监控手机端界面",
+    preview: "/assets/images/project/manholeClient.png",
+    website: "https://github.com/wrm244/manholeClient",
+    source: "https://github.com/wrm244/manholeClient",
+    tags: ["opensource", "design"],
+    type: "Curriculum Design",
+  },
+  {
     title: "图书管理系统课设",
     description: "基于C# + Mysql编写图书管理统一终端",
     preview: "/assets/images/project/book.png",
