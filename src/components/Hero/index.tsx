@@ -101,7 +101,7 @@ function Hero() {
         </animated.p>
         <SocialLinks />
         <animated.div>
-          <a className={styles.intro} href={"/about/"}>
+          <a className={styles.intro} href={"./about/"}>
             <Translate id="hompage.hero.introduce">自我介绍</Translate>
           </a>
           {/*span>　</span> */}
