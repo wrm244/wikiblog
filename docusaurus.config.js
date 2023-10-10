@@ -114,7 +114,7 @@ const config = {
               },
         {
           label: '简历',
-          to: './resume/',
+          href: 'https://wrm244.gxist.cn/resume/',
         },
             {
             label: '幻灯片',
