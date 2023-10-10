@@ -162,10 +162,10 @@ export function SocialLinks({ ...prop }) {
       <a
         href={socials.twitter}
         target="_blank"
-        aria-label="twitter"
-        rel="twitter"
+        aria-label="email"
+        rel="email"
       >
-        <Icon icon="ri:twitter-line" />
+        <Icon icon="ri:mail-line" />
       </a>
       <a href={socials.zhihu} target="_blank" aria-label="zhihu" rel="zhihu">
         <Icon icon="ri:zhihu-line" />
