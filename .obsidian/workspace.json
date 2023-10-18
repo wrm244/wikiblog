@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ba298d355cc0839e",
+        "id": "7131bf1242a1b8ca",
         "type": "tabs",
         "children": [
           {
-            "id": "bd4a1dc7016770d1",
+            "id": "9c7e3171e1042f0f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/2栈、队列和数组.md",
+                "file": "docs/stack/java/设计模式/DP02.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/2栈、队列和数组.md",
+                "file": "docs/stack/java/设计模式/DP02.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/2栈、队列和数组.md",
+                "file": "docs/stack/java/设计模式/DP02.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/course/Linux C/数据结构(C语言)/2栈、队列和数组.md"
+                "file": "docs/stack/java/设计模式/DP02.md"
               }
             }
           },
@@ -175,12 +175,17 @@
       "obsidian-translator:Translate": false
     }
   },
-  "active": "bd4a1dc7016770d1",
+  "active": "9c7e3171e1042f0f",
   "lastOpenFiles": [
+    "docs/stack/java/设计模式/DP03.md",
+    "docs/stack/java/设计模式/DP02.md",
+    "docs/stack/java/设计模式/DP01.md",
+    "img/正方形不是长方形.png.md",
+    "img",
+    "docs/course/Linux C/数据结构(C语言)/2栈、队列和数组.md",
     "docs/course/Linux C/数据结构(C语言)/assets/2栈、队列和数组/image-20230919211142.png",
     "docs/course/Linux C/数据结构(C语言)/1 线性表课后编程题.md",
     "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
-    "docs/course/Linux C/数据结构(C语言)/2栈、队列和数组.md",
     "docs/course/Linux C/数据结构(C语言)/assets/2栈、队列和数组/image-20230919181439.png",
     "docs/course/Linux C/数据结构(C语言)/assets/2栈、队列和数组",
     "docs/course/Linux C/数据结构(C语言)/assets/1 线性表课后编程题/image-20230919180225.png",
@@ -196,7 +201,6 @@
     "docs/stack/java/项目/外卖平台/assets/image-20221107184823104.png",
     "docs/stack/java/项目/外卖平台/assets/image-20221107181446913.png",
     "docs/stack/java/项目/外卖平台/assets/image-20221107175649468.png",
-    "docs/stack/java/项目/外卖平台/assets/image-20221107173137506.png",
     "docs/stack/java/项目/外卖平台/assets",
     "docs/stack/java/项目/外卖平台",
     "docs/stack/java/项目",
@@ -212,16 +216,12 @@
     "docs/course/大数据/hadoop/4 分布式计算SQL体系.md",
     "docs/course/大数据/hadoop/assets",
     "docs/course/大数据/hadoop",
-    "docs/course/大数据/生产实习",
     "docs/stack/java/JavaWeb/Web原理与配置/Request&Response.md",
     "docs/stack/java/JavaWeb/Web原理与配置/HTTP&Tomcat&Servlet.md",
     "README.md",
     "assets/image-20210726203656847.png.md",
     "assets/162714811435.png.md",
     "docs/stack/java/JavaWeb/JavaScript入门.md",
-    "docs/stack/java/JavaWeb/数据库连接/JDBC.md",
-    "docs/stack/java/JavaWeb/JavaSpring.md",
-    "docs/course/Linux C/以自动机视角设计C程序.md",
-    "docs/course/OS/操作系统课设/geekos project 4.md"
+    "docs/stack/java/JavaWeb/数据库连接/JDBC.md"
   ]
 }
