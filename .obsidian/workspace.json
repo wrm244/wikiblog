@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/stack/java/设计模式/DP02.md",
+                "file": "docs/stack/java/设计模式/DP06.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/stack/java/设计模式/DP02.md",
+                "file": "docs/stack/java/设计模式/DP06.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/stack/java/设计模式/DP02.md",
+                "file": "docs/stack/java/设计模式/DP06.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/stack/java/设计模式/DP02.md"
+                "file": "docs/stack/java/设计模式/DP06.md"
               }
             }
           },
@@ -177,6 +177,7 @@
   },
   "active": "9c7e3171e1042f0f",
   "lastOpenFiles": [
+    "docs/stack/java/设计模式/DP04.md",
     "docs/stack/java/设计模式/DP03.md",
     "docs/stack/java/设计模式/DP02.md",
     "docs/stack/java/设计模式/DP01.md",
@@ -221,7 +222,6 @@
     "README.md",
     "assets/image-20210726203656847.png.md",
     "assets/162714811435.png.md",
-    "docs/stack/java/JavaWeb/JavaScript入门.md",
-    "docs/stack/java/JavaWeb/数据库连接/JDBC.md"
+    "docs/stack/java/JavaWeb/JavaScript入门.md"
   ]
 }
