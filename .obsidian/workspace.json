@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/stack/java/设计模式/DP06.md",
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
                 "mode": "source",
                 "source": false
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/stack/java/设计模式/DP06.md",
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/stack/java/设计模式/DP06.md",
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/stack/java/设计模式/DP06.md"
+                "file": "docs/course/Linux C/数据结构(C语言)/1 线性表.md"
               }
             }
           },
@@ -151,7 +151,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -177,16 +179,18 @@
   },
   "active": "9c7e3171e1042f0f",
   "lastOpenFiles": [
+    "docs/course/Linux C/数据结构(C语言)/1 线性表课后编程题.md",
+    "docs/course/Linux C/数据结构(C语言)/2栈、队列和数组.md",
+    "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
+    "docs/course/Linux C/C语言进阶(基本概念).md",
+    "docs/stack/java/设计模式/DP06.md",
     "docs/stack/java/设计模式/DP04.md",
     "docs/stack/java/设计模式/DP03.md",
     "docs/stack/java/设计模式/DP02.md",
     "docs/stack/java/设计模式/DP01.md",
     "img/正方形不是长方形.png.md",
     "img",
-    "docs/course/Linux C/数据结构(C语言)/2栈、队列和数组.md",
     "docs/course/Linux C/数据结构(C语言)/assets/2栈、队列和数组/image-20230919211142.png",
-    "docs/course/Linux C/数据结构(C语言)/1 线性表课后编程题.md",
-    "docs/course/Linux C/数据结构(C语言)/1 线性表.md",
     "docs/course/Linux C/数据结构(C语言)/assets/2栈、队列和数组/image-20230919181439.png",
     "docs/course/Linux C/数据结构(C语言)/assets/2栈、队列和数组",
     "docs/course/Linux C/数据结构(C语言)/assets/1 线性表课后编程题/image-20230919180225.png",
@@ -220,8 +224,6 @@
     "docs/stack/java/JavaWeb/Web原理与配置/Request&Response.md",
     "docs/stack/java/JavaWeb/Web原理与配置/HTTP&Tomcat&Servlet.md",
     "README.md",
-    "assets/image-20210726203656847.png.md",
-    "assets/162714811435.png.md",
-    "docs/stack/java/JavaWeb/JavaScript入门.md"
+    "assets/image-20210726203656847.png.md"
   ]
 }
